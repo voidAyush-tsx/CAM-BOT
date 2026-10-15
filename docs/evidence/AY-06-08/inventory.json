@@ -1,0 +1,37 @@
+{
+  "inventory_at_start": {
+    "cwd": "/home/ayush/TOPS/CAM-BOT",
+    "git_head": "bf1e4e4",
+    "git_status_short": "",
+    "host_ros_distro": "unset",
+    "tools_missing": ["ros2", "xacro", "colcon"],
+    "packages": ["src/carrier_control", "src/carrier_description"],
+    "reused_sources": [
+      "src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "src/carrier_control/carrier_control/workcell_model.py",
+      "src/carrier_control/carrier_control/workflow.py",
+      "src/carrier_control/config/machine_tending.json",
+      "src/carrier_description/urdf/dual_arm.xacro"
+    ],
+    "existing_control_exec_dependencies": [
+      "rclpy", "sensor_msgs", "std_msgs", "std_srvs", "control_msgs",
+      "trajectory_msgs"
+    ],
+    "new_dependency_needed": "tf2_ros",
+    "launch_runtime_dependencies": ["robot_state_publisher", "rviz2"],
+    "available_offline_tests": [
+      "src/carrier_control/test/test_machine_tending_fsm.py",
+      "src/carrier_control/test/test_workflow.py",
+      "src/carrier_control/test/test_action_safety.py",
+      "src/carrier_control/test/test_workcell_contract.py",
+      "src/carrier_description/test/test_launch_contract.py"
+    ],
+    "coverage_before_edit": {
+      "AY-06": "no TF/reachability-based coordination policy",
+      "AY-07": "no geometric reachability evaluator",
+      "AY-08": "FSM, stations, visual and carrier adapters existed but were fixed-step replay"
+    }
+  },
+  "proof_limit": "Inventory is source inspection, not ROS runtime verification."
+}

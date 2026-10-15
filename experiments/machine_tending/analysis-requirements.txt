@@ -1,0 +1,3 @@
+# Analysis only; ROS runtime packages do not depend on this file.
+# Execution for the recorded AY-10 capture used Ubuntu's matplotlib 3.5.1.
+matplotlib>=3.5,<4

@@ -1,0 +1,7 @@
+AY-03 ROS graph — NOT OBSERVED
+The local host lacks ROS 2 Humble tooling. No node/topic/action list, joint
+publisher count, UR5 state change, TF stream, or controller result is claimed.
+tools/capture_ay03_humble.sh is prepared to capture a visual ROS graph on
+three starts. The supplied controller configuration is invalid by design,
+so a controlled-carrier graph requires validated station targets and a
+selected controller bring-up launch file before it can be tested.

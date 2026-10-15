@@ -4,6 +4,11 @@ import os
 
 package_name = 'carrier_description'
 
+
+def asset_files(directory):
+    return [path for path in glob(os.path.join(directory, '*')) if os.path.isfile(path)]
+
+
 setup(
     name=package_name,
     version='0.0.1',
@@ -23,22 +28,27 @@ setup(
 
         (
             os.path.join('share', package_name, 'urdf'),
-            glob('urdf/*')
+            asset_files('urdf')
         ),
 
         (
             os.path.join('share', package_name, 'launch'),
-            glob('launch/*')
+            asset_files('launch')
         ),
 
         (
             os.path.join('share', package_name, 'config'),
-            glob('config/*')
+            asset_files('config')
         ),
 
         (
             os.path.join('share', package_name, 'meshes'),
-            glob('meshes/*')
+            asset_files('meshes')
+        ),
+
+        (
+            os.path.join('share', package_name, 'rviz'),
+            asset_files('rviz')
         ),
     ],
 
@@ -48,11 +58,15 @@ setup(
     maintainer='shanmukha',
     maintainer_email='shanmukha@example.com',
 
-    description='UR5 carrier manipulator with custom bin manipulator',
+    description='UR5 carrier with flange and visual dual-arm placeholder',
 
     license='Apache-2.0',
 
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
 
     entry_points={
         'console_scripts': [

@@ -1,0 +1,14 @@
+AY-04 TF/station inspection — NOT OBSERVED in ROS
+Expected frame parent: world
+Expected unique children: station_s1_raw, station_s2_staging,
+station_s3_machine, station_s4_output, station_s5_finished.
+The XML source and canonical config contain those names; offline tests check
+name agreement and finite transforms. This does not establish an expanded
+URDF or runtime TF stream.
+
+In Ubuntu 22.04 / ROS Humble after build, run:
+  bash tools/capture_ay04_humble.sh
+It records configured URDF/check_urdf, /tf_static, view_frames, task target,
+workpiece state, and the missing-config failure test under runtime/.
+Inspect runtime/frames.pdf and the RViz view before claiming visual runtime
+verification. A TF frame alone does not prove a reachable robot target.

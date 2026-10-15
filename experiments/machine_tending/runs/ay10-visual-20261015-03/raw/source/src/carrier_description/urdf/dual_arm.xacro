@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="dual_arm">
+
+  <!--
+    CAM-BOT Phase 4B placeholder bimanual module.
+    This is deliberately a visualization/reachability placeholder, not a
+    physically complete manipulator or closed-chain grasp model.
+  -->
+  <xacro:macro name="dual_arm"
+               params="parent_link:=carrier_flange_interface
+                       base_length:=0.42
+                       base_width:=0.28
+                       base_thickness:=0.05
+                       upper_arm_length:=0.25
+                       forearm_length:=0.22">
+
+    <link name="dual_arm_base_link">
+      <visual>
+        <origin xyz="0 0 ${base_thickness / 2.0}"/>
+        <geometry><box size="${base_length} ${base_width} ${base_thickness}"/></geometry>
+        <material name="dual_base_material"><color rgba="0.16 0.18 0.22 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${base_thickness / 2.0}"/>
+        <geometry><box size="${base_length} ${base_width} ${base_thickness}"/></geometry>
+      </collision>
+    </link>
+
+    <joint name="carrier_flange_interface_to_dual_arm_base" type="fixed">
+      <parent link="${parent_link}"/>
+      <child link="dual_arm_base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- LEFT ARM -->
+    <link name="left_upper_arm">
+      <visual>
+        <origin xyz="0 ${upper_arm_length / 2.0} 0" rpy="0 0 0"/>
+        <geometry><box size="0.055 ${upper_arm_length} 0.055"/></geometry>
+        <material name="left_upper_material"><color rgba="0.72 0.74 0.78 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 ${upper_arm_length / 2.0} 0"/>
+        <geometry><box size="0.055 ${upper_arm_length} 0.055"/></geometry>
+      </collision>
+    </link>
+    <joint name="left_shoulder_joint" type="revolute">
+      <parent link="dual_arm_base_link"/>
+      <child link="left_upper_arm"/>
+      <origin xyz="-${base_length / 2.0 + 0.01} 0 ${base_thickness}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-1.57" upper="1.57" effort="20" velocity="2"/>
+    </joint>
+
+    <link name="left_forearm">
+      <visual>
+        <origin xyz="0 ${forearm_length / 2.0} 0"/>
+        <geometry><box size="0.045 ${forearm_length} 0.045"/></geometry>
+        <material name="left_forearm_material"><color rgba="0.58 0.60 0.64 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 ${forearm_length / 2.0} 0"/>
+        <geometry><box size="0.045 ${forearm_length} 0.045"/></geometry>
+      </collision>
+    </link>
+    <joint name="left_elbow_joint" type="revolute">
+      <parent link="left_upper_arm"/>
+      <child link="left_forearm"/>
+      <origin xyz="0 ${upper_arm_length} 0"/>
+      <axis xyz="1 0 0"/>
+      <limit lower="-1.57" upper="1.57" effort="20" velocity="2"/>
+    </joint>
+
+    <!-- RIGHT ARM -->
+    <link name="right_upper_arm">
+      <visual>
+        <origin xyz="0 ${upper_arm_length / 2.0} 0"/>
+        <geometry><box size="0.055 ${upper_arm_length} 0.055"/></geometry>
+        <material name="right_upper_material"><color rgba="0.72 0.74 0.78 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 ${upper_arm_length / 2.0} 0"/>
+        <geometry><box size="0.055 ${upper_arm_length} 0.055"/></geometry>
+      </collision>
+    </link>
+    <joint name="right_shoulder_joint" type="revolute">
+      <parent link="dual_arm_base_link"/>
+      <child link="right_upper_arm"/>
+      <origin xyz="${base_length / 2.0 + 0.01} 0 ${base_thickness}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-1.57" upper="1.57" effort="20" velocity="2"/>
+    </joint>
+
+    <link name="right_forearm">
+      <visual>
+        <origin xyz="0 ${forearm_length / 2.0} 0"/>
+        <geometry><box size="0.045 ${forearm_length} 0.045"/></geometry>
+        <material name="right_forearm_material"><color rgba="0.58 0.60 0.64 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 ${forearm_length / 2.0} 0"/>
+        <geometry><box size="0.045 ${forearm_length} 0.045"/></geometry>
+      </collision>
+    </link>
+    <joint name="right_elbow_joint" type="revolute">
+      <parent link="right_upper_arm"/>
+      <child link="right_forearm"/>
+      <origin xyz="0 ${upper_arm_length} 0"/>
+      <axis xyz="1 0 0"/>
+      <limit lower="-1.57" upper="1.57" effort="20" velocity="2"/>
+    </joint>
+
+  </xacro:macro>
+</robot>

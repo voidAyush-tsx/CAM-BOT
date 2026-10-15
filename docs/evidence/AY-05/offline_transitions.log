@@ -1,0 +1,27 @@
+AY-05 offline transition trace; fake deterministic adapter, NOT ROS runtime.
+Command: PYTHONPATH=src/carrier_control python3 tools/ay05_offline_trace.py
+Actual result: exit 0.
+
+SCENARIO success
+ENTERED HOME RAW_AT_S1
+ENTERED PICK_RAW RAW_AT_S1
+ENTERED STAGE HELD_RAW_AT_S1
+ENTERED LOAD_MACHINE HELD_RAW_AT_S2
+ENTERED MACHINE_DWELL RAW_IN_MACHINE
+ENTERED UNLOAD_MACHINE PROCESSED_IN_MACHINE
+ENTERED PLACE_FINISHED HELD_PROCESSED_AT_S4
+ENTERED HOME FINISHED_AT_S5
+SUCCESS HOME FINISHED_AT_S5
+CycleOutcome(success=True, terminal='SUCCESS', failure_state=None, failure_step=None, cause=None, workpiece_state='FINISHED_AT_S5')
+
+SCENARIO load_failure
+ENTERED HOME RAW_AT_S1
+ENTERED PICK_RAW RAW_AT_S1
+ENTERED STAGE HELD_RAW_AT_S1
+ENTERED LOAD_MACHINE HELD_RAW_AT_S2
+FAILURE LOAD_MACHINE HELD_RAW_AT_S2 INJECTED_ACTION_FAILURE
+CycleOutcome(success=False, terminal='FAILURE', failure_state='LOAD_MACHINE', failure_step='S3_LOAD', cause='INJECTED_ACTION_FAILURE', workpiece_state='HELD_RAW_AT_S2')
+
+The exact, reproducible positive/negative adapters and assertions are in
+`src/carrier_control/test/test_machine_tending_fsm.py`; this trace is a compact
+inspection artifact, not an action-server result.

@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "captured_at": "2026-10-15T00:00:00+05:30",
+  "repository": {
+    "path": "/home/ayush/TOPS/CAM-BOT",
+    "base_branch": "main",
+    "base_commit": "66c436a",
+    "initial_git_status": "clean",
+    "working_branch": "feat/ay01-ay13-implementation"
+  },
+  "environment": {
+    "ros_distro": null,
+    "ros_version": null,
+    "available_commands": ["pdftotext", "python3", "tesseract"],
+    "missing_commands": ["ros2", "colcon", "xacro", "check_urdf", "pytest"],
+    "runtime_verification_possible": false
+  },
+  "packages": [
+    {
+      "name": "carrier_control",
+      "type": "ament_python",
+      "dependencies": [
+        "control_msgs",
+        "geometry_msgs",
+        "moveit_msgs",
+        "rclpy",
+        "sensor_msgs",
+        "shape_msgs",
+        "trajectory_msgs"
+      ],
+      "existing_tests": [
+        "test/test_copyright.py",
+        "test/test_flake8.py",
+        "test/test_pep257.py"
+      ]
+    },
+    {
+      "name": "carrier_description",
+      "type": "ament_python",
+      "dependencies": [
+        "joint_state_publisher",
+        "joint_state_publisher_gui",
+        "launch",
+        "launch_ros",
+        "robot_state_publisher",
+        "rviz2",
+        "ur_description",
+        "xacro"
+      ],
+      "existing_tests": [
+        "test/test_copyright.py",
+        "test/test_flake8.py",
+        "test/test_pep257.py"
+      ]
+    }
+  ],
+  "preservation_constraints": {
+    "ur5_upstream_of_tool0": "src/carrier_description/urdf/ur5_with_test_tool.xacro",
+    "functional_carrier_control": [
+      "src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "src/carrier_control/carrier_control/machine_shop_trajectory.py"
+    ],
+    "ros_package_count": 2,
+    "mass_sensitivity_archives": [
+      "experiments/mass_sensitivity/exp01-upper-arm-10pct",
+      "experiments/mass_sensitivity/exp02-forearm-10pct",
+      "experiments/mass_sensitivity/exp03-shoulder-10pct"
+    ]
+  },
+  "ay_id_basis": {
+    "literal_ids_found_in_sources": false,
+    "mapping_rule": "IDs are mapped to the minimum acceptance-bearing implementation units in the repository completion plan; this mapping is project-local and is not claimed to be printed in either PDF.",
+    "acceptance_sources": [
+      "docs/reference/CAM_BOT_Final_Project_Completion_Plan.md:197",
+      "docs/reference/CAM_BOT_Final_Project_Completion_Plan.md:267",
+      "docs/reference/CAM_BOT_Final_Project_Completion_Plan.md:298",
+      "docs/reference/CAM_BOT_Final_Project_Completion_Plan.md:415",
+      "docs/reference/CAM_BOT_Final_Project_Completion_Plan.md:480",
+      "docs/reference/CAM_BOT_Final_Project_Completion_Plan.md:818"
+    ]
+  },
+  "ay_coverage_before_changes": {
+    "AY-01": "partial: repository structure exists but status is stale",
+    "AY-02": "partial: package metadata contains scaffolding and duplicate dependencies",
+    "AY-03": "found: UR5-to-tool0 chain and carrier flange exist; ROS parse unavailable",
+    "AY-04": "absent: no five-station environment model",
+    "AY-05": "absent: no workpiece model or state update",
+    "AY-06": "partial: generic bimanual stages only",
+    "AY-07": "partial: carrier action client has unbounded goal/result waits",
+    "AY-08": "absent: no machine-tending coordinator",
+    "AY-09": "absent: no traceable task/workpiece state interface",
+    "AY-10": "partial: one-command visual launch exists but no complete workflow",
+    "AY-11": "absent: no machine-tending trial schema or recorder",
+    "AY-12": "absent: no positive/negative acceptance suite or evidence template",
+    "AY-13": "partial: architecture/status documents exist but are stale"
+  }
+}

@@ -1,0 +1,19 @@
+AY-02 offline packaging manifest — predicted by setup.py data_files, NOT ROS-installed proof
+carrier_description:
+  share/carrier_description/urdf/carrier_flange.xacro
+  share/carrier_description/urdf/dual_arm.xacro
+  share/carrier_description/urdf/ur5_with_test_tool.xacro
+  share/carrier_description/urdf/machine_tending_cell.xacro
+  share/carrier_description/launch/dual_arm_demo.launch.py
+  share/carrier_description/launch/view_dual_arm.launch.py
+  share/carrier_description/launch/view_carrier.launch.py
+  share/carrier_description/rviz/dual_arm.rviz
+carrier_control:
+  share/carrier_control/config/waypoints.yaml
+  share/carrier_control/config/machine_tending.json
+  console_scripts: dual_arm_cycle, machine_shop_trajectory,
+    machine_shop_joint_cycle, plot_machine_shop_path,
+    machine_tending_coordinator
+All listed source assets and console-script declarations passed the offline
+test. Absolute package prefixes and installed files remain unverified until
+tools/capture_ay02_humble.sh runs successfully in Humble.

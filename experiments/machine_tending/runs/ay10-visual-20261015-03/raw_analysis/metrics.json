@@ -1,0 +1,56 @@
+{
+  "analysis_script_sha256": "befd582ce60adc14c320d23b664ebbae6472ea3837aaaa1425c3a38489920422",
+  "analysis_version": 1,
+  "attempts": 5,
+  "ay10": {
+    "actuation_verified": false,
+    "grasp_verified": false,
+    "qualification": "VISUAL_SIMULATION_PASS",
+    "trials": 5
+  },
+  "capture": {
+    "environment_sha256": "989a9a72c930f24dc2ab2c74fed6ce27f5233d100e98a94821f4e4693c9a1f53",
+    "manifest_sha256": "9b941b0c1f356d86de60f83d6256590d2fffe7ca440122c9b22de08b4dacdb49",
+    "source_tree_sha256": "fa421a5426f597b6dc65ec47781e4e8d6c7886796d30774998aa8f7f0933fe08"
+  },
+  "comparison": "descriptive only; no controlled baseline",
+  "cycle_boundary": "S1_APPROACH STEP_STARTED through HOME_END STEP_COMPLETED; failures through terminal event",
+  "empty_dataset": false,
+  "input_sha256": {
+    "trials.csv": "971b22b29ba27d3207a5638f0c83dc3bda404571d3dbab125bbed5794fbdc4be",
+    "trials.events.jsonl": "d38122f95825b6d22fbe3cf6901b787076e9e7bc2bac6bb33e5da9f2669de3fb"
+  },
+  "motion_count_rule": "Distinct CARRIER_MOTION IDs with max absolute goal-start joint delta > 1e-6 rad; repositions exclude HOME. REQUESTED/ACCEPTED/COMPLETED counted separately. Visual COMPLETED means final joint publication, not controller execution.",
+  "scenarios": [
+    {
+      "attempts": 5,
+      "carrier_repositions_accepted": 25,
+      "carrier_repositions_completed": 25,
+      "carrier_repositions_requested": 25,
+      "censored_durations": 0,
+      "failure_categories": {},
+      "missing_durations": 0,
+      "scenario": {
+        "enable_coordination": true,
+        "environment_sha256": "989a9a72c930f24dc2ab2c74fed6ce27f5233d100e98a94821f4e4693c9a1f53",
+        "experiment_id": "ay10-visual-fixed-v1",
+        "fault_injection_step": "",
+        "git_commit": "6e77292e4fceca0636a4cd86a037bf9e7d64f93a",
+        "mode": "visual_simulation",
+        "parameter_hash_sha256": "4a30a60ff007ec96a0be3d97aee8319e4bc8db24a8f4ffe1cd01c68968359076",
+        "source_tree_sha256": "fa421a5426f597b6dc65ec47781e4e8d6c7886796d30774998aa8f7f0933fe08",
+        "visual_time_scale": 1.0
+      },
+      "scenario_id": "e34fe0b52dc2",
+      "success_rate_pct": 100.0,
+      "successful_attempts": 5,
+      "successful_cycle_time": {
+        "max_s": 19.592351292,
+        "mean_s": 19.579116666,
+        "median_s": 19.585576358999997,
+        "min_s": 19.551515386000002,
+        "sample_stdev_s": 0.016634434137306406
+      }
+    }
+  ]
+}

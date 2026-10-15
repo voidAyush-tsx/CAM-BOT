@@ -1,0 +1,22 @@
+test_changed_scenarios_are_separate (test_analysis.AnalysisTests) ... ok
+test_cli_regenerates_tables_plots_and_preserves_raw_bytes (test_analysis.AnalysisTests) ... {"attempts": 3, "scenarios": 1, "output": "/tmp/tmpvo3_4lro/derived"}
+{"attempts": 3, "scenarios": 1, "output": "/tmp/tmpvo3_4lro/derived"}
+{"attempts": 0, "scenarios": 0, "output": "/tmp/tmpvo3_4lro/derived"}
+ok
+test_completed_motion_must_reach_recorded_goal (test_analysis.AnalysisTests) ... ok
+test_dangling_attempt_not_silently_dropped (test_analysis.AnalysisTests) ... ok
+test_duplicate_ids_rejected (test_analysis.AnalysisTests) ... ok
+test_duplicate_terminal_rejected (test_analysis.AnalysisTests) ... ok
+test_empty_dataset_is_explicit_and_has_no_success_percentage (test_analysis.AnalysisTests) ... ok
+test_independent_mixed_arithmetic_and_motion_totals (test_analysis.AnalysisTests) ... ok
+test_malformed_boolean_rejected (test_analysis.AnalysisTests) ... ok
+test_missing_adapter_evidence_rejected (test_analysis.AnalysisTests) ... ok
+test_missing_duration_is_reported_when_failure_precedes_pick (test_analysis.AnalysisTests) ... ok
+test_nontrivial_threshold_home_exclusion_and_failed_completion (test_analysis.AnalysisTests) ... ok
+test_raw_checksum_tampering_rejected (test_analysis.AnalysisTests) ... ok
+test_time_rollback_rejected (test_analysis.AnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.711s
+
+OK

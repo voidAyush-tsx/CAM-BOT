@@ -1,0 +1,1 @@
+Preflight stopped before any attempted trial because nodes from capture 01 remained in ROS domain 86. See raw/preexisting_nodes.txt. Process-group cleanup was added before capture 03. No trial data were generated here.

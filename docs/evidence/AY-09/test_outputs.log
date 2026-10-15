@@ -1,0 +1,27 @@
+AY-09 offline verification, 2026-10-15.
+
+Command: PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_metrics.py -v
+Actual result: exit 0; Ran 6 tests in 0.002s; OK.
+Positive coverage: successful and failed samples, unique UUID trial IDs,
+parseable CSV/JSONL, nonnegative duration, chronological sequence/elapsed
+time, interruption finalized INCOMPLETE, schema/template/source-hook parity.
+Negative coverage: duplicate final rejected with one row retained, failure
+without context rejected, visual runtime-verification claim rejected.
+
+Command: PYTHONPATH=src/carrier_control python3 -m unittest [AY-09 plus AY-01–08 regression modules] -q
+Actual result (final run): exit 0; Ran 53 tests in 0.066s; OK.
+Command: generate one temporary offline CSV/JSONL pair with ExperimentLogger, then `PYTHONPATH=src/carrier_control python3 tools/validate_ay09_dataset.py <temporary>/trials.csv`
+Actual result: exit 0; `{"validation": "PASS", "trials": 1, "events": 3}`.
+
+Command: bash -n tools/capture_ay09_humble.sh
+Actual result: exit 0.
+Command: bash tools/capture_ay09_humble.sh
+Actual result: exit 2; `ROS_DISTRO must be humble; observed unset`.
+
+Command: PYTHONPATH=src/carrier_control python3 -m unittest discover -s src/carrier_control/test -v
+Actual result: 40 functional tests passed; discovery exited 1 because the
+non-Humble host lacks `ament_copyright`, `ament_flake8`, and `ament_pep257`.
+Those ROS/ament lint tests were not represented as passing.
+
+No genuine ROS runtime sample was created on this host. Offline fixtures were
+temporary and are not stored as experimental results.

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "task_id": "AY-01",
+  "source_commit": "66c436a",
+  "baseline_type": "Phase-4 reconstruction with visual-only joint animation",
+  "files": [
+    {
+      "path": "src/carrier_description/urdf/carrier_flange.xacro",
+      "role": "tool0-mounted flange and interface macro"
+    },
+    {
+      "path": "src/carrier_description/urdf/dual_arm.xacro",
+      "role": "left/right two-joint placeholder macro"
+    },
+    {
+      "path": "src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "role": "upstream UR5 macro and Phase-4 attachment wrapper"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "role": "50 Hz cubic visual JointState cycle"
+    },
+    {
+      "path": "src/carrier_description/launch/view_dual_arm.launch.py",
+      "role": "isolated Phase-4 viewer entry point"
+    },
+    {
+      "path": "src/carrier_description/launch/dual_arm_demo.launch.py",
+      "role": "current machine-tending visual entry point"
+    },
+    {
+      "path": "src/carrier_description/rviz/dual_arm.rviz",
+      "role": "RViz RobotModel, TF and fixed-frame configuration"
+    },
+    {
+      "path": "src/carrier_description/package.xml",
+      "role": "description ROS package dependencies"
+    },
+    {
+      "path": "src/carrier_description/setup.py",
+      "role": "installed description, launch and RViz assets"
+    },
+    {
+      "path": "src/carrier_control/package.xml",
+      "role": "control ROS package dependencies"
+    },
+    {
+      "path": "src/carrier_control/setup.py",
+      "role": "dual_arm_cycle console entry point"
+    }
+  ],
+  "visual_joint_order": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint",
+    "left_shoulder_joint",
+    "left_elbow_joint",
+    "right_shoulder_joint",
+    "right_elbow_joint"
+  ],
+  "frame_chain": [
+    "tool0",
+    "carrier_flange",
+    "carrier_flange_interface",
+    "dual_arm_base_link"
+  ],
+  "known_limits": {
+    "custom_revolute_joint_rad": [-1.57, 1.57],
+    "generic_stage_extrema_rad": [-1.2, 1.2]
+  },
+  "known_caveat": "dual_arm_cycle publishes six constant-zero UR5 joint positions; run it only in the isolated visual viewer, never alongside controller joint feedback"
+}

@@ -303,7 +303,7 @@ def plot_joint_trajectory(samples):
     print(f'Path Y range: {y.min():.3f} → {y.max():.3f} m')
     print(f'Path Z range: {z.min():.3f} → {z.max():.3f} m')
     print()
-    print(f'Saved:')
+    print('Saved:')
     print(output)
     print('==========================================')
 
@@ -340,14 +340,14 @@ def main():
 
     finally:
 
-    	samples = node.samples
-	
-    	node.destroy_node()
+        samples = node.samples
 
-    	plot_joint_trajectory(samples)
+        node.destroy_node()
 
-    	if rclpy.ok():
-        	rclpy.shutdown()
+        plot_joint_trajectory(samples)
+
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

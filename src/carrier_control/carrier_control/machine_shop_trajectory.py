@@ -12,6 +12,7 @@ from moveit_msgs.msg import PositionConstraint
 from moveit_msgs.msg import OrientationConstraint
 
 from geometry_msgs.msg import PoseStamped
+from sensor_msgs.msg import JointState
 from shape_msgs.msg import SolidPrimitive
 
 
@@ -25,6 +26,22 @@ class MachineShopTrajectory(Node):
             self,
             MoveGroup,
             '/move_action'
+        )
+
+        self.joint_names = [
+            'shoulder_pan_joint',
+            'shoulder_lift_joint',
+            'elbow_joint',
+            'wrist_1_joint',
+            'wrist_2_joint',
+            'wrist_3_joint'
+        ]
+        self.joint_feedback_count = 0
+        self.joint_subscription = self.create_subscription(
+            JointState,
+            '/joint_states',
+            self._joint_feedback,
+            10
         )
 
         self.get_logger().info(
@@ -179,14 +196,22 @@ class MachineShopTrajectory(Node):
             z
         )
 
+        feedback_before = self.joint_feedback_count
         send_future = self.client.send_goal_async(
             goal
         )
 
         rclpy.spin_until_future_complete(
             self,
-            send_future
+            send_future,
+            timeout_sec=12.0
         )
+
+        if not send_future.done() or send_future.result() is None:
+            self.get_logger().error(
+                'MoveIt goal response timed out after 12.0 seconds.'
+            )
+            return False
 
         handle = send_future.result()
 
@@ -206,8 +231,21 @@ class MachineShopTrajectory(Node):
 
         rclpy.spin_until_future_complete(
             self,
-            result_future
+            result_future,
+            timeout_sec=35.0
         )
+
+        if not result_future.done() or result_future.result() is None:
+            self.get_logger().error(
+                'MoveIt result timed out after 35.0 seconds; cancelling.'
+            )
+            cancel_future = handle.cancel_goal_async()
+            rclpy.spin_until_future_complete(
+                self,
+                cancel_future,
+                timeout_sec=2.0
+            )
+            return False
 
         result = result_future.result().result
 
@@ -218,6 +256,12 @@ class MachineShopTrajectory(Node):
         )
 
         if error == 1:
+
+            if self.joint_feedback_count <= feedback_before:
+                self.get_logger().error(
+                    'MoveIt returned success without new /joint_states feedback.'
+                )
+                return False
 
             self.get_logger().info(
                 'Motion executed successfully.'
@@ -230,6 +274,11 @@ class MachineShopTrajectory(Node):
         )
 
         return False
+
+    def _joint_feedback(self, message):
+        """Count joint-state messages only when all carrier joints are present."""
+        if all(name in message.name for name in self.joint_names):
+            self.joint_feedback_count += 1
 
 
 def main(args=None):
@@ -245,12 +294,12 @@ def main(args=None):
         # ==================================================
 
         stations = [
-    		("P1", 0.200, 0.241, 0.500),
-    		("P2", 0.200, 0.341, 0.500),
-    		("P3", 0.150, -0.341, 0.500),
-    		("P4", 0.100, 0.241, 0.500),
-    		("P5", 0.150, -0.291, 0.500),
-		]
+            ("P1", 0.200, 0.241, 0.500),
+            ("P2", 0.200, 0.341, 0.500),
+            ("P3", 0.150, -0.341, 0.500),
+            ("P4", 0.100, 0.241, 0.500),
+            ("P5", 0.150, -0.291, 0.500),
+        ]
 
         # ==================================================
         # EXECUTE STATION SEQUENCE
@@ -272,7 +321,7 @@ def main(args=None):
             )
 
             node.get_logger().info(
-                f"Target position:"
+                "Target position:"
             )
 
             node.get_logger().info(
@@ -375,6 +424,7 @@ def main(args=None):
         node.destroy_node()
 
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

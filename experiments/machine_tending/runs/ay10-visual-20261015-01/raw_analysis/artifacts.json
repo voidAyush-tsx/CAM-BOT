@@ -1,0 +1,14 @@
+{
+  "cycle_time_by_trial": {
+    "observations": 1,
+    "bytes": 48762
+  },
+  "trial_outcomes": {
+    "observations": 1,
+    "bytes": 47294
+  },
+  "carrier_repositions_by_trial": {
+    "observations": 1,
+    "bytes": 59424
+  }
+}

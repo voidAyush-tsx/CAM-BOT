@@ -1,0 +1,1 @@
+schema_version,experiment_id,trial_id,git_commit,parameter_config,parameter_hash_sha256,start_timestamp_utc,end_timestamp_utc,time_source,cycle_time_s,status,success,failure_state,failure_reason,carrier_repositions,mode,workpiece_final_state,runtime_verified,end_to_end_verified,notes

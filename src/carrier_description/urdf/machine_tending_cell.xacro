@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="machine_tending_cell">
+  <!--
+    Configurable visual-simulation assumptions. These dimensions and station
+    poses are not measured cell geometry or manufacturing CAD.
+  -->
+  <xacro:macro name="machine_tending_cell" params="parent_link:=world s1_xyz s1_rpy s1_size s2_xyz s2_rpy s2_size s3_xyz s3_rpy s3_size s4_xyz s4_rpy s4_size s5_xyz s5_rpy s5_size">
+    <link name="cell_floor">
+      <visual>
+        <origin xyz="0 0 -0.03"/>
+        <geometry><box size="3.0 3.0 0.06"/></geometry>
+        <material name="cell_floor_material"><color rgba="0.35 0.37 0.40 1"/></material>
+      </visual>
+    </link>
+    <joint name="world_to_cell_floor" type="fixed">
+      <parent link="${parent_link}"/><child link="cell_floor"/>
+    </joint>
+
+    <link name="station_s1_raw">
+      <visual><origin xyz="0 0 ${float(s1_size.split()[2]) / 2.0}"/><geometry><box size="${s1_size}"/></geometry>
+        <material name="station_raw_material"><color rgba="0.20 0.45 0.85 1"/></material></visual>
+    </link>
+    <joint name="world_to_station_s1_raw" type="fixed">
+      <parent link="${parent_link}"/><child link="station_s1_raw"/><origin xyz="${s1_xyz}" rpy="${s1_rpy}"/>
+    </joint>
+
+    <link name="station_s2_staging">
+      <visual><origin xyz="0 0 ${float(s2_size.split()[2]) / 2.0}"/><geometry><box size="${s2_size}"/></geometry>
+        <material name="station_staging_material"><color rgba="0.90 0.70 0.12 1"/></material></visual>
+    </link>
+    <joint name="world_to_station_s2_staging" type="fixed">
+      <parent link="${parent_link}"/><child link="station_s2_staging"/><origin xyz="${s2_xyz}" rpy="${s2_rpy}"/>
+    </joint>
+
+    <link name="station_s3_machine">
+      <visual><origin xyz="0 0 ${float(s3_size.split()[2]) / 2.0}"/><geometry><box size="${s3_size}"/></geometry>
+        <material name="station_machine_material"><color rgba="0.25 0.28 0.32 1"/></material></visual>
+    </link>
+    <joint name="world_to_station_s3_machine" type="fixed">
+      <parent link="${parent_link}"/><child link="station_s3_machine"/><origin xyz="${s3_xyz}" rpy="${s3_rpy}"/>
+    </joint>
+
+    <link name="station_s4_output">
+      <visual><origin xyz="0 0 ${float(s4_size.split()[2]) / 2.0}"/><geometry><box size="${s4_size}"/></geometry>
+        <material name="station_output_material"><color rgba="0.85 0.42 0.12 1"/></material></visual>
+    </link>
+    <joint name="world_to_station_s4_output" type="fixed">
+      <parent link="${parent_link}"/><child link="station_s4_output"/><origin xyz="${s4_xyz}" rpy="${s4_rpy}"/>
+    </joint>
+
+    <link name="station_s5_finished">
+      <visual><origin xyz="0 0 ${float(s5_size.split()[2]) / 2.0}"/><geometry><box size="${s5_size}"/></geometry>
+        <material name="station_finished_material"><color rgba="0.18 0.70 0.35 1"/></material></visual>
+    </link>
+    <joint name="world_to_station_s5_finished" type="fixed">
+      <parent link="${parent_link}"/><child link="station_s5_finished"/><origin xyz="${s5_xyz}" rpy="${s5_rpy}"/>
+    </joint>
+
+    <!-- Three joints make visual workpiece state changes observable in /joint_states. -->
+    <link name="workpiece_x_carriage"/>
+    <joint name="workpiece_x_joint" type="prismatic">
+      <parent link="${parent_link}"/><child link="workpiece_x_carriage"/>
+      <axis xyz="1 0 0"/><limit lower="-1.5" upper="1.5" effort="1" velocity="2"/>
+    </joint>
+    <link name="workpiece_y_carriage"/>
+    <joint name="workpiece_y_joint" type="prismatic">
+      <parent link="workpiece_x_carriage"/><child link="workpiece_y_carriage"/>
+      <axis xyz="0 1 0"/><limit lower="-1.5" upper="1.5" effort="1" velocity="2"/>
+    </joint>
+    <link name="workpiece">
+      <visual>
+        <geometry><cylinder radius="0.055" length="0.12"/></geometry>
+        <material name="workpiece_material"><color rgba="0.85 0.85 0.88 1"/></material>
+      </visual>
+      <collision><geometry><cylinder radius="0.055" length="0.12"/></geometry></collision>
+    </link>
+    <joint name="workpiece_z_joint" type="prismatic">
+      <parent link="workpiece_y_carriage"/><child link="workpiece"/>
+      <axis xyz="0 0 1"/><limit lower="0" upper="1.5" effort="1" velocity="2"/>
+    </joint>
+  </xacro:macro>
+</robot>

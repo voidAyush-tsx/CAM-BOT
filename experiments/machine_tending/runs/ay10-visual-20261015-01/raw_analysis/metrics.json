@@ -1,0 +1,50 @@
+{
+  "analysis_script_sha256": "befd582ce60adc14c320d23b664ebbae6472ea3837aaaa1425c3a38489920422",
+  "analysis_version": 1,
+  "attempts": 1,
+  "capture": {
+    "environment_sha256": "989a9a72c930f24dc2ab2c74fed6ce27f5233d100e98a94821f4e4693c9a1f53",
+    "manifest_sha256": "a8ebabc77805166ae02d8c1ceb664f1f881263b430cfadf4392d0f6dfba34495",
+    "source_tree_sha256": "409e12ffb033508d5ccb456fda9b3c7a367ae177618ad0d9edc09f387e0a1a51"
+  },
+  "comparison": "descriptive only; no controlled baseline",
+  "cycle_boundary": "S1_APPROACH STEP_STARTED through HOME_END STEP_COMPLETED; failures through terminal event",
+  "empty_dataset": false,
+  "input_sha256": {
+    "trials.csv": "2d80c0e7e709cce1d3de4caecc59f2fd98dc3977c754a381fcd79998265eab08",
+    "trials.events.jsonl": "8fe9a96acf4e5a0e91065dcfc8011d7e97762e2d5522c35298e885a90a1c26d6"
+  },
+  "motion_count_rule": "Distinct CARRIER_MOTION IDs with max absolute goal-start joint delta > 1e-6 rad; repositions exclude HOME. REQUESTED/ACCEPTED/COMPLETED counted separately. Visual COMPLETED means final joint publication, not controller execution.",
+  "scenarios": [
+    {
+      "attempts": 1,
+      "carrier_repositions_accepted": 5,
+      "carrier_repositions_completed": 5,
+      "carrier_repositions_requested": 5,
+      "censored_durations": 0,
+      "failure_categories": {},
+      "missing_durations": 0,
+      "scenario": {
+        "enable_coordination": true,
+        "environment_sha256": "989a9a72c930f24dc2ab2c74fed6ce27f5233d100e98a94821f4e4693c9a1f53",
+        "experiment_id": "ay10-visual-fixed-v1",
+        "fault_injection_step": "",
+        "git_commit": "6e77292e4fceca0636a4cd86a037bf9e7d64f93a",
+        "mode": "visual_simulation",
+        "parameter_hash_sha256": "4a30a60ff007ec96a0be3d97aee8319e4bc8db24a8f4ffe1cd01c68968359076",
+        "source_tree_sha256": "409e12ffb033508d5ccb456fda9b3c7a367ae177618ad0d9edc09f387e0a1a51",
+        "visual_time_scale": 1.0
+      },
+      "scenario_id": "8817ed3dfa94",
+      "success_rate_pct": 100.0,
+      "successful_attempts": 1,
+      "successful_cycle_time": {
+        "max_s": 19.548801497,
+        "mean_s": 19.548801497,
+        "median_s": 19.548801497,
+        "min_s": 19.548801497,
+        "sample_stdev_s": null
+      }
+    }
+  ]
+}

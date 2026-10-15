@@ -1,5 +1,11 @@
 # Phase 1 — UR5 Carrier Baseline
 
+> **Archival provenance note (2026-10-15):** This is a historical Phase 1
+> report. It records earlier Gazebo/MoveIt/controller observations but the
+> selected controller bring-up and action-result evidence are not retained in
+> this checkout. See [current evidence levels](../STATUS.md). Present AY-10
+> measurements are visual ROS cycles, not a replay of this controller baseline.
+
 **Status:** ✅ Complete
 **Goal:** establish a simulated UR5 Carrier Arm that executes a repeatable
 machine-shop cycle, packaged so a third party can reproduce it.

@@ -1,0 +1,75 @@
+test_negative_controller_mode_rejects_unvalidated_targets (src.carrier_control.test.test_workflow.TestWorkflow) ... ok
+test_negative_failed_dependency_does_not_advance_workpiece (src.carrier_control.test.test_workflow.TestWorkflow) ... ok
+test_negative_rejects_discontinuous_workpiece_state (src.carrier_control.test.test_workflow.TestWorkflow) ... ok
+test_negative_rejects_out_of_limit_bimanual_pose (src.carrier_control.test.test_workflow.TestWorkflow) ... ok
+test_positive_plan_has_five_named_stations_and_complete_sequence (src.carrier_control.test.test_workflow.TestWorkflow) ... ok
+test_positive_state_sequence_reaches_finished (src.carrier_control.test.test_workflow.TestWorkflow) ... ok
+test_negative_duplicate_final_record_is_not_written (src.carrier_control.test.test_metrics.TestExperimentLogger) ... ok
+test_negative_failure_requires_context (src.carrier_control.test.test_metrics.TestExperimentLogger) ... ok
+test_negative_invalid_duration_and_visual_claim_rejected (src.carrier_control.test.test_metrics.TestExperimentLogger) ... ok
+test_positive_interruption_is_preserved_and_marked_incomplete (src.carrier_control.test.test_metrics.TestExperimentLogger) ... ok
+test_positive_schema_assets_and_coordinator_signal_hooks (src.carrier_control.test.test_metrics.TestExperimentLogger) ... ok
+test_positive_success_and_failure_samples_are_unique_and_parseable (src.carrier_control.test.test_metrics.TestExperimentLogger) ... ok
+test_negative_scanner_detects_an_unbounded_action_wait (src.carrier_control.test.test_action_safety.TestActionSafety) ... ok
+test_positive_all_action_waits_have_explicit_timeouts_and_feedback_gates (src.carrier_control.test.test_action_safety.TestActionSafety) ... ok
+test_negative_cancel_before_first_action_and_invalid_retry_policy (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_negative_early_cancellation_and_invalid_lifecycle (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_negative_failed_load_stops_before_dwell_unload_or_place (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_negative_timeout_prevents_workpiece_advance (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_positive_one_shot_order_and_terminal_success (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_positive_reset_then_new_start (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_positive_ros_adapter_contract_is_feedback_gated_and_interruptible (src.carrier_control.test.test_machine_tending_fsm.TestMachineTendingFSM) ... ok
+test_negative_just_outside_and_both_arm_requirement (src.carrier_control.test.test_reachability.TestReachability) ... ok
+test_negative_missing_nan_tf_target_and_invalid_units (src.carrier_control.test.test_reachability.TestReachability) ... ok
+test_positive_center_and_inclusive_boundary (src.carrier_control.test.test_reachability.TestReachability) ... ok
+test_positive_rotated_and_translated_tf_changes_local_result (src.carrier_control.test.test_reachability.TestReachability) ... ok
+test_negative_rejected_carrier_stops_fsm_before_load_commit (src.carrier_control.test.test_coordination.TestCoordination) ... ok
+test_negative_repeated_request_and_unreachable_recheck (src.carrier_control.test.test_coordination.TestCoordination) ... ok
+test_positive_full_offline_fsm_has_both_decisions_and_finishes (src.carrier_control.test.test_coordination.TestCoordination) ... ok
+test_positive_local_branch_makes_no_carrier_request (src.carrier_control.test.test_coordination.TestCoordination) ... ok
+test_positive_reposition_updated_tf_then_local (src.carrier_control.test.test_coordination.TestCoordination) ... ok
+test_positive_ros_adapter_contract_uses_live_tf_and_separate_mechanisms (src.carrier_control.test.test_coordination.TestCoordination) ... ok
+test_negative_supplied_plan_and_absent_stack_fail_closed (src.carrier_control.test.test_launch_preflight.TestLaunchPreflight) ... ok
+test_positive_validated_fixture_requires_existing_selected_bringup (src.carrier_control.test.test_launch_preflight.TestLaunchPreflight) ... ok
+test_negative_missing_asset_and_invalid_waypoints_fail (src.carrier_control.test.test_package_integration.TestPackageIntegration) ... ok
+test_positive_required_assets_entries_and_waypoints (src.carrier_control.test.test_package_integration.TestPackageIntegration) ... ok
+test_negative_malformed_xml_is_rejected (src.carrier_description.test.test_cell_model.TestCellModel) ... ok
+test_positive_cell_has_five_stations_and_movable_workpiece (src.carrier_description.test.test_cell_model.TestCellModel) ... ok
+test_positive_ur5_wrapper_preserves_tool0_attachment_contract (src.carrier_description.test.test_cell_model.TestCellModel) ... ok
+test_negative_controller_launch_has_no_competing_carrier_writer (src.carrier_description.test.test_launch_contract.TestLaunchContract) ... ok
+test_negative_launch_does_not_start_competing_joint_publishers (src.carrier_description.test.test_launch_contract.TestLaunchContract) ... ok
+test_positive_controller_entry_point_gates_inputs_and_shutdown (src.carrier_description.test.test_launch_contract.TestLaunchContract) ... ok
+test_positive_launch_is_python_and_starts_required_visual_nodes (src.carrier_description.test.test_launch_contract.TestLaunchContract) ... ok
+test_negative_broken_chain_rejected (src.carrier_description.test.test_phase4_contract.TestPhase4Contract) ... ok
+test_negative_duplicate_link_rejected (src.carrier_description.test.test_phase4_contract.TestPhase4Contract) ... ok
+test_negative_expanded_duplicate_rejected (src.carrier_description.test.test_phase4_contract.TestPhase4Contract) ... ok
+test_negative_limit_violation_rejected (src.carrier_description.test.test_phase4_contract.TestPhase4Contract) ... ok
+test_positive_isolated_viewer_has_one_joint_publisher (src.carrier_description.test.test_phase4_contract.TestPhase4Contract) ... ok
+test_positive_source_chain_order_and_limits (src.carrier_description.test.test_phase4_contract.TestPhase4Contract) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.073s
+
+OK
+test_changed_scenarios_are_separate (test_analysis.AnalysisTests) ... ok
+test_cli_regenerates_tables_plots_and_preserves_raw_bytes (test_analysis.AnalysisTests) ... {"attempts": 3, "scenarios": 1, "output": "/tmp/tmpdh71ial7/derived"}
+{"attempts": 3, "scenarios": 1, "output": "/tmp/tmpdh71ial7/derived"}
+{"attempts": 0, "scenarios": 0, "output": "/tmp/tmpdh71ial7/derived"}
+ok
+test_completed_motion_must_reach_recorded_goal (test_analysis.AnalysisTests) ... ok
+test_dangling_attempt_not_silently_dropped (test_analysis.AnalysisTests) ... ok
+test_duplicate_ids_rejected (test_analysis.AnalysisTests) ... ok
+test_duplicate_terminal_rejected (test_analysis.AnalysisTests) ... ok
+test_empty_dataset_is_explicit_and_has_no_success_percentage (test_analysis.AnalysisTests) ... ok
+test_independent_mixed_arithmetic_and_motion_totals (test_analysis.AnalysisTests) ... ok
+test_malformed_boolean_rejected (test_analysis.AnalysisTests) ... ok
+test_missing_adapter_evidence_rejected (test_analysis.AnalysisTests) ... ok
+test_missing_duration_is_reported_when_failure_precedes_pick (test_analysis.AnalysisTests) ... ok
+test_nontrivial_threshold_home_exclusion_and_failed_completion (test_analysis.AnalysisTests) ... ok
+test_raw_checksum_tampering_rejected (test_analysis.AnalysisTests) ... ok
+test_time_rollback_rejected (test_analysis.AnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.711s
+
+OK

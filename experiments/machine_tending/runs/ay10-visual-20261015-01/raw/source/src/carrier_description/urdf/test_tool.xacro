@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ========================================= -->
+  <!-- TEST TOOL MACRO                           -->
+  <!-- ========================================= -->
+
+  <xacro:macro name="test_tool"
+               params="parent_link:=tool0">
+
+    <!-- ======================================= -->
+    <!-- TOOL BASE                               -->
+    <!-- ======================================= -->
+
+    <link name="test_tool_base">
+
+      <inertial>
+        <origin xyz="0 0 0.025"
+                rpy="0 0 0"/>
+
+        <mass value="0.5"/>
+
+        <inertia
+          ixx="0.0005"
+          ixy="0.0"
+          ixz="0.0"
+          iyy="0.0005"
+          iyz="0.0"
+          izz="0.0008"/>
+      </inertial>
+
+
+      <visual>
+
+        <origin xyz="0 0 0.025"
+                rpy="0 0 0"/>
+
+        <geometry>
+
+          <cylinder
+            radius="0.08"
+            length="0.05"/>
+
+        </geometry>
+
+        <material name="ToolGrey">
+          <color rgba="0.35 0.35 0.35 1"/>
+        </material>
+
+      </visual>
+
+
+      <collision>
+
+        <origin xyz="0 0 0.025"
+                rpy="0 0 0"/>
+
+        <geometry>
+
+          <cylinder
+            radius="0.08"
+            length="0.05"/>
+
+        </geometry>
+
+      </collision>
+
+    </link>
+
+
+    <!-- ======================================= -->
+    <!-- TOOL SHAFT                              -->
+    <!-- ======================================= -->
+
+    <link name="test_tool_tip">
+
+      <inertial>
+
+        <origin xyz="0 0 0.05"
+                rpy="0 0 0"/>
+
+        <mass value="0.1"/>
+
+        <inertia
+          ixx="0.0001"
+          ixy="0"
+          ixz="0"
+          iyy="0.0001"
+          iyz="0"
+          izz="0.00002"/>
+
+      </inertial>
+
+
+      <visual>
+
+        <origin xyz="0 0 0.05"
+                rpy="0 0 0"/>
+
+        <geometry>
+
+          <cylinder
+            radius="0.02"
+            length="0.10"/>
+
+        </geometry>
+
+        <material name="ToolBlue">
+          <color rgba="0.05 0.2 0.8 1"/>
+        </material>
+
+      </visual>
+
+
+      <collision>
+
+        <origin xyz="0 0 0.05"
+                rpy="0 0 0"/>
+
+        <geometry>
+
+          <cylinder
+            radius="0.02"
+            length="0.10"/>
+
+        </geometry>
+
+      </collision>
+
+    </link>
+
+
+    <!-- ======================================= -->
+    <!-- UR5 -> TOOL                             -->
+    <!-- ======================================= -->
+
+    <joint name="tool0_to_test_tool"
+           type="fixed">
+
+      <parent link="${parent_link}"/>
+
+      <child link="test_tool_base"/>
+
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+
+    </joint>
+
+
+    <!-- ======================================= -->
+    <!-- BASE -> TIP                             -->
+    <!-- ======================================= -->
+
+    <joint name="test_tool_base_to_tip"
+           type="fixed">
+
+      <parent link="test_tool_base"/>
+
+      <child link="test_tool_tip"/>
+
+      <origin
+        xyz="0 0 0.05"
+        rpy="0 0 0"/>
+
+    </joint>
+
+
+  </xacro:macro>
+
+</robot>

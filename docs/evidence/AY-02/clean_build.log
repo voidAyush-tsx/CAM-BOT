@@ -1,0 +1,39 @@
+AY-02 clean-build gate — NOT RUN / BLOCKED
+Source HEAD at audit start: 8a4b3814ce43ff55468909c0c27985d2c853f4d7
+Host: CachyOS Linux (Arch derivative), not Ubuntu 22.04.
+ROS_DISTRO=unset; ros2, rosdep, colcon, and git-lfs not found on PATH.
+No ROS dependencies were installed and no colcon build or launch was claimed.
+
+Offline commands and results:
+  python3 -m unittest discover -s src/carrier_control/test -p 'test_package_integration.py' -v
+  Result: 2 tests passed (positive asset/entry-point/waypoint/dependency contract;
+          negative missing-asset and malformed-waypoint cases).
+  python3 -m unittest src/carrier_description/test/test_launch_contract.py src/carrier_description/test/test_phase4_contract.py -v
+  Result: 8 tests passed.
+  PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_action_safety.py src/carrier_control/test/test_workflow.py src/carrier_control/test/test_metrics.py src/carrier_control/test/test_package_integration.py -v
+  Result: 13 tests passed.
+  python3 -m py_compile src/carrier_control/carrier_control/waypoints.py src/carrier_control/carrier_control/machine_shop_joint_cycle.py src/carrier_control/setup.py src/carrier_description/setup.py
+  Result: exit 0.
+  bash -n tools/capture_ay02_humble.sh
+  Result: exit 0.
+  git diff --check
+  Result: exit 0.
+  cmp -s config/waypoints.yaml src/carrier_control/config/waypoints.yaml
+  Result: exit 0, byte-identical.
+  bash tools/capture_ay02_humble.sh
+  Result: exit 2, as designed: ROS_DISTRO must be humble; observed unset.
+
+A broad `unittest discover` invocation was also attempted and failed at
+collection of ament_copyright, ament_flake8, and ament_pep257 tests because
+the ROS test packages are absent; a metrics import also needed PYTHONPATH.
+The targeted command above sets PYTHONPATH and passes. This is not a clean
+ROS/colcon test result.
+
+Humble reproduction command (after committing this change, in Bash with
+/opt/ros/humble/setup.bash sourced and a GUI):
+  bash tools/capture_ay02_humble.sh
+
+The script makes a clean local clone, runs rosdep/colcon with timeouts, resolves
+package prefixes, lists installed assets and executables, launches the visual
+demo, checks one /joint_states publisher, and captures a sample. Runtime logs
+will be written under docs/evidence/AY-02/runtime/ in the invoking checkout.

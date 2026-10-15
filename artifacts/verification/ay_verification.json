@@ -1,0 +1,157 @@
+{
+  "command": "python3 tools/verify_ay.py --output artifacts/verification/ay_verification.json",
+  "acceptance_status": "SUPERSEDED MAPPING — OFFLINE COMPONENT CHECKS ONLY",
+  "generated_at": "2026-10-14T19:46:56.032114+00:00",
+  "proof_level": "STATIC VALID",
+  "runtime_note": "ROS 2, Gazebo, xacro, check_urdf, and controller runtime were unavailable.",
+  "schema_version": "1.0",
+  "summary": {
+    "passed": 26,
+    "total": 26
+  },
+  "tasks": {
+    "AY-01": {
+      "description": "inventory and archive preservation",
+      "negative": {
+        "detail": "inventory_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "inventory_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-02": {
+      "description": "package metadata and installed assets",
+      "negative": {
+        "detail": "packages_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "packages_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-03": {
+      "description": "UR5/tool0/flange/four-joint chain",
+      "negative": {
+        "detail": "chain_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "chain_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-04": {
+      "description": "five-station visual cell",
+      "negative": {
+        "detail": "stations_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "stations_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-05": {
+      "description": "workpiece model and state continuity",
+      "negative": {
+        "detail": "workpiece_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "workpiece_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-06": {
+      "description": "named bimanual workflow",
+      "negative": {
+        "detail": "workflow_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "workflow_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-07": {
+      "description": "bounded feedback-gated actions",
+      "negative": {
+        "detail": "actions_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "actions_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-08": {
+      "description": "fail-closed coordinator transitions",
+      "negative": {
+        "detail": "coordinator_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "coordinator_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-09": {
+      "description": "traceable state interfaces",
+      "negative": {
+        "detail": "states_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "states_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-10": {
+      "description": "single visual launch contract",
+      "negative": {
+        "detail": "launch_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "launch_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-11": {
+      "description": "metrics schema evidence integrity",
+      "negative": {
+        "detail": "metrics_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "metrics_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-12": {
+      "description": "positive and failure tests",
+      "negative": {
+        "detail": "tests_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "tests_positive",
+        "status": "PASS"
+      }
+    },
+    "AY-13": {
+      "description": "current documentation and limitations",
+      "negative": {
+        "detail": "docs_negative",
+        "status": "PASS"
+      },
+      "positive": {
+        "detail": "docs_positive",
+        "status": "PASS"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+test_changed_raw_qualification_cannot_generate_report (tools.test_generate_build_report.BuildReportTests.test_changed_raw_qualification_cannot_generate_report) ... ok
+test_report_has_all_gates_tasks_and_real_paths (tools.test_generate_build_report.BuildReportTests.test_report_has_all_gates_tasks_and_real_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.018s
+
+OK
