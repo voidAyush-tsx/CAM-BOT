@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 
 import time
+from pathlib import Path
 
 import rclpy
+from ament_index_python.packages import get_package_share_directory
 from rclpy.node import Node
 from rclpy.action import ActionClient
 
 from control_msgs.action import FollowJointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
+from carrier_control.waypoints import UR5_JOINT_NAMES, load_waypoints
 
 
 class MachineShopJointCycle(Node):
@@ -20,14 +23,12 @@ class MachineShopJointCycle(Node):
         # UR5 JOINT ORDER
         # =====================================================
 
-        self.joint_names = [
-            'shoulder_pan_joint',
-            'shoulder_lift_joint',
-            'elbow_joint',
-            'wrist_1_joint',
-            'wrist_2_joint',
-            'wrist_3_joint'
-        ]
+        self.joint_names = list(UR5_JOINT_NAMES)
+
+        waypoint_file = (Path(get_package_share_directory('carrier_control')) /
+                         'config' / 'waypoints.yaml')
+        self.waypoints = load_waypoints(waypoint_file)
+        self.get_logger().info(f'Loaded taught waypoints from {waypoint_file}')
 
         # =====================================================
         # CONTROLLER ACTION
@@ -38,6 +39,8 @@ class MachineShopJointCycle(Node):
             FollowJointTrajectory,
             '/joint_trajectory_controller/follow_joint_trajectory'
         )
+
+        self.feedback_count = 0
 
         self.get_logger().info(
             'Waiting for joint trajectory controller...'
@@ -111,14 +114,23 @@ class MachineShopJointCycle(Node):
         # SEND
         # -----------------------------------------------------
 
+        feedback_before = self.feedback_count
         send_future = self.client.send_goal_async(
-            goal
+            goal,
+            feedback_callback=self._feedback
         )
 
         rclpy.spin_until_future_complete(
             self,
-            send_future
+            send_future,
+            timeout_sec=5.0
         )
+
+        if not send_future.done() or send_future.result() is None:
+            self.get_logger().error(
+                f'{name}: goal response timed out after 5.0 seconds.'
+            )
+            return False
 
         goal_handle = send_future.result()
 
@@ -144,8 +156,21 @@ class MachineShopJointCycle(Node):
 
         rclpy.spin_until_future_complete(
             self,
-            result_future
+            result_future,
+            timeout_sec=move_time + 5.0
         )
+
+        if not result_future.done() or result_future.result() is None:
+            self.get_logger().error(
+                f'{name}: controller result timed out; cancelling goal.'
+            )
+            cancel_future = goal_handle.cancel_goal_async()
+            rclpy.spin_until_future_complete(
+                self,
+                cancel_future,
+                timeout_sec=2.0
+            )
+            return False
 
         result = result_future.result().result
 
@@ -154,6 +179,12 @@ class MachineShopJointCycle(Node):
         # -----------------------------------------------------
 
         if result.error_code == 0:
+
+            if self.feedback_count <= feedback_before:
+                self.get_logger().error(
+                    f'{name}: success result had no actual-position feedback.'
+                )
+                return False
 
             self.get_logger().info(
                 f'{name}: motion completed successfully.'
@@ -167,6 +198,11 @@ class MachineShopJointCycle(Node):
         )
 
         return False
+
+    def _feedback(self, message):
+        """Count only feedback that includes all six actual joint positions."""
+        if len(message.feedback.actual.positions) == len(self.joint_names):
+            self.feedback_count += 1
 
     # =========================================================
     # HOLD
@@ -190,81 +226,14 @@ class MachineShopJointCycle(Node):
     # =========================================================
 
     def run_cycle(self):
-
-        # =====================================================
-        # HOME
-        # =====================================================
-
-        HOME = [
-             0.0,
-            -1.5707,
-             0.0,
-             0.0,
-             0.0,
-             0.0
-        ]
-
-        # =====================================================
-        # P1
-        # =====================================================
-
-        P1 = [
-             3.5930650931,
-            -2.2054793584,
-            -1.0675882483,
-             0.1313373823,
-             1.2420101306,
-            -4.7123874695
-        ]
-
-        # =====================================================
-        # P2
-        # =====================================================
-
-        P2 = [
-            -2.9731800422,
-            -1.0697884970,
-             0.4051854970,
-            -2.4787475769,
-            -1.7109676751,
-            -0.0003444654
-        ]
-
-        # =====================================================
-        # P3
-        # =====================================================
-
-        P3 = [
-            -0.4911844575,
-            -1.2432532203,
-             1.0138335850,
-            -2.9107543219,
-            -1.5139363170,
-            -0.0006938361
-        ]
-
-        # =====================================================
-        # P4
-        # =====================================================
-
-        P4 = [
-            -1.9124223037,
-            -1.1707189683,
-             1.5631410256,
-            -3.5347189241,
-            -1.7280385900,
-            -0.0015613844
-        ]
+        HOME = self.waypoints['home']
 
         # =====================================================
         # STATIONS
         # =====================================================
 
         stations = [
-            ('P1', P1),
-            ('P2', P2),
-            ('P3', P3),
-            ('P4', P4)
+            (name, self.waypoints[name]) for name in ('P1', 'P2', 'P3', 'P4')
         ]
 
         # =====================================================
@@ -280,7 +249,7 @@ class MachineShopJointCycle(Node):
 
         self.dwell(
             'HOME',
-            3.0
+            self.waypoints['dwell_time']
         )
 
         # =====================================================
@@ -311,7 +280,7 @@ class MachineShopJointCycle(Node):
 
             self.dwell(
                 name,
-                3.0
+                self.waypoints['dwell_time']
             )
 
             # -------------------------------------------------
@@ -336,7 +305,7 @@ class MachineShopJointCycle(Node):
 
             self.dwell(
                 'HOME',
-                3.0
+                self.waypoints['dwell_time']
             )
 
         # =====================================================

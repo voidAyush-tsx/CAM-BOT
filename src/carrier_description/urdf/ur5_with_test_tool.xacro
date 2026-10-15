@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://wiki.ros.org/xacro"
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
        name="ur5_with_test_tool">
 
   <!-- Import the Universal Robots description -->
@@ -27,9 +27,40 @@
     default="$(find ur_description)/config/$(arg ur_type)/visual_parameters.yaml"/>
 
   <xacro:arg name="tf_prefix" default=""/>
+  <xacro:arg name="include_workcell" default="true"/>
+
+  <!-- Standalone Xacro fallback values mirror machine_tending.json. Both ROS
+       launch entry points override them from the installed plan at runtime. -->
+  <xacro:arg name="station_s1_xyz" default="0.75 0.85 0"/>
+  <xacro:arg name="station_s1_rpy" default="0 0 0"/>
+  <xacro:arg name="station_s1_size" default="0.45 0.45 0.70"/>
+  <xacro:arg name="station_s2_xyz" default="0.15 1.05 0"/>
+  <xacro:arg name="station_s2_rpy" default="0 0 0"/>
+  <xacro:arg name="station_s2_size" default="0.45 0.45 0.70"/>
+  <xacro:arg name="station_s3_xyz" default="-0.65 0.75 0"/>
+  <xacro:arg name="station_s3_rpy" default="0 0 0"/>
+  <xacro:arg name="station_s3_size" default="0.75 0.70 1.20"/>
+  <xacro:arg name="station_s4_xyz" default="-0.75 -0.45 0"/>
+  <xacro:arg name="station_s4_rpy" default="0 0 0"/>
+  <xacro:arg name="station_s4_size" default="0.45 0.45 0.70"/>
+  <xacro:arg name="station_s5_xyz" default="0.35 -0.95 0"/>
+  <xacro:arg name="station_s5_rpy" default="0 0 0"/>
+  <xacro:arg name="station_s5_size" default="0.45 0.45 0.70"/>
 
   <!-- World -->
   <link name="world"/>
+
+  <!-- The Phase-4 viewer disables the later visual machine-tending cell. -->
+  <xacro:if value="$(arg include_workcell)">
+    <xacro:include
+      filename="$(find carrier_description)/urdf/machine_tending_cell.xacro"/>
+    <xacro:machine_tending_cell parent_link="world"
+      s1_xyz="$(arg station_s1_xyz)" s1_rpy="$(arg station_s1_rpy)" s1_size="$(arg station_s1_size)"
+      s2_xyz="$(arg station_s2_xyz)" s2_rpy="$(arg station_s2_rpy)" s2_size="$(arg station_s2_size)"
+      s3_xyz="$(arg station_s3_xyz)" s3_rpy="$(arg station_s3_rpy)" s3_size="$(arg station_s3_size)"
+      s4_xyz="$(arg station_s4_xyz)" s4_rpy="$(arg station_s4_rpy)" s4_size="$(arg station_s4_size)"
+      s5_xyz="$(arg station_s5_xyz)" s5_rpy="$(arg station_s5_rpy)" s5_size="$(arg station_s5_size)"/>
+  </xacro:if>
 
   <!-- UR5 -->
   <xacro:ur_robot
@@ -46,7 +77,7 @@
     safety_pos_margin="0.15"
     safety_k_position="20"
 
-    force_abs_paths="false">
+    >
 
     <origin
       xyz="0 0 0"

@@ -1,0 +1,10 @@
+test_broken_local_link (tools.test_check_ay13_docs.DocCheckTests.test_broken_local_link) ... ok
+test_missing_and_duplicate_ay_status (tools.test_check_ay13_docs.DocCheckTests.test_missing_and_duplicate_ay_status) ... ok
+test_phantom_launch_and_executable (tools.test_check_ay13_docs.DocCheckTests.test_phantom_launch_and_executable) ... ok
+test_source_inventory_detects_changed_bytes (tools.test_check_ay13_docs.DocCheckTests.test_source_inventory_detects_changed_bytes) ... ok
+test_valid_local_link (tools.test_check_ay13_docs.DocCheckTests.test_valid_local_link) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK

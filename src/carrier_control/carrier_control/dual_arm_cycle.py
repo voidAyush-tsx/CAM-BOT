@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Phase-4 synchronized placeholder bimanual motion cycle."""
-import time
 from typing import Dict, List, Tuple
 
 import rclpy
@@ -24,7 +23,7 @@ class DualArmCycle(Node):
         ("APPROACH", dict(ls=-0.45, le=0.0,  rs=0.45, re=0.0), 2.0),
         ("GRASP",    dict(ls=-0.45, le=-1.20, rs=0.45, re=1.20), 1.5),
         ("HOLD",     dict(ls=-0.45, le=-1.20, rs=0.45, re=1.20), 0.8),
-        ("TRANSPORT",dict(ls=-0.80, le=-1.20, rs=0.80, re=1.20), 2.0),
+        ("TRANSPORT", dict(ls=-0.80, le=-1.20, rs=0.80, re=1.20), 2.0),
         ("PLACE",    dict(ls=-1.00, le=-1.20, rs=1.00, re=1.20), 2.0),
         ("RELEASE",  dict(ls=-1.00, le=0.0,  rs=1.00, re=0.0), 1.2),
         ("HOME",     dict(ls=0.0,  le=0.0,  rs=0.0,  re=0.0), 2.0),

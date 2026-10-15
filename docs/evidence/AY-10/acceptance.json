@@ -1,0 +1,81 @@
+{
+  "AY-10": {
+    "actuation_verified": false,
+    "grasp_verified": false,
+    "qualification": "VISUAL_SIMULATION_PASS",
+    "trials": 5
+  },
+  "AY-11": "MEASURED_VISUAL_RUNTIME",
+  "AY-12": "GENERATED_FROM_RAW",
+  "all_actual_attempts": 6,
+  "all_capture_inventory": [
+    {
+      "actual_attempts": 1,
+      "capture": "ay10-visual-20261015-01",
+      "capture_disposition": "BLOCKED_RESET_READINESS",
+      "successful_attempts": 1
+    },
+    {
+      "actual_attempts": 0,
+      "capture": "ay10-visual-20261015-02",
+      "capture_disposition": "BLOCKED_PREFLIGHT_OCCUPIED_DOMAIN",
+      "successful_attempts": 0
+    },
+    {
+      "actual_attempts": 5,
+      "capture": "ay10-visual-20261015-03",
+      "capture_disposition": "QUALIFIED_VISUAL",
+      "successful_attempts": 5
+    }
+  ],
+  "all_failed_attempts": 0,
+  "end_to_end_verified": false,
+  "main_capture_events": 530,
+  "main_capture_metrics": [
+    {
+      "attempts": 5,
+      "carrier_repositions_accepted": 25,
+      "carrier_repositions_completed": 25,
+      "carrier_repositions_requested": 25,
+      "censored_durations": 0,
+      "failure_categories": {},
+      "missing_durations": 0,
+      "scenario": {
+        "enable_coordination": true,
+        "environment_sha256": "989a9a72c930f24dc2ab2c74fed6ce27f5233d100e98a94821f4e4693c9a1f53",
+        "experiment_id": "ay10-visual-fixed-v1",
+        "fault_injection_step": "",
+        "git_commit": "6e77292e4fceca0636a4cd86a037bf9e7d64f93a",
+        "mode": "visual_simulation",
+        "parameter_hash_sha256": "4a30a60ff007ec96a0be3d97aee8319e4bc8db24a8f4ffe1cd01c68968359076",
+        "source_tree_sha256": "fa421a5426f597b6dc65ec47781e4e8d6c7886796d30774998aa8f7f0933fe08",
+        "visual_time_scale": 1.0
+      },
+      "scenario_id": "e34fe0b52dc2",
+      "success_rate_pct": 100.0,
+      "successful_attempts": 5,
+      "successful_cycle_time": {
+        "max_s": 19.592351292,
+        "mean_s": 19.579116666,
+        "median_s": 19.585576358999997,
+        "min_s": 19.551515386000002,
+        "sample_stdev_s": 0.016634434137306406
+      }
+    }
+  ],
+  "raw_checksums_verified": true,
+  "runtime_verified": false,
+  "scenario_pooling": "none; preliminary capture retained separately",
+  "source_identity": "base commit plus recorded patch and full selected source snapshot; working tree was dirty",
+  "tests": {
+    "analysis": {
+      "log": "final_tests.log",
+      "passed": 14
+    },
+    "baseline": {
+      "log": "final_tests.log",
+      "passed": 48
+    }
+  },
+  "validated_at_utc": "2026-10-15T10:48:30.668080+00:00"
+}

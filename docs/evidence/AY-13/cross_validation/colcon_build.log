@@ -1,0 +1,9 @@
+[0.193s] ERROR:colcon:colcon build: Duplicate package names not supported:
+- carrier_control:
+  - experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control
+  - experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control
+  - src/carrier_control
+- carrier_description:
+  - experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description
+  - experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description
+  - src/carrier_description

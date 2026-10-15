@@ -1,0 +1,15 @@
+{
+  "provenance": "Synthetic arithmetic fixture only; never an AY-10 observation",
+  "trials": [
+    {"id": "fixture-success-10", "success": true, "duration_s": 10, "requested": 1, "completed": 1},
+    {"id": "fixture-success-14", "success": true, "duration_s": 14, "requested": 3, "completed": 3},
+    {"id": "fixture-failure-6", "success": false, "duration_s": 6, "requested": 2, "completed": 1}
+  ],
+  "expected": {
+    "attempts": 3, "successful_attempts": 2, "success_rate_pct": 66.66666666666667,
+    "mean_s": 12, "median_s": 12, "min_s": 10, "max_s": 14,
+    "sample_variance_s2": 8, "censored_durations": 1,
+    "requested": 6, "accepted": 6, "completed": 5,
+    "failure_categories": {"INJECTED_VISUAL_TEST_FAILURE": 1}
+  }
+}

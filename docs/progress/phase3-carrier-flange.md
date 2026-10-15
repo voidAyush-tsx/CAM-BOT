@@ -1,5 +1,11 @@
 # Phase 3 — Carrier Flange & Bimanual Placeholder
 
+> **Archival provenance note (2026-10-15):** The development-machine warning
+> below described the state when this report was written. Flange and dual-arm
+> Xacro plus launch source were later committed (see [AY-01 inventory](../evidence/AY-01/manifest.json)
+> and [current status](../STATUS.md)). Preserve the original wording as a
+> historical snapshot, not today's repository state.
+
 **Status:** 🔧 In progress
 **Goal:** define a clean, parameterized mechanical and TF interface between the
 UR5 wrist and a future bimanual module — without designing the bimanual module.

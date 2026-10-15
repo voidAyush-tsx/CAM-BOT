@@ -1,0 +1,25 @@
+AY-04 offline verification — STATIC VALID only
+Host: CachyOS/Arch; ROS_DISTRO unset; xacro, check_urdf, ros2 unavailable.
+
+Command:
+  PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_workcell_contract.py src/carrier_control/test/test_workflow.py src/carrier_control/test/test_launch_preflight.py src/carrier_control/test/test_package_integration.py src/carrier_control/test/test_action_safety.py src/carrier_control/test/test_metrics.py src/carrier_description/test/test_cell_model.py src/carrier_description/test/test_launch_contract.py -v
+Actual result: 27/27 passed, including positive five-station/target/transform,
+config-change and Xacro-argument tests, plus negative missing, duplicate,
+nonfinite, wrong-target, missing-Xacro and unvalidated-controller cases.
+
+Command:
+  python3 -m unittest src/carrier_description/test/test_phase4_contract.py -v
+Actual result: 6/6 passed; tool0 and Phase-4 source contract preserved.
+
+Commands:
+  python3 -m py_compile src/carrier_control/carrier_control/workcell_model.py src/carrier_control/carrier_control/workflow.py src/carrier_control/carrier_control/machine_tending_coordinator.py src/carrier_description/launch/dual_arm_demo.launch.py src/carrier_description/launch/machine_tending_controller.launch.py
+  bash -n tools/capture_ay04_humble.sh
+  python3 -m json.tool src/carrier_control/config/machine_tending.json >/dev/null
+  git diff --check
+Actual result: all exited 0.
+
+Command:
+  bash tools/capture_ay04_humble.sh
+Actual result: exit 2, "ROS_DISTRO must be humble; observed unset".
+No configured Xacro expansion, check_urdf, TF, RViz, or workpiece topic was
+observed. The Humble capture script is prepared but has not run there.

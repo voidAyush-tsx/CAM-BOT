@@ -1,0 +1,37 @@
+{
+  "inventory_at_start": {
+    "git_head": "032de05",
+    "git_status_short": "",
+    "ros_distro": "unset",
+    "ros_tools": {"ros2": false, "xacro": false, "colcon": false},
+    "packages": ["src/carrier_control", "src/carrier_description"],
+    "relevant_package_dependencies": [
+      "rclpy", "std_msgs", "std_srvs", "sensor_msgs", "control_msgs",
+      "trajectory_msgs", "tf2_ros"
+    ],
+    "existing_logger": "src/carrier_control/carrier_control/metrics.py",
+    "existing_output": "CSV final row only after trial",
+    "existing_schema": "experiments/machine_tending/schema/trial.schema.json v1.0",
+    "missing": [
+      "experiment/config/source identity",
+      "JSONL events",
+      "crash/interruption marker",
+      "duplicate-final guard",
+      "explicit steady-clock semantics"
+    ],
+    "available_tests": [
+      "src/carrier_control/test/test_metrics.py",
+      "src/carrier_control/test/test_machine_tending_fsm.py",
+      "src/carrier_control/test/test_coordination.py"
+    ],
+    "ay09_coverage_before_edit": {
+      "csv_summary": "partial",
+      "jsonl_events": "absent",
+      "failure_final_row": "partial",
+      "interruption_record": "absent",
+      "runtime_sample": "blocked_without_humble"
+    },
+    "archival_mass_sensitivity_modified": false
+  },
+  "proof_limit": "Source inventory; ROS runtime unavailable."
+}

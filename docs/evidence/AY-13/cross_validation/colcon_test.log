@@ -1,0 +1,83 @@
+Starting >>> carrier_control
+--- stderr: carrier_control
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+Finished <<< carrier_control [1.02s]	[ with test failures ]
+Starting >>> carrier_description
+Finished <<< carrier_description [0.56s]	[ with test failures ]
+--- stderr: carrier_description
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+
+Summary: 2 packages finished [1.75s]
+  2 packages had stderr output: carrier_control carrier_description
+  2 packages had test failures: carrier_control carrier_description
+build/carrier_control/pytest.xml: 43 tests, 0 errors, 2 failures, 1 skipped
+- carrier_control.test.test_flake8 test_flake8
+  <<< failure message
+    AssertionError: Found 34 code style errors / warnings:
+      ./setup.py:12:1: E305 expected 2 blank lines after class or function definition, found 1
+      ./carrier_control/machine_shop_trajectory.py:297:5: W191 indentation contains tabs
+      ./carrier_control/machine_shop_trajectory.py:297:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/machine_shop_trajectory.py:298:5: W191 indentation contains tabs
+      ./carrier_control/machine_shop_trajectory.py:298:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/machine_shop_trajectory.py:299:5: W191 indentation contains tabs
+      ./carrier_control/machine_shop_trajectory.py:299:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/machine_shop_trajectory.py:300:5: W191 indentation contains tabs
+      ./carrier_control/machine_shop_trajectory.py:300:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/machine_shop_trajectory.py:301:5: W191 indentation contains tabs
+      ./carrier_control/machine_shop_trajectory.py:301:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/machine_shop_trajectory.py:302:1: W191 indentation contains tabs
+      ./carrier_control/machine_shop_trajectory.py:302:1: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/machine_shop_trajectory.py:324:17: F541 f-string is missing placeholders
+      ./carrier_control/machine_shop_trajectory.py:428:1: E305 expected 2 blank lines after class or function definition, found 1
+      ./carrier_control/machine_tending_coordinator.py:49:1: E302 expected 2 blank lines, found 1
+      ./carrier_control/machine_shop_joint_cycle.py:28:100: E501 line too long (106 > 99 characters)
+      ./carrier_control/plot_machine_shop_path.py:306:11: F541 f-string is missing placeholders
+      ./carrier_control/plot_machine_shop_path.py:343:5: W191 indentation contains tabs
+      ./carrier_control/plot_machine_shop_path.py:343:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/plot_machine_shop_path.py:344:1: W191 indentation contains tabs
+      ./carrier_control/plot_machine_shop_path.py:344:1: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/plot_machine_shop_path.py:344:1: W293 blank line contains whitespace
+      ./carrier_control/plot_machine_shop_path.py:345:5: W191 indentation contains tabs
+      ./carrier_control/plot_machine_shop_path.py:345:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/plot_machine_shop_path.py:347:5: W191 indentation contains tabs
+      ./carrier_control/plot_machine_shop_path.py:347:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/plot_machine_shop_path.py:349:5: W191 indentation contains tabs
+      ./carrier_control/plot_machine_shop_path.py:349:5: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/plot_machine_shop_path.py:350:9: W191 indentation contains tabs
+      ./carrier_control/plot_machine_shop_path.py:350:9: E101 indentation contains mixed spaces and tabs
+      ./carrier_control/plot_machine_shop_path.py:350:10: E117 over-indented
+      ./carrier_control/dual_arm_cycle.py:3:1: F401 'time' imported but unused
+      ./carrier_control/dual_arm_cycle.py:27:21: E231 missing whitespace after ','
+    assert 1 == 0
+  >>>
+- carrier_control.test.test_pep257 test_pep257
+  <<< failure message
+    AssertionError: Found code style errors / warnings
+    assert 1 == 0
+  >>>
+build/carrier_description/pytest.xml: 16 tests, 0 errors, 2 failures, 1 skipped
+- carrier_description.test.test_flake8 test_flake8
+  <<< failure message
+    AssertionError: Found 1 code style errors / warnings:
+      ./setup.py:11:1: E305 expected 2 blank lines after class or function definition, found 1
+    assert 1 == 0
+  >>>
+- carrier_description.test.test_pep257 test_pep257
+  <<< failure message
+    AssertionError: Found code style errors / warnings
+    assert 1 == 0
+  >>>
+
+Summary: 59 tests, 0 errors, 4 failures, 2 skipped

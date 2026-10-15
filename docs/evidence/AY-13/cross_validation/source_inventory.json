@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-15T11:24:58.171757+00:00",
+  "scope": "all tracked files under src; installed/runtime claims are separate",
+  "files": [
+    {
+      "path": "src/carrier_control/LICENSE",
+      "kind": "package_asset",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/__init__.py",
+      "kind": "python_source_or_test",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/coordination_policy.py",
+      "kind": "python_source_or_test",
+      "sha256": "24018bc1de323894c956cb2c25a6e340f8f78a0660041d16030d47348ff36c40",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "kind": "python_source_or_test",
+      "sha256": "4a7c2a335a7ded6a201f8813d436626d79ddfc9a1432c1e3edfc0a3a9f834a24",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/launch_preflight.py",
+      "kind": "python_source_or_test",
+      "sha256": "f704b6a494e5b54405b374e77fed78628bd66eb71dd8c48b567607c6326462cc",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "kind": "python_source_or_test",
+      "sha256": "1cb2600a357199f6946253bfbc065a0f01671e650775a8022b10d94a6856c003",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_shop_trajectory.py",
+      "kind": "python_source_or_test",
+      "sha256": "3003338f7b7e944def61075d9a49671212d0bbaea5e5d227d53e37904d909e88",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "kind": "python_source_or_test",
+      "sha256": "6097b279f38ab6821de7ead521e9ad3abda6d363a40b3ab8cf84bf01383a05b0",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "kind": "python_source_or_test",
+      "sha256": "602c658bbc92dd0200e58a9350479eacd0fa3bcc95160b3ab76e87c11d60bcdf",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/metrics.py",
+      "kind": "python_source_or_test",
+      "sha256": "8d1861a3abdea20974b08d1b176ad50957c2efb55aa460fab5376c9c226479f9",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/plot_machine_shop_path.py",
+      "kind": "python_source_or_test",
+      "sha256": "f1c19d57a7213fb83f2d9e86907c2800b7403ff8b52174710e36dd2db4ea3e31",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/reachability.py",
+      "kind": "python_source_or_test",
+      "sha256": "205ed65e13eb48f87e923ef1be0c5b97ee4b72e58c32281bab91c3e0274d31a6",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/waypoints.py",
+      "kind": "python_source_or_test",
+      "sha256": "90df4e4b4588f327f6655143234291ee53ceb987b8da7016ad9de9fb6442943d",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/workcell_model.py",
+      "kind": "python_source_or_test",
+      "sha256": "cd3df56c683c837f0eed2847dd125b10ec63cc2d63e3a0c92826ee616f928809",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/workflow.py",
+      "kind": "python_source_or_test",
+      "sha256": "cc1402f920e824d1e5632f4f135c795ecc1840be54965c9989094343117257c8",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/config/machine_tending.json",
+      "kind": "runtime_config_or_visualization",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/config/waypoints.yaml",
+      "kind": "runtime_config_or_visualization",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/package.xml",
+      "kind": "ros_package_manifest",
+      "sha256": "4e630a53d59946ee85592b55f55a97d2094d4e26c97c2ad0a339cbfdf6d53d5f",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/resource/carrier_control",
+      "kind": "package_asset",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/setup.cfg",
+      "kind": "package_asset",
+      "sha256": "0029bef66bb3b848393b3d0ce728e2b1f7b95c61d033fc5d6917c691e72a1d35",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/setup.py",
+      "kind": "python_source_or_test",
+      "sha256": "81d3aa2bd8cb80a6d3d752f85970853d3c837675d88df8758b17f23369b61880",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_action_safety.py",
+      "kind": "python_source_or_test",
+      "sha256": "4458ded22938ff1dcb6100ba78a090a9ddd0cea02c9f9ad60eaa8c7f3e0f928f",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_coordination.py",
+      "kind": "python_source_or_test",
+      "sha256": "234a020761debec8834dc3920b19dd56129d6c3e8d5570803b9a44dfcfc9d485",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_copyright.py",
+      "kind": "python_source_or_test",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_flake8.py",
+      "kind": "python_source_or_test",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_launch_preflight.py",
+      "kind": "python_source_or_test",
+      "sha256": "37a8822c66425cdbca0a8614e15280b64fd7519bc091ca8fab0fc00aee79065a",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_machine_tending_fsm.py",
+      "kind": "python_source_or_test",
+      "sha256": "f8699dd0327d3c8a84b47806406fe035e82c60966741f990a45a74a43b4355d7",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_metrics.py",
+      "kind": "python_source_or_test",
+      "sha256": "ecd9a14b26ba1d8c1b13ee900f2a054ef285f8dc1defcd01aae661fffefd59bf",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_package_integration.py",
+      "kind": "python_source_or_test",
+      "sha256": "ab9fe3715fec02d6fd23202192a37918b87d5ec07d1ca89296f05e40d4c94462",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_pep257.py",
+      "kind": "python_source_or_test",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_reachability.py",
+      "kind": "python_source_or_test",
+      "sha256": "a65cabeef7e3f8c2d119ff0f32019d4b1ba3ea1dc926515c7cb7db123f0bcf3a",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_workcell_contract.py",
+      "kind": "python_source_or_test",
+      "sha256": "27513f5628c0304381871b348e10cb3e217dd93b28b465fbc8f1268ee3ed72e2",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_control/test/test_workflow.py",
+      "kind": "python_source_or_test",
+      "sha256": "d618ee79daf45225a62cfb91873d80acfd140bb6ff0d72fe7fac19aa4cbb1f78",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/LICENSE",
+      "kind": "package_asset",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/carrier_description/__init__.py",
+      "kind": "python_source_or_test",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/launch/dual_arm_demo.launch.py",
+      "kind": "python_source_or_test",
+      "sha256": "0ba531adbd4cb5c1d10756f438f0ba3945139d0e8d34c938e518aee5ecf46861",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/launch/machine_tending_controller.launch.py",
+      "kind": "python_source_or_test",
+      "sha256": "31446f8380e95cc56fdb56e7ea502c6d18de4eeac380f50e218e32a2cdb71c65",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/launch/view_carrier.launch.py",
+      "kind": "python_source_or_test",
+      "sha256": "ddd40d2594c4671963a0215c4bee927e66e0806092df2eb7fb45272230457b70",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/launch/view_dual_arm.launch.py",
+      "kind": "python_source_or_test",
+      "sha256": "6fb9ccd4eec5896dda0066e6491a2bdb54a355317fbb43f3ec9f41d57c87bea3",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/package.xml",
+      "kind": "ros_package_manifest",
+      "sha256": "dcf9ee4944d3c5f81751f7826e57fb1583809a858c14791e8846ba7be81b35ec",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/resource/carrier_description",
+      "kind": "package_asset",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/rviz/dual_arm.rviz",
+      "kind": "runtime_config_or_visualization",
+      "sha256": "899302e6d68696323a5e989c0426b77bd2f147b81451f0de6eff2c843676007b",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/rviz/dual_arm.rviz.backup",
+      "kind": "package_asset",
+      "sha256": "8830d59b52c89b875b890c2c8082e7eeb7078535107ff27dfd6433ec4b211370",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/setup.cfg",
+      "kind": "package_asset",
+      "sha256": "90fe9f0e0c3fa43dffe9d2f4f7d3929f19328bf0cef0c0676b177f7fe350c2b9",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/setup.py",
+      "kind": "python_source_or_test",
+      "sha256": "710097f1fb7aa1f8d879f21e36a74177850da3e6075b18b09e1877b93c62c2e5",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/test/test_cell_model.py",
+      "kind": "python_source_or_test",
+      "sha256": "d24fbebc47eeb2862498b04ef17d9dc652bcd5790d67764e37beaf9d4a7dcee0",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/test/test_copyright.py",
+      "kind": "python_source_or_test",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/test/test_flake8.py",
+      "kind": "python_source_or_test",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/test/test_launch_contract.py",
+      "kind": "python_source_or_test",
+      "sha256": "fade78188dfad0e62565f0a463f24635b08c7429a8e1cace5497b6d2ac865ebc",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/test/test_pep257.py",
+      "kind": "python_source_or_test",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/test/test_phase4_contract.py",
+      "kind": "python_source_or_test",
+      "sha256": "d87e2bf0020de445312ab4eaac6ede733ec9868399affafa50c5c59f8af6f01a",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/urdf/carrier_flange.xacro",
+      "kind": "robot_model",
+      "sha256": "395c404cb87eb73fb87c9838dfb2a705b2823056d612451f9f549b9a97e0b3f9",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/urdf/dual_arm.xacro",
+      "kind": "robot_model",
+      "sha256": "2a7b37c06bc216cd099d082a93c37a1392c6f152105dacd64d9f373655de9c20",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/urdf/machine_tending_cell.xacro",
+      "kind": "robot_model",
+      "sha256": "4a70b4afbfb535e09c5f8b0c8163b22351f4ed55fcd06411ae23ff21ab085f2a",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/urdf/test_tool.xacro",
+      "kind": "robot_model",
+      "sha256": "81aa4e175b7a32706d520119afe3756c5609e44436c287261818c41c96261a56",
+      "evidence_level": "available_code"
+    },
+    {
+      "path": "src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "kind": "robot_model",
+      "sha256": "995d77b46c632b6d0b729651885bf248d3daba20bf816226489ca15eb8b0e8bd",
+      "evidence_level": "available_code"
+    }
+  ],
+  "count": 56
+}

@@ -1,5 +1,14 @@
 # CAM-BOT --- Carrier-Assisted Bimanual Manipulation for Machine Tending
 
+> **Archival provenance note (2026-10-15):** The text below is preserved as a
+> historical progress narrative. Its Gazebo Classic world, bimanual controller
+> and complete actuated execution claims have no matching world/controller
+> source or retained runtime evidence in this checkout, so they are **unverified
+> here**. Current supported acceptance is the ROS 2 Humble *visual* workcell,
+> coordinator and five measured visual trials. See [status](../STATUS.md),
+> [architecture](../ARCHITECTURE.md) and [raw capture](../../experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json).
+> This note does not erase or adjudicate the historical author's observations.
+
 > **Project:** Carrier-assisted Adaptive Manipulation with Bimanual
 > Operational Technology (CAM-BOT)\
 > **Current milestone:** Phase 4 --- Integrated visual simulation

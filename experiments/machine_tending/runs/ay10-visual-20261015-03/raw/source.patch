@@ -1,0 +1,92 @@
+diff --git a/src/carrier_control/carrier_control/machine_tending_coordinator.py b/src/carrier_control/carrier_control/machine_tending_coordinator.py
+index d59267b..318bba1 100644
+--- a/src/carrier_control/carrier_control/machine_tending_coordinator.py
++++ b/src/carrier_control/carrier_control/machine_tending_coordinator.py
+@@ -223,6 +223,7 @@ class MachineTendingCoordinator(Node):
+                 state=event.get("state") or "FSM",
+                 target=payload.get("target"), action=event.get("step") or "FSM",
+                 result=event["event"], details={
++                    "ros_time_ns": self.get_clock().now().nanoseconds,
+                     "workpiece_state": event["workpiece_state"],
+                     "failure_step": event.get("failure_step"),
+                     "cause": event.get("cause"),
+@@ -608,6 +609,38 @@ class MachineTendingCoordinator(Node):
+         return latest
+ 
+     def _animate_carrier_visual(self, station, duration_s, deadline, cancelled):
++        """Record visual requests and completed publications, never actuator results."""
++        if self.mode != "visual_simulation":
++            return True
++        start = list(self.visual_carrier_positions)
++        goal = list(self.plan["stations"][station]["visual_carrier_joints"])
++        motion_id = f"{self.fsm.trial_id}:{self.experiment_logger.active['sequence']}"
++        details = {
++            "motion_id": motion_id, "station": station,
++            "start_joints_rad": start, "goal_joints_rad": goal,
++            "nontrivial": max(abs(a - b) for a, b in zip(start, goal)) > 1e-6,
++            "is_reposition": station != "HOME",
++            "evidence_kind": "visual_joint_publication",
++        }
++
++        def emit(result):
++            self.experiment_logger.log_event(
++                state=self.fsm.current_state or "HOME", action="CARRIER_MOTION",
++                result=result, details={
++                    **details, "ros_time_ns": self.get_clock().now().nanoseconds,
++                    "final_joints_rad": list(self.visual_carrier_positions),
++                },
++            )
++
++        emit("REQUESTED")
++        emit("ACCEPTED")  # Accepted by the visual adapter, not a ROS action server.
++        completed = self._animate_carrier_visual_impl(
++            station, duration_s, deadline, cancelled
++        )
++        emit("COMPLETED" if completed else "FAILED")
++        return completed
++
++    def _animate_carrier_visual_impl(self, station, duration_s, deadline, cancelled):
+         if self.mode != "visual_simulation":
+             return True
+         start = list(self.visual_carrier_positions)
+@@ -751,6 +784,26 @@ class MachineTendingCoordinator(Node):
+         return StepOutcome(True)
+ 
+     def _execute_fsm_step(self, step, deadline, cancelled) -> StepOutcome:
++        try:
++            outcome = self._execute_fsm_step_impl(step, deadline, cancelled)
++        except Exception as exc:
++            self.experiment_logger.log_event(
++                state=self.fsm.current_state, action="ADAPTER_RESULT", result="FAILED",
++                details={"step": step["name"], "cause": f"{type(exc).__name__}:{exc}",
++                         "ros_time_ns": self.get_clock().now().nanoseconds,
++                         "mode": self.mode},
++            )
++            raise
++        self.experiment_logger.log_event(
++            state=self.fsm.current_state, action="ADAPTER_RESULT",
++            result="COMPLETED" if outcome.success else "FAILED",
++            details={"step": step["name"], "cause": outcome.cause,
++                     "ros_time_ns": self.get_clock().now().nanoseconds,
++                     "mode": self.mode},
++        )
++        return outcome
++
++    def _execute_fsm_step_impl(self, step, deadline, cancelled) -> StepOutcome:
+         self.last_local_decision = None
+         if step["name"] == self.fault_injection_step:
+             return StepOutcome(False, "INJECTED_VISUAL_TEST_FAILURE")
+@@ -784,6 +837,13 @@ class MachineTendingCoordinator(Node):
+ 
+     def run_trial(self, trial_number: int) -> Dict[str, Any]:
+         trial_id = self.experiment_logger.begin_trial(self.mode)
++        self.experiment_logger.log_event(
++            state="TRIAL", action="CONTEXT", result="RECORDED",
++            details={"visual_time_scale": self.visual_time_scale,
++                     "enable_coordination": self.enable_coordination,
++                     "fault_injection_step": self.fault_injection_step,
++                     "ros_time_ns": self.get_clock().now().nanoseconds},
++        )
+         self.carrier_motion_count = 0
+         self.carrier_reposition_count = 0
+         self.policy.reset()

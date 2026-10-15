@@ -11,3 +11,4 @@
 *.md    text eol=lf
 *.yaml  text eol=lf
 *.xacro text eol=lf
+*.db3 filter=lfs diff=lfs merge=lfs -text

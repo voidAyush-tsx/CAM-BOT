@@ -1,0 +1,7 @@
+AY-03 launch process evidence — NOT RUN in ROS
+Host: CachyOS Linux, ROS_DISTRO unset, ros2/colcon unavailable.
+Command: bash tools/capture_ay03_humble.sh
+Actual result: exit 2, "ROS_DISTRO must be humble; observed unset".
+No RViz process, ROS action server, controller, or TF stream was observed.
+Humble execution will write three visual launch logs and one default-controller
+rejection log under docs/evidence/AY-03/runtime/.

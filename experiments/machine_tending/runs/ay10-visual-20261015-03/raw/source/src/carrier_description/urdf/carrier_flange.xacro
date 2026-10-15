@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="carrier_flange">
+
+  <!--
+    CAM-BOT Phase 4A carrier-flange reconstruction.
+
+    DOCUMENTED CONTRACT:
+      tool0 -> carrier_flange -> carrier_flange_interface
+
+    The project documentation specifies these parameter names, but the original
+    final numerical flange dimensions were not recoverable from the repository.
+    Therefore the defaults below are EXPLICIT RECONSTRUCTION VALUES, not claims
+    about the historical mechanical design.
+
+    Units:
+      length/width/thickness/spacing/height = metres
+      tilt_angle = radians
+  -->
+  <xacro:macro name="carrier_flange"
+               params="parent_link:=tool0
+                       flange_length:=0.60
+                       flange_width:=0.40
+                       flange_thickness:=0.05
+                       mount_spacing:=0.25
+                       mount_height:=0.06
+                       tilt_angle:=0.0">
+
+    <link name="carrier_flange">
+      <visual>
+        <origin xyz="0 0 ${flange_thickness / 2.0}" rpy="0 0 0"/>
+        <geometry>
+          <box size="${flange_length} ${flange_width} ${flange_thickness}"/>
+        </geometry>
+        <material name="carrier_flange_material">
+          <color rgba="0.22 0.24 0.28 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${flange_thickness / 2.0}" rpy="0 0 0"/>
+        <geometry>
+          <box size="${flange_length} ${flange_width} ${flange_thickness}"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="tool0_to_carrier_flange" type="fixed">
+      <parent link="${parent_link}"/>
+      <child link="carrier_flange"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <!--
+      Two simple visual mounting posts make mount_spacing/mount_height useful
+      without pretending that undocumented hole locations are known.
+    -->
+    <link name="carrier_flange_mount_left">
+      <visual>
+        <origin xyz="0 0 ${mount_height / 2.0}" rpy="0 0 0"/>
+        <geometry><cylinder radius="0.018" length="${mount_height}"/></geometry>
+        <material name="mount_material_left"><color rgba="0.35 0.37 0.42 1"/></material>
+      </visual>
+    </link>
+    <joint name="carrier_flange_mount_left_joint" type="fixed">
+      <parent link="carrier_flange"/>
+      <child link="carrier_flange_mount_left"/>
+      <origin xyz="${-mount_spacing / 2.0} 0 ${flange_thickness}" rpy="0 0 0"/>
+    </joint>
+
+    <link name="carrier_flange_mount_right">
+      <visual>
+        <origin xyz="0 0 ${mount_height / 2.0}" rpy="0 0 0"/>
+        <geometry><cylinder radius="0.018" length="${mount_height}"/></geometry>
+        <material name="mount_material_right"><color rgba="0.35 0.37 0.42 1"/></material>
+      </visual>
+    </link>
+    <joint name="carrier_flange_mount_right_joint" type="fixed">
+      <parent link="carrier_flange"/>
+      <child link="carrier_flange_mount_right"/>
+      <origin xyz="${mount_spacing / 2.0} 0 ${flange_thickness}" rpy="0 0 0"/>
+    </joint>
+
+    <link name="carrier_flange_interface"/>
+    <joint name="carrier_flange_to_interface" type="fixed">
+      <parent link="carrier_flange"/>
+      <child link="carrier_flange_interface"/>
+      <origin xyz="0 0 ${flange_thickness + mount_height}" rpy="0 ${tilt_angle} 0"/>
+    </joint>
+
+  </xacro:macro>
+</robot>

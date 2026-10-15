@@ -82,7 +82,10 @@ presented as artifacts unless independently corroborated.
 
 ## D-06 — `waypoints.yaml` becomes the single waypoint source
 
-**Date:** Phase 4 · **Status:** ⚠️ Agreed, not implemented
+**Date:** Phase 4 · **Historical status:** ⚠️ Agreed, not implemented
+· **Current status:** Implemented in `carrier_control` as audited below
+
+The following rationale and action describe the state at the time:
 
 Waypoints currently exist twice: in `config/waypoints.yaml` (which no node
 reads) and hardcoded inside `machine_shop_joint_cycle.py`. Two sources will
@@ -90,3 +93,66 @@ drift.
 
 **Action:** move `waypoints.yaml` inside `carrier_description`, install it via
 `setup.py` `data_files`, and load it at node startup.
+
+**2026-10-15 source audit:** The historical status/action above is superseded
+in implementation by `src/carrier_control/config/waypoints.yaml`, installed
+by `carrier_control/setup.py` and loaded by `machine_shop_joint_cycle.py`.
+The root `config/waypoints.yaml` is a source mirror. No claim is made that the
+historical plan's exact destination (`carrier_description`) was followed.
+
+---
+
+## D-07 — Separate visual assumptions from controller-validated targets
+
+**Date:** 2026-10-15 · **Status:** Adopted
+
+The five station poses are configurable visual assumptions. Legacy P1–P4 joint
+values are retained as provenance but are not declared valid for the newly named
+stations; S5 has no taught target. Controller mode therefore fails closed until
+all targets are explicitly validated.
+
+Visual mode may animate assumed carrier joints and workpiece joints, but its
+records always set `runtime_verified=false` and `end_to_end_verified=false`.
+This prevents an RViz sequence from being reported as Gazebo actuation or
+verified grasping. AY-10/11 later measured **visual** FSM timing from live ROS
+events; those records are measurements of the visual workflow only.
+
+---
+
+## D-08 — Preserve historical reports and classify current evidence
+
+**Date:** 2026-10-15 · **Status:** Adopted
+
+Keep the Phase 1, flange and Phase 4 progress documents as historical reports.
+Add provenance notes where present repository evidence differs. The current
+[status matrix](STATUS.md) distinguishes available source, live visual ROS,
+actuated simulation, and measured complete visual cycles. A written historical
+claim alone cannot promote current controller verification.
+
+---
+
+## D-09 — Scope five trials to one fixed visual scenario
+
+**Date:** 2026-10-15 · **Status:** Adopted
+
+The user qualified visual ROS trials. AY-10 capture 03 contains five actual
+attempts under one configuration and a sealed raw manifest; preliminary
+captures 01 and 02 remain separate. AY-11/12 derive descriptive metrics and
+plots from that raw set. A visual carrier move counts as completed only when
+its exact goal publication is observed; it is not a controller action result.
+No optimization, grasp or physical-CNC claim follows from this dataset.
+
+---
+
+## D-10 — Scope Colcon discovery and own capture process groups
+
+**Date:** 2026-10-15 · **Status:** Adopted
+
+The immutable AY-10 evidence contains nested snapshots of both ROS packages.
+Colcon's repository-wide package discovery therefore reports duplicate
+package names. Build and test with `--base-paths src` so the tracked source
+packages are the only candidates. The first AY-06–08 probe also left child
+nodes after the launch parent stopped. The capture script now starts launch
+and rosbag in process groups, signals the groups, and checks the ROS domain
+for residual nodes before declaring a clean shutdown. These repairs do not
+change the controller or visual reachability logic.

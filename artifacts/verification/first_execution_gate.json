@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "captured_on": "2026-10-15",
+  "requested_environment": {
+    "os": "Ubuntu 22.04",
+    "ros_distro": "humble"
+  },
+  "observed_environment": {
+    "working_directory": "/home/ayush/TOPS/CAM-BOT",
+    "branch": "feat/ay01-ay13-implementation",
+    "head_before_evidence_commit": "9fec5e9",
+    "git_status": "clean",
+    "os": "CachyOS Linux",
+    "os_family": "Arch Linux",
+    "shell": "/bin/fish",
+    "ros_distro": null,
+    "ros_version": null
+  },
+  "tooling": {
+    "ros2": "MISSING",
+    "rosdep": "MISSING",
+    "colcon": "MISSING",
+    "xacro": "MISSING",
+    "check_urdf": "MISSING"
+  },
+  "gate_commands": [
+    {
+      "command": "pwd; git status --short; git rev-parse --short HEAD",
+      "status": "PASS",
+      "result": "/home/ayush/TOPS/CAM-BOT; clean feature branch; 9fec5e9"
+    },
+    {
+      "command": "find src/carrier_description src/carrier_control -type f | sort",
+      "status": "PASS",
+      "result": "source inventory captured in gate output"
+    },
+    {
+      "command": "ros2 pkg list",
+      "status": "NOT_RUN_PREREQUISITE",
+      "result": "ros2 executable missing"
+    },
+    {
+      "command": "rosdep install --from-paths src --ignore-src -r -y",
+      "status": "NOT_RUN_SAFETY_STOP",
+      "result": "host is not Ubuntu 22.04/Humble and rosdep is missing"
+    },
+    {
+      "command": "colcon build --symlink-install --packages-select carrier_description carrier_control",
+      "status": "NOT_RUN_PREREQUISITE",
+      "result": "colcon and sourced Humble environment missing"
+    },
+    {
+      "command": "source install/setup.bash; ros2 pkg prefix carrier_description; ros2 pkg prefix carrier_control",
+      "status": "NOT_RUN_PREREQUISITE",
+      "result": "no build/install tree produced"
+    },
+    {
+      "command": "xacro src/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot_generated.urdf",
+      "status": "NOT_RUN_PREREQUISITE",
+      "result": "xacro executable missing"
+    },
+    {
+      "command": "check_urdf /tmp/cambot_generated.urdf",
+      "status": "NOT_RUN_PREREQUISITE",
+      "result": "check_urdf missing and no generated URDF exists"
+    }
+  ],
+  "disposition": "BLOCKED: runtime verification",
+  "safety_action": "No ROS packages were installed on the mismatched CachyOS host.",
+  "pdf_source": "/home/ayush/TOPS/CAM-BOT_Ayush_Individual_Task_Document.pdf",
+  "mapping_correction": "The earlier inferred AY-01..AY-13 mapping is superseded by the PDF task definitions. Its 26/26 result is offline component evidence only, not AY acceptance evidence."
+}

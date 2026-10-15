@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cambot.local/schema/machine-tending-trial-2.0.json",
+  "title": "CAM-BOT machine-tending trial summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "experiment_id", "trial_id", "git_commit",
+    "parameter_config", "parameter_hash_sha256", "start_timestamp_utc",
+    "end_timestamp_utc", "time_source", "cycle_time_s", "status",
+    "success", "failure_state", "failure_reason", "carrier_repositions",
+    "mode", "workpiece_final_state", "runtime_verified",
+    "end_to_end_verified", "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "trial_id": {"type": "string", "minLength": 1},
+    "git_commit": {"type": "string", "minLength": 1},
+    "parameter_config": {"type": "string", "minLength": 1},
+    "parameter_hash_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "start_timestamp_utc": {"type": "string", "format": "date-time"},
+    "end_timestamp_utc": {"type": "string", "format": "date-time"},
+    "time_source": {"const": "monotonic_duration+utc_wall_timestamps"},
+    "cycle_time_s": {"type": "number", "minimum": 0},
+    "status": {"enum": ["COMPLETE", "FAILED", "INCOMPLETE"]},
+    "success": {"type": "boolean"},
+    "failure_state": {"type": ["string", "null"]},
+    "failure_reason": {"type": ["string", "null"]},
+    "carrier_repositions": {"type": "integer", "minimum": 0},
+    "mode": {"enum": ["controller", "visual_simulation"]},
+    "workpiece_final_state": {"type": "string", "minLength": 1},
+    "runtime_verified": {"type": "boolean"},
+    "end_to_end_verified": {"type": "boolean"},
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "COMPLETE"}}},
+      "then": {"properties": {"success": {"const": true}}},
+      "else": {
+        "properties": {
+          "success": {"const": false},
+          "failure_state": {"type": "string", "minLength": 1},
+          "failure_reason": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"mode": {"const": "visual_simulation"}}},
+      "then": {
+        "properties": {
+          "runtime_verified": {"const": false},
+          "end_to_end_verified": {"const": false}
+        }
+      }
+    }
+  ]
+}

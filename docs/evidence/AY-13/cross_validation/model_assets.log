@@ -1,0 +1,42 @@
+robot name is: ur5_with_test_tool
+---------- Successfully Parsed XML ---------------
+root Link: world has 8 child(ren)
+    child(1):  base_link
+        child(1):  base
+        child(2):  base_link_inertia
+            child(1):  shoulder_link
+                child(1):  upper_arm_link
+                    child(1):  forearm_link
+                        child(1):  wrist_1_link
+                            child(1):  wrist_2_link
+                                child(1):  wrist_3_link
+                                    child(1):  flange
+                                        child(1):  tool0
+                                            child(1):  carrier_flange
+                                                child(1):  carrier_flange_mount_left
+                                                child(2):  carrier_flange_mount_right
+                                                child(3):  carrier_flange_interface
+                                                    child(1):  dual_arm_base_link
+                                                        child(1):  left_upper_arm
+                                                            child(1):  left_forearm
+                                                        child(2):  right_upper_arm
+                                                            child(1):  right_forearm
+                                    child(2):  ft_frame
+    child(2):  workpiece_x_carriage
+        child(1):  workpiece_y_carriage
+            child(1):  workpiece
+    child(3):  cell_floor
+    child(4):  station_s1_raw
+    child(5):  station_s2_staging
+    child(6):  station_s3_machine
+    child(7):  station_s4_output
+    child(8):  station_s5_finished
+manipulator_nonfixed_joints= 10 ['shoulder_pan_joint', 'shoulder_lift_joint', 'elbow_joint', 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint', 'left_shoulder_joint', 'left_elbow_joint', 'right_shoulder_joint', 'right_elbow_joint']
+workpiece_nonfixed_joints= 3 ['workpiece_x_joint', 'workpiece_y_joint', 'workpiece_z_joint']
+/home/ayush/TOPS/CAM-BOT/install/carrier_description
+/home/ayush/TOPS/CAM-BOT/install/carrier_control
+carrier_control dual_arm_cycle
+carrier_control machine_shop_joint_cycle
+carrier_control machine_shop_trajectory
+carrier_control machine_tending_coordinator
+carrier_control plot_machine_shop_path

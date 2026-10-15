@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-10-15",
+  "status_source": "docs/STATUS.md",
+  "scope": "Visual ROS Humble evidence; historical reports kept separate",
+  "records": [
+    {
+      "id": "AY-01",
+      "requirement": "Integrate Phase 4 source",
+      "prior_state": "Flange/dual-arm work was described outside committed source.",
+      "approach_options": "Recover the supplied Xacro and integrate as repository source; preserve UR tool0 boundary.",
+      "files_changes": [
+        "src/carrier_description/urdf/carrier_flange.xacro",
+        "src/carrier_description/urdf/dual_arm.xacro",
+        "src/carrier_description/urdf/ur5_with_test_tool.xacro"
+      ],
+      "tests": [
+        {
+          "command": "xacro src/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot.urdf && check_urdf /tmp/cambot.urdf",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS in Humble; older static inventory retained."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-01/manifest.json",
+        "docs/progress/AY01_AY09_RUNTIME_FINALIZATION.md"
+      ],
+      "limitations": "No controller or grasp proof.",
+      "next": "Use the current visual architecture as the baseline.",
+      "source_commit_or_change": "66c436a",
+      "change_summary": "Added carrier flange and dual-arm Xacro to the wrapper robot."
+    },
+    {
+      "id": "AY-02",
+      "requirement": "Integrate buildable ROS packages",
+      "prior_state": "Package assets and dependencies needed installation audit.",
+      "approach_options": "Install package assets through setup.py and retain selected-package build.",
+      "files_changes": [
+        "src/carrier_control/setup.py",
+        "src/carrier_description/setup.py"
+      ],
+      "tests": [
+        {
+          "command": "colcon build --base-paths src --symlink-install --packages-select carrier_description carrier_control",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS; both packages in clean build log."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-02/clean_build.log",
+        "docs/evidence/AY-02/installed_assets.txt"
+      ],
+      "limitations": "Build success does not show controller execution. Current clean checkouts must scope Colcon discovery to src because archived AY-10 snapshots contain duplicate package names.",
+      "next": "Rebuild after ROS source changes.",
+      "source_commit_or_change": "ac6c7bd",
+      "change_summary": "Installed package assets and waypoint configuration through the ROS package setup files."
+    },
+    {
+      "id": "AY-03",
+      "requirement": "Provide one-command visual launch and fail-closed controller entry",
+      "prior_state": "Launch/runtime topology was ambiguous.",
+      "approach_options": "Separate visual and gated controller launch files; require controller bring-up and validated targets for the latter.",
+      "files_changes": [
+        "src/carrier_description/launch/dual_arm_demo.launch.py",
+        "src/carrier_description/launch/machine_tending_controller.launch.py"
+      ],
+      "tests": [
+        {
+          "command": "ros2 launch carrier_description dual_arm_demo.launch.py auto_start:=false",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS in captured Humble visual runtime; one joint-state publisher recorded."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-03/launch_process.log",
+        "docs/evidence/AY-03/ros_graph.txt",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/joint_state_publishers.txt"
+      ],
+      "limitations": "The controller launch cannot run with the supplied unvalidated plan.",
+      "next": "Teach targets and select controller bring-up separately.",
+      "source_commit_or_change": "9fdbc5e",
+      "change_summary": "Separated visual and fail-closed controller launch routes."
+    },
+    {
+      "id": "AY-04",
+      "requirement": "Model five station workcell",
+      "prior_state": "Station geometry and targets were not shared.",
+      "approach_options": "Use one configurable visual cell source and TF frames.",
+      "files_changes": [
+        "src/carrier_description/urdf/machine_tending_cell.xacro",
+        "src/carrier_control/config/machine_tending.json"
+      ],
+      "tests": [
+        {
+          "command": "bash tools/capture_ay04_humble.sh",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "Humble TF and workpiece evidence retained; five stations in current Xacro."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-04/station_mapping.md",
+        "docs/evidence/AY-04/tf_station_inspection.txt"
+      ],
+      "limitations": "Dimensions/poses are visual assumptions, not surveyed geometry.",
+      "next": "Survey real cell before controller validation.",
+      "source_commit_or_change": "4dd6875 / 2388a3f",
+      "change_summary": "Defined shared visual station geometry and configured station targets."
+    },
+    {
+      "id": "AY-05",
+      "requirement": "Run exact machine-tending FSM",
+      "prior_state": "Older cycle was generic joint animation.",
+      "approach_options": "Add one-shot state machine, workpiece progression, failure gates.",
+      "files_changes": [
+        "src/carrier_control/carrier_control/machine_tending_fsm.py",
+        "src/carrier_control/carrier_control/machine_tending_coordinator.py"
+      ],
+      "tests": [
+        {
+          "command": "PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_machine_tending_fsm.py -v",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS offline; live complete state sequence in AY-10 raw events."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-05/test_outputs.log",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.events.jsonl"
+      ],
+      "limitations": "Visual adapter success is not grasp feedback.",
+      "next": "Connect real arm feedback only with a selected interface.",
+      "source_commit_or_change": "bf1e4e4",
+      "change_summary": "Implemented bounded one-shot FSM and coordinator event/state publication."
+    },
+    {
+      "id": "AY-06",
+      "requirement": "Coordinate carrier and local-arm decisions",
+      "prior_state": "Old waypoint-only cycle had no reachability branch.",
+      "approach_options": "Gate each step through reachability and carrier reposition/local action decisions.",
+      "files_changes": [
+        "src/carrier_control/carrier_control/coordination_policy.py",
+        "src/carrier_control/carrier_control/machine_tending_coordinator.py"
+      ],
+      "tests": [
+        {
+          "command": "PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_coordination.py -v",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS offline; both branches observed in live visual trial."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-06-08/verification.log",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/probe.log"
+      ],
+      "limitations": "Visual carrier publications are not actuator feedback.",
+      "next": "Retain branch-specific evidence in later controller studies.",
+      "source_commit_or_change": "113a5bd",
+      "change_summary": "Added branch selection between carrier reposition and local manipulation."
+    },
+    {
+      "id": "AY-07",
+      "requirement": "Check both-arm reachability without weakening bounds",
+      "prior_state": "Legacy carrier targets missed new station geometry.",
+      "approach_options": "Calibrate visual-only carrier joints and recheck current TF against bounded proxy.",
+      "files_changes": [
+        "src/carrier_control/carrier_control/reachability.py",
+        "src/carrier_control/config/machine_tending.json"
+      ],
+      "tests": [
+        {
+          "command": "PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_reachability.py -v",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS offline and live five rechecks per AY-10 trial."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-06-08/target_candidate_matrix.md",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/probe.log"
+      ],
+      "limitations": "Proxy omits IK/collision/physical clearance; controller_validated remains false.",
+      "next": "Add validated IK/collision evidence before claiming robot reachability.",
+      "source_commit_or_change": "4b43e8a",
+      "change_summary": "Added both-arm geometric bounds and visual-only calibrated carrier poses."
+    },
+    {
+      "id": "AY-08",
+      "requirement": "Integrate coordination with visual ROS/TF",
+      "prior_state": "Intermediate or missing final TF could cause false unreachable results.",
+      "approach_options": "Two-stage TF handshake and repeated exact final visual joint publication.",
+      "files_changes": [
+        "src/carrier_control/carrier_control/machine_tending_coordinator.py",
+        "tools/capture_ay0608_humble.sh"
+      ],
+      "tests": [
+        {
+          "command": "bash tools/capture_ay0608_humble.sh",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "Visual simulation pass in runtime handoff; current AY-10 capture repeats integrated behavior."
+        }
+      ],
+      "evidence": [
+        "docs/progress/AY01_AY09_RUNTIME_FINALIZATION.md",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json"
+      ],
+      "limitations": "Original AY-06\u201308 runtime directory is absent from checkout; no controller proof.",
+      "next": "Preserve final-pose republishing and TF handshake.",
+      "source_commit_or_change": "113a5bd / 9568e28",
+      "change_summary": "Integrated TF-gated rechecks, final-pose republishing, and visual capture."
+    },
+    {
+      "id": "AY-09",
+      "requirement": "Log structured per-trial outcomes and events",
+      "prior_state": "No durable FSM trial dataset.",
+      "approach_options": "Add schema-bound CSV/JSONL logger and validator.",
+      "files_changes": [
+        "src/carrier_control/carrier_control/metrics.py",
+        "tools/validate_ay09_dataset.py",
+        "experiments/machine_tending/schema/trial.schema.json"
+      ],
+      "tests": [
+        {
+          "command": "PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_metrics.py -v",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS offline; AY-10 live logger output retained."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-09/schema.md",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.events.jsonl"
+      ],
+      "limitations": "Original AY-09 one-trial runtime directory absent; flags correctly remain false.",
+      "next": "Keep raw events immutable and verification flags scoped.",
+      "source_commit_or_change": "462c822",
+      "change_summary": "Added structured trial/event logging, schemas, and validator."
+    },
+    {
+      "id": "AY-10",
+      "requirement": "Collect at least five actual attempted full trials",
+      "prior_state": "AY-09 had one visual trial; no qualifying batch.",
+      "approach_options": "Use fixed visual scenario, readiness/reset gates, live ROS observation and immutable raw capture.",
+      "files_changes": [
+        "tools/capture_ay10_humble.sh",
+        "tools/ay10_ros_probe.py",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json"
+      ],
+      "tests": [
+        {
+          "command": "bash tools/capture_ay10_humble.sh",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "Five unique successful attempts; 530 node events; reset and final-state checks pass."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-10/acceptance.json",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/attempts.jsonl",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/visual_rosbag/metadata.yaml",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/rviz_runtime.png"
+      ],
+      "limitations": "Visual-only; preliminary capture kept separately, no scenario pooling.",
+      "next": "Use this sealed dataset for AY-11/12 only.",
+      "source_commit_or_change": "c113874 / a240fc0",
+      "change_summary": "Added readiness/reset-gated capture and retained a sealed five-attempt raw dataset."
+    },
+    {
+      "id": "AY-11",
+      "requirement": "Compute reproducible durations, outcomes and carrier counts",
+      "prior_state": "No five-run event-derived summary.",
+      "approach_options": "Derive first PICK_RAW action to final HOME from raw events; count requested/accepted/completed visual moves separately.",
+      "files_changes": [
+        "experiments/machine_tending/scripts/analyze_trials.py",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/metrics.json"
+      ],
+      "tests": [
+        {
+          "command": "python3 -m unittest discover -s experiments/machine_tending/tests -v",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "14 analysis tests PASS; 5/5 success, mean 19.579116666 s, 25 completed visual repositions."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-10/analysis_tests.log",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/metrics.json"
+      ],
+      "limitations": "Descriptive single scenario; no controller timing or controlled baseline.",
+      "next": "Use immutable raw checksums for any recalculation.",
+      "source_commit_or_change": "8529847",
+      "change_summary": "Added event-derived duration and requested/accepted/completed motion metrics."
+    },
+    {
+      "id": "AY-12",
+      "requirement": "Generate result tables and readable plots",
+      "prior_state": "No plots from qualifying raw trials.",
+      "approach_options": "Regenerate CSV tables and three figures via analysis CLI.",
+      "files_changes": [
+        "experiments/machine_tending/scripts/analyze_trials.py",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/trials.csv",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/summary.csv"
+      ],
+      "tests": [
+        {
+          "command": "python3 experiments/machine_tending/scripts/analyze_trials.py experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv --output experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis --qualify",
+          "environment": "Ubuntu 22.04 / ROS 2 Humble Distrobox for ROS checks; host Python for offline/analysis checks",
+          "result": "PASS; artifact manifest and three nonempty plots."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/AY-10/regeneration.log",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/artifacts.json",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/cycle_time_by_trial.png",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/trial_outcomes.png",
+        "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/carrier_repositions_by_trial.png"
+      ],
+      "limitations": "No optimization claim from this one visual scenario.",
+      "next": "Re-run CLI when raw input changes and keep scenario groups separate.",
+      "source_commit_or_change": "8529847 / 7409988",
+      "change_summary": "Added reproducible tables and three result plots from sealed raw events."
+    },
+    {
+      "id": "AY-13",
+      "requirement": "Reconcile technical docs and maintain evidence ledger",
+      "prior_state": "Status had a broken Phase 4 link, old controller claims and duplicate tables.",
+      "approach_options": "Retain historical reports with caveats; centralize status; add per-ID ledger, repeat guide and automated checks.",
+      "files_changes": [
+        "README.md",
+        "docs/ARCHITECTURE.md",
+        "docs/AY_TRACEABILITY.md",
+        "docs/DECISIONS.md",
+        "docs/STATUS.md",
+        "docs/VALIDATION.md",
+        "docs/ROADMAP.md",
+        "docs/progress/phase3-carrier-flange.md",
+        "docs/progress/phase_4.md",
+        "docs/ayush/ledger.json",
+        "docs/ayush/README.md",
+        "tools/check_ay13_docs.py",
+        "tools/test_check_ay13_docs.py",
+        "docs/evidence/AY-13/humble_contract.log",
+        "docs/evidence/AY-13/doc_checker_tests.log",
+        "docs/evidence/AY-13/source_contract.log",
+        "docs/progress/phase1-carrier-baseline.md",
+        "docs/evidence/AY-13/README.md",
+        "tools/capture_ay0608_humble.sh",
+        "docs/evidence/AY-13/cross_validation/README.md",
+        "docs/evidence/AY-13/cross_validation/source_inventory.json",
+        "src/carrier_control/setup.py",
+        "src/carrier_description/setup.py",
+        "src/carrier_control/carrier_control/dual_arm_cycle.py",
+        "src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+        "src/carrier_control/carrier_control/machine_shop_trajectory.py",
+        "src/carrier_control/carrier_control/machine_tending_coordinator.py",
+        "src/carrier_control/carrier_control/machine_tending_fsm.py",
+        "src/carrier_control/carrier_control/plot_machine_shop_path.py",
+        "src/carrier_control/carrier_control/reachability.py",
+        "src/carrier_control/carrier_control/waypoints.py",
+        "src/carrier_control/carrier_control/workcell_model.py",
+        "src/carrier_description/launch/machine_tending_controller.launch.py",
+        "docs/evidence/AY-06-08/runtime/probe.jsonl",
+        "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/metadata.yaml",
+        "tools/capture_ay01_humble.sh",
+        "tools/capture_ay02_humble.sh",
+        "tools/generate_build_report.py",
+        "artifacts/verification/cambot_build_report.json",
+        "tools/test_generate_build_report.py",
+        "docs/evidence/AY-13/cross_validation/build_report_tests.log",
+        "docs/evidence/AY-13/cross_validation/build_report_generation.log"
+      ],
+      "tests": [
+        {
+          "command": "python3 -m unittest tools/test_check_ay13_docs.py -v",
+          "environment": "CachyOS host Python 3",
+          "result": "PASS: four negative/positive fixture tests; docs/evidence/AY-13/doc_checker_tests.log"
+        },
+        {
+          "command": "python3 tools/check_ay13_docs.py --installed; xacro src/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot-ay13.urdf; check_urdf /tmp/cambot-ay13.urdf; ros2 pkg executables carrier_control",
+          "environment": "Ubuntu 22.04 ROS 2 Humble in cambot-humble Distrobox, workspace sourced",
+          "result": "PASS: 13 records/statuses, links, installed assets/executables/launches, Xacro/URDF; docs/evidence/AY-13/humble_contract.log"
+        },
+        {
+          "command": "rosdep check --from-paths src --ignore-src; colcon build --base-paths src --symlink-install --packages-select carrier_description carrier_control; colcon test --base-paths src --packages-select carrier_description carrier_control; colcon test-result --verbose",
+          "environment": "Ubuntu 22.04 ROS 2 Humble in cambot-humble Distrobox",
+          "result": "PASS: dependencies satisfied, two packages built, 59 package tests with 0 failures and 2 skipped; see cross_validation logs"
+        },
+        {
+          "command": "PYTHONPATH=src/carrier_control python3 -m unittest src/carrier_control/test/test_workflow.py src/carrier_control/test/test_metrics.py src/carrier_control/test/test_action_safety.py src/carrier_control/test/test_machine_tending_fsm.py src/carrier_control/test/test_reachability.py src/carrier_control/test/test_coordination.py src/carrier_control/test/test_launch_preflight.py src/carrier_control/test/test_package_integration.py -v; python3 -m unittest src/carrier_description/test/test_cell_model.py src/carrier_description/test/test_launch_contract.py src/carrier_description/test/test_phase4_contract.py -v",
+          "environment": "Ubuntu 22.04 ROS 2 Humble in cambot-humble Distrobox",
+          "result": "PASS: 35 carrier-control plus 13 carrier-description regression tests; cross_validation/regression_48.log"
+        },
+        {
+          "command": "ROS_DOMAIN_ID=95 QT_QPA_PLATFORM=xcb LIBGL_ALWAYS_SOFTWARE=1 bash tools/capture_ay0608_humble.sh docs/evidence/AY-13/cross_validation/live_recheck",
+          "environment": "Ubuntu 22.04 ROS 2 Humble in cambot-humble Distrobox; isolated domain 95",
+          "result": "VISUAL_SIMULATION_PASS, five rechecks, one joint-state publisher, no residual nodes; controller verification false"
+        },
+        {
+          "command": "bash -n tools/capture_ay01_humble.sh tools/capture_ay02_humble.sh tools/capture_ay0608_humble.sh",
+          "environment": "CachyOS host Bash",
+          "result": "PASS: capture script syntax valid after scoped-build and setup-sourcing repairs"
+        },
+        {
+          "command": "python3 tools/generate_build_report.py; python3 -m json.tool artifacts/verification/cambot_build_report.json >/dev/null",
+          "environment": "CachyOS host Python 3; committed cross-validation evidence and f2e753f source commit",
+          "result": "PASS: 13 AY records, 11 gates, five qualifying visual attempts and explicit NOT RUN controller scenarios"
+        },
+        {
+          "command": "python3 -m unittest tools/test_generate_build_report.py -v",
+          "environment": "CachyOS host Python 3; committed AY-10 raw/derived evidence",
+          "result": "PASS: two tests; report paths/results complete and altered trial qualification rejected"
+        }
+      ],
+      "evidence": [
+        "docs/STATUS.md",
+        "docs/ayush/README.md",
+        "docs/evidence/AY-13/humble_contract.log",
+        "docs/evidence/AY-13/doc_checker_tests.log",
+        "docs/evidence/AY-13/source_contract.log",
+        "docs/evidence/AY-13/README.md",
+        "docs/evidence/AY-13/cross_validation/README.md",
+        "docs/evidence/AY-13/cross_validation/colcon_retest.log",
+        "docs/evidence/AY-13/cross_validation/regression_48.log",
+        "docs/evidence/AY-13/cross_validation/live_recheck/probe.jsonl",
+        "docs/evidence/AY-13/cross_validation/live_recheck/residual_nodes.txt",
+        "docs/evidence/AY-06-08/runtime/probe.jsonl",
+        "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/metadata.yaml",
+        "artifacts/verification/cambot_build_report.json",
+        "docs/evidence/AY-13/cross_validation/build_report_tests.log",
+        "docs/evidence/AY-13/cross_validation/build_report_generation.log"
+      ],
+      "limitations": "Selected controller/validated targets and second-person clean-checkout repeat remain unavailable; G6/G7 are visual-only and S2/S4 controller cases are NOT RUN.",
+      "next": "Obtain independent replay record; then mark AY-13 complete.",
+      "source_commit_or_change": "current documentation change; see Git history",
+      "change_summary": "Reconciled status/architecture/decisions/quick start, marked archival claims, added evidence ledger, clean-checkout guide, document checker and negative fixtures. Cross-validation repaired Colcon discovery instructions, preexisting package lint, and visual capture process-group shutdown without altering the sealed AY-10 raw data."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "task_id": "AY-01",
+  "proof_level": "STATIC VALID (local source only)",
+  "disposition": "REPAIR / VERIFY; runtime acceptance blocked",
+  "host": "CachyOS Linux; ROS_DISTRO unset",
+  "checks": [
+    {
+      "command": "python3 tools/phase4_contract.py",
+      "result": "PASS",
+      "detail": "10 unique local links, 9 unique local joints; fixed tool0-to-flange-to-interface-to-dual-arm chain; four custom revolute limits [-1.57, 1.57] rad; all generic stage targets within limits; UR5-six then custom-four sample order"
+    },
+    {
+      "command": "python3 -m unittest src/carrier_description/test/test_phase4_contract.py src/carrier_description/test/test_cell_model.py src/carrier_description/test/test_launch_contract.py -v",
+      "result": "PASS: 11 tests",
+      "detail": "Positive source/viewer checks and negative duplicate-link, broken-chain, limit-violation, duplicate-expanded-name, malformed-XML, and publisher-conflict checks"
+    },
+    {
+      "command": "python3 -m compileall -q src/carrier_description/launch tools/phase4_contract.py; bash -n tools/capture_ay01_humble.sh",
+      "result": "PASS",
+      "detail": "Python and Bash syntax"
+    },
+    {
+      "command": "git cat-file -e 66c436a:<manifest path> for all manifest entries",
+      "result": "PASS: 11 paths",
+      "detail": "All listed Phase-4 assets and package metadata existed at reconstruction commit 66c436a"
+    },
+    {
+      "command": "bash tools/capture_ay01_humble.sh",
+      "result": "EXPECTED FAILURE: exit 2",
+      "detail": "ROS_DISTRO must be humble; observed unset. No build or runtime claims recorded."
+    }
+  ],
+  "runtime_checks_pending": [
+    "xacro exits 0 on installed workspace",
+    "check_urdf succeeds on generated URDF",
+    "expanded URDF unique links/joints and complete frame chain",
+    "isolated Phase-4 viewer starts and shuts down",
+    "exactly one /joint_states publisher and one sample",
+    "TF frame diagram shows required chain",
+    "RViz screenshot confirms UR5, flange, arms and fixed frame"
+  ],
+  "interpretation": "The generic GRASP label is a visual pose and does not establish a physics-simulated grasp."
+}

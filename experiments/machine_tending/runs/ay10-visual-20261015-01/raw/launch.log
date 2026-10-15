@@ -1,0 +1,40 @@
+[INFO] [launch]: All log files can be found below /home/ayush/.ros/log/2026-10-15-16-06-52-416229-kaizen-20741
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [20773]
+[INFO] [machine_tending_coordinator-2]: process started with pid [20775]
+[INFO] [rviz2-3]: process started with pid [20777]
+[robot_state_publisher-1] [INFO] [1792060612.703138169] [robot_state_publisher]: got segment base
+[robot_state_publisher-1] [INFO] [1792060612.703259507] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1792060612.703264557] [robot_state_publisher]: got segment base_link_inertia
+[robot_state_publisher-1] [INFO] [1792060612.703267722] [robot_state_publisher]: got segment carrier_flange
+[robot_state_publisher-1] [INFO] [1792060612.703270151] [robot_state_publisher]: got segment carrier_flange_interface
+[robot_state_publisher-1] [INFO] [1792060612.703272777] [robot_state_publisher]: got segment carrier_flange_mount_left
+[robot_state_publisher-1] [INFO] [1792060612.703275216] [robot_state_publisher]: got segment carrier_flange_mount_right
+[robot_state_publisher-1] [INFO] [1792060612.703277359] [robot_state_publisher]: got segment cell_floor
+[robot_state_publisher-1] [INFO] [1792060612.703279699] [robot_state_publisher]: got segment dual_arm_base_link
+[robot_state_publisher-1] [INFO] [1792060612.703282035] [robot_state_publisher]: got segment flange
+[robot_state_publisher-1] [INFO] [1792060612.703284319] [robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-1] [INFO] [1792060612.703286541] [robot_state_publisher]: got segment ft_frame
+[robot_state_publisher-1] [INFO] [1792060612.703288751] [robot_state_publisher]: got segment left_forearm
+[robot_state_publisher-1] [INFO] [1792060612.703290991] [robot_state_publisher]: got segment left_upper_arm
+[robot_state_publisher-1] [INFO] [1792060612.703293114] [robot_state_publisher]: got segment right_forearm
+[robot_state_publisher-1] [INFO] [1792060612.703295276] [robot_state_publisher]: got segment right_upper_arm
+[robot_state_publisher-1] [INFO] [1792060612.703297444] [robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-1] [INFO] [1792060612.703299583] [robot_state_publisher]: got segment station_s1_raw
+[robot_state_publisher-1] [INFO] [1792060612.703301723] [robot_state_publisher]: got segment station_s2_staging
+[robot_state_publisher-1] [INFO] [1792060612.703303838] [robot_state_publisher]: got segment station_s3_machine
+[robot_state_publisher-1] [INFO] [1792060612.703305968] [robot_state_publisher]: got segment station_s4_output
+[robot_state_publisher-1] [INFO] [1792060612.703308170] [robot_state_publisher]: got segment station_s5_finished
+[robot_state_publisher-1] [INFO] [1792060612.703310509] [robot_state_publisher]: got segment tool0
+[robot_state_publisher-1] [INFO] [1792060612.703312714] [robot_state_publisher]: got segment upper_arm_link
+[robot_state_publisher-1] [INFO] [1792060612.703314917] [robot_state_publisher]: got segment workpiece
+[robot_state_publisher-1] [INFO] [1792060612.703317234] [robot_state_publisher]: got segment workpiece_x_carriage
+[robot_state_publisher-1] [INFO] [1792060612.703319581] [robot_state_publisher]: got segment workpiece_y_carriage
+[robot_state_publisher-1] [INFO] [1792060612.703321781] [robot_state_publisher]: got segment world
+[robot_state_publisher-1] [INFO] [1792060612.703323944] [robot_state_publisher]: got segment wrist_1_link
+[robot_state_publisher-1] [INFO] [1792060612.703326216] [robot_state_publisher]: got segment wrist_2_link
+[robot_state_publisher-1] [INFO] [1792060612.703328507] [robot_state_publisher]: got segment wrist_3_link
+[rviz2-3] [INFO] [1792060612.911500554] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1792060612.911651192] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[rviz2-3] [INFO] [1792060612.958195826] [rviz2]: Stereo is NOT SUPPORTED
+[machine_tending_coordinator-2] [WARN] [1792060612.985918790] [machine_tending_coordinator]: VISUAL SIMULATION ONLY: carrier joints are not commanded; this run is not runtime or end-to-end verification

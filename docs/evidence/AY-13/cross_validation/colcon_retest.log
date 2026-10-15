@@ -1,0 +1,32 @@
+Starting >>> carrier_control
+Finished <<< carrier_control [0.74s]
+Starting >>> carrier_description
+Finished <<< carrier_description [0.72s]
+
+Summary: 2 packages finished [1.57s]
+Starting >>> carrier_control
+--- stderr: carrier_control
+
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+Finished <<< carrier_control [1.07s]
+Starting >>> carrier_description
+Finished <<< carrier_description [0.55s]
+--- stderr: carrier_description
+
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+
+Summary: 2 packages finished [1.79s]
+  2 packages had stderr output: carrier_control carrier_description
+Summary: 59 tests, 0 errors, 0 failures, 2 skipped
