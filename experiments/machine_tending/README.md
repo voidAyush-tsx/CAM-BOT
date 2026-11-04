@@ -122,14 +122,16 @@ retains a blocked partial capture. A hard crash leaving a dangling attempt is
 rejected by analysis; it cannot disappear from the denominator.
 
 ```bash
-distrobox enter cambot-humble -- bash
-cd ~/TOPS/CAM-BOT
+# In Ubuntu 22.04 / ROS Humble (enter cambot-humble first on CachyOS):
+cd /path/to/CAM-BOT
+set +u
 source /opt/ros/humble/setup.bash
 export COLCON_TRACE=
-colcon build --symlink-install --packages-select carrier_description carrier_control
+colcon build --base-paths src --symlink-install --packages-select carrier_description carrier_control
+# Choose an unused ROS domain; the capture checks it before launching.
 export ROS_DOMAIN_ID=86
-bash tools/capture_ay10_humble.sh \
-  experiments/machine_tending/runs/NEW_CAPTURE/raw 5
+capture_output="$(mktemp -d /tmp/cambot-capture.XXXXXX)"
+bash tools/capture_ay10_humble.sh "$capture_output/raw" 5
 ```
 
 The script safely sources the workspace under `set +u` / `set -u`, sets the
@@ -146,14 +148,24 @@ to yield new IDs, timestamps and measured durations, not identical observations.
 
 ## Regenerate AY-11/12
 
+Always use a new directory outside the published capture and analysis trees.
+The analyzer can overwrite files in an existing output directory; rejecting
+raw-directory outputs alone does not protect the published `raw_analysis/`.
+
 ```bash
+analysis_output="$(mktemp -d /tmp/cambot-analysis.XXXXXX)"
 python3 experiments/machine_tending/scripts/analyze_trials.py \
   experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv \
-  --output experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis \
+  --output "$analysis_output" \
   --qualify
 ```
 
-Run with the container's Python/Matplotlib. Outputs are `trials.csv`,
+The recorded renderer used Matplotlib 3.5.1. Matplotlib versions, fonts and
+rendering libraries can change PNG bytes and `artifacts.json` byte counts even
+when numerical results and CSV tables match. Compare those numerical outputs
+separately, record dependency versions, and do not replace published plots to
+force byte equality. Use the original rendering environment when checking
+exact historical PNG bytes. Outputs are `trials.csv`,
 `summary.csv`, `metrics.json`, `artifacts.json`, `cycle_time_by_trial.png`,
 `trial_outcomes.png`, and `carrier_repositions_by_trial.png`. Plots use seconds
 or move counts, display sample count, and preserve failed/missing/censored

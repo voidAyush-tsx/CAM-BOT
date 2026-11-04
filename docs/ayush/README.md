@@ -19,6 +19,12 @@ shows installed packages, executables and URDF, while the
 path/status/launch cases. The only AY-13 acceptance blocker is an independent
 second-person quick-start repeat; no reviewer observation is fabricated.
 
+The [2026-11-05 repair validation](../evidence/AY-13/reproducibility_repair.md)
+records documentation/LFS corrections, offline checks and the remaining
+Humble/human replay requirements. Historical ledger commands retain their
+original destinations as provenance; use the new-output commands below for
+regeneration.
+
 ## Evidence boundary
 
 Available source/installed code, observed visual ROS execution, actuated
@@ -39,9 +45,14 @@ bimanual/gripper feedback, IK/collision study, surveyed workcell or real CNC
 evidence exists in this checkout. Runtime/end-to-end/actuation/grasp
 verification flags in the visual data are false. The historical
 [Phase 4 narrative](../progress/phase_4.md) is preserved as an archival report,
-not present Gazebo evidence. Earlier AY-06–08 and AY-09 one-trial capture
-directories were not committed; their offline evidence and later AY-10 live
-integration evidence are identified separately in the ledger.
+not present Gazebo evidence. The original AY-06–08 capture was not retained,
+but later cross-validation records do exist in
+[AY-06–08/runtime](../evidence/AY-06-08/runtime/probe.jsonl). That probe passed
+visually but left child nodes; the subsequent
+[clean recheck](../evidence/AY-13/cross_validation/live_recheck/probe.jsonl)
+records the repaired cleanup. These are later runs, not recovered original
+evidence. AY-09's original one-trial runtime directory remains absent; the
+later AY-10 dataset supplies retained integrated logger evidence.
 
 ## Clean-checkout quick start
 
@@ -49,16 +60,25 @@ Use a fresh Ubuntu 22.04 ROS 2 Humble environment, or the project's
 `cambot-humble` Distrobox on CachyOS. ROS Humble, `colcon`, `rosdep`,
 `xacro`, `check_urdf`, `rviz2`, `git-lfs` (for complete media/CSV checkout)
 and the package dependencies must be installed. A clean clone has no local
-`install/` until built. Use the current feature branch while AY-13 is under
-review; use `main` once these docs are merged.
+`install/` until built. The authoritative default branch is `main`; the
+October 15 feature work was merged, reverted, then restored. The local Codex
+branch `work` is not a remote publication target. For a repair PR review,
+replace `main` below with the published review branch and verify the exact
+commit supplied by the author. Record that SHA; pending fixes are not on
+`main` until merged. See [Git LFS storage](../GIT_LFS.md) before diagnosing
+apparently modified archive files.
+
+Run these commands in Ubuntu 22.04 with ROS Humble installed. On CachyOS,
+enter `cambot-humble` first and return to your chosen checkout directory.
 
 ```bash
-git lfs install
-git clone --branch feature/ay10-ay12-visual-experiments https://github.com/voidAyush-tsx/CAM-BOT.git
+git clone --branch main https://github.com/voidAyush-tsx/CAM-BOT.git
 cd CAM-BOT
-# On CachyOS: enter the Ubuntu container, then return to this checkout.
-distrobox enter cambot-humble -- bash
-cd /path/to/CAM-BOT
+git lfs install --local
+git lfs pull
+git rev-parse HEAD
+git status --short
+set +u
 source /opt/ros/humble/setup.bash
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --base-paths src --symlink-install --packages-select carrier_description carrier_control
@@ -82,18 +102,28 @@ xacro src/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot.urdf
 check_urdf /tmp/cambot.urdf
 ros2 pkg executables carrier_control
 python3 tools/check_ay13_docs.py --installed
-ros2 launch carrier_description dual_arm_demo.launch.py auto_start:=false trial_count:=1 visual_time_scale:=1.0
+demo_output="$(mktemp -d /tmp/cambot-ay13-demo.XXXXXX)"
+ros2 launch carrier_description dual_arm_demo.launch.py \
+  auto_start:=false enable_coordination:=true trial_count:=1 visual_time_scale:=1.0 \
+  results_file:="$demo_output/trials.csv"
 ```
 
-In another sourced terminal, trigger one visual trial:
+In separate sourced terminals, start the observers before triggering the
+trial so the beginning of the sequence is captured:
 
 ```bash
-ros2 service call /machine_tending_coordinator/start std_srvs/srv/Trigger "{}"
+# Observer terminal 1
 ros2 topic echo /cambot/task_state
+# Observer terminal 2
 ros2 topic echo /cambot/workpiece_state
+# Observer terminal 3
+ros2 topic echo /cambot/coordination_decision
+# Control terminal: check authority, then trigger the one-shot cycle
+ros2 topic info /joint_states --verbose
+ros2 service call /machine_tending_coordinator/start std_srvs/srv/Trigger "{}"
 ```
 
-Use separate terminals for the topic echoes. Observe HOME → PICK_RAW → STAGE
+Coordination must be explicitly enabled: the launch default is `false`. Observe HOME → PICK_RAW → STAGE
 → LOAD_MACHINE → MACHINE_DWELL → UNLOAD_MACHINE → PLACE_FINISHED → HOME and
 `FINISHED_AT_S5`. Check `ros2 topic info /joint_states --verbose`: visual
 mode must show one publisher, `machine_tending_coordinator`. Do not launch
@@ -104,10 +134,15 @@ leaving the sealed raw and published derived data intact:
 
 ```bash
 python3 -m unittest discover -s experiments/machine_tending/tests -v
+analysis_output="$(mktemp -d /tmp/cambot-ay13-analysis.XXXXXX)"
 python3 experiments/machine_tending/scripts/analyze_trials.py \
   experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv \
-  --output /tmp/cambot-ay13-regenerated --qualify
+  --output "$analysis_output" --qualify
 ```
+
+Matplotlib version, fonts and rendering dependencies can change PNG bytes
+while numerical results match. Compare metrics and tables separately from
+images, record dependency versions, and preserve the published artifacts.
 
 The [experiment README](../../experiments/machine_tending/README.md) explains
 the source commit plus patch/snapshot identity, environment/config hashes,
@@ -120,8 +155,10 @@ The [cross-validation record](../evidence/AY-13/cross_validation/README.md)
 retains the failing unscoped build, passing scoped build and Colcon tests,
 48-test regression, model/installed-asset checks, live visual probe and exact
 analysis regeneration comparison. The [machine-readable report](../../artifacts/verification/cambot_build_report.json)
-is generated by `python3 tools/generate_build_report.py` from those committed
-records. The build and script repairs did not add a controller stack;
+was generated by `tools/generate_build_report.py` from those committed
+records. Its CLI overwrites the published report; during review, exercise
+`tools/test_generate_build_report.py` or call `build_report()` in memory
+instead of running the writer. The build and script repairs did not add a controller stack;
 controller smoke cases remain unverified.
 
 ## Independent quick-start repeat

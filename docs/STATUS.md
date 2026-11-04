@@ -3,6 +3,8 @@
 Updated 2026-10-15. This is the only project status matrix. Each AY record,
 including prior state, options, exact files, commands, results, limitations and
 next action, is in the [versioned evidence ledger](ayush/ledger.json).
+The [2026-11-05 documentation repair](evidence/AY-13/reproducibility_repair.md)
+adds offline validation and evidence clarification without changing dispositions.
 
 | Level | Meaning | Present evidence |
 |---|---|---|
@@ -33,10 +35,13 @@ Controller targets S1–S4 are unvalidated and S5 has no taught target.
 | AY-12 | COMPLETE | Reproducible visual tables/plots; [artifacts](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/artifacts.json), [regeneration](evidence/AY-10/regeneration.log) |
 | AY-13 | IN PROGRESS | Documentation and [G0–G10 cross-validation](evidence/AY-13/cross_validation/README.md) recorded in a [machine report](../artifacts/verification/cambot_build_report.json); controller gates and independent second-person repeat remain open. [Guide](ayush/README.md) |
 
-AY-01…09 completion refers to visual ROS scope. Original AY-06–08 and AY-09
-runtime capture directories are absent here; the later AY-10 raw dataset
-independently shows their integrated paths and logger. It does not change the
-older offline logs into runtime proof. The [Phase 4 narrative](progress/phase_4.md)
+AY-01…09 completion refers to visual ROS scope. The original AY-06–08 capture
+was not retained. Later [AY-06–08 runtime records](evidence/AY-06-08/runtime/probe.jsonl)
+and the [clean cross-validation recheck](evidence/AY-13/cross_validation/live_recheck/probe.jsonl)
+are present; they are separate later runs, not the missing original capture.
+AY-09's original one-trial runtime directory remains absent. The later AY-10
+raw dataset independently shows the integrated paths and logger; it does not
+change older offline logs into runtime proof. The [Phase 4 narrative](progress/phase_4.md)
 is retained with an archival caveat because its Gazebo/controller claims lack
 supporting files in this checkout.
 

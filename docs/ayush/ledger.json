@@ -201,7 +201,7 @@
         "docs/progress/AY01_AY09_RUNTIME_FINALIZATION.md",
         "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json"
       ],
-      "limitations": "Original AY-06\u201308 runtime directory is absent from checkout; no controller proof.",
+      "limitations": "Original AY-06\u201308 capture is absent. Later records in docs/evidence/AY-06-08/runtime and the clean AY-13 cross-validation recheck are retained as separate runs; no controller proof.",
       "next": "Preserve final-pose republishing and TF handshake.",
       "source_commit_or_change": "113a5bd / 9568e28",
       "change_summary": "Integrated TF-gated rechecks, final-pose republishing, and visual capture."
@@ -362,7 +362,8 @@
         "artifacts/verification/cambot_build_report.json",
         "tools/test_generate_build_report.py",
         "docs/evidence/AY-13/cross_validation/build_report_tests.log",
-        "docs/evidence/AY-13/cross_validation/build_report_generation.log"
+        "docs/evidence/AY-13/cross_validation/build_report_generation.log",
+        "docs/evidence/AY-13/reproducibility_repair.md"
       ],
       "tests": [
         {
@@ -404,6 +405,11 @@
           "command": "python3 -m unittest tools/test_generate_build_report.py -v",
           "environment": "CachyOS host Python 3; committed AY-10 raw/derived evidence",
           "result": "PASS: two tests; report paths/results complete and altered trial qualification rejected"
+        },
+        {
+          "command": "python tools/check_ay13_docs.py; offline pytest selection and qualified analyzer CLI recorded in docs/evidence/AY-13/reproducibility_repair.md",
+          "environment": "2026-11-05 Codex Debian 13; Python 3.12.14, pytest 9.2.0, Matplotlib 3.11.2; ROS Humble unavailable",
+          "result": "PASS: docs, 74 offline tests, five-trial archived qualification, numerical/table equality, 56 source hashes and 387 protected file hashes. Legacy verify_ay.py: 25/26, pre-existing literal-glob assertion failure. No fresh ROS or independent human repeat."
         }
       ],
       "evidence": [
@@ -422,7 +428,8 @@
         "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/metadata.yaml",
         "artifacts/verification/cambot_build_report.json",
         "docs/evidence/AY-13/cross_validation/build_report_tests.log",
-        "docs/evidence/AY-13/cross_validation/build_report_generation.log"
+        "docs/evidence/AY-13/cross_validation/build_report_generation.log",
+        "docs/evidence/AY-13/reproducibility_repair.md"
       ],
       "limitations": "Selected controller/validated targets and second-person clean-checkout repeat remain unavailable; G6/G7 are visual-only and S2/S4 controller cases are NOT RUN.",
       "next": "Obtain independent replay record; then mark AY-13 complete.",
