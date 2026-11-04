@@ -12,3 +12,18 @@
 *.yaml  text eol=lf
 *.xacro text eol=lf
 *.db3 filter=lfs diff=lfs merge=lfs -text
+
+# These legacy files are ordinary Git blobs. Preserve their existing storage
+# without converting sealed data to LFS pointers; see docs/GIT_LFS.md.
+"/Task2/Screencast from 08-28-2026 02:16:43 AM.webm" -filter !diff !merge -text
+"/Task2/Screencast from 08-28-2026 12:07:58 AM.webm" -filter !diff !merge -text
+"/Task2/TASK2_UR5_Mass_Sensitivity_Report.docx" -filter !diff !merge -text
+"/experiments/machine_tending/templates/trials.csv" -filter !diff !merge -text
+"/experiments/mass_sensitivity/exp01-upper-arm-10pct/data/baseline_8.393kg.csv" -filter !diff !merge -text
+"/experiments/mass_sensitivity/exp01-upper-arm-10pct/data/experiment_9.2323kg.csv" -filter !diff !merge -text
+"/experiments/mass_sensitivity/exp02-forearm-10pct/data/baseline_2.330kg.csv" -filter !diff !merge -text
+"/experiments/mass_sensitivity/exp02-forearm-10pct/data/exp02_forearm_2.563kg.csv" -filter !diff !merge -text
+"/experiments/mass_sensitivity/exp03-shoulder-10pct/data/baseline_8.393_2.330kg.csv" -filter !diff !merge -text
+"/experiments/mass_sensitivity/exp03-shoulder-10pct/data/exp03_shoulder_4.070kg.csv" -filter !diff !merge -text
+"/media/2026-08-24-machine-shop-cycle.webm" -filter !diff !merge -text
+"/media/Screencast from 09-29-2026 10:03:01 PM.webm" -filter !diff !merge -text
