@@ -116,12 +116,11 @@ class TestCoordination(unittest.TestCase):
             'lookup_transform(', '"world", "dual_arm_base_link"',
             'def _coordinate_target(', 'def _move_carrier(',
             'def _animate_visual_state(', '"/cambot/coordination_decision"',
-            '"TF_NOT_UPDATED"', '"BM_ACTUATION_UNAVAILABLE"',
+            '"BM_ACTUATION_UNAVAILABLE"',
             '"CARRIER_ACTION_SUCCEEDED_WITH_FEEDBACK"',
             'def _settled_base_transform(',
             'FINAL_TF_NOT_OBSERVED',
             'self.visual_carrier_positions = list(goal)',
-            'if first_updated.status == "REACHABLE"',
             'list(self.visual_carrier_positions) + list(message.position)',
         ):
             self.assertIn(fragment, source)

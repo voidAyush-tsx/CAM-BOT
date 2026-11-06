@@ -14,6 +14,7 @@ from ament_index_python.packages import get_package_share_directory
 from control_msgs.action import FollowJointTrajectory
 import rclpy
 from rclpy.action import ActionClient
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.time import Time
 from sensor_msgs.msg import JointState
@@ -531,31 +532,48 @@ class MachineTendingCoordinator(Node):
         dot = abs(sum(a * b for a, b in zip(before[1], after[1])))
         return distance > 1e-8 or dot < 1 - 1e-6
 
-    def _settled_base_transform(self, deadline, cancelled, previous=None):
+    def _settled_base_transform(self, deadline, cancelled, not_before_ns):
         """
-        Wait for a newer world->dual_arm_base_link TF to settle.
+        Wait for distinct, fresh world->dual_arm_base_link TF samples to settle.
 
         Visual carrier motion publishes multiple intermediate joint states.
-        Require several nearly-identical samples from a transform that is
-        newer than ``previous`` before using it for a reachability recheck.
+        Freshness is a timestamp property: the final pose need not move again.
+        Ignore samples predating motion completion and repeated cached stamps.
+        Never return an unsettled pose on timeout or cancellation.
         """
         timeout = self.plan["workspace"]["tf_timeout_s"]
         until = min(deadline, time.monotonic() + timeout)
 
         latest = None
+        last_stamp_ns = None
+        next_visual_publish = 0.0
         stable_samples = 0
         required_stable_samples = 4
         translation_tol_sq = 1e-8
         quaternion_dot_tol = 1.0 - 1e-6
 
         while time.monotonic() < until and not cancelled():
+            # There is no idle joint-state timer. Keep the final visual pose
+            # available to robot_state_publisher while waiting for fresh TF.
+            if self.mode == "visual_simulation" and time.monotonic() >= next_visual_publish:
+                self._publish_visual_joints()
+                next_visual_publish = time.monotonic() + 0.05
             try:
                 if self.tf_buffer.can_transform(
                     "world", "dual_arm_base_link", Time()
                 ):
                     tf = self.tf_buffer.lookup_transform(
                         "world", "dual_arm_base_link", Time()
-                    ).transform
+                    )
+                    stamp_ns = Time.from_msg(tf.header.stamp).nanoseconds
+                    if (stamp_ns < not_before_ns or
+                            (last_stamp_ns is not None and stamp_ns <= last_stamp_ns)):
+                        rclpy.spin_once(self, timeout_sec=min(
+                            0.05, max(0.0, until - time.monotonic())
+                        ))
+                        continue
+                    last_stamp_ns = stamp_ns
+                    tf = tf.transform
                     pose = (
                         (
                             tf.translation.x,
@@ -569,12 +587,6 @@ class MachineTendingCoordinator(Node):
                             tf.rotation.w,
                         ),
                     )
-
-                    if previous is not None and not self._transform_changed(
-                        previous, pose
-                    ):
-                        rclpy.spin_once(self, timeout_sec=0.05)
-                        continue
 
                     if latest is None:
                         latest = pose
@@ -608,7 +620,7 @@ class MachineTendingCoordinator(Node):
                 ),
             )
 
-        return latest
+        return None
 
     def _animate_carrier_visual(self, station, duration_s, deadline, cancelled):
         """Record visual requests and completed publications, never actuator results."""
@@ -741,39 +753,19 @@ class MachineTendingCoordinator(Node):
         if not self._animate_carrier_visual(station, step["duration_s"],
                                             deadline, cancelled):
             return StepOutcome(False, "CARRIER_VISUAL_UPDATE_CANCELLED_OR_TIMEOUT")
-        # First accept any post-animation TF that already proves the target
-        # reachable. If that first update is still outside the proxy, require
-        # a newer settled transform so an intermediate visual carrier pose
-        # cannot be mistaken for the final station pose.
-        first_after = self._current_base_transform(
-            deadline, cancelled, previous=before
+        # Recheck only fresh, stable TF after motion completion. A reachable
+        # intermediate pose is not proof that the final station is reachable.
+        after = self._settled_base_transform(
+            deadline, cancelled, self.get_clock().now().nanoseconds
         )
-        if first_after is None:
+        if after is None:
             self._emit_decision(
-                step, target_xyz, before, reach, decision, "TF_NOT_UPDATED"
+                step, target_xyz, before, reach, decision, "FINAL_TF_NOT_OBSERVED"
             )
-            return StepOutcome(False, "TF_NOT_UPDATED")
-
-        first_updated = evaluate_reachability(
-            target_xyz, first_after, workspace, workspace["required_arms"]
+            return StepOutcome(False, "FINAL_TF_NOT_OBSERVED")
+        updated = evaluate_reachability(
+            target_xyz, after, workspace, workspace["required_arms"]
         )
-        if first_updated.status == "REACHABLE":
-            after = first_after
-            updated = first_updated
-        else:
-            settled_after = self._settled_base_transform(
-                deadline, cancelled, previous=first_after
-            )
-            if settled_after is None:
-                self._emit_decision(
-                    step, target_xyz, first_after, first_updated, decision,
-                    "FINAL_TF_NOT_OBSERVED",
-                )
-                return StepOutcome(False, "FINAL_TF_NOT_OBSERVED")
-            after = settled_after
-            updated = evaluate_reachability(
-                target_xyz, after, workspace, workspace["required_arms"]
-            )
         recheck = self.policy.choose(
             command_id, target_xyz, self.fsm.workpiece_state, after,
             updated, station
@@ -915,6 +907,8 @@ def main(args=None) -> None:
                 if node.start_requested:
                     node.start_requested = False
                     node.run_trials()
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass  # Normal ROS shutdown; run_trial already seals interrupted trials.
     except (RuntimeError, WorkflowError, FSMError, TrialRecordError) as exc:
         if node is not None:
             node.get_logger().error(str(exc))
