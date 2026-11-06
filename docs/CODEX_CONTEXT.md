@@ -2,7 +2,7 @@
 
 **Prepared:** 2026-11-04. **Repository:** https://github.com/voidAyush-tsx/CAM-BOT (default branch: `main`).
 
-> **Provenance:** This handoff combines past engineering conversation notes with a GitHub review of repository files such as `README.md`, `docs/STATUS.md`, `docs/ayush/README.md`, `docs/ARCHITECTURE.md`, `docs/VALIDATION.md`, `experiments/machine_tending/README.md`, `src/carrier_description/launch/dual_arm_demo.launch.py`, `src/carrier_control/carrier_control/machine_tending_coordinator.py`, and `src/carrier_control/config/machine_tending.json`. These were read from the repository at handoff time. **No complete git checkout is contained in this handoff bundle**, and no local ROS test was run during its generation. On starting, verify the live branch/commit and source; the actual repo is definitive. Some readme instructions target the older feature branch `feature/ay10-ay12-visual-experiments`; check whether work has since merged into main.
+> **Provenance:** This handoff combines past engineering conversation notes with a GitHub review of repository files such as `README.md`, `docs/STATUS.md`, `docs/ayush/README.md`, `docs/ARCHITECTURE.md`, `docs/VALIDATION.md`, `experiments/machine_tending/README.md`, `src/carrier_description/launch/dual_arm_demo.launch.py`, `src/carrier_control/carrier_control/machine_tending_coordinator.py`, and `src/carrier_control/config/machine_tending.json`. These were read from the repository at handoff time. This guide originated in a handoff bundle; it is now stored in the actual repository. No local ROS test was run during its generation. The October 15 feature work was merged, reverted and restored before the November 4 handoff commit. `main` is the repository default branch; `work` is a local Codex task branch. Verify the exact checkout/review commit; the actual source is definitive.
 
 ## 1. Goal, user intent, and completion boundary
 
@@ -143,7 +143,7 @@ These events occurred during CachyOS + ROS Humble Distrobox validation; treat th
 | `FINAL_TF_NOT_OBSERVED` | Exact final visual joint value was published only once and TF consumer sometimes missed it | Snap to exact final visual UR5 goal and republish final joint sample multiple times |
 | Bash capture script `unbound variable` for `COLCON_TRACE` / `AMENT_TRACE_SETUP_FILES` | `set -euo pipefail` and ROS/Colcon setup scripts | Temporarily disable nounset while sourcing, set `COLCON_TRACE` as needed |
 
-Original AY-06–08 runtime capture directories and AY-09 one-trial capture directories are **not retained** in the repository; their test reports and the later AY-10 live visual dataset support different claims. Do not invent the missing directories or infer they ran in a later checkout.
+The original AY-06–08 capture is not retained, but later records exist in `docs/evidence/AY-06-08/runtime/`; that visual probe left child nodes. The subsequent `docs/evidence/AY-13/cross_validation/live_recheck/` records the repaired cleanup. These later runs do not recover the missing original capture. AY-09's original one-trial runtime directory remains absent; the later AY-10 dataset supplies integrated logger evidence. Keep each run's provenance distinct.
 
 ## 8. Measured experiment (AY-10–12)
 
@@ -188,9 +188,10 @@ Open another ROS-sourced shell to invoke `ros2 service call /machine_tending_coo
 For archived plot regeneration, never overwrite sealed output:
 
 ```bash
+analysis_output="$(mktemp -d /tmp/cambot-ay13-analysis.XXXXXX)"
 python3 experiments/machine_tending/scripts/analyze_trials.py \
   experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv \
-  --output /tmp/cambot-ay13-regenerated --qualify
+  --output "$analysis_output" --qualify
 ```
 
 Inspect `docs/evidence/AY-13/cross_validation/README.md` and `artifacts/verification/cambot_build_report.json` before claiming all gates. Report skips and controller failures accurately. Historical reference: 48 offline regression tests (35 control + 13 description); later AY-13 documentation reports scoped Colcon test outcomes plus separate analysis tests. Do not confuse archived logs with tests rerun today.

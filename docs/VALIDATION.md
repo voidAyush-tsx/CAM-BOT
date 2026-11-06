@@ -12,6 +12,15 @@ evidence, not files presently retained in this checkout. The AY-10 raw
 capture is the retained live visual evidence. Controller execution remains
 unverified.
 
+Legacy runners `capture_ay03_humble.sh`, `capture_ay04_humble.sh`,
+`capture_ay05_humble.sh` and `capture_ay09_humble.sh` below are historical
+references: they write fixed paths under `docs/evidence/` and can overwrite
+prior outputs. Do not rerun them against the maintained evidence checkout.
+For fresh coordinated visual evidence, use the quick start or
+`capture_ay0608_humble.sh` / `capture_ay10_humble.sh` with a new explicit
+output directory. Historical ledger commands describe past runs, not safe
+regeneration destinations.
+
 ## AY-10…AY-12 visual experiment acceptance
 
 The user selected visual ROS trials as the qualifying scope. Five observed
@@ -22,13 +31,17 @@ Controller gates below remain requirements for a future controller experiment.
 
 ```bash
 python3 -m unittest discover -s experiments/machine_tending/tests -v
+analysis_output="$(mktemp -d /tmp/cambot-validation-analysis.XXXXXX)"
 python3 experiments/machine_tending/scripts/analyze_trials.py \
   experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv \
-  --output experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis \
+  --output "$analysis_output" \
   --qualify
 ```
 
-Run analysis with Matplotlib available (the Humble container has 3.5.1).
+Use a new output directory; preserve sealed raw data and published analysis.
+Run analysis with Matplotlib available (the recorded Humble container had 3.5.1).
+Other Matplotlib/font/rendering versions can change PNG bytes while numerical
+results match; compare metrics and tables separately and record versions.
 Qualification checks raw checksums, source/config identity, five unique finals,
 terminal outcomes, state and adapter event order, observed resets, both
 coordination cases, and completed goals against observed joint publications.
@@ -49,7 +62,8 @@ python3 -m unittest \
   src/carrier_description/test/test_launch_contract.py -v
 python3 -m compileall -q \
   src/carrier_control/carrier_control src/carrier_description/launch
-python3 tools/verify_ay.py --output artifacts/verification/ay_verification.json
+verification_output="$(mktemp -d /tmp/cambot-static-verification.XXXXXX)"
+python3 tools/verify_ay.py --output "$verification_output/ay_verification.json"
 ```
 
 The generated JSON contains legacy offline component checks created before the
@@ -72,7 +86,7 @@ set -u
 xacro $(ros2 pkg prefix carrier_description)/share/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot.urdf
 check_urdf /tmp/cambot.urdf
 timeout 20s ros2 launch carrier_description dual_arm_demo.launch.py \
-  visual_time_scale:=0.05
+  enable_coordination:=true visual_time_scale:=0.05
 ```
 
 The last command is a visual simulation check, not Gazebo actuation.
@@ -80,8 +94,8 @@ The last command is a visual simulation check, not Gazebo actuation.
 For the five-station cell, run
 `PYTHONPATH=src/carrier_control python3 -m unittest
 src/carrier_control/test/test_workcell_contract.py -v` for positive and
-failure-path config/transform tests. In Humble, run
-`bash tools/capture_ay04_humble.sh` to expand/check the configured URDF,
+failure-path config/transform tests. The historical runner
+`tools/capture_ay04_humble.sh` expands/checks the configured URDF,
 inspect station TF frames and workpiece state, and capture an RViz screenshot.
 The supplied cell geometry is temporary simulation-only. A later genuine
 [RViz screenshot](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw/rviz_runtime.png)
@@ -119,9 +133,9 @@ the bimanual module has no selected controller/feedback interface.
 
 The current repository cannot pass this run: there is no selected controller
 bring-up file, S1–S4 are unvalidated mappings, and S5 lacks a taught carrier
-target. Use `bash tools/capture_ay03_humble.sh` in a sourced Ubuntu 22.04/Humble
-GUI session for three visual launch/stop checks and the default fail-closed
-controller check. Do not label those visual trials as controlled motion.
+target. The historical `tools/capture_ay03_humble.sh` records three visual
+launch/stop checks and the default fail-closed controller check in a sourced
+Ubuntu 22.04/Humble GUI session; its output destination is fixed. Do not label those visual trials as controlled motion.
 
 ## AY-05 FSM checks
 
@@ -134,8 +148,8 @@ PYTHONPATH=src/carrier_control python3 -m unittest \
   src/carrier_control/test/test_machine_tending_fsm.py -v
 ```
 
-In a sourced Ubuntu 22.04/Humble GUI workspace, run
-`bash tools/capture_ay05_humble.sh`. It launches the **visual-only** coordinator
+The historical `tools/capture_ay05_humble.sh` requires a sourced
+Ubuntu 22.04/Humble GUI workspace and writes a fixed output directory. It launches the **visual-only** coordinator
 in manual-start mode for three cases: successful one-shot, injected `S3_LOAD`
 failure, and early cancel. Its observer records trial IDs, timestamps, state
 order, terminal event, and workpiece topic updates. It does not simulate a
@@ -182,8 +196,8 @@ invalid-claim datasets. They verify unique IDs, one final row, nonnegative
 steady-clock durations, complete failure context, chronological event
 sequences, schema/template parity, and direct coordinator logger hooks.
 
-In a sourced Ubuntu 22.04/Humble GUI workspace,
-`bash tools/capture_ay09_humble.sh` can create a **visual runtime** CSV
+The historical `tools/capture_ay09_humble.sh`, in a sourced
+Ubuntu 22.04/Humble GUI workspace, writes a **visual runtime** CSV
 and JSONL pair under `docs/evidence/AY-09/runtime/`; that directory is not
 present in this checkout. The retained [AY-10 CSV](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv)
 and [event JSONL](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.events.jsonl)
