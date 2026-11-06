@@ -20,6 +20,17 @@ ALL_STATES = [
 ]
 
 
+def validate_cancellation(entered, terminal, cancellation_confirmed):
+    """Require service acknowledgement and bounded, non-advancing cancellation."""
+    cause = terminal.get("cause", "")
+    if not cancellation_confirmed or terminal.get("event") != "FAILURE" or not (
+            cause.startswith("CANCEL") or
+            cause == "CARRIER_VISUAL_UPDATE_CANCELLED_OR_TIMEOUT"):
+        raise RuntimeError(f"early cancellation failed: {terminal}")
+    if entered != ALL_STATES[:2] or terminal.get("workpiece_state") != "RAW_AT_S1":
+        raise RuntimeError(f"FSM/workpiece advanced after cancellation: {terminal}")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--expect", choices=("success", "load_failure", "cancelled"),
@@ -31,6 +42,7 @@ def main():
     task_events = []
     workpiece_events = []
     cancellation_sent = False
+    cancel_future = None
 
     def collect(target, topic):
         def callback(message):
@@ -63,7 +75,7 @@ def main():
             if args.expect == "cancelled" and not cancellation_sent and "PICK_RAW" in entered:
                 if not cancel_client.wait_for_service(timeout_sec=0.5):
                     raise RuntimeError("cancel service not ready")
-                cancel_client.call_async(Trigger.Request())
+                cancel_future = cancel_client.call_async(Trigger.Request())
                 cancellation_sent = True
             terminals = [event for event in task_events
                          if event.get("event") in ("SUCCESS", "FAILURE")]
@@ -101,11 +113,10 @@ def main():
             if "FINISHED" in phases:
                 raise RuntimeError("workpiece advanced after injected load failure")
         else:
-            if not cancellation_sent or terminal["event"] != "FAILURE" or not \
-                    terminal.get("cause", "").startswith("CANCEL"):
-                raise RuntimeError(f"early cancellation failed: {terminal}")
-            if "STAGE" in entered:
-                raise RuntimeError("FSM advanced to STAGE after cancellation")
+            confirmed = bool(cancel_future is not None and cancel_future.done() and
+                             cancel_future.result().success)
+            validate_cancellation(entered, terminal, confirmed)
+            print(json.dumps({"cancel_service_success": confirmed}), flush=True)
         print(json.dumps({"probe_result": "PASS", "expect": args.expect,
                           "states_entered": entered, "terminal": terminal,
                           "workpiece_samples": len(workpiece_events)}), flush=True)

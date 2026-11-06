@@ -5,11 +5,16 @@ from __future__ import annotations
 
 import argparse
 import ast
+import contextlib
 from datetime import datetime, timezone
+import io
 import json
+import os
 from pathlib import Path
+import runpy
 import subprocess
 import sys
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 
 
@@ -105,6 +110,29 @@ def inventory_negative():
     )
 
 
+def require_package_assets(package_root, expected):
+    """Inspect setup metadata without installing or depending on its spelling."""
+    package_root = Path(package_root).resolve()
+    captured = {}
+    previous = Path.cwd()
+    try:
+        os.chdir(package_root)
+        with patch("setuptools.setup", side_effect=lambda **kw: captured.update(kw)):
+            with contextlib.redirect_stdout(io.StringIO()):
+                runpy.run_path(str(package_root / "setup.py"))
+    finally:
+        os.chdir(previous)
+    assets = {
+        str(Path(destination) / Path(source).name): source
+        for destination, sources in captured.get("data_files", [])
+        for source in sources
+    }
+    require(not (set(expected) - assets.keys()),
+            f"missing installed assets: {sorted(set(expected) - assets.keys())}")
+    for source in assets.values():
+        require((package_root / source).is_file(), f"missing package source: {source}")
+
+
 def packages_positive():
     manifests = sorted((ROOT / "src").glob("*/package.xml"))
     require(len(manifests) == 2, "expected exactly two ROS packages")
@@ -112,16 +140,13 @@ def packages_positive():
         root = ET.parse(manifest).getroot()
         description = root.findtext("description", "")
         require("TODO" not in description, f"scaffold description in {manifest}")
-    require(
-        "glob('config/*')" in (CONTROL_ROOT / "setup.py").read_text(),
-        "config not installed",
-    )
-    require(
-        "glob('rviz/*')" in (
-            ROOT / "src/carrier_description/setup.py"
-        ).read_text(),
-        "RViz not installed",
-    )
+    require_package_assets(CONTROL_ROOT, {
+        "share/carrier_control/config/machine_tending.json",
+        "share/carrier_control/config/waypoints.yaml",
+    })
+    require_package_assets(ROOT / "src/carrier_description", {
+        "share/carrier_description/rviz/dual_arm.rviz",
+    })
 
 
 def packages_negative():
