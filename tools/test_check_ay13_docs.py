@@ -109,6 +109,16 @@ class DocCheckTests(unittest.TestCase):
             self.assertEqual([], CHECK.inventory_errors(root))
             source.write_text("value = 2\n", encoding="utf-8")
             self.assertIn("hash mismatch", " ".join(CHECK.inventory_errors(root)))
+            historical = inventory.read_bytes()
+            current = root / "artifacts/verification/source_inventory.json"
+            current.parent.mkdir(parents=True)
+            updated = json.loads(historical)
+            updated["files"][0]["sha256"] = hashlib.sha256(source.read_bytes()).hexdigest()
+            current.write_text(json.dumps(updated), encoding="utf-8")
+            self.assertEqual([], CHECK.inventory_errors(root))
+            self.assertEqual(historical, inventory.read_bytes())
+            source.write_text("value = 3\n", encoding="utf-8")
+            self.assertIn("hash mismatch", " ".join(CHECK.inventory_errors(root)))
 
 
 if __name__ == "__main__":
