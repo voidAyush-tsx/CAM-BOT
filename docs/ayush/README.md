@@ -100,6 +100,8 @@ raw archives contain source snapshots with duplicate ROS package names;
 Colcon's default repository-wide discovery would reject them.
 On Wayland/niri, use `export QT_QPA_PLATFORM=xcb` and
 `export LIBGL_ALWAYS_SOFTWARE=1` for RViz.
+For headless cloud runs, also export `GALLIUM_DRIVER=softpipe`; the LLVM
+software-renderer path reproduced an intermittent RViz shutdown crash.
 
 ```bash
 xacro src/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot.urdf

@@ -167,6 +167,8 @@ colcon test-result --verbose
 
 On a Wayland/niri desktop, set `QT_QPA_PLATFORM=xcb` and
 `LIBGL_ALWAYS_SOFTWARE=1` before launching RViz.
+For the headless cloud workflow, also set `GALLIUM_DRIVER=softpipe` to avoid
+the reproduced LLVM software-renderer crash; see [cloud validation](docs/CLOUD_HUMBLE.md).
 
 **Run one integrated visual cycle:**
 

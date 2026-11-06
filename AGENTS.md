@@ -19,6 +19,7 @@ CAM-BOT (Carrier-assisted Adaptive Manipulation with Bimanual Operational Techno
   `colcon test --base-paths src --packages-select carrier_description carrier_control`.
 - To source workspace under Bash `set -u`: `export COLCON_TRACE=; set +u; source install/setup.bash; set -u`.
 - Wayland/niri RViz workaround: `QT_QPA_PLATFORM=xcb`, `LIBGL_ALWAYS_SOFTWARE=1`.
+- Headless cloud RViz also needs `GALLIUM_DRIVER=softpipe`; see `docs/CLOUD_HUMBLE.md` for the observed LLVM-renderer crash and validated scope.
 - Demo: `ros2 launch carrier_description dual_arm_demo.launch.py auto_start:=true enable_coordination:=true trial_count:=1 visual_time_scale:=1.0`.
 - This launch is a visual joint-state simulator, not a Gazebo/controller demonstration.
 

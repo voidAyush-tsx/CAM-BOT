@@ -23,10 +23,13 @@ These commands create only the named container and local build outputs:
 
 ```bash
 replay_output="$(mktemp -d /tmp/cambot-humble.XXXXXX)"
+git lfs install --local
+git lfs pull
 docker run -d --name cambot-dev \
   --mount type=bind,src=/workspace/CAM-BOT,dst=/workspace/CAM-BOT \
   --mount "type=bind,src=$replay_output,dst=/evidence" \
-  -e ROS_DOMAIN_ID=96 -e ROS_LOCALHOST_ONLY=1 cambot-humble:cloud sleep infinity
+  -e ROS_DOMAIN_ID=96 -e ROS_LOCALHOST_ONLY=1 \
+  -e GALLIUM_DRIVER=softpipe cambot-humble:cloud sleep infinity
 docker exec cambot-dev bash -c '
   set -e
   git config --global --add safe.directory /workspace/CAM-BOT
@@ -40,16 +43,27 @@ docker exec cambot-dev bash -c '
 docker exec cambot-dev xvfb-run -a -s '-screen 0 1280x800x24' bash -c '
   set -e
   source /opt/ros/humble/setup.bash
-  export QT_QPA_PLATFORM=xcb LIBGL_ALWAYS_SOFTWARE=1
-  bash tools/capture_ay0608_humble.sh /evidence/visual
+  export QT_QPA_PLATFORM=xcb LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=softpipe
+  for scenario in success unreachable load_failure cancelled; do
+    bash tools/capture_ay0608_humble.sh "/evidence/$scenario" "$scenario"
+  done
 '
 ```
 
-Use an unused container name or inspect an existing one before reuse. A passing
-probe establishes the functional visual cycle; inspect `launch.log` and
-`residual_nodes.txt` separately because the runner does not reject every child
-exit error. Known shutdown and impossible-target diagnostics are documented in
-the replay record. The recorded five-trial experiment remains separate.
+Use an unused container name or inspect an existing one before reuse. The image
+includes Git LFS because container-side Git also applies checkout-local filters.
+The capture runner now requires clean exits for all three launch children and
+an empty residual graph; crashes or forced termination fail the capture.
+Each scenario requires a new output directory. The unreachable fixture changes
+only a copied configuration's two workspace radii to 1 mm.
+
+Headless Xvfb with Mesa's default LLVM renderer reproduced an intermittent
+RViz crash, including after single-interrupt shutdown was repaired. The debugger
+stack entered LLVM compilation through `swrast_dri.so` during an RViz redraw.
+`GALLIUM_DRIVER=softpipe` selects Mesa's alternative software renderer and is the
+cloud image default. This is an environment workaround, not a fix to Mesa or
+proof that every desktop renderer shuts down correctly. Keep all error checks
+enabled. The recorded five-trial experiment remains separate.
 
 Stop only the container started for this run with `docker stop cambot-dev`.
 The mounted output directory remains on the host. Live processes do not
