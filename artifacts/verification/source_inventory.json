@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "795ab6fea946f04010a604aff4d83fd2bad1030c",
+  "source_commit": "342221018772f3aadcca39b9d7f1f423b14a40a7",
   "scope": "current tracked src bytes only; runtime evidence is recorded separately",
   "historical_inventory": "docs/evidence/AY-13/cross_validation/source_inventory.json",
   "count": 57,
@@ -50,7 +50,7 @@
     {
       "path": "src/carrier_control/carrier_control/machine_tending_coordinator.py",
       "kind": "python_source_or_test",
-      "sha256": "1cd62dfa1379763cc7bb0afbdf716026a65cf3d8be9d1f9297cc8f984cb797ff",
+      "sha256": "7d6e330d6c08bb9a285729d7ed63b5d0362cfb05ed1ae877902b5b633aa46c3b",
       "evidence_level": "available_code"
     },
     {
@@ -147,7 +147,7 @@
       "path": "src/carrier_control/test/test_coordinator_runtime.py",
       "kind": "python_source_or_test",
       "evidence_level": "available_code",
-      "sha256": "f14ea571a1e1e63c0ee39eabc67bfc7984d82aa8f39e7eb001b48227f66bb10c"
+      "sha256": "9c141a6bac5b8c44b9ff6539cfa26ff5a7b43bf9299fc4cea8f73d0b2cbd6901"
     },
     {
       "path": "src/carrier_control/test/test_copyright.py",
