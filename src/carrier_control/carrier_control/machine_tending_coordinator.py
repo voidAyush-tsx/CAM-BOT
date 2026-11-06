@@ -145,6 +145,7 @@ class MachineTendingCoordinator(Node):
         self.last_motion_failure = None
         self.last_local_decision = None
         self.start_requested = False
+        self.shutdown_requested = False
         self.fsm = MachineTendingFSM(
             self.plan,
             notify=self._fsm_event,
@@ -853,6 +854,8 @@ class MachineTendingCoordinator(Node):
             self._publish_workpiece()
             self.fsm.start(trial_id)
             outcome = self.fsm.run(self._execute_fsm_step)
+            if self.shutdown_requested:
+                raise KeyboardInterrupt("shutdown requested during trial")
             self._publish_coordinator(
                 outcome.terminal, trial_id=trial_id,
                 failure_state=outcome.failure_state,
@@ -896,23 +899,32 @@ class MachineTendingCoordinator(Node):
 
 
 def main(args=None) -> None:
-    # Let Python unwind the active trial before invalidating publishers/TF.
-    # Humble's asynchronous context shutdown can otherwise race spin/publish.
+    # Request cancellation without raising through a native subscription take.
+    # Keep the context valid until the trial record and node cleanup finish.
+    node = None
+    stopping = False
+
+    def request_shutdown(signum, frame):
+        nonlocal stopping
+        stopping = True
+        if node is not None:
+            node.shutdown_requested = True
+            node.fsm.cancel_requested = True
+
     previous_signals = {
-        signum: signal.signal(signum, signal.default_int_handler)
+        signum: signal.signal(signum, request_shutdown)
         for signum in (signal.SIGINT, signal.SIGTERM)
     }
-    node = None
     try:
         rclpy.init(args=args, signal_handler_options=SignalHandlerOptions.NO)
         node = MachineTendingCoordinator()
-        if node.auto_start:
+        if node.auto_start and not stopping:
             if not node.run_trials():
                 raise RuntimeError("machine-tending FSM failed")
         else:
-            while rclpy.ok():
+            while rclpy.ok() and not stopping:
                 rclpy.spin_once(node, timeout_sec=0.1)
-                if node.start_requested:
+                if node.start_requested and not stopping:
                     node.start_requested = False
                     node.run_trials()
     except (KeyboardInterrupt, ExternalShutdownException):

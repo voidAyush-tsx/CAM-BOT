@@ -116,6 +116,25 @@ class RecheckTests(unittest.TestCase):
 
 
 class ShutdownTests(unittest.TestCase):
+    def test_signal_requests_cancellation_without_invalidating_context(self):
+        node = Mock(auto_start=False, start_requested=True)
+
+        def interrupt(*args, **kwargs):
+            coordinator.signal.getsignal(coordinator.signal.SIGINT)(None, None)
+            shutdown.assert_not_called()
+
+        with patch.object(coordinator, "MachineTendingCoordinator", return_value=node), \
+                patch.object(coordinator.rclpy, "init"), \
+                patch.object(coordinator.rclpy, "ok", return_value=True), \
+                patch.object(coordinator.rclpy, "spin_once", side_effect=interrupt), \
+                patch.object(coordinator.rclpy, "shutdown") as shutdown:
+            coordinator.main()
+        self.assertTrue(node.shutdown_requested)
+        self.assertTrue(node.fsm.cancel_requested)
+        node.run_trials.assert_not_called()
+        node.destroy_node.assert_called_once()
+        shutdown.assert_called_once()
+
     def test_normal_shutdown_exceptions_destroy_node_without_traceback(self):
         for exception in (KeyboardInterrupt, coordinator.ExternalShutdownException):
             with self.subTest(exception=exception):
