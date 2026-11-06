@@ -7,5 +7,5 @@ RUN --mount=type=secret,id=ca,required=true \
     ros-humble-rviz2 ros-humble-xacro ros-humble-tf2-tools \
     python3-colcon-common-extensions python3-pytest python3-matplotlib python3-yaml \
     ros-humble-ament-copyright ros-humble-ament-flake8 ros-humble-ament-pep257 \
-    liburdfdom-tools xvfb xauth && rm -rf /var/lib/apt/lists/*
+    liburdfdom-tools xvfb xauth git-lfs && rm -rf /var/lib/apt/lists/*
 WORKDIR /workspace/CAM-BOT
