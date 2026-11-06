@@ -121,13 +121,16 @@ class ShutdownTests(unittest.TestCase):
             with self.subTest(exception=exception):
                 node = Mock(auto_start=False)
                 with patch.object(coordinator, "MachineTendingCoordinator", return_value=node), \
-                        patch.object(coordinator.rclpy, "init"), \
+                        patch.object(coordinator.rclpy, "init") as init, \
                         patch.object(coordinator.rclpy, "ok", return_value=True), \
                         patch.object(coordinator.rclpy, "spin_once", side_effect=exception), \
                         patch.object(coordinator.rclpy, "shutdown") as shutdown:
                     coordinator.main()
                 node.destroy_node.assert_called_once()
                 shutdown.assert_called_once()
+                init.assert_called_once_with(
+                    args=None, signal_handler_options=coordinator.SignalHandlerOptions.NO
+                )
 
     def test_unexpected_executor_errors_still_fail(self):
         node = Mock(auto_start=False)

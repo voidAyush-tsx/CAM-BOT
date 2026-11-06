@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 import json
 import math
 from pathlib import Path
+import signal
 import time
 from typing import Any, Dict, Optional
 
@@ -16,6 +17,7 @@ import rclpy
 from rclpy.action import ActionClient
 from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
+from rclpy.signals import SignalHandlerOptions
 from rclpy.time import Time
 from sensor_msgs.msg import JointState
 from std_srvs.srv import Trigger
@@ -894,9 +896,15 @@ class MachineTendingCoordinator(Node):
 
 
 def main(args=None) -> None:
-    rclpy.init(args=args)
+    # Let Python unwind the active trial before invalidating publishers/TF.
+    # Humble's asynchronous context shutdown can otherwise race spin/publish.
+    previous_signals = {
+        signum: signal.signal(signum, signal.default_int_handler)
+        for signum in (signal.SIGINT, signal.SIGTERM)
+    }
     node = None
     try:
+        rclpy.init(args=args, signal_handler_options=SignalHandlerOptions.NO)
         node = MachineTendingCoordinator()
         if node.auto_start:
             if not node.run_trials():
@@ -916,10 +924,14 @@ def main(args=None) -> None:
             print(f"machine_tending_coordinator: {exc}")
         raise
     finally:
-        if node is not None:
-            node.destroy_node()
-        if rclpy.ok():
-            rclpy.shutdown()
+        try:
+            if node is not None:
+                node.destroy_node()
+            if rclpy.ok():
+                rclpy.shutdown()
+        finally:
+            for signum, handler in previous_signals.items():
+                signal.signal(signum, handler)
 
 
 if __name__ == "__main__":
