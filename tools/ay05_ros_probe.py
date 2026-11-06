@@ -31,9 +31,25 @@ def validate_cancellation(entered, terminal, cancellation_confirmed):
         raise RuntimeError(f"FSM/workpiece advanced after cancellation: {terminal}")
 
 
+def validate_unreachable(entered, terminal, decisions):
+    """Require one reposition, a real unreachable recheck, and no workpiece advance."""
+    if (entered != ALL_STATES[:2] or terminal.get("event") != "FAILURE" or
+            terminal.get("cause") != "RECHECK_STILL_UNREACHABLE" or
+            terminal.get("failure_step") != "S1_APPROACH" or
+            terminal.get("workpiece_state") != "RAW_AT_S1"):
+        raise RuntimeError(f"unreachable target failure misclassified or advanced: {terminal}")
+    moves = [event for event in decisions if event.get("decision") == "CARRIER_REPOSITION"
+             and event.get("outcome") == "PENDING"]
+    rechecks = [event for event in decisions if event.get("decision") == "UNREACHABLE"
+                and event.get("reason") == "RECHECK_STILL_UNREACHABLE"
+                and event.get("outcome") == "RECHECKED_AFTER_CARRIER"]
+    if len(moves) != 1 or len(rechecks) != 1:
+        raise RuntimeError("expected exactly one reposition and one unreachable TF recheck")
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--expect", choices=("success", "load_failure", "cancelled"),
+    parser.add_argument("--expect", choices=("success", "load_failure", "cancelled", "unreachable"),
                         required=True)
     parser.add_argument("--timeout-s", type=float, default=90.0)
     args = parser.parse_args()
@@ -41,6 +57,7 @@ def main():
     node = Node("ay05_fsm_probe")
     task_events = []
     workpiece_events = []
+    decisions = []
     cancellation_sent = False
     cancel_future = None
 
@@ -55,6 +72,8 @@ def main():
                              collect(task_events, "task_state"), 100)
     node.create_subscription(String, "/cambot/workpiece_state",
                              collect(workpiece_events, "workpiece_state"), 100)
+    node.create_subscription(String, "/cambot/coordination_decision",
+                             collect(decisions, "coordination_decision"), 100)
     start_client = node.create_client(Trigger, "/machine_tending_coordinator/start")
     cancel_client = node.create_client(Trigger, "/machine_tending_coordinator/cancel")
     deadline = time.monotonic() + args.timeout_s
@@ -67,6 +86,8 @@ def main():
             rclpy.spin_once(node, timeout_sec=0.1)
         if not start_future.done() or not start_future.result().success:
             raise RuntimeError("start service rejected or timed out")
+        if node.count_publishers("/joint_states") != 1:
+            raise RuntimeError("visual mode requires one joint-state publisher")
         terminal = None
         while time.monotonic() < deadline:
             rclpy.spin_once(node, timeout_sec=0.1)
@@ -112,6 +133,8 @@ def main():
                 raise RuntimeError(f"injected failure did not stop at load: {entered}, {terminal}")
             if "FINISHED" in phases:
                 raise RuntimeError("workpiece advanced after injected load failure")
+        elif args.expect == "unreachable":
+            validate_unreachable(entered, terminal, decisions)
         else:
             confirmed = bool(cancel_future is not None and cancel_future.done() and
                              cancel_future.result().success)
