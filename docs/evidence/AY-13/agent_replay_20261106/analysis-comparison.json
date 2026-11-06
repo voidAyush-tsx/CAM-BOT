@@ -1,0 +1,9 @@
+{
+  "artifacts.json": true,
+  "trial_outcomes.png": true,
+  "cycle_time_by_trial.png": true,
+  "summary.csv": true,
+  "metrics.json": true,
+  "trials.csv": true,
+  "carrier_repositions_by_trial.png": true
+}

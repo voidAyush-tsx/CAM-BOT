@@ -1,0 +1,62 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-06-13-40-37-234953-8a865585ad44-686
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [705]
+[INFO] [machine_tending_coordinator-2]: process started with pid [707]
+[INFO] [rviz2-3]: process started with pid [709]
+[robot_state_publisher-1] [INFO] [1793972437.500913378] [robot_state_publisher]: got segment base
+[robot_state_publisher-1] [INFO] [1793972437.501081858] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1793972437.501094127] [robot_state_publisher]: got segment base_link_inertia
+[robot_state_publisher-1] [INFO] [1793972437.501100406] [robot_state_publisher]: got segment carrier_flange
+[robot_state_publisher-1] [INFO] [1793972437.501105554] [robot_state_publisher]: got segment carrier_flange_interface
+[robot_state_publisher-1] [INFO] [1793972437.501110881] [robot_state_publisher]: got segment carrier_flange_mount_left
+[robot_state_publisher-1] [INFO] [1793972437.501115418] [robot_state_publisher]: got segment carrier_flange_mount_right
+[robot_state_publisher-1] [INFO] [1793972437.501120185] [robot_state_publisher]: got segment cell_floor
+[robot_state_publisher-1] [INFO] [1793972437.501125273] [robot_state_publisher]: got segment dual_arm_base_link
+[robot_state_publisher-1] [INFO] [1793972437.501130471] [robot_state_publisher]: got segment flange
+[robot_state_publisher-1] [INFO] [1793972437.501135007] [robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-1] [INFO] [1793972437.501140305] [robot_state_publisher]: got segment ft_frame
+[robot_state_publisher-1] [INFO] [1793972437.501145012] [robot_state_publisher]: got segment left_forearm
+[robot_state_publisher-1] [INFO] [1793972437.501149789] [robot_state_publisher]: got segment left_upper_arm
+[robot_state_publisher-1] [INFO] [1793972437.501155077] [robot_state_publisher]: got segment right_forearm
+[robot_state_publisher-1] [INFO] [1793972437.501159283] [robot_state_publisher]: got segment right_upper_arm
+[robot_state_publisher-1] [INFO] [1793972437.501163640] [robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-1] [INFO] [1793972437.501167786] [robot_state_publisher]: got segment station_s1_raw
+[robot_state_publisher-1] [INFO] [1793972437.501172473] [robot_state_publisher]: got segment station_s2_staging
+[robot_state_publisher-1] [INFO] [1793972437.501177340] [robot_state_publisher]: got segment station_s3_machine
+[robot_state_publisher-1] [INFO] [1793972437.501219813] [robot_state_publisher]: got segment station_s4_output
+[robot_state_publisher-1] [INFO] [1793972437.501224761] [robot_state_publisher]: got segment station_s5_finished
+[robot_state_publisher-1] [INFO] [1793972437.501229388] [robot_state_publisher]: got segment tool0
+[robot_state_publisher-1] [INFO] [1793972437.501258381] [robot_state_publisher]: got segment upper_arm_link
+[robot_state_publisher-1] [INFO] [1793972437.501263619] [robot_state_publisher]: got segment workpiece
+[robot_state_publisher-1] [INFO] [1793972437.501267845] [robot_state_publisher]: got segment workpiece_x_carriage
+[robot_state_publisher-1] [INFO] [1793972437.501272342] [robot_state_publisher]: got segment workpiece_y_carriage
+[robot_state_publisher-1] [INFO] [1793972437.501310709] [robot_state_publisher]: got segment world
+[robot_state_publisher-1] [INFO] [1793972437.501316187] [robot_state_publisher]: got segment wrist_1_link
+[robot_state_publisher-1] [INFO] [1793972437.501320463] [robot_state_publisher]: got segment wrist_2_link
+[robot_state_publisher-1] [INFO] [1793972437.501325020] [robot_state_publisher]: got segment wrist_3_link
+[rviz2-3] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[rviz2-3] [INFO] [1793972437.632309086] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1793972437.632585727] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[machine_tending_coordinator-2] [WARN] [1793972437.676175323] [machine_tending_coordinator]: VISUAL SIMULATION ONLY: carrier joints are not commanded; this run is not runtime or end-to-end verification
+[rviz2-3] [INFO] [1793972437.678111131] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1793972442.201216544] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1793972442.201528468] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[machine_tending_coordinator-2] Traceback (most recent call last):
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/install/carrier_control/lib/carrier_control/machine_tending_coordinator", line 33, in <module>
+[machine_tending_coordinator-2]     sys.exit(load_entry_point('carrier-control', 'console_scripts', 'machine_tending_coordinator')())
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 914, in main
+[machine_tending_coordinator-2]     rclpy.spin_once(node, timeout_sec=0.1)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 208, in spin_once
+[machine_tending_coordinator-2]     executor.spin_once(timeout_sec=timeout_sec)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 812, in spin_once
+[machine_tending_coordinator-2]     self._spin_once_impl(timeout_sec)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 801, in _spin_once_impl
+[machine_tending_coordinator-2]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 784, in wait_for_ready_callbacks
+[machine_tending_coordinator-2]     return next(self._cb_iter)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 685, in _wait_for_ready_callbacks
+[machine_tending_coordinator-2]     raise ExternalShutdownException()
+[machine_tending_coordinator-2] rclpy.executors.ExternalShutdownException
+[ERROR] [rviz2-3]: process has died [pid 709, exit code -11, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /workspace/CAM-BOT/install/carrier_description/share/carrier_description/rviz/dual_arm.rviz --ros-args -r __node:=rviz2'].
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 705]
+[ERROR] [machine_tending_coordinator-2]: process has died [pid 707, exit code 1, cmd '/workspace/CAM-BOT/install/carrier_control/lib/carrier_control/machine_tending_coordinator --ros-args -r __node:=machine_tending_coordinator --params-file /tmp/launch_params_qlcdzogl'].

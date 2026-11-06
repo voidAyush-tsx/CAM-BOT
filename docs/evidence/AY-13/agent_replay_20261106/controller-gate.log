@@ -1,0 +1,3 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-06-13-42-59-628020-8a865585ad44-1151
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [launch]: Caught exception in launch (see debug for traceback): station S1_RAW target is not controller-validated

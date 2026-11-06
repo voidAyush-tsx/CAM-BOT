@@ -25,6 +25,10 @@ Humble/human replay requirements. Historical ledger commands retain their
 original destinations as provenance; use the new-output commands below for
 regeneration.
 
+For cloud execution, see the [Humble container workflow](../CLOUD_HUMBLE.md)
+and [agent-run replay](../evidence/AY-13/agent_replay_20261106/README.md).
+That replay is not an independent human sign-off and retains its failed diagnostics.
+
 ## Evidence boundary
 
 Available source/installed code, observed visual ROS execution, actuated

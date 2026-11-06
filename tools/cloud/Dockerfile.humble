@@ -1,0 +1,11 @@
+FROM ros:humble-ros-base-jammy@sha256:d9bcf2e6f72df127fdee07048c2e87b1b4b9a59a74af0592f4489fc2844aa855
+RUN --mount=type=secret,id=ca,required=true \
+    apt-get -o Acquire::https::CaInfo=/run/secrets/ca update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::https::CaInfo=/run/secrets/ca install -y --no-install-recommends \
+    ros-humble-ur-description ros-humble-moveit-msgs ros-humble-control-msgs \
+    ros-humble-robot-state-publisher ros-humble-joint-state-publisher-gui \
+    ros-humble-rviz2 ros-humble-xacro ros-humble-tf2-tools \
+    python3-colcon-common-extensions python3-pytest python3-matplotlib python3-yaml \
+    ros-humble-ament-copyright ros-humble-ament-flake8 ros-humble-ament-pep257 \
+    liburdfdom-tools xvfb xauth && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace/CAM-BOT

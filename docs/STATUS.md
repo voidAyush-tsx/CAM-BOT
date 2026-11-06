@@ -5,6 +5,10 @@ including prior state, options, exact files, commands, results, limitations and
 next action, is in the [versioned evidence ledger](ayush/ledger.json).
 The [2026-11-05 documentation repair](evidence/AY-13/reproducibility_repair.md)
 adds offline validation and evidence clarification without changing dispositions.
+The [2026-11-06 agent Humble replay](evidence/AY-13/agent_replay_20261106/README.md)
+adds a fresh build, package tests and live visual success/failure/cancellation
+evidence. Graceful shutdown, impossible-target classification and independent
+human review remain open.
 
 | Level | Meaning | Present evidence |
 |---|---|---|
