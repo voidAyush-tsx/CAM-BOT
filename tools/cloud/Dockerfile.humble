@@ -1,4 +1,4 @@
-FROM ros:humble-ros-base-jammy@sha256:d9bcf2e6f72df127fdee07048c2e87b1b4b9a59a74af0592f4489fc2844aa855
+FROM ros:humble-ros-base-jammy@sha256:d9bcf2e6f72df127fdee07048c2e87b1b4b9a59a74af0592f4489fc2844aa855 AS runtime
 RUN --mount=type=secret,id=ca,required=true \
     apt-get -o Acquire::https::CaInfo=/run/secrets/ca update && \
     DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::https::CaInfo=/run/secrets/ca install -y --no-install-recommends \
@@ -9,3 +9,40 @@ RUN --mount=type=secret,id=ca,required=true \
     ros-humble-ament-copyright ros-humble-ament-flake8 ros-humble-ament-pep257 \
     liburdfdom-tools xvfb xauth git-lfs && rm -rf /var/lib/apt/lists/*
 WORKDIR /workspace/CAM-BOT
+
+FROM runtime AS rviz-build
+# Humble 11.2.29. Pin the source, not a moving branch or tag; retain the apt ABI.
+ENV RVIZ_REVISION=4e2b27b7561da7eb03fbc7e92a74d4b3f1e0b054
+COPY tools/cloud/rviz-stop-render-on-close.patch /tmp/rviz-stop-render-on-close.patch
+RUN --mount=type=secret,id=ca,required=true \
+    git init /tmp/rviz && \
+    git -C /tmp/rviz remote add origin https://github.com/ros2/rviz.git && \
+    git -C /tmp/rviz -c http.sslCAInfo=/run/secrets/ca fetch --depth 1 origin "$RVIZ_REVISION" && \
+    git -C /tmp/rviz checkout --detach FETCH_HEAD && \
+    test "$(git -C /tmp/rviz rev-parse HEAD)" = "$RVIZ_REVISION" && \
+    git -C /tmp/rviz apply --check /tmp/rviz-stop-render-on-close.patch && \
+    git -C /tmp/rviz apply /tmp/rviz-stop-render-on-close.patch
+SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
+RUN source /opt/ros/humble/setup.bash && \
+    for package in rviz_common rviz2 rviz_default_plugins; do \
+      python3 -c 'import sys, xml.etree.ElementTree as ET; assert ET.parse(sys.argv[1]).findtext("version") == "11.2.29", "RViz ABI changed: review the pinned patch"' \
+        "/opt/ros/humble/share/$package/package.xml"; \
+    done && \
+    mkdir /tmp/rviz-build && cd /tmp/rviz-build && \
+    MAKEFLAGS=-j2 colcon build --base-paths /tmp/rviz/rviz_common --merge-install \
+      --install-base /opt/cambot/rviz --executor sequential \
+      --cmake-args -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release && \
+    mkdir -p /opt/cambot/rviz/share/cambot-patches && \
+    cp /tmp/rviz/LICENSE /tmp/rviz-stop-render-on-close.patch /opt/cambot/rviz/share/cambot-patches/ && \
+    { printf 'upstream=https://github.com/ros2/rviz.git\nrevision=%s\nversion=11.2.29\n' "$RVIZ_REVISION"; \
+      sha256sum /tmp/rviz-stop-render-on-close.patch /opt/cambot/rviz/lib/librviz_common.so; \
+      dpkg-query -W ros-humble-rviz-common ros-humble-rviz2 ros-humble-rviz-default-plugins; \
+    } > /opt/cambot/rviz/share/cambot-patches/provenance.txt
+
+FROM runtime
+COPY --from=rviz-build /opt/cambot/rviz /opt/cambot/rviz
+COPY --chmod=755 tools/cloud/ros_entrypoint.sh /cambot_entrypoint.sh
+RUN /cambot_entrypoint.sh bash -ec \
+    'test "$(ros2 pkg prefix rviz_common)" = /opt/cambot/rviz; ldd /opt/ros/humble/lib/rviz2/rviz2 | grep -F "librviz_common.so => /opt/cambot/rviz/lib/librviz_common.so"'
+ENTRYPOINT ["/cambot_entrypoint.sh"]
+CMD ["bash"]
