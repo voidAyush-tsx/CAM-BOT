@@ -1,0 +1,35 @@
+test_confirmed_coordinated_cancellation (test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_confirmed_scripted_cancellation (test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_later_state_rejected (test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_timeout_without_cancel_acknowledgement_rejected (test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_unrelated_failure_rejected (test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_workpiece_advance_rejected (test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_exact_failure_and_recheck_are_required (test_ay05_ros_probe.UnreachableProbeTests) ... ok
+test_broken_local_link (test_check_ay13_docs.DocCheckTests) ... ok
+test_missing_and_duplicate_ay_status (test_check_ay13_docs.DocCheckTests) ... ok
+test_phantom_launch_and_executable (test_check_ay13_docs.DocCheckTests) ... ok
+test_source_inventory_detects_changed_bytes (test_check_ay13_docs.DocCheckTests) ... ok
+test_valid_local_link (test_check_ay13_docs.DocCheckTests) ... ok
+test_changed_raw_qualification_cannot_generate_report (test_generate_build_report.BuildReportTests) ... ok
+test_cli_refuses_to_overwrite_an_existing_report (test_generate_build_report.BuildReportTests) ... ok
+test_historical_source_hash_is_still_enforced (test_generate_build_report.BuildReportTests) ... ok
+test_report_has_all_gates_tasks_and_real_paths (test_generate_build_report.BuildReportTests) ... ok
+test_active_accepts_one_incomplete_raw_trial (test_probe_visual_shutdown.ShutdownTrialTests) ... ok
+test_active_rejects_success_missing_fields_and_wrong_workpiece (test_probe_visual_shutdown.ShutdownTrialTests) ... ok
+test_idle_has_no_trials (test_probe_visual_shutdown.ShutdownTrialTests) ... ok
+test_idle_rejects_any_trial (test_probe_visual_shutdown.ShutdownTrialTests) ... ok
+test_background_session_restores_sigint_and_owns_process_group (test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_clean_children (test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_forced_termination_is_not_a_clean_shutdown (test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_missing_child_exit_fails (test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_rviz_crash_is_not_hidden_by_successful_probe (test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_current_packages (test_verify_ay.PackageAssetChecks) ... ok
+test_helper_based_setup_is_accepted (test_verify_ay.PackageAssetChecks) ... ok
+test_missing_source_fails (test_verify_ay.PackageAssetChecks) ... ok
+test_omitted_asset_fails_even_with_old_glob_text (test_verify_ay.PackageAssetChecks) ... ok
+test_setup_exception_restores_working_directory (test_verify_ay.PackageAssetChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.389s
+
+OK

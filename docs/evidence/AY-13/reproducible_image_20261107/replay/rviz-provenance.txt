@@ -1,0 +1,8 @@
+upstream=https://github.com/ros2/rviz.git
+revision=4e2b27b7561da7eb03fbc7e92a74d4b3f1e0b054
+version=11.2.29
+47934b890f979c743b657887bf209243e33cd90d97346640bca404acc9f9479d  /tmp/rviz-stop-render-on-close.patch
+fa5b93ffaf3b70ca1f6d9e4043b2502165ea83b1e77100df1262a2f2613d4d21  /opt/cambot/rviz/lib/librviz_common.so
+ros-humble-rviz-common	11.2.29-1jammy.20260915.212521
+ros-humble-rviz-default-plugins	11.2.29-1jammy.20260915.231541
+ros-humble-rviz2	11.2.29-1jammy.20260916.003100

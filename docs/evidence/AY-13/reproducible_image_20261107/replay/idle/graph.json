@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    "_ros2cli_daemon_99_141dade51de1484c91bb5ff6abeb7d63",
+    "ay13_shutdown_observer",
+    "machine_tending_coordinator",
+    "robot_state_publisher",
+    "rviz2",
+    "transform_listener_impl_55e9670e68c0"
+  ],
+  "joint_state_publishers": [
+    "machine_tending_coordinator"
+  ]
+}

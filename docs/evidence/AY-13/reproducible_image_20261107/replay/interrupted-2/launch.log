@@ -1,0 +1,50 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-07-05-29-42-238998-60389ec0f240-1410
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [1412]
+[INFO] [machine_tending_coordinator-2]: process started with pid [1414]
+[INFO] [rviz2-3]: process started with pid [1416]
+[rviz2-3] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[robot_state_publisher-1] [INFO] [1794029382.841512125] [robot_state_publisher]: got segment base
+[robot_state_publisher-1] [INFO] [1794029382.841631993] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1794029382.841638563] [robot_state_publisher]: got segment base_link_inertia
+[robot_state_publisher-1] [INFO] [1794029382.841642719] [robot_state_publisher]: got segment carrier_flange
+[robot_state_publisher-1] [INFO] [1794029382.841646354] [robot_state_publisher]: got segment carrier_flange_interface
+[robot_state_publisher-1] [INFO] [1794029382.841649679] [robot_state_publisher]: got segment carrier_flange_mount_left
+[robot_state_publisher-1] [INFO] [1794029382.841652844] [robot_state_publisher]: got segment carrier_flange_mount_right
+[robot_state_publisher-1] [INFO] [1794029382.841655648] [robot_state_publisher]: got segment cell_floor
+[robot_state_publisher-1] [INFO] [1794029382.841658643] [robot_state_publisher]: got segment dual_arm_base_link
+[robot_state_publisher-1] [INFO] [1794029382.841661367] [robot_state_publisher]: got segment flange
+[robot_state_publisher-1] [INFO] [1794029382.841664481] [robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-1] [INFO] [1794029382.841667326] [robot_state_publisher]: got segment ft_frame
+[robot_state_publisher-1] [INFO] [1794029382.841670260] [robot_state_publisher]: got segment left_forearm
+[robot_state_publisher-1] [INFO] [1794029382.841694045] [robot_state_publisher]: got segment left_upper_arm
+[robot_state_publisher-1] [INFO] [1794029382.841697430] [robot_state_publisher]: got segment right_forearm
+[robot_state_publisher-1] [INFO] [1794029382.841700275] [robot_state_publisher]: got segment right_upper_arm
+[robot_state_publisher-1] [INFO] [1794029382.841703059] [robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-1] [INFO] [1794029382.841705733] [robot_state_publisher]: got segment station_s1_raw
+[robot_state_publisher-1] [INFO] [1794029382.841708517] [robot_state_publisher]: got segment station_s2_staging
+[robot_state_publisher-1] [INFO] [1794029382.841711091] [robot_state_publisher]: got segment station_s3_machine
+[robot_state_publisher-1] [INFO] [1794029382.841713554] [robot_state_publisher]: got segment station_s4_output
+[robot_state_publisher-1] [INFO] [1794029382.841716118] [robot_state_publisher]: got segment station_s5_finished
+[robot_state_publisher-1] [INFO] [1794029382.841718752] [robot_state_publisher]: got segment tool0
+[robot_state_publisher-1] [INFO] [1794029382.841721416] [robot_state_publisher]: got segment upper_arm_link
+[robot_state_publisher-1] [INFO] [1794029382.841724100] [robot_state_publisher]: got segment workpiece
+[robot_state_publisher-1] [INFO] [1794029382.841726834] [robot_state_publisher]: got segment workpiece_x_carriage
+[robot_state_publisher-1] [INFO] [1794029382.841742628] [robot_state_publisher]: got segment workpiece_y_carriage
+[robot_state_publisher-1] [INFO] [1794029382.841755517] [robot_state_publisher]: got segment world
+[robot_state_publisher-1] [INFO] [1794029382.841758842] [robot_state_publisher]: got segment wrist_1_link
+[robot_state_publisher-1] [INFO] [1794029382.841761656] [robot_state_publisher]: got segment wrist_2_link
+[robot_state_publisher-1] [INFO] [1794029382.841764240] [robot_state_publisher]: got segment wrist_3_link
+[machine_tending_coordinator-2] [WARN] [1794029382.885687954] [machine_tending_coordinator]: VISUAL SIMULATION ONLY: carrier joints are not commanded; this run is not runtime or end-to-end verification
+[rviz2-3] [INFO] [1794029382.946803330] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1794029382.946993803] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[rviz2-3] [INFO] [1794029382.985057437] [rviz2]: Stereo is NOT SUPPORTED
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [rviz2-3]: sending signal 'SIGINT' to process[rviz2-3]
+[INFO] [machine_tending_coordinator-2]: sending signal 'SIGINT' to process[machine_tending_coordinator-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[rviz2-3] [INFO] [1794029385.224396152] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1794029385.229444041] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 1412]
+[INFO] [machine_tending_coordinator-2]: process has finished cleanly [pid 1414]
+[INFO] [rviz2-3]: process has finished cleanly [pid 1416]

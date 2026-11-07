@@ -1,0 +1,14 @@
+	librviz_common.so => /opt/cambot/rviz/lib/librviz_common.so (0x00007f0346ef8000)
+Build, offline checks, model and historical analysis passed
+Visual scenario passed: success
+Visual scenario passed: unreachable
+Visual scenario passed: load_failure
+Visual scenario passed: cancelled
+Idle shutdown passed
+Interrupted shutdown passed: 1/5
+Interrupted shutdown passed: 2/5
+Interrupted shutdown passed: 3/5
+Interrupted shutdown passed: 4/5
+Interrupted shutdown passed: 5/5
+[ERROR] [launch]: Caught exception in launch (see debug for traceback): station S1_RAW target is not controller-validated
+AY13_AGENT_TECHNICAL_REPLAY_PASS (independent human review still required)

@@ -29,7 +29,10 @@ For cloud execution, see the [Humble container workflow](../CLOUD_HUMBLE.md)
 and [agent-run replay](../evidence/AY-13/agent_replay_20261106/README.md).
 That replay is not an independent human sign-off and retains its failed diagnostics.
 The [consolidated repair progress](../evidence/AY-13/runtime_repair_20261107/README.md)
-collects later code fixes, tests, and the still-pending RViz dependency patch.
+collects the earlier code fixes, tests and RViz diagnostics. The subsequent
+[reproducible-image replay](../evidence/AY-13/reproducible_image_20261107/README.md)
+records the pinned dependency integration and successful final technical suite.
+Independent human reproduction is still required.
 
 ## Evidence boundary
 
