@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the machine-readable CAM-BOT cross-validation report."""
 
+import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -12,6 +13,7 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = "docs/evidence/AY-13/cross_validation"
 CAPTURE = "experiments/machine_tending/runs/ay10-visual-20261015-03"
+EVIDENCE_SOURCE_COMMIT = "f2e753f9780a6e6d670ecfe498aba3ed11fc63a1"
 
 
 def read_json(path):
@@ -42,19 +44,19 @@ def build_report():
         raise RuntimeError("report requires 13 AY records and statuses")
     if inventory["count"] != len(inventory["files"]):
         raise RuntimeError("source inventory count changed")
-    if subprocess.run(
-        ["git", "-C", str(ROOT), "diff", "--quiet", "HEAD", "--", "src"],
-        check=False,
-    ).returncode != 0:
-        raise RuntimeError("src differs from report commit")
+    # These gates describe the October capture, not whichever source is now HEAD.
     tracked = set(subprocess.check_output(
-        ["git", "-C", str(ROOT), "ls-files", "src"], text=True
+        ["git", "-C", str(ROOT), "ls-tree", "-r", "--name-only",
+         EVIDENCE_SOURCE_COMMIT, "--", "src"], text=True
     ).splitlines())
     mapped = {item["path"]: item["sha256"] for item in inventory["files"]}
     if set(mapped) != tracked:
         raise RuntimeError("source inventory does not cover committed source")
     for path, digest in mapped.items():
-        if hashlib.sha256((ROOT / path).read_bytes()).hexdigest() != digest:
+        source = subprocess.check_output(
+            ["git", "-C", str(ROOT), "show", f"{EVIDENCE_SOURCE_COMMIT}:{path}"]
+        )
+        if hashlib.sha256(source).hexdigest() != digest:
             raise RuntimeError(f"source inventory hash mismatch: {path}")
 
     retest = (ROOT / EVIDENCE / "colcon_retest.log").read_text(encoding="utf-8")
@@ -152,8 +154,9 @@ def build_report():
         "title": "CAM-BOT BUILD REPORT",
         "schema_version": 1,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "commit": head,
-        "commit_role": "validated ROS source and cross-validation repair commit",
+        "commit": EVIDENCE_SOURCE_COMMIT,
+        "commit_role": "historical October cross-validation source; not current runtime proof",
+        "generated_from_checkout": head,
         "environment": {
             "host": "CachyOS x86_64",
             "container": "Ubuntu 22.04.5 LTS via cambot-humble Distrobox",
@@ -236,11 +239,16 @@ def build_report():
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, required=True,
+                        help="new report path; existing reports cannot be overwritten")
+    args = parser.parse_args()
     report = build_report()
-    output = ROOT / "artifacts/verification/cambot_build_report.json"
+    output = args.output
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(f"{output.relative_to(ROOT)}: {len(report['ids'])} AY IDs, "
+    with output.open("x", encoding="utf-8") as stream:
+        stream.write(json.dumps(report, indent=2) + "\n")
+    print(f"{output}: {len(report['ids'])} AY IDs, "
           f"{len(report['gates'])} gates, {report['trials']['qualifying_raw_attempted']} visual attempts")
 
 

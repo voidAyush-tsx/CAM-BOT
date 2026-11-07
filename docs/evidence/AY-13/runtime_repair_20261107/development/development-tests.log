@@ -1,0 +1,25 @@
+Starting >>> carrier_control
+--- stderr: carrier_control
+
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+Finished <<< carrier_control [1.64s]
+Starting >>> carrier_description
+--- stderr: carrier_description
+
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+Finished <<< carrier_description [0.64s]
+
+Summary: 2 packages finished [2.53s]
+  2 packages had stderr output: carrier_control carrier_description

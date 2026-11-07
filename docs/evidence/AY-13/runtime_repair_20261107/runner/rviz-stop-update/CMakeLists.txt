@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project(rviz_stop_update)
+find_package(ament_cmake REQUIRED)
+find_package(rviz_common REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
+add_library(rviz_stop_update SHARED shutdown.cpp)
+ament_target_dependencies(rviz_stop_update rviz_common)
+target_link_libraries(rviz_stop_update Qt5::Widgets)

@@ -1,10 +1,17 @@
 # CAM-BOT status and evidence levels
 
-Updated 2026-10-15. This is the only project status matrix. Each AY record,
+Updated 2026-11-07. This is the only project status matrix. Each AY record,
 including prior state, options, exact files, commands, results, limitations and
 next action, is in the [versioned evidence ledger](ayush/ledger.json).
 The [2026-11-05 documentation repair](evidence/AY-13/reproducibility_repair.md)
 adds offline validation and evidence clarification without changing dispositions.
+The [2026-11-06 agent Humble replay](evidence/AY-13/agent_replay_20261106/README.md)
+adds a fresh build, package tests and live visual success/failure/cancellation
+evidence. The [consolidated runtime repair](evidence/AY-13/runtime_repair_20261107/README.md)
+fixes impossible-target classification and coordinator shutdown, with focused
+regressions and five interrupted-trial passes using a locally rebuilt RViz
+patch. Reproducible RViz patch integration, the final full visual-suite repeat,
+and independent human review remain open.
 
 | Level | Meaning | Present evidence |
 |---|---|---|
@@ -33,7 +40,7 @@ Controller targets S1–S4 are unvalidated and S5 has no taught target.
 | AY-10 | COMPLETE | Five actual visual attempts; [acceptance](evidence/AY-10/acceptance.json), [raw manifest](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json) |
 | AY-11 | COMPLETE | Event-derived visual metrics; [metrics](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/metrics.json), [tests](evidence/AY-10/analysis_tests.log) |
 | AY-12 | COMPLETE | Reproducible visual tables/plots; [artifacts](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/artifacts.json), [regeneration](evidence/AY-10/regeneration.log) |
-| AY-13 | IN PROGRESS | Documentation and [G0–G10 cross-validation](evidence/AY-13/cross_validation/README.md) recorded in a [machine report](../artifacts/verification/cambot_build_report.json); controller gates and independent second-person repeat remain open. [Guide](ayush/README.md) |
+| AY-13 | IN PROGRESS | Documentation, historical [cross-validation](evidence/AY-13/cross_validation/README.md), and [runtime repair progress](evidence/AY-13/runtime_repair_20261107/README.md) retained. RViz patch integration/final visual repeat and independent second-person review remain open. [Guide](ayush/README.md) |
 
 AY-01…09 completion refers to visual ROS scope. The original AY-06–08 capture
 was not retained. Later [AY-06–08 runtime records](evidence/AY-06-08/runtime/probe.jsonl)

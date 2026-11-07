@@ -1,0 +1,93 @@
+test_broken_local_link (tools.test_check_ay13_docs.DocCheckTests) ... ok
+test_missing_and_duplicate_ay_status (tools.test_check_ay13_docs.DocCheckTests) ... ok
+test_phantom_launch_and_executable (tools.test_check_ay13_docs.DocCheckTests) ... ok
+test_source_inventory_detects_changed_bytes (tools.test_check_ay13_docs.DocCheckTests) ... ok
+test_valid_local_link (tools.test_check_ay13_docs.DocCheckTests) ... ok
+test_changed_raw_qualification_cannot_generate_report (tools.test_generate_build_report.BuildReportTests) ... fatal: detected dubious ownership in repository at '/workspace/CAM-BOT'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /workspace/CAM-BOT
+ERROR
+test_cli_refuses_to_overwrite_an_existing_report (tools.test_generate_build_report.BuildReportTests) ... FAIL
+test_historical_source_hash_is_still_enforced (tools.test_generate_build_report.BuildReportTests) ... fatal: detected dubious ownership in repository at '/workspace/CAM-BOT'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /workspace/CAM-BOT
+ERROR
+test_report_has_all_gates_tasks_and_real_paths (tools.test_generate_build_report.BuildReportTests) ... fatal: detected dubious ownership in repository at '/workspace/CAM-BOT'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /workspace/CAM-BOT
+ERROR
+test_current_packages (tools.test_verify_ay.PackageAssetChecks) ... ok
+test_helper_based_setup_is_accepted (tools.test_verify_ay.PackageAssetChecks) ... ok
+test_missing_source_fails (tools.test_verify_ay.PackageAssetChecks) ... ok
+test_omitted_asset_fails_even_with_old_glob_text (tools.test_verify_ay.PackageAssetChecks) ... ok
+test_setup_exception_restores_working_directory (tools.test_verify_ay.PackageAssetChecks) ... ok
+test_confirmed_coordinated_cancellation (tools.test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_confirmed_scripted_cancellation (tools.test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_later_state_rejected (tools.test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_timeout_without_cancel_acknowledgement_rejected (tools.test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_unrelated_failure_rejected (tools.test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_workpiece_advance_rejected (tools.test_ay05_ros_probe.CancellationProbeTests) ... ok
+test_exact_failure_and_recheck_are_required (tools.test_ay05_ros_probe.UnreachableProbeTests) ... ok
+test_background_session_restores_sigint_and_owns_process_group (tools.test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_clean_children (tools.test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_forced_termination_is_not_a_clean_shutdown (tools.test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_missing_child_exit_fails (tools.test_ros_shutdown.ShutdownCaptureTests) ... ok
+test_rviz_crash_is_not_hidden_by_successful_probe (tools.test_ros_shutdown.ShutdownCaptureTests) ... ok
+
+======================================================================
+ERROR: test_changed_raw_qualification_cannot_generate_report (tools.test_generate_build_report.BuildReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/CAM-BOT/tools/test_generate_build_report.py", line 41, in test_changed_raw_qualification_cannot_generate_report
+    report_module.build_report()
+  File "/workspace/CAM-BOT/tools/generate_build_report.py", line 30, in build_report
+    head = subprocess.check_output(
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-C', '/workspace/CAM-BOT', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_historical_source_hash_is_still_enforced (tools.test_generate_build_report.BuildReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/CAM-BOT/tools/test_generate_build_report.py", line 54, in test_historical_source_hash_is_still_enforced
+    report_module.build_report()
+  File "/workspace/CAM-BOT/tools/generate_build_report.py", line 30, in build_report
+    head = subprocess.check_output(
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-C', '/workspace/CAM-BOT', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_report_has_all_gates_tasks_and_real_paths (tools.test_generate_build_report.BuildReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/CAM-BOT/tools/test_generate_build_report.py", line 15, in test_report_has_all_gates_tasks_and_real_paths
+    report = report_module.build_report()
+  File "/workspace/CAM-BOT/tools/generate_build_report.py", line 30, in build_report
+    head = subprocess.check_output(
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-C', '/workspace/CAM-BOT', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+======================================================================
+FAIL: test_cli_refuses_to_overwrite_an_existing_report (tools.test_generate_build_report.BuildReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/CAM-BOT/tools/test_generate_build_report.py", line 65, in test_cli_refuses_to_overwrite_an_existing_report
+    self.assertIn("FileExistsError", result.stderr)
+AssertionError: 'FileExistsError' not found in 'fatal: detected dubious ownership in repository at \'/workspace/CAM-BOT\'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /workspace/CAM-BOT\nTraceback (most recent call last):\n  File "/workspace/CAM-BOT/tools/generate_build_report.py", line 256, in <module>\n    main()\n  File "/workspace/CAM-BOT/tools/generate_build_report.py", line 246, in main\n    report = build_report()\n  File "/workspace/CAM-BOT/tools/generate_build_report.py", line 30, in build_report\n    head = subprocess.check_output(\n  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File "/usr/lib/python3.10/subprocess.py", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command \'[\'git\', \'-C\', \'/workspace/CAM-BOT\', \'rev-parse\', \'HEAD\']\' returned non-zero exit status 128.\n'
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.219s
+
+FAILED (failures=1, errors=3)

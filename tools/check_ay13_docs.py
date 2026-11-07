@@ -152,8 +152,10 @@ def installed_errors(executables, launches):
 
 
 def inventory_errors(root=ROOT):
-    """Check the G0 source map against all tracked source paths and bytes."""
-    path = root / "docs/evidence/AY-13/cross_validation/source_inventory.json"
+    """Check the maintained source map, preserving the sealed G0 inventory."""
+    path = root / "artifacts/verification/source_inventory.json"
+    if not path.is_file():
+        path = root / "docs/evidence/AY-13/cross_validation/source_inventory.json"
     if not path.is_file():
         return ["missing G0 source inventory"]
     data = json.loads(path.read_text(encoding="utf-8"))

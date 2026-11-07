@@ -1,0 +1,20 @@
+63db6539fb4a3cab311fb2f7ae09ec100ad304f8
+## main...origin/main
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+Python 3.10.12
+python3-matplotlib	3.5.1-2build1
+python3-pytest	6.2.5-1ubuntu2
+ros-humble-ros-base	0.10.0-1jammy.20260915.225919
+ros-humble-rviz2	11.2.29-1jammy.20260916.003100
+ros-humble-ur-description	2.14.0-1jammy.20260922.040002

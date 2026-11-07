@@ -1,0 +1,103 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-06-19-03-15-914008-b18bcd8b8ecf-3164
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [3166]
+[INFO] [machine_tending_coordinator-2]: process started with pid [3168]
+[INFO] [rviz2-3]: process started with pid [3170]
+[robot_state_publisher-1] [INFO] [1793991796.168703384] [robot_state_publisher]: got segment base
+[robot_state_publisher-1] [INFO] [1793991796.168809602] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1793991796.168816432] [robot_state_publisher]: got segment base_link_inertia
+[robot_state_publisher-1] [INFO] [1793991796.168820678] [robot_state_publisher]: got segment carrier_flange
+[robot_state_publisher-1] [INFO] [1793991796.168824053] [robot_state_publisher]: got segment carrier_flange_interface
+[robot_state_publisher-1] [INFO] [1793991796.168827548] [robot_state_publisher]: got segment carrier_flange_mount_left
+[robot_state_publisher-1] [INFO] [1793991796.168830322] [robot_state_publisher]: got segment carrier_flange_mount_right
+[robot_state_publisher-1] [INFO] [1793991796.168833097] [robot_state_publisher]: got segment cell_floor
+[robot_state_publisher-1] [INFO] [1793991796.168836311] [robot_state_publisher]: got segment dual_arm_base_link
+[robot_state_publisher-1] [INFO] [1793991796.168839266] [robot_state_publisher]: got segment flange
+[robot_state_publisher-1] [INFO] [1793991796.168842000] [robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-1] [INFO] [1793991796.168844834] [robot_state_publisher]: got segment ft_frame
+[robot_state_publisher-1] [INFO] [1793991796.168847548] [robot_state_publisher]: got segment left_forearm
+[robot_state_publisher-1] [INFO] [1793991796.168850112] [robot_state_publisher]: got segment left_upper_arm
+[robot_state_publisher-1] [INFO] [1793991796.168852856] [robot_state_publisher]: got segment right_forearm
+[robot_state_publisher-1] [INFO] [1793991796.168855560] [robot_state_publisher]: got segment right_upper_arm
+[robot_state_publisher-1] [INFO] [1793991796.168858574] [robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-1] [INFO] [1793991796.168861208] [robot_state_publisher]: got segment station_s1_raw
+[robot_state_publisher-1] [INFO] [1793991796.168863812] [robot_state_publisher]: got segment station_s2_staging
+[robot_state_publisher-1] [INFO] [1793991796.168866386] [robot_state_publisher]: got segment station_s3_machine
+[robot_state_publisher-1] [INFO] [1793991796.168869080] [robot_state_publisher]: got segment station_s4_output
+[robot_state_publisher-1] [INFO] [1793991796.168871774] [robot_state_publisher]: got segment station_s5_finished
+[robot_state_publisher-1] [INFO] [1793991796.168874528] [robot_state_publisher]: got segment tool0
+[robot_state_publisher-1] [INFO] [1793991796.168877292] [robot_state_publisher]: got segment upper_arm_link
+[robot_state_publisher-1] [INFO] [1793991796.168880096] [robot_state_publisher]: got segment workpiece
+[robot_state_publisher-1] [INFO] [1793991796.168882841] [robot_state_publisher]: got segment workpiece_x_carriage
+[robot_state_publisher-1] [INFO] [1793991796.168885795] [robot_state_publisher]: got segment workpiece_y_carriage
+[robot_state_publisher-1] [INFO] [1793991796.168888379] [robot_state_publisher]: got segment world
+[robot_state_publisher-1] [INFO] [1793991796.168891043] [robot_state_publisher]: got segment wrist_1_link
+[robot_state_publisher-1] [INFO] [1793991796.168893677] [robot_state_publisher]: got segment wrist_2_link
+[robot_state_publisher-1] [INFO] [1793991796.168896351] [robot_state_publisher]: got segment wrist_3_link
+[rviz2-3] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[rviz2-3] [INFO] [1793991796.290196201] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1793991796.290393885] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[rviz2-3] [INFO] [1793991796.340439480] [rviz2]: Stereo is NOT SUPPORTED
+[machine_tending_coordinator-2] [WARN] [1793991796.629653206] [machine_tending_coordinator]: VISUAL SIMULATION ONLY: carrier joints are not commanded; this run is not runtime or end-to-end verification
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [rviz2-3]: sending signal 'SIGINT' to process[rviz2-3]
+[INFO] [machine_tending_coordinator-2]: sending signal 'SIGINT' to process[machine_tending_coordinator-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[rviz2-3] [INFO] [1793991799.064134889] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1793991799.066388689] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[machine_tending_coordinator-2] [ERROR] [1793991799.073897997] [machine_tending_coordinator]: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[machine_tending_coordinator-2] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[machine_tending_coordinator-2] Traceback (most recent call last):
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_fsm.py", line 146, in run
+[machine_tending_coordinator-2]     outcome = execute_step(step, deadline, lambda: self.cancel_requested)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 782, in _execute_fsm_step
+[machine_tending_coordinator-2]     outcome = self._execute_fsm_step_impl(step, deadline, cancelled)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 810, in _execute_fsm_step_impl
+[machine_tending_coordinator-2]     coordinated = self._coordinate_target(step, deadline, cancelled)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 753, in _coordinate_target
+[machine_tending_coordinator-2]     if not self._animate_carrier_visual(station, step["duration_s"],
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 651, in _animate_carrier_visual
+[machine_tending_coordinator-2]     completed = self._animate_carrier_visual_impl(
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 673, in _animate_carrier_visual_impl
+[machine_tending_coordinator-2]     rclpy.spin_once(self, timeout_sec=min(
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 208, in spin_once
+[machine_tending_coordinator-2]     executor.spin_once(timeout_sec=timeout_sec)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 812, in spin_once
+[machine_tending_coordinator-2]     self._spin_once_impl(timeout_sec)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 809, in _spin_once_impl
+[machine_tending_coordinator-2]     raise handler.exception()
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 309, in _execute_coroutine_step
+[machine_tending_coordinator-2]     result = coro.send(None)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 478, in handler
+[machine_tending_coordinator-2]     arg = take_from_wait_list(entity)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 400, in _take_subscription
+[machine_tending_coordinator-2]     msg_info = sub.handle.take_message(sub.msg_type, sub.raw)
+[machine_tending_coordinator-2] RuntimeError: Unable to convert call argument to Python object (compile in debug mode for details)
+[machine_tending_coordinator-2] 
+[machine_tending_coordinator-2] During handling of the above exception, another exception occurred:
+[machine_tending_coordinator-2] 
+[machine_tending_coordinator-2] Traceback (most recent call last):
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/install/carrier_control/lib/carrier_control/machine_tending_coordinator", line 33, in <module>
+[machine_tending_coordinator-2]     sys.exit(load_entry_point('carrier-control', 'console_scripts', 'machine_tending_coordinator')())
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 909, in main
+[machine_tending_coordinator-2]     node.run_trials()
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 889, in run_trials
+[machine_tending_coordinator-2]     record = self.run_trial(trial_number)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 853, in run_trial
+[machine_tending_coordinator-2]     outcome = self.fsm.run(self._execute_fsm_step)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_fsm.py", line 148, in run
+[machine_tending_coordinator-2]     return self._fail(f"ADAPTER_EXCEPTION:{type(exc).__name__}", name)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_fsm.py", line 124, in _fail
+[machine_tending_coordinator-2]     self._emit("FAILURE", cause=cause, failure_step=step)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_fsm.py", line 86, in _emit
+[machine_tending_coordinator-2]     self.notify({
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 222, in _fsm_event
+[machine_tending_coordinator-2]     self._publish_json(self.task_publisher, payload)
+[machine_tending_coordinator-2]   File "/workspace/CAM-BOT/build/carrier_control/carrier_control/machine_tending_coordinator.py", line 191, in _publish_json
+[machine_tending_coordinator-2]     publisher.publish(message)
+[machine_tending_coordinator-2]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+[machine_tending_coordinator-2]     self.__publisher.publish(msg)
+[machine_tending_coordinator-2] rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 3166]
+[ERROR] [machine_tending_coordinator-2]: process has died [pid 3168, exit code 1, cmd '/workspace/CAM-BOT/install/carrier_control/lib/carrier_control/machine_tending_coordinator --ros-args -r __node:=machine_tending_coordinator --params-file /tmp/launch_params_yd3ch_ft'].
+[INFO] [rviz2-3]: process has finished cleanly [pid 3170]

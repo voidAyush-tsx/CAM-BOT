@@ -1,0 +1,349 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-06-18-54-34-139586-b18bcd8b8ecf-1459
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [1477]
+[INFO] [machine_tending_coordinator-2]: process started with pid [1479]
+[INFO] [gdb-3]: process started with pid [1481]
+[gdb-3] SIGINT is used by the debugger.
+[gdb-3] Are you sure you want to change it? (y or n) [answered Y; input not from terminal]
+[gdb-3] warning: Error disabling address space randomization: Operation not permitted
+[robot_state_publisher-1] [INFO] [1793991274.487262911] [robot_state_publisher]: got segment base
+[robot_state_publisher-1] [INFO] [1793991274.487424852] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1793991274.487433785] [robot_state_publisher]: got segment base_link_inertia
+[robot_state_publisher-1] [INFO] [1793991274.487439483] [robot_state_publisher]: got segment carrier_flange
+[robot_state_publisher-1] [INFO] [1793991274.487444631] [robot_state_publisher]: got segment carrier_flange_interface
+[robot_state_publisher-1] [INFO] [1793991274.487449629] [robot_state_publisher]: got segment carrier_flange_mount_left
+[robot_state_publisher-1] [INFO] [1793991274.487454315] [robot_state_publisher]: got segment carrier_flange_mount_right
+[robot_state_publisher-1] [INFO] [1793991274.487458882] [robot_state_publisher]: got segment cell_floor
+[robot_state_publisher-1] [INFO] [1793991274.487463569] [robot_state_publisher]: got segment dual_arm_base_link
+[robot_state_publisher-1] [INFO] [1793991274.487468136] [robot_state_publisher]: got segment flange
+[robot_state_publisher-1] [INFO] [1793991274.487472543] [robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-1] [INFO] [1793991274.487477179] [robot_state_publisher]: got segment ft_frame
+[robot_state_publisher-1] [INFO] [1793991274.487481736] [robot_state_publisher]: got segment left_forearm
+[robot_state_publisher-1] [INFO] [1793991274.487486093] [robot_state_publisher]: got segment left_upper_arm
+[robot_state_publisher-1] [INFO] [1793991274.487490629] [robot_state_publisher]: got segment right_forearm
+[robot_state_publisher-1] [INFO] [1793991274.487495016] [robot_state_publisher]: got segment right_upper_arm
+[robot_state_publisher-1] [INFO] [1793991274.487499322] [robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-1] [INFO] [1793991274.487503639] [robot_state_publisher]: got segment station_s1_raw
+[robot_state_publisher-1] [INFO] [1793991274.487507825] [robot_state_publisher]: got segment station_s2_staging
+[robot_state_publisher-1] [INFO] [1793991274.487512202] [robot_state_publisher]: got segment station_s3_machine
+[robot_state_publisher-1] [INFO] [1793991274.487516498] [robot_state_publisher]: got segment station_s4_output
+[robot_state_publisher-1] [INFO] [1793991274.487520674] [robot_state_publisher]: got segment station_s5_finished
+[robot_state_publisher-1] [INFO] [1793991274.487524951] [robot_state_publisher]: got segment tool0
+[robot_state_publisher-1] [INFO] [1793991274.487529137] [robot_state_publisher]: got segment upper_arm_link
+[robot_state_publisher-1] [INFO] [1793991274.487533213] [robot_state_publisher]: got segment workpiece
+[robot_state_publisher-1] [INFO] [1793991274.487537219] [robot_state_publisher]: got segment workpiece_x_carriage
+[robot_state_publisher-1] [INFO] [1793991274.487541415] [robot_state_publisher]: got segment workpiece_y_carriage
+[robot_state_publisher-1] [INFO] [1793991274.487545351] [robot_state_publisher]: got segment world
+[robot_state_publisher-1] [INFO] [1793991274.487549928] [robot_state_publisher]: got segment wrist_1_link
+[robot_state_publisher-1] [INFO] [1793991274.487554945] [robot_state_publisher]: got segment wrist_2_link
+[robot_state_publisher-1] [INFO] [1793991274.487559552] [robot_state_publisher]: got segment wrist_3_link
+[machine_tending_coordinator-2] [WARN] [1793991274.598644446] [machine_tending_coordinator]: VISUAL SIMULATION ONLY: carrier joints are not commanded; this run is not runtime or end-to-end verification
+[gdb-3] [Thread debugging using libthread_db enabled]
+[gdb-3] Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[gdb-3] [New Thread 0x7fdc312de640 (LWP 1519)]
+[gdb-3] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[gdb-3] [New Thread 0x7fdc2bfff640 (LWP 1520)]
+[gdb-3] [New Thread 0x7fdc2b7fe640 (LWP 1521)]
+[gdb-3] [New Thread 0x7fdc2affd640 (LWP 1522)]
+[gdb-3] [New Thread 0x7fdc2a7fc640 (LWP 1523)]
+[gdb-3] [New Thread 0x7fdc29ffb640 (LWP 1524)]
+[gdb-3] [New Thread 0x7fdc297fa640 (LWP 1525)]
+[gdb-3] [New Thread 0x7fdc28ff9640 (LWP 1526)]
+[gdb-3] [New Thread 0x7fdc287f8640 (LWP 1527)]
+[gdb-3] [New Thread 0x7fdc27ff7640 (LWP 1528)]
+[gdb-3] [New Thread 0x7fdc277f6640 (LWP 1529)]
+[gdb-3] [New Thread 0x7fdc26ff5640 (LWP 1530)]
+[gdb-3] [New Thread 0x7fdc2661c640 (LWP 1531)]
+[gdb-3] [New Thread 0x7fdc25658640 (LWP 1532)]
+[gdb-3] [New Thread 0x7fdc24e57640 (LWP 1533)]
+[gdb-3] [New Thread 0x7fdc0df24640 (LWP 1534)]
+[gdb-3] [New Thread 0x7fdc0d723640 (LWP 1535)]
+[gdb-3] [New Thread 0x7fdc0cf22640 (LWP 1536)]
+[gdb-3] [New Thread 0x7fdc0100d640 (LWP 1537)]
+[gdb-3] [New Thread 0x7fdc0080c640 (LWP 1538)]
+[gdb-3] [New Thread 0x7fdbe3fff640 (LWP 1539)]
+[gdb-3] [New Thread 0x7fdbdb5ff640 (LWP 1540)]
+[gdb-3] [New Thread 0x7fdbe37fe640 (LWP 1541)]
+[gdb-3] [New Thread 0x7fdbe2ffd640 (LWP 1542)]
+[gdb-3] [INFO] [1793991275.117882848] [rviz2]: Stereo is NOT SUPPORTED
+[gdb-3] [INFO] [1793991275.118054413] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[gdb-3] [INFO] [1793991275.176929245] [rviz2]: Stereo is NOT SUPPORTED
+[gdb-3] [New Thread 0x7fdbe127e640 (LWP 1543)]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [gdb-3]: sending signal 'SIGINT' to process[gdb-3]
+[INFO] [machine_tending_coordinator-2]: sending signal 'SIGINT' to process[machine_tending_coordinator-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[gdb-3] [INFO] [1793991297.796459966] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1793991297.797312018] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[gdb-3] [Thread 0x7fdbe127e640 (LWP 1543) exited]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 1477]
+[gdb-3] 
+[gdb-3] Thread 1 "rviz2" received signal SIGSEGV, Segmentation fault.
+[gdb-3] 0x00007fdc36d61a81 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[INFO] [machine_tending_coordinator-2]: process has finished cleanly [pid 1479]
+[gdb-3] 
+[gdb-3] Thread 25 (Thread 0x7fdbe2ffd640 (LWP 1542) "rviz2:disk$0"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0dfee8bb in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 24 (Thread 0x7fdbe37fe640 (LWP 1541) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e638cd3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 23 (Thread 0x7fdbdb5ff640 (LWP 1540) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e638cd3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 22 (Thread 0x7fdbe3fff640 (LWP 1539) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e638cd3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 21 (Thread 0x7fdc0080c640 (LWP 1538) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e638cd3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 20 (Thread 0x7fdc0100d640 (LWP 1537) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e638cd3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 19 (Thread 0x7fdc0cf22640 (LWP 1536) "llvmpipe-4"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e63c4f3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 18 (Thread 0x7fdc0d723640 (LWP 1535) "llvmpipe-3"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e63c4f3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 17 (Thread 0x7fdc0df24640 (LWP 1534) "llvmpipe-2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e63c4f3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 16 (Thread 0x7fdc24e57640 (LWP 1533) "llvmpipe-1"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e63c4f3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 15 (Thread 0x7fdc25658640 (LWP 1532) "llvmpipe-0"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc0e03e52d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #3  0x00007fdc0e63c4f3 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #4  0x00007fdc0e03e45b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 14 (Thread 0x7fdc2661c640 (LWP 1531) "QDBusConnection"):
+[gdb-3] #0  0x00007fdc36dd6d1f in poll () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc35897596 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+[gdb-3] #2  0x00007fdc3583f433 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+[gdb-3] #3  0x00007fdc376570b8 in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #4  0x00007fdc375fc75b in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #5  0x00007fdc3740faf2 in QThread::exec() () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #6  0x00007fdc31738f0b in ?? () from /lib/x86_64-linux-gnu/libQt5DBus.so.5
+[gdb-3] #7  0x00007fdc37410ca1 in ?? () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #8  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #9  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 13 (Thread 0x7fdc26ff5640 (LWP 1530) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc305e4132 in eprosima::fastdds::dds::detail::WaitSetImpl::wait(std::vector<eprosima::fastdds::dds::Condition*, std::allocator<eprosima::fastdds::dds::Condition*> >&, eprosima::fastrtps::Time_t const&) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc305e41aa in eprosima::fastdds::dds::WaitSet::wait(std::vector<eprosima::fastdds::dds::Condition*, std::allocator<eprosima::fastdds::dds::Condition*> >&, eprosima::fastrtps::Time_t) const () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #4  0x00007fdc30a60a44 in rmw_fastrtps_shared_cpp::__rmw_wait(char const*, rmw_subscriptions_s*, rmw_guard_conditions_s*, rmw_services_s*, rmw_clients_s*, rmw_events_s*, rmw_wait_set_s*, rmw_time_s const*) () from /opt/ros/humble/lib/librmw_fastrtps_shared_cpp.so
+[gdb-3] #5  0x00007fdc30a4c502 in ?? () from /opt/ros/humble/lib/librmw_fastrtps_shared_cpp.so
+[gdb-3] #6  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #7  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #8  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 12 (Thread 0x7fdc277f6640 (LWP 1529) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d51a01 in pthread_cond_wait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc3063be45 in eprosima::fastdds::rtps::FlowControllerImpl<eprosima::fastdds::rtps::FlowControllerSyncPublishMode, eprosima::fastdds::rtps::FlowControllerFifoSchedule>::run() () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #4  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #5  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 11 (Thread 0x7fdc27ff7640 (LWP 1528) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d5aa13 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc306d62fa in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc306d6b6c in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #4  0x00007fdc306d4347 in eprosima::fastdds::rtps::SharedMemChannelResource::perform_listen_operation(eprosima::fastrtps::rtps::Locator_t) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #5  0x00007fdc306d798b in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #6  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #7  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #8  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 10 (Thread 0x7fdc287f8640 (LWP 1527) "rviz2"):
+[gdb-3] #0  0x00007fdc36de5814 in recvfrom () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc3051c040 in eprosima::fastdds::rtps::UDPChannelResource::Receive(unsigned char*, unsigned int, unsigned int&, eprosima::fastrtps::rtps::Locator_t&) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #2  0x00007fdc3051c406 in eprosima::fastdds::rtps::UDPChannelResource::perform_listen_operation(eprosima::fastrtps::rtps::Locator_t) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc3051713b in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #4  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 9 (Thread 0x7fdc28ff9640 (LWP 1526) "rviz2"):
+[gdb-3] #0  0x00007fdc36de5814 in recvfrom () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc3051c040 in eprosima::fastdds::rtps::UDPChannelResource::Receive(unsigned char*, unsigned int, unsigned int&, eprosima::fastrtps::rtps::Locator_t&) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #2  0x00007fdc3051c406 in eprosima::fastdds::rtps::UDPChannelResource::perform_listen_operation(eprosima::fastrtps::rtps::Locator_t) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc3051713b in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #4  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 8 (Thread 0x7fdc297fa640 (LWP 1525) "rviz2"):
+[gdb-3] #0  0x00007fdc36de5814 in recvfrom () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc3051c040 in eprosima::fastdds::rtps::UDPChannelResource::Receive(unsigned char*, unsigned int, unsigned int&, eprosima::fastrtps::rtps::Locator_t&) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #2  0x00007fdc3051c406 in eprosima::fastdds::rtps::UDPChannelResource::perform_listen_operation(eprosima::fastrtps::rtps::Locator_t) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc3051713b in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #4  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 7 (Thread 0x7fdc29ffb640 (LWP 1524) "rviz2"):
+[gdb-3] #0  0x00007fdc36de5814 in recvfrom () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc3051c040 in eprosima::fastdds::rtps::UDPChannelResource::Receive(unsigned char*, unsigned int, unsigned int&, eprosima::fastrtps::rtps::Locator_t&) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #2  0x00007fdc3051c406 in eprosima::fastdds::rtps::UDPChannelResource::perform_listen_operation(eprosima::fastrtps::rtps::Locator_t) () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc3051713b in ?? () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #4  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 6 (Thread 0x7fdc2a7fc640 (LWP 1523) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d5229d in pthread_cond_clockwait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc3042ef61 in eprosima::fastrtps::rtps::ResourceEvent::event_service() () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #4  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #5  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 5 (Thread 0x7fdc2affd640 (LWP 1522) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d5229d in pthread_cond_clockwait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc306c9701 in eprosima::fastdds::rtps::SharedMemWatchdog::run() () from /opt/ros/humble/lib/libfastrtps.so.2.6
+[gdb-3] #3  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #4  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #5  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 4 (Thread 0x7fdc2b7fe640 (LWP 1521) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d5ac38 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc372ac372 in rclcpp::SignalHandler::wait_for_signal() () from /opt/ros/humble/lib/librclcpp.so
+[gdb-3] #3  0x00007fdc372ad10e in rclcpp::SignalHandler::deferred_signal_handler() () from /opt/ros/humble/lib/librclcpp.so
+[gdb-3] #4  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 3 (Thread 0x7fdc2bfff640 (LWP 1520) "rviz2"):
+[gdb-3] #0  0x00007fdc36d4f0d7 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d5229d in pthread_cond_clockwait () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc32229839 in ?? () from /lib/x86_64-linux-gnu/libspdlog.so.1
+[gdb-3] #3  0x00007fdc36fe3253 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #4  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #5  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 2 (Thread 0x7fdc312de640 (LWP 1519) "QXcbEventQueue"):
+[gdb-3] #0  0x00007fdc36dd6d1f in poll () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc32b337e2 in ?? () from /lib/x86_64-linux-gnu/libxcb.so.1
+[gdb-3] #2  0x00007fdc32b3522c in xcb_wait_for_event () from /lib/x86_64-linux-gnu/libxcb.so.1
+[gdb-3] #3  0x00007fdc31870d08 in ?? () from /lib/x86_64-linux-gnu/libQt5XcbQpa.so.5
+[gdb-3] #4  0x00007fdc37410ca1 in ?? () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #5  0x00007fdc36d52a83 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #6  0x00007fdc36de3a94 in clone () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] 
+[gdb-3] Thread 1 (Thread 0x7fdc319ed280 (LWP 1500) "rviz2"):
+[gdb-3] #0  0x00007fdc36d61a81 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #1  0x00007fdc36d630f9 in malloc () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #2  0x00007fdc36fb598c in operator new(unsigned long) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+[gdb-3] #3  0x00007fdc020a3f83 in llvm::User::operator new(unsigned long, unsigned int) () from /lib/x86_64-linux-gnu/libLLVM-15.so.1
+[gdb-3] #4  0x00007fdc020385ba in llvm::CastInst::Create(llvm::Instruction::CastOps, llvm::Value*, llvm::Type*, llvm::Twine const&, llvm::Instruction*) () from /lib/x86_64-linux-gnu/libLLVM-15.so.1
+[gdb-3] #5  0x00007fdc01f612d1 in ?? () from /lib/x86_64-linux-gnu/libLLVM-15.so.1
+[gdb-3] #6  0x00007fdc01fa2963 in LLVMBuildBitCast () from /lib/x86_64-linux-gnu/libLLVM-15.so.1
+[gdb-3] #7  0x00007fdc0e673f05 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #8  0x00007fdc0e67572f in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #9  0x00007fdc0e66217d in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #10 0x00007fdc0e6670a2 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #11 0x00007fdc0e654e58 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #12 0x00007fdc0e6394a0 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #13 0x00007fdc0ebb5418 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #14 0x00007fdc0ebb55a0 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #15 0x00007fdc0ebb5c93 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #16 0x00007fdc0ebb89b6 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #17 0x00007fdc0ebb9d6c in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #18 0x00007fdc0e66e676 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #19 0x00007fdc0dfe1b40 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #20 0x00007fdc0dfdaafa in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+[gdb-3] #21 0x00007fdc259d4872 in ?? () from /lib/x86_64-linux-gnu/libGLX_mesa.so.0
+[gdb-3] #22 0x00007fdc259d83ff in ?? () from /lib/x86_64-linux-gnu/libGLX_mesa.so.0
+[gdb-3] #23 0x00007fdc36b132da in Ogre::RenderSystem::_swapAllRenderTargetBuffers() () from /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so.1.12.1
+[gdb-3] #24 0x00007fdc36b40ea2 in Ogre::Root::_updateAllRenderTargets() () from /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so.1.12.1
+[gdb-3] #25 0x00007fdc36b40f10 in Ogre::Root::renderOneFrame() () from /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so.1.12.1
+[gdb-3] #26 0x00007fdc380a161a in rviz_common::VisualizationManager::onUpdate() () from /opt/ros/humble/lib/librviz_common.so
+[gdb-3] #27 0x00007fdc376357c8 in ?? () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #28 0x00007fdc376397fe in QTimer::timeout(QTimer::QPrivateSignal) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #29 0x00007fdc3762b33f in QObject::event(QEvent*) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #30 0x00007fdc37a0f713 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+[gdb-3] #31 0x00007fdc375fde3a in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #32 0x00007fdc376563eb in QTimerInfoList::activateTimers() () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #33 0x00007fdc37656d34 in ?? () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #34 0x00007fdc35841d8b in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+[gdb-3] #35 0x00007fdc358975f8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+[gdb-3] #36 0x00007fdc3583f433 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+[gdb-3] #37 0x00007fdc376570b8 in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #38 0x00007fdc375fc75b in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #39 0x00007fdc37604cf4 in QCoreApplication::exec() () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+[gdb-3] #40 0x000055e08ad1f99e in ?? ()
+[gdb-3] #41 0x00007fdc36ce7d90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #42 0x00007fdc36ce7e40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+[gdb-3] #43 0x000055e08ad1fc15 in ?? ()
+[INFO] [gdb-3]: process has finished cleanly [pid 1481]

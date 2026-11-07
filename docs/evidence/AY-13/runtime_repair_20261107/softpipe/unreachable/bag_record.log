@@ -1,0 +1,15 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1793991436.547100598] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1793991436.548799744] [rosbag2_storage]: Opened database '/evidence/softpipe/unreachable/visual_rosbag/visual_rosbag_0.db3' for READ_WRITE.
+[INFO] [1793991436.549744679] [rosbag2_recorder]: Listening for topics...
+[INFO] [1793991436.549775941] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1793991436.549902283] [rosbag2_recorder]: Recording...
+[INFO] [1793991436.852518212] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1793991436.852970084] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1793991437.054473000] [rosbag2_recorder]: Subscribed to topic '/cambot/coordination_decision'
+[INFO] [1793991437.054928176] [rosbag2_recorder]: Subscribed to topic '/cambot/task_state'
+[INFO] [1793991437.055611592] [rosbag2_recorder]: Subscribed to topic '/cambot/workpiece_state'
+[INFO] [1793991437.056568304] [rosbag2_recorder]: Subscribed to topic '/joint_states'
+[INFO] [1793991437.056587203] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1793991446.061261957] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1793991446.063952827] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1793991446.064043652] [rosbag2_recorder]: Recording stopped

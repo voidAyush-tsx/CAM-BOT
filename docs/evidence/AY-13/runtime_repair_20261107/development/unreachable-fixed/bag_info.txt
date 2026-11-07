@@ -1,0 +1,15 @@
+
+Files:             visual_rosbag_0.db3
+Bag size:          219.3 KiB
+Storage id:        sqlite3
+Duration:          3.993573380s
+Start:             Nov  6 2026 14:05:27.682464461 (1793973927.682464461)
+End:               Nov  6 2026 14:05:31.676037841 (1793973931.676037841)
+Messages:          218
+Topic information: Topic: /joint_states | Type: sensor_msgs/msg/JointState | Count: 133 | Serialization Format: cdr
+                   Topic: /cambot/workpiece_state | Type: std_msgs/msg/String | Count: 3 | Serialization Format: cdr
+                   Topic: /cambot/task_state | Type: std_msgs/msg/String | Count: 10 | Serialization Format: cdr
+                   Topic: /cambot/coordination_decision | Type: std_msgs/msg/String | Count: 3 | Serialization Format: cdr
+                   Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 1 | Serialization Format: cdr
+                   Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 68 | Serialization Format: cdr
+
