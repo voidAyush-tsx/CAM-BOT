@@ -21,6 +21,7 @@ DOCUMENTS = [
     "docs/AY_TRACEABILITY.md",
     "docs/VALIDATION.md",
     "docs/ROADMAP.md",
+    "docs/CLOUD_HUMBLE.md",
     "docs/ayush/README.md",
     "docs/progress/phase_4.md",
     "docs/progress/phase3-carrier-flange.md",
