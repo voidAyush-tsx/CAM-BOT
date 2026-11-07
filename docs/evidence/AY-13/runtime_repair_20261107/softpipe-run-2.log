@@ -1,0 +1,2 @@
+VISUAL_LAUNCH_SHUTDOWN_PASS: all three children exited cleanly
+Visual-only probe complete; inspect logs before claiming a pass.

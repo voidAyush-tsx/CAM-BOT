@@ -1,0 +1,10 @@
+--- a/rviz_common/src/rviz_common/visualizer_app.cpp
++++ b/rviz_common/src/rviz_common/visualizer_app.cpp
+@@ -189,6 +189,7 @@
+   if (!ros_client_abstraction_->ok()) {
+     if (frame_) {
+       // Make sure the window doesn't ask if we want to save first.
++      frame_->getManager()->stopUpdate();
+       frame_->setWindowModified(false);
+     }
+     QApplication::closeAllWindows();

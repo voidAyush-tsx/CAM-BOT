@@ -370,7 +370,14 @@
         "tools/test_ay05_ros_probe.py",
         "tools/cloud/Dockerfile.humble",
         "docs/CLOUD_HUMBLE.md",
-        "docs/evidence/AY-13/agent_replay_20261106/README.md"
+        "docs/evidence/AY-13/agent_replay_20261106/README.md",
+        "src/carrier_control/test/test_coordinator_runtime.py",
+        "tools/start_ros_session.py",
+        "tools/check_ros_shutdown.py",
+        "tools/test_ros_shutdown.py",
+        "tools/cloud/rviz-stop-render-on-close.patch",
+        "artifacts/verification/source_inventory.json",
+        "docs/evidence/AY-13/runtime_repair_20261107/README.md"
       ],
       "tests": [
         {
@@ -422,6 +429,11 @@
           "command": "Fresh main clone; runner/run-humble-validation.sh; coordinated visual capture; failure/cancel and unreachable runners; see agent_replay_20261106/README.md",
           "environment": "2026-11-06 Codex, Ubuntu 22.04/Humble Docker, Xvfb, Python 3.10.12, Matplotlib 3.5.1; application commit 63db653; observer/tool fixes 8ebe7de",
           "result": "PASS: build/rosdep, 59 Colcon results (2 copyright skips), installed checks, 14 analysis tests, 7 documentation/report tests, 11 new tool tests, legacy 26/26; all 7 published outputs byte-match. Live visual success, load failure and acknowledged cancellation pass. Impossible-target classification assertion fails with FINAL_TF_NOT_OBSERVED; shutdown errors retained; no residual nodes. No controller/grasp/human-review claim."
+        },
+        {
+          "command": "colcon test --base-paths src --packages-select carrier_description carrier_control --executor sequential --return-code-on-test-failure; tool unittest suite; experiment analysis unittest suite; recorded visual/interruption runners",
+          "environment": "2026-11-07 Codex Ubuntu 22.04 / ROS Humble; source c375343, tested checkout 9a192ec; native patched RViz built from upstream 11.2.29 plus recorded timer-stop patch",
+          "result": "PASS: latest 70 package results (0 errors, 0 failures, 2 copyright skips), 26 tool tests, 14 analysis tests. Earlier full build/model/analysis pass with 7 outputs byte-identical; 404 protected files unchanged. Three visual cycles, unreachable/load/cancel probes passed on intermediate source. Five latest interrupted runs pass with locally rebuilt RViz; unpatched RViz and softpipe-only shutdown failures retained. Final dependency packaging/full visual repeat and human review remain open."
         }
       ],
       "evidence": [
@@ -447,12 +459,21 @@
         "docs/evidence/AY-13/agent_replay_20261106/colcon-test-result.log",
         "docs/evidence/AY-13/agent_replay_20261106/visual-success/probe.jsonl",
         "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/probe.jsonl",
-        "docs/evidence/AY-13/agent_replay_20261106/unreachable/probe.jsonl"
+        "docs/evidence/AY-13/agent_replay_20261106/unreachable/probe.jsonl",
+        "docs/evidence/AY-13/runtime_repair_20261107/README.md",
+        "docs/evidence/AY-13/runtime_repair_20261107/manifest.json",
+        "docs/evidence/AY-13/runtime_repair_20261107/final-colcon-test-result.log",
+        "docs/evidence/AY-13/runtime_repair_20261107/final-tool-tests.log",
+        "docs/evidence/AY-13/runtime_repair_20261107/final-analysis-tests.log",
+        "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/probe.jsonl",
+        "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted.log",
+        "docs/evidence/AY-13/runtime_repair_20261107/rviz-valgrind/memory.log",
+        "docs/evidence/AY-13/runtime_repair_20261107/sealed-preservation.json"
       ],
-      "limitations": "Fresh agent Humble replay completed with passing functional visual checks, but graceful shutdown and impossible-target failure classification remain open. No selected controller/validated targets or independent second-person clean-checkout sign-off; controller operation remains unverified.",
-      "next": "Repair the reproduced TF-settling/classification and shutdown issues with focused regressions; retain agent/human provenance and unverified controller scope.",
+      "limitations": "Coordinator and unreachable-target repairs are covered by regression and runtime evidence. RViz timer-stop patch passes five interrupted runs locally but is not integrated into the reproducible image or validated across the final full visual suite. No independent second-person review or controller/grasp/physical verification.",
+      "next": "Review consolidated draft; integrate pinned RViz dependency patch, repeat the full visual/shutdown suite, then record a genuinely independent second-person clean-checkout review before marking AY-13 complete.",
       "source_commit_or_change": "current documentation change; see Git history",
-      "change_summary": "Reconciled status/architecture/decisions/quick start, marked archival claims, added evidence ledger, clean-checkout guide, document checker and negative fixtures. Cross-validation repaired Colcon discovery instructions, preexisting package lint, and visual capture process-group shutdown without altering the sealed AY-10 raw data."
+      "change_summary": "Reconciled status/architecture/decisions/quick start, marked archival claims, added evidence ledger, clean-checkout guide, document checker and negative fixtures. Cross-validation repaired Colcon discovery instructions, preexisting package lint, and visual capture process-group shutdown without altering the sealed AY-10 raw data. Consolidated post-merge runtime repairs, strict shutdown/observer checks, current source inventory, overwrite-safe historical report generation, and all later diagnostic evidence; AY-13 remains IN PROGRESS."
     }
   ]
 }

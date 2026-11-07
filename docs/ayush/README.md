@@ -16,8 +16,8 @@ corrected against source. [D-08 and D-09](../DECISIONS.md) record the evidence
 policy and visual-trial scope. The [Humble contract log](../evidence/AY-13/humble_contract.log)
 shows installed packages, executables and URDF, while the
 [checker fixtures](../evidence/AY-13/doc_checker_tests.log) cover negative
-path/status/launch cases. The only AY-13 acceptance blocker is an independent
-second-person quick-start repeat; no reviewer observation is fabricated.
+path/status/launch cases. Current runtime repair and independent-review blockers
+are recorded in the status matrix; no reviewer observation is fabricated.
 
 The [2026-11-05 repair validation](../evidence/AY-13/reproducibility_repair.md)
 records documentation/LFS corrections, offline checks and the remaining
@@ -28,6 +28,8 @@ regeneration.
 For cloud execution, see the [Humble container workflow](../CLOUD_HUMBLE.md)
 and [agent-run replay](../evidence/AY-13/agent_replay_20261106/README.md).
 That replay is not an independent human sign-off and retains its failed diagnostics.
+The [consolidated repair progress](../evidence/AY-13/runtime_repair_20261107/README.md)
+collects later code fixes, tests, and the still-pending RViz dependency patch.
 
 ## Evidence boundary
 
@@ -100,8 +102,6 @@ raw archives contain source snapshots with duplicate ROS package names;
 Colcon's default repository-wide discovery would reject them.
 On Wayland/niri, use `export QT_QPA_PLATFORM=xcb` and
 `export LIBGL_ALWAYS_SOFTWARE=1` for RViz.
-For headless cloud runs, also export `GALLIUM_DRIVER=softpipe`; the LLVM
-software-renderer path reproduced an intermittent RViz shutdown crash.
 
 ```bash
 xacro src/carrier_description/urdf/ur5_with_test_tool.xacro > /tmp/cambot.urdf

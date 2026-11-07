@@ -1,0 +1,2028 @@
+{
+  "result": "PASS",
+  "baseline_commit": "e58b8028329b9dfed92b37598eb9ff5cd934e7ed",
+  "count": 404,
+  "scope": "all pre-existing evidence, experiments, media, Task2, root config and published build report",
+  "files": [
+    {
+      "path": "Task2/README.md",
+      "sha256": "53167456425e09d0737fcffb259825c364f7c372e94eeef4c9c04d38f0355195",
+      "storage": "git"
+    },
+    {
+      "path": "Task2/Screencast from 08-28-2026 02:16:43 AM.webm",
+      "sha256": "9df544abd7b3b9f847638b303bf8c920e8e642a53046052a157cd879f60190d1",
+      "storage": "git"
+    },
+    {
+      "path": "Task2/Screencast from 08-28-2026 12:07:58 AM.webm",
+      "sha256": "9b898d9d1750031bb8ccf77fab20341721959a2939999ecb22ef3e8df519822e",
+      "storage": "git"
+    },
+    {
+      "path": "Task2/TASK2_UR5_Mass_Sensitivity_Report.docx",
+      "sha256": "bbf770b15cecc95a2950f712ebadcac8a7c9617852f246dc847e71d40b7cf9ec",
+      "storage": "git"
+    },
+    {
+      "path": "artifacts/verification/cambot_build_report.json",
+      "sha256": "e9c14913da0fcb31224a1a907b7e4baa85a7f907fd9e700690a4696d4bd7da9d",
+      "storage": "git"
+    },
+    {
+      "path": "config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-01/README.md",
+      "sha256": "6774fbda249da40af789c5760902a335d4e51c21b7d9b853260dd2967dcb86b1",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-01/manifest.json",
+      "sha256": "fbdf56fd3b7e53bd4882732a2fd0a26fcf6d478fff599ff9cbf182bd2de04356",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-01/static-checks.json",
+      "sha256": "036cf8b3802d1eec5ab96336dcb6cedaef54a2d2143fd3813763dfa73ce870b4",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-02/clean_build.log",
+      "sha256": "324d86cd055211fb8856bf9f2d6297660ee3458856abea51bafd99741a2fe46c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-02/dependency_audit.md",
+      "sha256": "7fa4fac04b1b6a64cd4a551ac3b69a02acd58c97ab0fce789c53ea872ab8d73d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-02/installed_assets.txt",
+      "sha256": "b647bd04adbf69696e44839717c5ba8dab9ca2caf5b179d30c5f84925d5662fc",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/launch_process.log",
+      "sha256": "10254c8113b54bf8d2faf08c64cac82ab0eb6a00257ad2da5e88dccc89da32fc",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/ros_graph.txt",
+      "sha256": "9f0b9c243d554c20f0ac44ed94f4fdc5cfbf35ad9e3d5458c349062fc489ae6a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/source_check.md",
+      "sha256": "29428cc7740b02b455c1c7338dd1c79c963b861266efa392a93ceac55ee8f95e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/stop_start.md",
+      "sha256": "cdeaada11f8ad8bc0691e8e4af69cb73a96b047ebea47ee35a08f5d6f019fa96",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/screenshot_status.md",
+      "sha256": "83cf594e8a5a627268c4b576e5271e2436c766d216ac5dfdb013fb8aaa35c408",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/static_checks.log",
+      "sha256": "396db9ec3df30c15c65527c2ae531a1249a71afa0dd091e67eb4e7df93cf4942",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/station_mapping.md",
+      "sha256": "cee61747e333772933f9354b3cd1c730793ac9eb234c430c901f4f62f71dd9fa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/tanmay_zip_audit.md",
+      "sha256": "2b72b249c00be5d7825c9b7931c3ce15e34f322e2c94fd6188053145b84edb03",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/tf_station_inspection.txt",
+      "sha256": "5b416be706fa112f1be31d1caf7d792467a8a4f32cccde78981e44e807ba1e3a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-05/offline_transitions.log",
+      "sha256": "93bf964176cb7543ba41681eb645e00c699b700b071ca7ce3bbfe79eb86d8dc2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-05/test_outputs.log",
+      "sha256": "9a07488d6f2a7dca79ab6f2920e1b1598c63b4c1c886e61eba5749fb8521c7d3",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-05/transition_matrix.md",
+      "sha256": "75d8eeda698136c1eebd16a6507224502750219192b45c3bf239acc99ed7b307",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/inventory.json",
+      "sha256": "05ff5cc956f9ee3cb052a1173f695ccdc8e6cd0a0b14a3599728e99cb3bb72c3",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/bag_info.txt",
+      "sha256": "ae27cdf297a2737d6eb4545cc5142bbdc6ff58438b69c164fee7c0cf6e0d864d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/bag_record.log",
+      "sha256": "c7c9e2330cdb2232999168a04ce93f8785952f3148bc67646eda4e8c38857044",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/joint_state_publishers.txt",
+      "sha256": "7d5198461e9cb56627ff598691c02c00242ed5daff5bf45f00200a34290eae39",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/launch.log",
+      "sha256": "74b4725d140ae8e1fe79cab6eac515ac1ba102a7c2478bd5e351793add3e04fa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/probe.jsonl",
+      "sha256": "6103f72f09d7e7ef6063b2657dc0af78d8ee01b2ac9a8c54a819229c4022629c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/visual_rosbag/metadata.yaml",
+      "sha256": "cdfba9236b764fd2a761d7c025aa5ae3bc96db6f8bd05a60c512bd170e0e7d98",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "daf36319dd72b7915df9b01a9457b767bb988798bd9018e4d9154b0b1e38bcf7",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/target_candidate_matrix.md",
+      "sha256": "8af556810de1f1cb8015ddce2c9665102899f34e90f399dd64dd8835e1a8e903",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/verification.log",
+      "sha256": "3e72811a0ec4004c0e225847a58e95951a5a81bb02187ea5e8546990fe1d630a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-09/inventory.json",
+      "sha256": "4bae28a0650712474d66eefaa77179025403aa7b5af2deb46beafda1f9d8648b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-09/schema.md",
+      "sha256": "ff59d8defd158d59e406c424edf8ac81ec4fd38a63f5532085a9343582f578a2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-09/test_outputs.log",
+      "sha256": "bfaf0c458a348387f2c2235dc2b01fade4706338bb5bdef1eef4455412643a0f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/README.md",
+      "sha256": "25abe920e545331f6fd44661ced52047d30ed099a7cb6bd148b982eef876c851",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/acceptance.json",
+      "sha256": "754fa4b08815412296c15cb1b4ae4ddbbe1dd26ac386effca08fe07018024985",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/analysis_tests.log",
+      "sha256": "2817ee415b5b5a831b6a7abb49cc0cdb4c9380487407a076826fada5f5f00ae7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/build.log",
+      "sha256": "ae62575829f8643dec1b676bbb8e5af160e55db153802f06c10c5f471e96e87e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/final_tests.log",
+      "sha256": "a3d13134bd93b184ee2eb925c5e3c5db966548c9a19138ea8847e8d450caef10",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/regeneration.log",
+      "sha256": "188b3ca86500f3211ca5cc9fbf4288c91cbe5dcc9358e37f918db8ae80438c3f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/README.md",
+      "sha256": "f86c98327f4ca2e0b53adbc103871678018b85d7eaa560b08a0a4b3a8b1a7976",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/README.md",
+      "sha256": "f3274a0868c6a60641af1a6734ebdd5301321464994ef03e3331179dc0d23dbd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/analysis-comparison.json",
+      "sha256": "21e8a367e0389b9e227247da9957ae72e2e90595c0149d8b5e750325f09543e4",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/analysis-regeneration.log",
+      "sha256": "a02de4f5092f82220b8a3b93ee6f9068463310a6383734a350e069e3674c4a2f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/analysis-tests.log",
+      "sha256": "802e7ecc4f668ac3a9a03ab0d6f400a8e9ec5adfb2bd487853a9b206dbba74c1",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/launch.log",
+      "sha256": "c52d1bf9cb378f8ab0c5e0f2d9bfda6773e095522529e70c4176ea3b1788cd37",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/probe.jsonl",
+      "sha256": "94e7e4a91a2c9d00cd4635ce6be379cfc290d6d607bbc671cedffb3b987cb21c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/trials.csv",
+      "sha256": "d3222c9916abdfafdbd9f146d9d719258dcbf3e799b365ce280c329cf9d1420d",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/trials.events.jsonl",
+      "sha256": "239804929db1452383377139e671b59d009f4839310a932d3ce60a49fc3232ca",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/launch.log",
+      "sha256": "511b0dddb3c22cda713154ae0fd5ea05304118aeb2ddce1ad66099740b2a3d00",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/probe.jsonl",
+      "sha256": "2a5b81266362ae85cf548366b75a22cf385527b4a22e376e9cd894b0731d4c7d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/trials.csv",
+      "sha256": "6f672a3dc8a0281d93dc2f456a11f07bb06e57997849fb58cc740041aa546292",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/trials.events.jsonl",
+      "sha256": "951b86a9bec3f2a158966517ee247c85dfd30ee67fa63d81c1b910bdf51d606b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled/launch.log",
+      "sha256": "4add1261b7595082abc76e32640fe2a1ad9486e16903aa01941e69e0378259e9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled/probe.jsonl",
+      "sha256": "3196af7d748570b04647ceb17fa3488b5b0557c3368799d7fe849c1a3b8315c6",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/check-urdf.log",
+      "sha256": "b1acff9c5726a81cdc9275bc49570b6a481701f5288e3029e00ebd0fc43e1df9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/colcon-build.log",
+      "sha256": "5fde081abb3c27890b89377588798a0d958369f5dabe617ddfd363b7e816b315",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/colcon-test-result.log",
+      "sha256": "aaf819a366020e173444877cf5d1924e7a8390c28504677455eb97196e158f6e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/colcon-test.log",
+      "sha256": "f1c428f9eca95f300ee59d70e8e7baac637986233df2c0202c606049b07fe955",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/controller-gate.log",
+      "sha256": "b0efc5b252a1e3951ac870a8ef363faa5127aeb84d252e76cc666acb5b0aa938",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/doc-report-tests.log",
+      "sha256": "663ec3972ea3382ca1fdd9d40da63d175b5a03c8dd693d67c21293b48ad88417",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/environment.txt",
+      "sha256": "0339a73c5c85504d20f8689599440ff393d3f3332fb023b2c6541c1a99353642",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/installed-doc-check.log",
+      "sha256": "cea15b97f05dea91e5948b7fc258c72af25517dcf330ad355954cfdf96ed425d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/launch.log",
+      "sha256": "c716870b7e02b871d11f1877b650920421526182e4d0acb34d3964fbf3c36b1d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/probe.jsonl",
+      "sha256": "b8f1181b8b45ad1ab65d928ad523786f92c120b2a2c1c720d9c17bf7080afaf7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/trials.csv",
+      "sha256": "00f6403a0fb501f8a3c8d1f17aa1a7b7b80d4f237b316c55cbeac8368d6b57d3",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/trials.events.jsonl",
+      "sha256": "3da36e4432898c17d19de45df27a67518a2e1b2e48e8a44eb89c7be533fb2b14",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/manifest.json",
+      "sha256": "d2f3b0ba7684f6526fa77d9df5ed1c34a26cb1e1eaf5a11a46fb68da8709a86a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/rosdep-check.log",
+      "sha256": "43a3ee518f5ec19ddeeb125d8bbb6f4272cd1077bfef239a91faf9e78638698f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/capture-parent-signal.sh",
+      "sha256": "8eee28ee1121e5c638863c50e7d4ab64e59efec5a12a138795b2fbefe0ede21d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/observe-unreachable.py",
+      "sha256": "2468115a17076007ca9b9365d769e54d748146aa2ddac1f2c82e3a75bf15775c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/run-humble-failures.sh",
+      "sha256": "6fe0e70a3d6383b04690cf5d0d003ac5f17a0076f35806c1a8de168b41e9e01d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/run-humble-validation.sh",
+      "sha256": "29c03558f608f8008683426593358bbb22c90959467c7b37a9815fe0e54a5b6e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/run-unreachable.sh",
+      "sha256": "68556420eb4cec0fd1d4e874a125e64f47be8df948444fa85c7c95f8aed33acf",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/rviz-standalone.log",
+      "sha256": "ddda2b8b9c2e67ac5aff84de4cce1efa628d2866031e48a825ca6a9e25ead211",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/static-verification-humble.json",
+      "sha256": "d6c5443551b6b9279e5fd7fd90afa0086bb1081b64f9111ca6d953ef32c8119c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/static-verification-humble.log",
+      "sha256": "d6c5443551b6b9279e5fd7fd90afa0086bb1081b64f9111ca6d953ef32c8119c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/tool-regressions.log",
+      "sha256": "487e3a75a4c4fd55d5a67c5bdd989f05f9292d4f7e00f15ce5c639752ef65e3b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable-config.json",
+      "sha256": "96810ad852798d8df7b2320b45340e566b401b0e9ada0342e15665ee79b06b0c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/launch.log",
+      "sha256": "32b63ca948a944e9b10d8400929bb0fcd710f141bdda2993653882c22d367f07",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/probe.jsonl",
+      "sha256": "cb25302fb032831c3d0de18170b7141caab3c2cc86c1c4d83f65fe23d7b9ac9a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/trials.csv",
+      "sha256": "c6aea6334ef9dbf9b17b61e7e40dec4d1262e6b54fd278374a0ed98bc32b191d",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/trials.events.jsonl",
+      "sha256": "f5b8887d3293b7f568f4e64468e61a717c83611596bc982b609bde9f93bce8ac",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/bag_info.txt",
+      "sha256": "ad12c94a13ea3fd46af48ce060ae43d720647602677a1d5ebdf04f7b062f4492",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/bag_record.log",
+      "sha256": "1a13bdd58a6f6c0554c637f7e5baa16f137afaad8a58aabf368c895b52f0906c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/joint_state_publishers.txt",
+      "sha256": "aebe06f4d94e0e3e25e363142ae0234a2bf30f7daa03ddb1ddaa3ab901fbd77c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/launch.log",
+      "sha256": "ea164ce008e6da8377159bf18898b4f650c33b72aacdcde4822b83ca0adcffed",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/probe.jsonl",
+      "sha256": "269aef29973a5f3963711dc4d8ac7b3fe801e56cbf73551e308272c207ad2a5f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/visual_rosbag/metadata.yaml",
+      "sha256": "595887476810b6664ce6dd24f437a9f0a0e51b4022bc43545112eeb97116c0f0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "7ff6c395fcbf9318a2cf1b73a675683c4e56b351549e2bea3e3bd790c2b9fca5",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/bag_info.txt",
+      "sha256": "ab601f9c1ed6e4c07b86c00993ed958154af67685dd15e86ca9d206abad4f165",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/bag_record.log",
+      "sha256": "88ab10ec7e0643f89cb3439eec008f76f97fee77a7e95771fdb2f7b105ead8b2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/joint_state_publishers.txt",
+      "sha256": "d629216a4bc2c77811e10ffacb7a35563b6f474647f3dff42131ca92f870fdcc",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/launch.log",
+      "sha256": "79d3579512a98d8bafc0cab8c2af071042a22a94be2d6dd8e7ceb3f308430c6d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/probe.jsonl",
+      "sha256": "ed21fed653cbf71cb69f880f5439b226c2323cd70d372788e01e0582364d8e0c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/visual_rosbag/metadata.yaml",
+      "sha256": "d4b244f1988af3b0c79a661c1d4359afd5b152bff59a7aa6aebf789c477a00e0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "add8ac7a3baab0602685f6bf34a59a6a75d81768b5097583d927195bac1e11f0",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/README.md",
+      "sha256": "836577c91169d94c4d104ffeec76290cf427069fae4cd670e7b9c343c204ff47",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/analysis_comparison.log",
+      "sha256": "440e11c586ca0efab2c3bbb961861a7676461107ca731045c67b9cab49fe6ddb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/analysis_regeneration.log",
+      "sha256": "fc5e1efc47456a296d2253383cf4bca2039a8d1c860e0ad9e57244a0155b5990",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/bash_syntax.log",
+      "sha256": "d44bea081267613133893cb01584c9a60c4ecbd8b1b7c0b2b9dcbae5ff2927b5",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/build_report_generation.log",
+      "sha256": "26f52258ff1e1bf5a56536e4a92ea4055abc957b08e115bcdb6c9720130b6e21",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/build_report_tests.log",
+      "sha256": "82838b500663c4c458de976b28926a981469e760359cd7098cbb22ed18c8dcfa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_build.log",
+      "sha256": "d6873c36c1d4fc5c57b8026774de0a25962dbb0b0e222916ec4483da22a74267",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_build_scoped.log",
+      "sha256": "51d648298dd031767cb799f04fb0486ce1930a482dd290915cdd25444adb634f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_retest.log",
+      "sha256": "9c62ad35e67bf3698dc1352be54266e849c3300c7fceebee8d7f7f38f11327f6",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_test.log",
+      "sha256": "5d5c7ee6760823ea05da979539e6a93cd80a416f3da298130e352c34a34e5f77",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/installed_doc_contract.log",
+      "sha256": "cea15b97f05dea91e5948b7fc258c72af25517dcf330ad355954cfdf96ed425d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_probe_invocation.log",
+      "sha256": "c83f1830f8edbf1040ba90c99707b65dc1a081533f2a9613c7f7323dbb17797f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/bag_info.txt",
+      "sha256": "cb749ee617dc5c316fa09d1c193a752624e6478aeeabdaaed5dd115c2bf5f856",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/bag_record.log",
+      "sha256": "a8d5de57bb5695b9573cc503cfb48ef9b5d814ba738ab594855879819c3b0de8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/joint_state_publishers.txt",
+      "sha256": "eddaa0107fb7422f67b151af90ef5843d5b8250d225c9ee3cc8f6c4addd1024e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/launch.log",
+      "sha256": "12cefb73ed8cceefe34ba64c0699a04fc91695a143fce5573975f50a75403174",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/probe.jsonl",
+      "sha256": "195eb163ede501fe997d5daf9c4682a45a10cfe3f8209ab71ca8550035259cac",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/metadata.yaml",
+      "sha256": "fa8611cb71a7d35800e748c9554ede3490a5c0c50ffb2237a2c44b8e69d9a2ef",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "c403bb6339adffc47b529ad9acc4566236d3efbbd42ed0785c7345be52a74857",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck_invocation.log",
+      "sha256": "c83f1830f8edbf1040ba90c99707b65dc1a081533f2a9613c7f7323dbb17797f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/model_assets.log",
+      "sha256": "26c3a27db3157f318a48ff67c8a7f27808f89678df32632c7a62a86a5ea93ee9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/regression_48.log",
+      "sha256": "45520b40b5237b5ee282a749284a2c24441c0d89049ad9b35d8efa3be1a1ee8b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/rosdep_check.log",
+      "sha256": "43a3ee518f5ec19ddeeb125d8bbb6f4272cd1077bfef239a91faf9e78638698f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/source_inventory.json",
+      "sha256": "e60bc80507439727366a236a23080f8b2a2518c1f73012a4a7ba8f1c5ee5ca23",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/doc_checker_tests.log",
+      "sha256": "5677a6c27922a905d54b5dbe2e2cfc1e9ceaf01a927886fbc4ba603efe028e13",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/humble_contract.log",
+      "sha256": "68485184b86fd9e4357b18fd6456f79a3f293316b903b2951aafe9c223f01f39",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/reproducibility_repair.md",
+      "sha256": "74f02784dff2b4ea68af830012496f55bfd85ae4ae65e5d19f6d48e0a9b2ae04",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/source_contract.log",
+      "sha256": "c6ebe8ee258206200ab76eddc31604bfec3c6df160c5840ee52498343da2069a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/README.md",
+      "sha256": "f630fb686e85795fade14319aa914a0895aa77cbf7d83dcc930f2d13276887a7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/analysis-requirements.txt",
+      "sha256": "c7ec1e00cf71fcf9a6d6de9e4d54409d187c34206af240a43694cad256b461b7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/README.md",
+      "sha256": "94a927aad3108494a071e241154d96925cca1a8ebe98670a36a728cea6656b35",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/attempts.jsonl",
+      "sha256": "0496f97fde6803d280965659519dee901a0fa90c3a00a04848ba89da112ac1f2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/bag_info.txt",
+      "sha256": "952d0352edc6a501dac2c74cf4e70d9341bfda47c86a0c1ec1b8d34052e20fbc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/bag_record.log",
+      "sha256": "c43f529854105504abea804e7f448d9628045c09c2a2855e015f41e0199a73fb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/checksums.json",
+      "sha256": "9efa4e59a580f74a542be80b9a8aba16b927cc9495702286832ee677129cd29d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/config.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/joint_state_publishers.txt",
+      "sha256": "5efd8085482ce5f8252599ff246ce41b1e85c1e74539455c1bff59813e5bd12f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/launch.log",
+      "sha256": "2598e0517764224b80375f252ff7ce84b9ed8bb39163064e602e045ddda3fda0",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/manifest.json",
+      "sha256": "a8ebabc77805166ae02d8c1ceb664f1f881263b430cfadf4392d0f6dfba34495",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/probe.log",
+      "sha256": "3fb9fa408871b24a412f94aea06ef75decc83b682df144adbd5a8e16c90a949e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/rviz_runtime.json",
+      "sha256": "6847ad9d9349a4e273548d473352444379a784a25c46a709d3444d49025d6710",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/rviz_runtime.png",
+      "sha256": "d8ee83dbb781f725d284a15e31d3f935619ef462fccc3cb3ac362f9bda23fd81",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source.patch",
+      "sha256": "27e2981eb438a6c38d645633010cececc5b1581423582f4145f1d32c04aa2c8a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/experiments/machine_tending/scripts/analyze_trials.py",
+      "sha256": "eed0aa2e29c2837c6868c94212afd29ba8f554537b3c5da52a1a9ddbd54565e1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/coordination_policy.py",
+      "sha256": "24018bc1de323894c956cb2c25a6e340f8f78a0660041d16030d47348ff36c40",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "sha256": "b621a2e84ee14d1fc7aac8c4ab6f1162b1a8aeea8cee6f556c0bd8b923ccbc58",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/launch_preflight.py",
+      "sha256": "f704b6a494e5b54405b374e77fed78628bd66eb71dd8c48b567607c6326462cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "sha256": "381b4481dafa51f62a4591cedd031c6cb85e17ff76a27f13604315a552fb57f8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_shop_trajectory.py",
+      "sha256": "fc8da7e0c5e7e767065904c5b56f72e783ef4a066c72d72c7d6e1e4b5b20837f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "sha256": "15a94b8ad686ba70d7f32aec36222dc0617cc3d468198d76254eb486e86a8f54",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "sha256": "bd69fc6461b09c87d62bdba0c827e6ba88e732d32b472eeebc49c251fde31751",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/metrics.py",
+      "sha256": "8d1861a3abdea20974b08d1b176ad50957c2efb55aa460fab5376c9c226479f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/plot_machine_shop_path.py",
+      "sha256": "de3f5ab207eb63543af007719d4142402c3fd67ec8b5736f3143ca7e6c53f1bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/reachability.py",
+      "sha256": "553c687ecdce9233aaad2900831e5ee90700ba3e2cfeea3992f5b81fb302f5c1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/waypoints.py",
+      "sha256": "25e007b6abb1b32aad725a402833037c21fe1a52da8260507389b19871b9ec93",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/workcell_model.py",
+      "sha256": "d3afa07b431f6b4339f913096a1d86fa19fb21f2c0e2a353851b56bd6216dd3f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/workflow.py",
+      "sha256": "cc1402f920e824d1e5632f4f135c795ecc1840be54965c9989094343117257c8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/config/machine_tending.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/package.xml",
+      "sha256": "4e630a53d59946ee85592b55f55a97d2094d4e26c97c2ad0a339cbfdf6d53d5f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/setup.py",
+      "sha256": "bc91dd567a001fba06329c408f6b69e3d6e88bc065c4fbd2040c1dac26b25597",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_action_safety.py",
+      "sha256": "4458ded22938ff1dcb6100ba78a090a9ddd0cea02c9f9ad60eaa8c7f3e0f928f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_coordination.py",
+      "sha256": "234a020761debec8834dc3920b19dd56129d6c3e8d5570803b9a44dfcfc9d485",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_launch_preflight.py",
+      "sha256": "37a8822c66425cdbca0a8614e15280b64fd7519bc091ca8fab0fc00aee79065a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_machine_tending_fsm.py",
+      "sha256": "f8699dd0327d3c8a84b47806406fe035e82c60966741f990a45a74a43b4355d7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_metrics.py",
+      "sha256": "ecd9a14b26ba1d8c1b13ee900f2a054ef285f8dc1defcd01aae661fffefd59bf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_package_integration.py",
+      "sha256": "ab9fe3715fec02d6fd23202192a37918b87d5ec07d1ca89296f05e40d4c94462",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_reachability.py",
+      "sha256": "a65cabeef7e3f8c2d119ff0f32019d4b1ba3ea1dc926515c7cb7db123f0bcf3a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_workcell_contract.py",
+      "sha256": "27513f5628c0304381871b348e10cb3e217dd93b28b465fbc8f1268ee3ed72e2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_workflow.py",
+      "sha256": "d618ee79daf45225a62cfb91873d80acfd140bb6ff0d72fe7fac19aa4cbb1f78",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/carrier_description/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/dual_arm_demo.launch.py",
+      "sha256": "0ba531adbd4cb5c1d10756f438f0ba3945139d0e8d34c938e518aee5ecf46861",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/machine_tending_controller.launch.py",
+      "sha256": "5f9bf73549f6cd4685ea4de0b61e90a3ac0902a52e5beeab277d34755aab1b28",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/view_carrier.launch.py",
+      "sha256": "ddd40d2594c4671963a0215c4bee927e66e0806092df2eb7fb45272230457b70",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/view_dual_arm.launch.py",
+      "sha256": "6fb9ccd4eec5896dda0066e6491a2bdb54a355317fbb43f3ec9f41d57c87bea3",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/package.xml",
+      "sha256": "dcf9ee4944d3c5f81751f7826e57fb1583809a858c14791e8846ba7be81b35ec",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/rviz/dual_arm.rviz",
+      "sha256": "899302e6d68696323a5e989c0426b77bd2f147b81451f0de6eff2c843676007b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/setup.py",
+      "sha256": "5cfec68555f25ec91c19d734cd620308e86d0a87150b64b621950d5f32b66da4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_cell_model.py",
+      "sha256": "d24fbebc47eeb2862498b04ef17d9dc652bcd5790d67764e37beaf9d4a7dcee0",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_launch_contract.py",
+      "sha256": "fade78188dfad0e62565f0a463f24635b08c7429a8e1cace5497b6d2ac865ebc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_phase4_contract.py",
+      "sha256": "d87e2bf0020de445312ab4eaac6ede733ec9868399affafa50c5c59f8af6f01a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/carrier_flange.xacro",
+      "sha256": "395c404cb87eb73fb87c9838dfb2a705b2823056d612451f9f549b9a97e0b3f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/dual_arm.xacro",
+      "sha256": "2a7b37c06bc216cd099d082a93c37a1392c6f152105dacd64d9f373655de9c20",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/machine_tending_cell.xacro",
+      "sha256": "4a70b4afbfb535e09c5f8b0c8163b22351f4ed55fcd06411ae23ff21ab085f2a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/test_tool.xacro",
+      "sha256": "81aa4e175b7a32706d520119afe3756c5609e44436c287261818c41c96261a56",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "sha256": "995d77b46c632b6d0b729651885bf248d3daba20bf816226489ca15eb8b0e8bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay05_offline_trace.py",
+      "sha256": "382adcf983fec02b317eea1cbd617f90e9c193b4753bff853554752d845f2148",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay05_ros_probe.py",
+      "sha256": "25064ff1cfa5bfee56ce0ffde2cfeacb5697019330a625735e303258c68b9f57",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay0608_ros_probe.py",
+      "sha256": "76e34e8935fb8f33cb15ee3d070daf540d4e2dfedeb56ca843b1784bc93b4a13",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay10_ros_probe.py",
+      "sha256": "632aafb51e42dcec81d3622e59264e914a03f0c54bbd461f460540b9b05ab56d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay01_humble.sh",
+      "sha256": "5ce5d6a4fbe46e75c633c052a0baf19793342039d7c5990a7019153226f1d9f1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay02_humble.sh",
+      "sha256": "32bbe17cf82653320e015957ccfbd0bdbde932b247e3c91519527b35b581feff",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay03_humble.sh",
+      "sha256": "3a5e1b45f6d48c1b5322dcc0de2ee775c4b53e4e15cbac9cd8ac63bb34809402",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay04_humble.sh",
+      "sha256": "c5db29759d498b5346f04c848429c1ef49b449e30d57a4a09ecb0c813943ad63",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay05_humble.sh",
+      "sha256": "33757fa51edb637d79f8ec40c273332cc5f3e9b0f10e1994c8260e1eb6b1111f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay0608_humble.sh",
+      "sha256": "dd1e0aab566030c01b0da16033a8906a9eaceedb4e35756fee1b97e1016c22a1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay09_humble.sh",
+      "sha256": "0bc457a52e435a9575ed6da342ff4ab518f2dbb860ea5543f72968111f60a146",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay10_humble.sh",
+      "sha256": "aea0e3832c9f1bfde316f62b7e25308562f98feb986736ef9d166806a8e2b90f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/phase4_contract.py",
+      "sha256": "855580923c15f3f83a4f76918af9b0d64ab64a15f841049a5a0e592fc2e965cf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/record_ay10_environment.py",
+      "sha256": "d67eb2293b18c59b681dd9175492a094300a026614b3c212e1083088f79ad5cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/validate_ay09_dataset.py",
+      "sha256": "430b5f332c4631e1baeb8f2390b46383c8baaa8a11433f95179510d27308d367",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/verify_ay.py",
+      "sha256": "7400b779bea4e506299d38e18827c2884ddb5c822514cd0f861a789a45ea531f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/topics.jsonl",
+      "sha256": "457ba1d5e43eca5ad516aaa15d9f3102e31edcebb6d537b3a8debf8aa5ee6a61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/trials.csv",
+      "sha256": "2d80c0e7e709cce1d3de4caecc59f2fd98dc3977c754a381fcd79998265eab08",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/trials.events.jsonl",
+      "sha256": "8fe9a96acf4e5a0e91065dcfc8011d7e97762e2d5522c35298e885a90a1c26d6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/visual_rosbag/metadata.yaml",
+      "sha256": "1e4d5b82c330dcba3d292a094651ceb552bfc709310576324584984d6ddf9814",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "6e4b36f6d7f7d16c150918afc854e06c7b93629045a5c674a52215b98fe6a1c8",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/artifacts.json",
+      "sha256": "ad8bdaa39aa38100b0c157146ab8c5de02683ad68d4a0df8767a21b240268f52",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/carrier_repositions_by_trial.png",
+      "sha256": "e4b3a5bf4f772d6bf5e867e1a53576fd00ea6a47ed6cc047ed89f2e7af069fda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/cycle_time_by_trial.png",
+      "sha256": "f69ba8e629c685fee3d098a8554330d981aa94d2b078f4610f619572838c73ce",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/metrics.json",
+      "sha256": "eeb08628e9689eba5155d013707ab0d108c5b7dfdef8eaa576de346e87961918",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/summary.csv",
+      "sha256": "9ec5962cc0be76fac37e6470001aa0d539c2547ed85532980ec8ba5fc67179a0",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/trial_outcomes.png",
+      "sha256": "cb338199eb3c390f819c9e8d493eb33a30442e0be4a6a1b781f7e8debd0af69d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/trials.csv",
+      "sha256": "40b8e2efbdccab447f4ba2c3e4deb73c99955e9af179fccc3f51251e8809347c",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-02/README.md",
+      "sha256": "4a16d594f6198e8afc5640770eb2afd6575cc15848c64399f0f8838d9bda482d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-02/raw/preexisting_nodes.txt",
+      "sha256": "60bb6577d71646284369414459247079d979c1c975e3203cdd626ba01d90703d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/README.md",
+      "sha256": "fc0d90d2ad14f400f99dbeb1e41278c4c1f2aa6652a4bd01ef1570fa31801af8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/attempts.jsonl",
+      "sha256": "ce69f144e1f7c4abe93312a26cfcf414b0221c1aeafc6870828a24d0fdde1bd1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/bag_info.txt",
+      "sha256": "623a8a99b02b42fb00528d14e6624fd8e7da8ebda3690aacf91fdfec9ec61ab6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/bag_record.log",
+      "sha256": "37e0ba7c5a081b3d48ea0b96175bd5e1b27278cce545eea1e0f9db4869859458",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/checksums.json",
+      "sha256": "77ebeac651e94ae41740795974d469803f49012caf56659361b780658a99290a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/config.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/joint_state_publishers.txt",
+      "sha256": "7922eb475ddc4073921768afcf8b2467f8dd63d409addd13616ad54b434d9be4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/launch.log",
+      "sha256": "7700d1aae4a244f985777eebe4da0f0a83cb2bbcacd524b613935ecf75038906",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json",
+      "sha256": "9b941b0c1f356d86de60f83d6256590d2fffe7ca440122c9b22de08b4dacdb49",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/probe.log",
+      "sha256": "ce69f144e1f7c4abe93312a26cfcf414b0221c1aeafc6870828a24d0fdde1bd1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/rviz_runtime.json",
+      "sha256": "a5982dcef688d9c7b2256c941092b2b0ef2862c3ceb76b4a1e20c255afa29e5c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/rviz_runtime.png",
+      "sha256": "b6b152c70909d6cf6669a4d43b9a85842884387782870bcf1a1768b223610772",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source.patch",
+      "sha256": "27e2981eb438a6c38d645633010cececc5b1581423582f4145f1d32c04aa2c8a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/experiments/machine_tending/scripts/analyze_trials.py",
+      "sha256": "eed0aa2e29c2837c6868c94212afd29ba8f554537b3c5da52a1a9ddbd54565e1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/coordination_policy.py",
+      "sha256": "24018bc1de323894c956cb2c25a6e340f8f78a0660041d16030d47348ff36c40",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "sha256": "b621a2e84ee14d1fc7aac8c4ab6f1162b1a8aeea8cee6f556c0bd8b923ccbc58",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/launch_preflight.py",
+      "sha256": "f704b6a494e5b54405b374e77fed78628bd66eb71dd8c48b567607c6326462cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "sha256": "381b4481dafa51f62a4591cedd031c6cb85e17ff76a27f13604315a552fb57f8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_shop_trajectory.py",
+      "sha256": "fc8da7e0c5e7e767065904c5b56f72e783ef4a066c72d72c7d6e1e4b5b20837f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "sha256": "15a94b8ad686ba70d7f32aec36222dc0617cc3d468198d76254eb486e86a8f54",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "sha256": "bd69fc6461b09c87d62bdba0c827e6ba88e732d32b472eeebc49c251fde31751",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/metrics.py",
+      "sha256": "8d1861a3abdea20974b08d1b176ad50957c2efb55aa460fab5376c9c226479f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/plot_machine_shop_path.py",
+      "sha256": "de3f5ab207eb63543af007719d4142402c3fd67ec8b5736f3143ca7e6c53f1bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/reachability.py",
+      "sha256": "553c687ecdce9233aaad2900831e5ee90700ba3e2cfeea3992f5b81fb302f5c1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/waypoints.py",
+      "sha256": "25e007b6abb1b32aad725a402833037c21fe1a52da8260507389b19871b9ec93",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/workcell_model.py",
+      "sha256": "d3afa07b431f6b4339f913096a1d86fa19fb21f2c0e2a353851b56bd6216dd3f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/workflow.py",
+      "sha256": "cc1402f920e824d1e5632f4f135c795ecc1840be54965c9989094343117257c8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/config/machine_tending.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/package.xml",
+      "sha256": "4e630a53d59946ee85592b55f55a97d2094d4e26c97c2ad0a339cbfdf6d53d5f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/setup.py",
+      "sha256": "bc91dd567a001fba06329c408f6b69e3d6e88bc065c4fbd2040c1dac26b25597",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_action_safety.py",
+      "sha256": "4458ded22938ff1dcb6100ba78a090a9ddd0cea02c9f9ad60eaa8c7f3e0f928f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_coordination.py",
+      "sha256": "234a020761debec8834dc3920b19dd56129d6c3e8d5570803b9a44dfcfc9d485",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_launch_preflight.py",
+      "sha256": "37a8822c66425cdbca0a8614e15280b64fd7519bc091ca8fab0fc00aee79065a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_machine_tending_fsm.py",
+      "sha256": "f8699dd0327d3c8a84b47806406fe035e82c60966741f990a45a74a43b4355d7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_metrics.py",
+      "sha256": "ecd9a14b26ba1d8c1b13ee900f2a054ef285f8dc1defcd01aae661fffefd59bf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_package_integration.py",
+      "sha256": "ab9fe3715fec02d6fd23202192a37918b87d5ec07d1ca89296f05e40d4c94462",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_reachability.py",
+      "sha256": "a65cabeef7e3f8c2d119ff0f32019d4b1ba3ea1dc926515c7cb7db123f0bcf3a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_workcell_contract.py",
+      "sha256": "27513f5628c0304381871b348e10cb3e217dd93b28b465fbc8f1268ee3ed72e2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_workflow.py",
+      "sha256": "d618ee79daf45225a62cfb91873d80acfd140bb6ff0d72fe7fac19aa4cbb1f78",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/carrier_description/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/dual_arm_demo.launch.py",
+      "sha256": "0ba531adbd4cb5c1d10756f438f0ba3945139d0e8d34c938e518aee5ecf46861",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/machine_tending_controller.launch.py",
+      "sha256": "5f9bf73549f6cd4685ea4de0b61e90a3ac0902a52e5beeab277d34755aab1b28",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/view_carrier.launch.py",
+      "sha256": "ddd40d2594c4671963a0215c4bee927e66e0806092df2eb7fb45272230457b70",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/view_dual_arm.launch.py",
+      "sha256": "6fb9ccd4eec5896dda0066e6491a2bdb54a355317fbb43f3ec9f41d57c87bea3",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/package.xml",
+      "sha256": "dcf9ee4944d3c5f81751f7826e57fb1583809a858c14791e8846ba7be81b35ec",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/rviz/dual_arm.rviz",
+      "sha256": "899302e6d68696323a5e989c0426b77bd2f147b81451f0de6eff2c843676007b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/setup.py",
+      "sha256": "5cfec68555f25ec91c19d734cd620308e86d0a87150b64b621950d5f32b66da4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_cell_model.py",
+      "sha256": "d24fbebc47eeb2862498b04ef17d9dc652bcd5790d67764e37beaf9d4a7dcee0",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_launch_contract.py",
+      "sha256": "fade78188dfad0e62565f0a463f24635b08c7429a8e1cace5497b6d2ac865ebc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_phase4_contract.py",
+      "sha256": "d87e2bf0020de445312ab4eaac6ede733ec9868399affafa50c5c59f8af6f01a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/carrier_flange.xacro",
+      "sha256": "395c404cb87eb73fb87c9838dfb2a705b2823056d612451f9f549b9a97e0b3f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/dual_arm.xacro",
+      "sha256": "2a7b37c06bc216cd099d082a93c37a1392c6f152105dacd64d9f373655de9c20",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/machine_tending_cell.xacro",
+      "sha256": "4a70b4afbfb535e09c5f8b0c8163b22351f4ed55fcd06411ae23ff21ab085f2a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/test_tool.xacro",
+      "sha256": "81aa4e175b7a32706d520119afe3756c5609e44436c287261818c41c96261a56",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "sha256": "995d77b46c632b6d0b729651885bf248d3daba20bf816226489ca15eb8b0e8bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay05_offline_trace.py",
+      "sha256": "382adcf983fec02b317eea1cbd617f90e9c193b4753bff853554752d845f2148",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay05_ros_probe.py",
+      "sha256": "25064ff1cfa5bfee56ce0ffde2cfeacb5697019330a625735e303258c68b9f57",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay0608_ros_probe.py",
+      "sha256": "76e34e8935fb8f33cb15ee3d070daf540d4e2dfedeb56ca843b1784bc93b4a13",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay10_ros_probe.py",
+      "sha256": "8dd381703fa496fb1ef667079f1eff3cb71e9e3878d1fa4ce96db1bacdd57c02",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay01_humble.sh",
+      "sha256": "5ce5d6a4fbe46e75c633c052a0baf19793342039d7c5990a7019153226f1d9f1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay02_humble.sh",
+      "sha256": "32bbe17cf82653320e015957ccfbd0bdbde932b247e3c91519527b35b581feff",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay03_humble.sh",
+      "sha256": "3a5e1b45f6d48c1b5322dcc0de2ee775c4b53e4e15cbac9cd8ac63bb34809402",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay04_humble.sh",
+      "sha256": "c5db29759d498b5346f04c848429c1ef49b449e30d57a4a09ecb0c813943ad63",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay05_humble.sh",
+      "sha256": "33757fa51edb637d79f8ec40c273332cc5f3e9b0f10e1994c8260e1eb6b1111f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay0608_humble.sh",
+      "sha256": "dd1e0aab566030c01b0da16033a8906a9eaceedb4e35756fee1b97e1016c22a1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay09_humble.sh",
+      "sha256": "0bc457a52e435a9575ed6da342ff4ab518f2dbb860ea5543f72968111f60a146",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay10_humble.sh",
+      "sha256": "9aa5c698962c7c5f73e060810f780f48611b7b9d9c8b0f039356f62411cfce02",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/phase4_contract.py",
+      "sha256": "855580923c15f3f83a4f76918af9b0d64ab64a15f841049a5a0e592fc2e965cf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/record_ay10_environment.py",
+      "sha256": "d67eb2293b18c59b681dd9175492a094300a026614b3c212e1083088f79ad5cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/validate_ay09_dataset.py",
+      "sha256": "430b5f332c4631e1baeb8f2390b46383c8baaa8a11433f95179510d27308d367",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/verify_ay.py",
+      "sha256": "7400b779bea4e506299d38e18827c2884ddb5c822514cd0f861a789a45ea531f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/topics.jsonl",
+      "sha256": "f5f22042f30e697bc642c2b434f5ac0fea88a5f99eef7e981be881cf961961fa",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv",
+      "sha256": "971b22b29ba27d3207a5638f0c83dc3bda404571d3dbab125bbed5794fbdc4be",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.events.jsonl",
+      "sha256": "d38122f95825b6d22fbe3cf6901b787076e9e7bc2bac6bb33e5da9f2669de3fb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/visual_rosbag/metadata.yaml",
+      "sha256": "42be498509ee4328d08b79d4a3afa95cfbc0fe2503aaa296b4c900bbe00ccc74",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "227c136b0f2b1430a432060148cd4ced2e63979dd4b0f6be28004e7ea8b8c616",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/artifacts.json",
+      "sha256": "3cca0df8fdcf370ae362ac235822cfaab06fefad9bd378275aae6a02e25d7053",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/carrier_repositions_by_trial.png",
+      "sha256": "bd93a0a2a97b625d1b8407698e040ca8ba464dddb3ade82132fcdd7fda924c5f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/cycle_time_by_trial.png",
+      "sha256": "795689f5c308ac68372c7bfd92abf3c4cccfc40dd96d7d7c81ad48bd4daa7c79",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/metrics.json",
+      "sha256": "aeb9db37c991285c4fc1ce9ff460212beebc57bbc13f25af98443d4de4741ee5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/summary.csv",
+      "sha256": "c2f7a3a60cf4d98e75c17d7d699de2914eb61b9536e09cfb8bbd566b5873a51f",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/trial_outcomes.png",
+      "sha256": "335dbb73fbe8e5be4580f2f4794afe6a2fbc2824245d218960156cb80b0677a2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/trials.csv",
+      "sha256": "0a0fdd54400f92c7a43c8e80469c47c56a8826a03696b24f92bcf7c5a7691ee0",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/schema/event.schema.json",
+      "sha256": "0af7481f6c98ff24a044114be1ac5d6f770cb9a4900cb217ce4979bf8acaa33b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/schema/trial.schema.json",
+      "sha256": "ce82466745013a884e333c71adf79a710460866c3df4f12cb39f6cc988e5ba7f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/scripts/analyze_trials.py",
+      "sha256": "befd582ce60adc14c320d23b664ebbae6472ea3837aaaa1425c3a38489920422",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/templates/trials.csv",
+      "sha256": "a3517abdd551dd871f78059bf8a7b51ad26c5c22b8202cf5de6dff99c2e415b8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/tests/fixtures/expected.json",
+      "sha256": "2cc85bb691a5af9b2c6699d11dc8b7241c236d814d8b07a30d19659c4f0bb9e5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/tests/test_analysis.py",
+      "sha256": "e76455899a28e66cf3e234097795a7132c51460d949cb70f5a134b6de94ebb61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/README.md",
+      "sha256": "7d7337dacacd909b015952c2c38ae625d96f518704047763760f168ba6aba9fb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/data/baseline_8.393kg.csv",
+      "sha256": "f3ba7a5f5d5606504322d37713b5a37fbe52728420dca6a5b868d12f2d848c0e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/data/experiment_9.2323kg.csv",
+      "sha256": "dd3576c733ec972e8e9fc0dd267c5a617f5f5aaddd5e25b69997d9b0d15d0ab8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/params/physical_parameters_9.2323kg.yaml",
+      "sha256": "e798d18df856f876d0866493f32b203e8c46658df1747f156e253a5e7e7c49ab",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/params/physical_parameters_baseline.yaml",
+      "sha256": "e798d18df856f876d0866493f32b203e8c46658df1747f156e253a5e7e7c49ab",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/all_joint_positions_comparison.png",
+      "sha256": "63a4c58e2e7f3f8c004f7b99da3a5058605432a2ef617c7c19f1c295101f78f5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/elbow_joint_acceleration_comparison.png",
+      "sha256": "ca84930a8cac2038245768cd3cb8d46fe41df4cd4f42137d11beeff64193f67c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/elbow_joint_position_comparison.png",
+      "sha256": "ce647e1e1c6ebf4cfd6035bd1fcc120bd4f23662a2f0d904933784fa917d984f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/elbow_joint_velocity_comparison.png",
+      "sha256": "9509103a28515126e6286c3e646b488e35517283567668536e8e99c67ce5cadb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/position_range_comparison.png",
+      "sha256": "6e341d24d8f4e0ba8940c69e0adebf30032a474f4cc4ce94b2f62622fc8885af",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_lift_joint_acceleration_comparison.png",
+      "sha256": "c737e5cad81782684f7625301b1192a3c438b3db734bf6a94e92ee8047a322a6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_lift_joint_position_comparison.png",
+      "sha256": "68485e06d3cc1812dd220eadddad1bd813c003ada319266c502611af4a973a4b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_lift_joint_velocity_comparison.png",
+      "sha256": "d4fe340f54ffd7e7aa414b60ba971619d50884ffbf86630cef09b84691548b41",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_pan_joint_acceleration_comparison.png",
+      "sha256": "a65afc5673bd8785d6ff7a5d90b011f8bd31d4bb042d8ae79298f050b1f0f5bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_pan_joint_position_comparison.png",
+      "sha256": "933d6bc45734b5e35c51847e4f8172542a4e8bccaf16eade49a5fd4535667ed7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_pan_joint_velocity_comparison.png",
+      "sha256": "2f77dc13847a3a29289d9b779d14995225338cec93acdfbcbd8925860b42cc39",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_1_joint_acceleration_comparison.png",
+      "sha256": "aac31e204b396757556e8a6812d2d35bc8d6cb0a644f69192b908361d969e511",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_1_joint_position_comparison.png",
+      "sha256": "4d61dc5e5c8b157c7e1700b580515b5a32218c47f09631fcbe66b1be66e358a8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_1_joint_velocity_comparison.png",
+      "sha256": "381785f86e188be1610b97274cd5f8d4e57d423fac24f1afc6101eda1a72d693",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_2_joint_acceleration_comparison.png",
+      "sha256": "0120be462b82a731b2cee51b99c9412021c4deb9078b5fe5ddc4dc8d663a2aef",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_2_joint_position_comparison.png",
+      "sha256": "6a769edfc7892088ccfaa923b1a3dd1c02f0158fab84a79619f7666cb2a164cb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_2_joint_velocity_comparison.png",
+      "sha256": "bd58e1daca3834c563c28da2af020012c9ad950f6e796b1f06900234047e4ba4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_3_joint_acceleration_comparison.png",
+      "sha256": "31ee39aa4d78cd48e5c44dd30d2c99caa4beb2984e67237b6525d3c7293d9b88",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_3_joint_position_comparison.png",
+      "sha256": "d69bb40e2dd547508fad59afc3b8b75b9f0cea40e4097a89c58cabc6a8640694",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_3_joint_velocity_comparison.png",
+      "sha256": "648ef07893d847264602bd73cdc3ad19a67b1a39f2a9ba64a38407066d4e2271",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/results/exp01_mass_comparison.txt",
+      "sha256": "2528909251cf0eb45fe9319873641294919ead28e6a5e3fb9e2ae39f0edb403e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/results/experiment_bag_metadata.yaml",
+      "sha256": "01f9bf84c125bd1d040d31623e792b1e2cd65c9cd400b92bd8107308f7e04ea8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/scripts/compare_exp01.py",
+      "sha256": "e37e715668e262c094b706d401d01834d76cf8cab10287966e7fcbef2e93b02e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/scripts/compare_exp01_plots.py",
+      "sha256": "77c508a17954c64f7eab09d899f4da71b93f22a4279ab43a822cd4676fec347e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/scripts/extract_joint_states.py",
+      "sha256": "1cd99e5423e2089134759f2a03653aa6cb5f7c9d8aea64c99bd896afdc6fe26b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/urdf/experiment_9.2323kg.urdf",
+      "sha256": "5216c976ca752342ffd6af31a732f1178f9350555de2d32f5a6e3bef8746ddc4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/urdf/ur5_baseline_verified.urdf",
+      "sha256": "ac29aae7d6cbf13d8b00870b746292d7632ac94a936a9864e648db9d3c405994",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/urdf/ur5_exp01_verified.urdf",
+      "sha256": "5216c976ca752342ffd6af31a732f1178f9350555de2d32f5a6e3bef8746ddc4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/data/baseline_2.330kg.csv",
+      "sha256": "87424e2eaf805371387d61a1a34154ad1d6196a509bd6d8e39b140b828c5345c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/data/exp02_forearm_2.563kg.csv",
+      "sha256": "6dacdb8141b476971e73f05a82d66bc9da28b08d0fcfe8d5fdc6a442121e1375",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/params/physical_parameters_baseline.yaml",
+      "sha256": "58b2a17bc1e5be5cc0ee0f093b81d58bbab5784e2f795a7cd51cdf6c3e8d0dae",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/params/physical_parameters_exp02.yaml",
+      "sha256": "05798b6b0c461afe6098735e5ce4bf176d2bd02ab949cb4abe2018b59a531de3",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_accelerations_comparison.png",
+      "sha256": "f507515b1d28d37a97f281477ef49eaef5349c0d5aeb6c58a54cf8bcca53b6f2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_positions_comparison.png",
+      "sha256": "fdeb3317bf8eeaff71fd547ab93159f82745f6f96389eaffe3ab0e1afc2d07c9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_range_comparison.png",
+      "sha256": "105d0841846fe8821b28c3cbe4e6d7027a89a2ad4b6701e73f3bf19c1931a66a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_velocities_comparison.png",
+      "sha256": "188354f56ff5b19618d16decf868e559a81a47e6d800fc6955a66aebdb60dd2b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/baseline_bag_metadata.yaml",
+      "sha256": "1e4d9daa76594bc9ee0b3a8c135828ae776cd67a999924813a9cdd4ad4dd2d1a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/exp02_baseline_vs_forearm_10pct_comparison.txt",
+      "sha256": "c3f60a3b8d712417c6bcdd11193d0d60c80388116cd9a1f338738b86bf80a086",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/exp02_forearm_mass_10pct_analysis.txt",
+      "sha256": "54a298ac12359a5466edc307412ab7fbfdb1365f7382f6e96e7fba1f7af2b8cb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/exp02_summary.txt",
+      "sha256": "0e9b317831ca0bb926e5e4b398ab973ca20373fa8f0ef09d56d0a237c7cf2338",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/experiment_bag_metadata.yaml",
+      "sha256": "0a9be1d1e2e68f4d9399e355ebcb0195866226a6e6a7cc364cd83c9b81aedc4f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/analyze_exp02.py",
+      "sha256": "adff38feda35699b9ed17577195bef654c32c558a36d2c9427997e8a72fb94c2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/compare_exp02.py",
+      "sha256": "5668c2f41d5dc16842c9de9af21538629ae50825f9852bd46cd3b8eeb3623183",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/exp02_plots.py",
+      "sha256": "37c45be9d1c268383ccdfb5004ea5b9878d89273b8aabf8ea9c58e6cef2e857d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/extract_baseline_exp02.py",
+      "sha256": "3cb6943a6aa7ca2e614e94007299f596b6e417f99e75c8272518acf8ce3643a8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/extract_exp02_joint_states.py",
+      "sha256": "a0aa509c843fb705ff5fa8d39bcec3fdc5f657b091ee27aeb32ac2cc0b81249b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/urdf/baseline_reference.urdf",
+      "sha256": "ac29aae7d6cbf13d8b00870b746292d7632ac94a936a9864e648db9d3c405994",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/urdf/ur5_exp02_generated.urdf",
+      "sha256": "3e8b7f3d65295dffab7e3f3ef5e249732d67be1530c5d8855f113a2f08011e61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/urdf/ur5_exp02_verified.urdf",
+      "sha256": "3e8b7f3d65295dffab7e3f3ef5e249732d67be1530c5d8855f113a2f08011e61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/data/baseline_8.393_2.330kg.csv",
+      "sha256": "162fc364c5e2caf2ad8e7446fa629945a1d86a595c2fced3b4ea45078a9929e5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/data/exp03_shoulder_4.070kg.csv",
+      "sha256": "ce9b248be7154e17cbcc73129480733bc328ede4815de979afc4914b90d1068c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/params/physical_parameters_exp03.yaml",
+      "sha256": "f8d419686ccf93d822beb10f1121ac5b7d67ff750b592ba5c5c1106fefad60aa",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_accelerations_comparison.png",
+      "sha256": "7744df7777756382705267cd4710d8ead75170152ef15bbee4622c6fbc7100af",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_positions_comparison.png",
+      "sha256": "034f9f26e10d981c74e64f5517cf15d487c079ff88a9dced387e9306e6f9baa6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_range_comparison.png",
+      "sha256": "5f351e1c99cfe6cb8c33889945d6b5f476ded2e19a57e7f96074dec98d2ca827",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_velocities_comparison.png",
+      "sha256": "0366ceb2e6e9540ba7534f52cf4dd06d0628c895f200101fe874a9989912af81",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/results/exp03_shoulder_mass_10pct_analysis.txt",
+      "sha256": "c6a22cd82e64f581f7d0c39335b0387f6b3b0d08d772dfc263f313d5533d15b4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/results/experiment_bag_metadata.yaml",
+      "sha256": "6e222c09fc14303b62d72c206a91175c68d0613f06f3dd4231521cf14f4be7d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/scripts/analyze_exp03.py",
+      "sha256": "00cadaa514cdef63801492412b7f3644ea14b50b671d890c67377aa6f1ab1b3f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/scripts/exp03_plots.py",
+      "sha256": "b6c6493e45b0b0ff24271f1b389e6104b09eb405020866602bc83c0eb229687c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/scripts/extract_exp03.py",
+      "sha256": "2a815e2d710191fe3892b0c0666c8328016b8e305ff38bc8fac03a5d188d0901",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/urdf/ur5_exp03_verified.urdf",
+      "sha256": "574c8152883e7d82c0bef538d6e00e158962e0b088b99022c3c47167c17c4c01",
+      "storage": "git"
+    },
+    {
+      "path": "media/2026-08-24-machine-shop-cycle.webm",
+      "sha256": "7ac28efb7693cb93a03d041012f9eee1d515163412c5dbc93ec743c9125507dd",
+      "storage": "git"
+    },
+    {
+      "path": "media/Screencast from 09-29-2026 10:03:01 PM.webm",
+      "sha256": "fe01d1c8ef4f33a8475bfdf4f755b3cba65e62f9f5d3c045cd9b598777999fa3",
+      "storage": "git"
+    }
+  ]
+}

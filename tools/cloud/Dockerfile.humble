@@ -8,7 +8,4 @@ RUN --mount=type=secret,id=ca,required=true \
     python3-colcon-common-extensions python3-pytest python3-matplotlib python3-yaml \
     ros-humble-ament-copyright ros-humble-ament-flake8 ros-humble-ament-pep257 \
     liburdfdom-tools xvfb xauth git-lfs && rm -rf /var/lib/apt/lists/*
-# Avoid the reproduced LLVM llvmpipe redraw/shutdown crash in headless RViz.
-# Hardware-rendered desktop validation remains a separate environment check.
-ENV GALLIUM_DRIVER=softpipe
 WORKDIR /workspace/CAM-BOT

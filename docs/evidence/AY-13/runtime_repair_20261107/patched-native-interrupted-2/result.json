@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "shutdown_during": "PICK_RAW",
+  "trial": {
+    "schema_version": "2.0",
+    "experiment_id": "cambot-machine-tending",
+    "trial_id": "cambot-machine-tending-a2662894-efaa-4ab1-81d8-f96f1f4244e5",
+    "git_commit": "9a192eca37f1c46c972e6fc248a09c4494e17941",
+    "parameter_config": "/workspace/CAM-BOT/install/carrier_control/share/carrier_control/config/machine_tending.json",
+    "parameter_hash_sha256": "4a30a60ff007ec96a0be3d97aee8319e4bc8db24a8f4ffe1cd01c68968359076",
+    "start_timestamp_utc": "2026-11-06T19:09:17.888295+00:00",
+    "end_timestamp_utc": "2026-11-06T19:09:20.212845+00:00",
+    "time_source": "monotonic_duration+utc_wall_timestamps",
+    "cycle_time_s": "2.324528069",
+    "status": "INCOMPLETE",
+    "success": "False",
+    "failure_state": "PICK_RAW",
+    "failure_reason": "KeyboardInterrupt:shutdown requested during trial",
+    "carrier_repositions": "0",
+    "mode": "visual_simulation",
+    "workpiece_final_state": "RAW_AT_S1",
+    "runtime_verified": "False",
+    "end_to_end_verified": "False",
+    "notes": "trial interrupted before a durable final summary"
+  },
+  "actuation_verified": false,
+  "grasp_verified": false
+}

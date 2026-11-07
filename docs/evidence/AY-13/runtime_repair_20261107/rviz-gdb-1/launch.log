@@ -1,0 +1,108 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-06-18-54-09-864382-b18bcd8b8ecf-1371
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [1389]
+[INFO] [machine_tending_coordinator-2]: process started with pid [1391]
+[INFO] [gdb-3]: process started with pid [1393]
+[gdb-3] SIGINT is used by the debugger.
+[gdb-3] Are you sure you want to change it? (y or n) [answered Y; input not from terminal]
+[gdb-3] warning: Error disabling address space randomization: Operation not permitted
+[gdb-3] [Thread debugging using libthread_db enabled]
+[gdb-3] Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[gdb-3] [New Thread 0x7f7da62e7640 (LWP 1427)]
+[gdb-3] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[robot_state_publisher-1] [INFO] [1793991250.462644274] [robot_state_publisher]: got segment base
+[robot_state_publisher-1] [INFO] [1793991250.462761868] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1793991250.462767867] [robot_state_publisher]: got segment base_link_inertia
+[robot_state_publisher-1] [INFO] [1793991250.462772023] [robot_state_publisher]: got segment carrier_flange
+[robot_state_publisher-1] [INFO] [1793991250.462775659] [robot_state_publisher]: got segment carrier_flange_interface
+[robot_state_publisher-1] [INFO] [1793991250.462779274] [robot_state_publisher]: got segment carrier_flange_mount_left
+[robot_state_publisher-1] [INFO] [1793991250.462782789] [robot_state_publisher]: got segment carrier_flange_mount_right
+[robot_state_publisher-1] [INFO] [1793991250.462785524] [robot_state_publisher]: got segment cell_floor
+[robot_state_publisher-1] [INFO] [1793991250.462788658] [robot_state_publisher]: got segment dual_arm_base_link
+[robot_state_publisher-1] [INFO] [1793991250.462791623] [robot_state_publisher]: got segment flange
+[robot_state_publisher-1] [INFO] [1793991250.462794447] [robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-1] [INFO] [1793991250.462797271] [robot_state_publisher]: got segment ft_frame
+[robot_state_publisher-1] [INFO] [1793991250.462800075] [robot_state_publisher]: got segment left_forearm
+[robot_state_publisher-1] [INFO] [1793991250.462802709] [robot_state_publisher]: got segment left_upper_arm
+[robot_state_publisher-1] [INFO] [1793991250.462805583] [robot_state_publisher]: got segment right_forearm
+[robot_state_publisher-1] [INFO] [1793991250.462808187] [robot_state_publisher]: got segment right_upper_arm
+[robot_state_publisher-1] [INFO] [1793991250.462811041] [robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-1] [INFO] [1793991250.462813896] [robot_state_publisher]: got segment station_s1_raw
+[robot_state_publisher-1] [INFO] [1793991250.462816570] [robot_state_publisher]: got segment station_s2_staging
+[robot_state_publisher-1] [INFO] [1793991250.462819154] [robot_state_publisher]: got segment station_s3_machine
+[robot_state_publisher-1] [INFO] [1793991250.462821657] [robot_state_publisher]: got segment station_s4_output
+[robot_state_publisher-1] [INFO] [1793991250.462824211] [robot_state_publisher]: got segment station_s5_finished
+[robot_state_publisher-1] [INFO] [1793991250.462826955] [robot_state_publisher]: got segment tool0
+[robot_state_publisher-1] [INFO] [1793991250.462829709] [robot_state_publisher]: got segment upper_arm_link
+[robot_state_publisher-1] [INFO] [1793991250.462832473] [robot_state_publisher]: got segment workpiece
+[robot_state_publisher-1] [INFO] [1793991250.462835318] [robot_state_publisher]: got segment workpiece_x_carriage
+[robot_state_publisher-1] [INFO] [1793991250.462838132] [robot_state_publisher]: got segment workpiece_y_carriage
+[robot_state_publisher-1] [INFO] [1793991250.462840696] [robot_state_publisher]: got segment world
+[robot_state_publisher-1] [INFO] [1793991250.462843269] [robot_state_publisher]: got segment wrist_1_link
+[robot_state_publisher-1] [INFO] [1793991250.462845973] [robot_state_publisher]: got segment wrist_2_link
+[robot_state_publisher-1] [INFO] [1793991250.462848778] [robot_state_publisher]: got segment wrist_3_link
+[gdb-3] [New Thread 0x7f7da51b1640 (LWP 1432)]
+[gdb-3] [New Thread 0x7f7da49b0640 (LWP 1433)]
+[gdb-3] [New Thread 0x7f7d9ffff640 (LWP 1434)]
+[gdb-3] [New Thread 0x7f7d9f7fe640 (LWP 1435)]
+[gdb-3] [New Thread 0x7f7d9effd640 (LWP 1436)]
+[gdb-3] [New Thread 0x7f7d9e7fc640 (LWP 1437)]
+[gdb-3] [New Thread 0x7f7d9dffb640 (LWP 1438)]
+[gdb-3] [New Thread 0x7f7d9d7fa640 (LWP 1439)]
+[gdb-3] [New Thread 0x7f7d9cff9640 (LWP 1440)]
+[gdb-3] [New Thread 0x7f7d9c7f8640 (LWP 1441)]
+[machine_tending_coordinator-2] [WARN] [1793991250.516621499] [machine_tending_coordinator]: VISUAL SIMULATION ONLY: carrier joints are not commanded; this run is not runtime or end-to-end verification
+[gdb-3] [New Thread 0x7f7d9bf70640 (LWP 1442)]
+[gdb-3] [New Thread 0x7f7d9b579640 (LWP 1443)]
+[gdb-3] [New Thread 0x7f7d83fff640 (LWP 1444)]
+[gdb-3] [New Thread 0x7f7d837fe640 (LWP 1445)]
+[gdb-3] [New Thread 0x7f7d82ffd640 (LWP 1446)]
+[gdb-3] [New Thread 0x7f7d827fc640 (LWP 1447)]
+[gdb-3] [New Thread 0x7f7d81ffb640 (LWP 1448)]
+[gdb-3] [New Thread 0x7f7d817fa640 (LWP 1449)]
+[gdb-3] [New Thread 0x7f7d80ff9640 (LWP 1450)]
+[gdb-3] [New Thread 0x7f7d7500d640 (LWP 1451)]
+[gdb-3] [New Thread 0x7f7d7480c640 (LWP 1452)]
+[gdb-3] [New Thread 0x7f7d4ffff640 (LWP 1453)]
+[gdb-3] [New Thread 0x7f7d4f7fe640 (LWP 1454)]
+[gdb-3] [INFO] [1793991250.830890808] [rviz2]: Stereo is NOT SUPPORTED
+[gdb-3] [INFO] [1793991250.831077796] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[gdb-3] [INFO] [1793991250.889067813] [rviz2]: Stereo is NOT SUPPORTED
+[gdb-3] [New Thread 0x7f7d4da7e640 (LWP 1455)]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [gdb-3]: sending signal 'SIGINT' to process[gdb-3]
+[INFO] [machine_tending_coordinator-2]: sending signal 'SIGINT' to process[machine_tending_coordinator-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[robot_state_publisher-1] [INFO] [1793991273.633967686] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[gdb-3] [INFO] [1793991273.635371869] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[gdb-3] [Thread 0x7f7d4da7e640 (LWP 1455) exited]
+[gdb-3] [Thread 0x7f7da49b0640 (LWP 1433) exited]
+[gdb-3] [Thread 0x7f7d9bf70640 (LWP 1442) exited]
+[gdb-3] [Thread 0x7f7d9effd640 (LWP 1436) exited]
+[gdb-3] [Thread 0x7f7d9e7fc640 (LWP 1437) exited]
+[gdb-3] [Thread 0x7f7d9dffb640 (LWP 1438) exited]
+[gdb-3] [Thread 0x7f7d9d7fa640 (LWP 1439) exited]
+[gdb-3] [Thread 0x7f7d9cff9640 (LWP 1440) exited]
+[gdb-3] [Thread 0x7f7d9f7fe640 (LWP 1435) exited]
+[gdb-3] [Thread 0x7f7d9c7f8640 (LWP 1441) exited]
+[gdb-3] [Thread 0x7f7da62e7640 (LWP 1427) exited]
+[gdb-3] [Thread 0x7f7d4f7fe640 (LWP 1454) exited]
+[gdb-3] [Thread 0x7f7d9ffff640 (LWP 1434) exited]
+[gdb-3] [Thread 0x7f7d9b579640 (LWP 1443) exited]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 1389]
+[INFO] [machine_tending_coordinator-2]: process has finished cleanly [pid 1391]
+[gdb-3] [Thread 0x7f7da51b1640 (LWP 1432) exited]
+[gdb-3] [Thread 0x7f7d4ffff640 (LWP 1453) exited]
+[gdb-3] [Thread 0x7f7d7500d640 (LWP 1451) exited]
+[gdb-3] [Thread 0x7f7d80ff9640 (LWP 1450) exited]
+[gdb-3] [Thread 0x7f7d817fa640 (LWP 1449) exited]
+[gdb-3] [Thread 0x7f7d81ffb640 (LWP 1448) exited]
+[gdb-3] [Thread 0x7f7d827fc640 (LWP 1447) exited]
+[gdb-3] [Thread 0x7f7d82ffd640 (LWP 1446) exited]
+[gdb-3] [Thread 0x7f7d837fe640 (LWP 1445) exited]
+[gdb-3] [Thread 0x7f7d83fff640 (LWP 1444) exited]
+[gdb-3] [Thread 0x7f7da69f5280 (LWP 1412) exited]
+[gdb-3] [Thread 0x7f7d7480c640 (LWP 1452) exited]
+[gdb-3] [New process 1412]
+[gdb-3] [Inferior 1 (process 1412) exited normally]
+[INFO] [gdb-3]: process has finished cleanly [pid 1393]

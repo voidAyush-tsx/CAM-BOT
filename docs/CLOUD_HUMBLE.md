@@ -28,8 +28,7 @@ git lfs pull
 docker run -d --name cambot-dev \
   --mount type=bind,src=/workspace/CAM-BOT,dst=/workspace/CAM-BOT \
   --mount "type=bind,src=$replay_output,dst=/evidence" \
-  -e ROS_DOMAIN_ID=96 -e ROS_LOCALHOST_ONLY=1 \
-  -e GALLIUM_DRIVER=softpipe cambot-humble:cloud sleep infinity
+  -e ROS_DOMAIN_ID=96 -e ROS_LOCALHOST_ONLY=1 cambot-humble:cloud sleep infinity
 docker exec cambot-dev bash -c '
   set -e
   git config --global --add safe.directory /workspace/CAM-BOT
@@ -43,7 +42,7 @@ docker exec cambot-dev bash -c '
 docker exec cambot-dev xvfb-run -a -s '-screen 0 1280x800x24' bash -c '
   set -e
   source /opt/ros/humble/setup.bash
-  export QT_QPA_PLATFORM=xcb LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=softpipe
+  export QT_QPA_PLATFORM=xcb LIBGL_ALWAYS_SOFTWARE=1
   for scenario in success unreachable load_failure cancelled; do
     bash tools/capture_ay0608_humble.sh "/evidence/$scenario" "$scenario"
   done
@@ -57,13 +56,14 @@ an empty residual graph; crashes or forced termination fail the capture.
 Each scenario requires a new output directory. The unreachable fixture changes
 only a copied configuration's two workspace radii to 1 mm.
 
-Headless Xvfb with Mesa's default LLVM renderer reproduced an intermittent
-RViz crash, including after single-interrupt shutdown was repaired. The debugger
-stack entered LLVM compilation through `swrast_dri.so` during an RViz redraw.
-`GALLIUM_DRIVER=softpipe` selects Mesa's alternative software renderer and is the
-cloud image default. This is an environment workaround, not a fix to Mesa or
-proof that every desktop renderer shuts down correctly. Keep all error checks
-enabled. The recorded five-trial experiment remains separate.
+Headless Xvfb reproduced an intermittent RViz redraw/shutdown crash. Selecting
+`GALLIUM_DRIVER=softpipe` passed several cases but failed an early-interruption
+test, so it is not an accepted repair. The [current progress record](evidence/AY-13/runtime_repair_20261107/README.md)
+includes GDB/Valgrind diagnostics and a small RViz timer-stop patch candidate.
+Five interrupted runs passed with a locally rebuilt, patched `rviz_common`;
+that dependency patch is not yet integrated into this Dockerfile or validated
+across the complete visual suite. Unpatched RViz can still fail the capture.
+Keep all error checks enabled. The recorded five-trial experiment remains separate.
 
 Stop only the container started for this run with `docker stop cambot-dev`.
 The mounted output directory remains on the host. Live processes do not

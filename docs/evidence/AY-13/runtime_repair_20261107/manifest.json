@@ -1,0 +1,1301 @@
+{
+  "scope": "consolidated agent runtime repair progress; includes failed diagnostics; not independent review",
+  "count": 259,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "298a5ff4b7e7f87360d3b90768c1c107fae223461a8807f90687a2eb8d3faf76",
+      "bytes": 7573
+    },
+    {
+      "path": "active-interrupt-runner.log",
+      "sha256": "b460030dbc75e4b9f0301bff6646ada2facac2ceee69b8241b17f3a92657ab59",
+      "bytes": 323
+    },
+    {
+      "path": "analysis-comparison.log",
+      "sha256": "f2b585bf0cd8a93cf01721a971b4b8dc77431403b7b0153e94403b8f1fa35eb8",
+      "bytes": 169
+    },
+    {
+      "path": "analysis-regeneration.log",
+      "sha256": "a02de4f5092f82220b8a3b93ee6f9068463310a6383734a350e069e3674c4a2f",
+      "bytes": 76
+    },
+    {
+      "path": "analysis-tests.log",
+      "sha256": "f501747e0d5ae9753794e9271aac22240273f412b6df2af9b1eb8a83cee35590",
+      "bytes": 1445
+    },
+    {
+      "path": "apt-gdb.log",
+      "sha256": "e598d530d517da795daf2b96b3ce7d919a44f027303c7780f6e18ee5a128c5a3",
+      "bytes": 4709
+    },
+    {
+      "path": "apt-git-lfs.log",
+      "sha256": "ab03931bff42318d26d2687d5e4ceb3cb28b3ad15e017c5f1cab27301713c8a2",
+      "bytes": 3098
+    },
+    {
+      "path": "apt-valgrind.log",
+      "sha256": "3dadb702c0b68c25fa5c2444107ac53d817b2b295c10c0e0c02a166a03d62ab1",
+      "bytes": 2217
+    },
+    {
+      "path": "cambot.urdf",
+      "sha256": "97c160ecc8087defe65caa8069bc356c13d08fb39d216e79ec7cdb05cae8039a",
+      "bytes": 37036
+    },
+    {
+      "path": "check-urdf.log",
+      "sha256": "b1acff9c5726a81cdc9275bc49570b6a481701f5288e3029e00ebd0fc43e1df9",
+      "bytes": 1693
+    },
+    {
+      "path": "colcon-build.log",
+      "sha256": "50f03efcac931acd8484e40210fb66cad433965fe06febedee54579e30893a60",
+      "bytes": 178
+    },
+    {
+      "path": "colcon-test-result.log",
+      "sha256": "812133deb0e1fe640f104cc521d160d93b9b16e15c0fdbbe3bd65e45ad7d270f",
+      "bytes": 51
+    },
+    {
+      "path": "colcon-test.log",
+      "sha256": "319503803575e2831feb28849b3496099f721f69ffcaf0ba4b61df2d214fddaa",
+      "bytes": 866
+    },
+    {
+      "path": "development/cancelled-fixed/bag_info.txt",
+      "sha256": "6dbfcb5b5b2172333088e4f1d578e1b3d086d20afb59097161a8deaf75a8ab63",
+      "bytes": 974
+    },
+    {
+      "path": "development/cancelled-fixed/bag_record.log",
+      "sha256": "d0dd2c1709cce0a1c182737eac324fd21c098ca8d2f95b07deaecbd9bcf0eff0",
+      "bytes": 1413
+    },
+    {
+      "path": "development/cancelled-fixed/joint_state_publishers.txt",
+      "sha256": "10c6bdf6e2aec9566c6f1bb071536d0fe18c2aa019a68b61105df6b66e705364",
+      "bytes": 1239
+    },
+    {
+      "path": "development/cancelled-fixed/launch.log",
+      "sha256": "7a8a0e5abdb42c40bbbf6a1c7718b7a90bedd7878df2b383b77c84b048c3ff2f",
+      "bytes": 4928
+    },
+    {
+      "path": "development/cancelled-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/cancelled-fixed/probe.jsonl",
+      "sha256": "4f84a8eee29daca707412198f8d74561bed5feddeec55cde8cd5e4cd84fba0e4",
+      "bytes": 5552
+    },
+    {
+      "path": "development/cancelled-fixed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/cancelled-fixed/trials.csv",
+      "sha256": "28471f717941e2aa67469f0d6b6ebcea59a0fd4077710522424beea854139a8c",
+      "bytes": 831
+    },
+    {
+      "path": "development/cancelled-fixed/trials.events.jsonl",
+      "sha256": "9eb5b9fa73eb0ec01af30c74fc379a251dd6055bd6bc53a664b8e13ac0ab0d37",
+      "bytes": 12460
+    },
+    {
+      "path": "development/cancelled-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "55bcd8696a82153f46ee591dd595b691cc1d698433afc6b53d3aeae90ba30e35",
+      "bytes": 3390
+    },
+    {
+      "path": "development/cancelled-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "b42e4fc4d9a6610155ffc2ec2fc694360d25a752e947c8478339c70686ffd189",
+      "bytes": 151552
+    },
+    {
+      "path": "development/development-build.log",
+      "sha256": "2a01df65718c6901f39bb941085c4b2d0ba8c6826b1b79e5d0ffe58cc815457c",
+      "bytes": 178
+    },
+    {
+      "path": "development/development-test-result.log",
+      "sha256": "812133deb0e1fe640f104cc521d160d93b9b16e15c0fdbbe3bd65e45ad7d270f",
+      "bytes": 51
+    },
+    {
+      "path": "development/development-tests.log",
+      "sha256": "4ea6aed95d75d9d4c565752a253c0ad2afa007959d96255a3373322e5c34ed34",
+      "bytes": 866
+    },
+    {
+      "path": "development/development-tool-tests-retry.log",
+      "sha256": "ce8cc3324245ba53330baf1cb1f24c50b3337f00a047461eb625c618e6174019",
+      "bytes": 2518
+    },
+    {
+      "path": "development/development-tool-tests.log",
+      "sha256": "ab930d9e36b5edf8470d0665176883a62d92809a87d49c31234fd3e0ac94cb0f",
+      "bytes": 7422
+    },
+    {
+      "path": "development/load-failure-fixed/bag_info.txt",
+      "sha256": "bd37baa5627aa9c663bf6c1c0765312ccd33dc96c40ea2d488f9885522a74822",
+      "bytes": 977
+    },
+    {
+      "path": "development/load-failure-fixed/bag_record.log",
+      "sha256": "941ad1a507d61db6f2626f9d2af4d39895374273a757c01d33621ffdbf9fbbf5",
+      "bytes": 1416
+    },
+    {
+      "path": "development/load-failure-fixed/joint_state_publishers.txt",
+      "sha256": "7d4c7857c87f918730c1bcadbc96f04ca92ed3c605096da4574c47a0e5f656bf",
+      "bytes": 1239
+    },
+    {
+      "path": "development/load-failure-fixed/launch.log",
+      "sha256": "11eb0bb68a496e29972d74d99ca98c7067e58d9a1b3c4252a506e22a56f4d087",
+      "bytes": 4921
+    },
+    {
+      "path": "development/load-failure-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/load-failure-fixed/probe.jsonl",
+      "sha256": "57a957dd428f8f182fb9fb21cce681e15e635b2b3a0c371c17f4fe2463575e37",
+      "bytes": 16015
+    },
+    {
+      "path": "development/load-failure-fixed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/load-failure-fixed/trials.csv",
+      "sha256": "aaa6ff7792a9b912219d791d5b5ae6b3126d47640af4415487ffd2f917428d37",
+      "bytes": 826
+    },
+    {
+      "path": "development/load-failure-fixed/trials.events.jsonl",
+      "sha256": "32a1fecadd6476fee7fb9cf4ef30cf8a540d23fe492855e4c889b9828421b16c",
+      "bytes": 27624
+    },
+    {
+      "path": "development/load-failure-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "602ef3c8992374bb8da3c3bb2c5cfdc89428db0b027e376382ac877ab00406e8",
+      "bytes": 3393
+    },
+    {
+      "path": "development/load-failure-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "d2ebad1c0c55ba0fb7d87dd6c0ea85dcd3ca69b3236349c97b7e9ed99c345e80",
+      "bytes": 466944
+    },
+    {
+      "path": "development/normal-fixed/bag_record.log",
+      "sha256": "404ed674f26b915fb14a39ec7da321a9bff22ca752d17377987f446f0ee5dc40",
+      "bytes": 1410
+    },
+    {
+      "path": "development/normal-fixed/launch.log",
+      "sha256": "5c138143f4ae6c7e2a9bb36389971f9eb69b3fcda4b824140d60e0a41145fafb",
+      "bytes": 4921
+    },
+    {
+      "path": "development/normal-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/normal-fixed/probe.jsonl",
+      "sha256": "67452659122f86ba484aa069e115a02a49524dfa8717bb84cb351c863f4b5aad",
+      "bytes": 6376
+    },
+    {
+      "path": "development/normal-fixed/trials.csv",
+      "sha256": "29571fd6fa7bbb2591d16d9bd934f82a47640b6ad667465d4fa3dcf0d214fce9",
+      "bytes": 810
+    },
+    {
+      "path": "development/normal-fixed/trials.events.jsonl",
+      "sha256": "3855bd96c3dac9ea07c0204a082a1b08ebfb890d2609c30b10321180537cb5e3",
+      "bytes": 13165
+    },
+    {
+      "path": "development/normal-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "21e493ff2fc25db5336ecd1305d1981a83da198caba4a083339dba30500963bf",
+      "bytes": 3390
+    },
+    {
+      "path": "development/normal-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "bdbba12f25272d280114b33631441280797df6e0a3cdbf64cb0d203ec0aca615",
+      "bytes": 212992
+    },
+    {
+      "path": "development/normal-fixed-retry/bag_info.txt",
+      "sha256": "68978eb024aef8005a2ede97cc10a04caee8d0e8f3bae088df7b783a57b7d688",
+      "bytes": 978
+    },
+    {
+      "path": "development/normal-fixed-retry/bag_record.log",
+      "sha256": "4f436a32b4d401feceb82b409178e780693a2fbec008baea425d1969ee8afa61",
+      "bytes": 1416
+    },
+    {
+      "path": "development/normal-fixed-retry/joint_state_publishers.txt",
+      "sha256": "4f353d2330f6475c4b6b16f41add4710109ca3611df991c9241a89a9e5dc344a",
+      "bytes": 1239
+    },
+    {
+      "path": "development/normal-fixed-retry/launch.log",
+      "sha256": "855cccdfd621a1ef71d56abaa1b53f8f18ff3e1c6105c3bf3520c436a07c9988",
+      "bytes": 4921
+    },
+    {
+      "path": "development/normal-fixed-retry/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/normal-fixed-retry/probe.jsonl",
+      "sha256": "14587f7f78f88641b8e9a357a21bcef3d71e9f2b4956881e3144ef04bd51c1c2",
+      "bytes": 41119
+    },
+    {
+      "path": "development/normal-fixed-retry/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/normal-fixed-retry/trials.csv",
+      "sha256": "7c30cecf4173810290656a886039a210a5b8a6d5b75a65e245072d4f28da645e",
+      "bytes": 788
+    },
+    {
+      "path": "development/normal-fixed-retry/trials.events.jsonl",
+      "sha256": "25fcf164fd08b2a971f75080258b6d7035f6fdaeb8e6632fc76ffefd4b650aab",
+      "bytes": 67985
+    },
+    {
+      "path": "development/normal-fixed-retry/visual_rosbag/metadata.yaml",
+      "sha256": "cdf8acdaa6cb3ca567434864d9cd9b5ec2d3593b12355a2e1a4c67d7357ba805",
+      "bytes": 3398
+    },
+    {
+      "path": "development/normal-fixed-retry/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "55750fc0cb833cb6da8e6fec80c2c2e294654b5dd6bdef8fd3c0020ce8f03fa3",
+      "bytes": 1097728
+    },
+    {
+      "path": "development/shutdown-parent-python/launch.log",
+      "sha256": "7560a9d28dcdcccf5d6e61afaea651f3fc964204e03ecc462e1e3d8cc15a0c08",
+      "bytes": 4921
+    },
+    {
+      "path": "development/shutdown-parent-python/processes.txt",
+      "sha256": "1e78391e7e8fce30e296940e7cd74ecaeda0a689386c6bcb630f98d1c3167006",
+      "bytes": 402
+    },
+    {
+      "path": "development/unreachable-fixed/bag_info.txt",
+      "sha256": "bf101463b1d2f97997304ca6d0d10512566215d69968318a61825412d926a9ff",
+      "bytes": 975
+    },
+    {
+      "path": "development/unreachable-fixed/bag_record.log",
+      "sha256": "05c06565a3868eff62547907e6139f421f12f47e472c37ac6c791fee611cccf0",
+      "bytes": 1415
+    },
+    {
+      "path": "development/unreachable-fixed/joint_state_publishers.txt",
+      "sha256": "d25b71033cef97e5b821a1ff36e00daef4a391472faae65e7572749a27eeb583",
+      "bytes": 1239
+    },
+    {
+      "path": "development/unreachable-fixed/launch.log",
+      "sha256": "d6dbcb937c1cff8426ae406604bbc9ecd6f4857cfd6c9469a8cad326c4905e41",
+      "bytes": 4921
+    },
+    {
+      "path": "development/unreachable-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/unreachable-fixed/probe.jsonl",
+      "sha256": "c9d96a28448641df92f14c03391c0459ff343f525756aac532800733f67e1798",
+      "bytes": 6266
+    },
+    {
+      "path": "development/unreachable-fixed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "development/unreachable-fixed/trials.csv",
+      "sha256": "a93af3eaa709434b9154f04c7eb1bb7e0fcc0ce8a1a6d9db66335d309f6a603b",
+      "bytes": 773
+    },
+    {
+      "path": "development/unreachable-fixed/trials.events.jsonl",
+      "sha256": "29a3e9de6b3a5b8aa75ae7382e06ec10f202d066f33a761c8a13523955e78504",
+      "bytes": 13133
+    },
+    {
+      "path": "development/unreachable-fixed/unreachable-config.json",
+      "sha256": "96810ad852798d8df7b2320b45340e566b401b0e9ada0342e15665ee79b06b0c",
+      "bytes": 10926
+    },
+    {
+      "path": "development/unreachable-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "de496757c9da27e88c7d489fe25895e12ef47eab124ded884961b29e7d9234a8",
+      "bytes": 3391
+    },
+    {
+      "path": "development/unreachable-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "9d86a06575968593bf8884dc88f362ca134e7109392bb0de1f73fb91c25a1697",
+      "bytes": 221184
+    },
+    {
+      "path": "docker-build.log",
+      "sha256": "f976dd6c1bfce36cad386b1d45af9fd2b6eefd2e300d0b62230e7cbf99efdf12",
+      "bytes": 108774
+    },
+    {
+      "path": "environment.txt",
+      "sha256": "1b2d37a33d24a61c8d18ff611df107d1fa14e8eb8dc19a7a19ce3ac7bc9f1eaa",
+      "bytes": 778
+    },
+    {
+      "path": "final-analysis-tests.log",
+      "sha256": "ecfb25a1ca158d7daba8ab6ad4e7c8da4c9629237938e8fe2bfae56f2389925b",
+      "bytes": 1445
+    },
+    {
+      "path": "final-colcon-test-result.log",
+      "sha256": "fa6b0f0ccf7c3bda2aa883828ed3ed3b8bd12fe7c0a3298883fc131996ebe2c7",
+      "bytes": 51
+    },
+    {
+      "path": "final-colcon-test.log",
+      "sha256": "74746dcac8841311727ce9a698af4919e318dfe9c19a49787ca9690c3762bf0f",
+      "bytes": 866
+    },
+    {
+      "path": "final-tool-tests.log",
+      "sha256": "50249c41dbb8966214f814c1c0f91104f83901f9d2fce5b65ffeb25aa31718c6",
+      "bytes": 2518
+    },
+    {
+      "path": "historical-report.json",
+      "sha256": "4f362d6f8f8698475847edda7483a703111819fe57644f1e1400f564cb0f1f57",
+      "bytes": 32218
+    },
+    {
+      "path": "historical-report.log",
+      "sha256": "383a9a146b1e9a7dc205f4389348a592030b3bbde7f6a3fa59005433fba38f5c",
+      "bytes": 73
+    },
+    {
+      "path": "installed-doc-check.log",
+      "sha256": "cea15b97f05dea91e5948b7fc258c72af25517dcf330ad355954cfdf96ed425d",
+      "bytes": 118
+    },
+    {
+      "path": "legacy-verification.json",
+      "sha256": "642a370260ab011a158d6279ce9044955c0d5bc8cc8c451d4b400a757cc5e10a",
+      "bytes": 3870
+    },
+    {
+      "path": "legacy-verification.log",
+      "sha256": "642a370260ab011a158d6279ce9044955c0d5bc8cc8c451d4b400a757cc5e10a",
+      "bytes": 3870
+    },
+    {
+      "path": "patched-native-interrupted-1/launch.log",
+      "sha256": "a0f17e90e602d4a85f51910055ee3e8d0677bbf4481767c90635a3956bc7a1a4",
+      "bytes": 4928
+    },
+    {
+      "path": "patched-native-interrupted-1/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "patched-native-interrupted-1/result.json",
+      "sha256": "2eb0f37172c2327eb8b0450bf3598fc2fcd4c94adcb35da01a707e6904e70050",
+      "bytes": 1186
+    },
+    {
+      "path": "patched-native-interrupted-1/trials.csv",
+      "sha256": "1053d3b8fe5824fc08a812f81cfc2df945e19eb3417e718529c13e5eb43d0f71",
+      "bytes": 857
+    },
+    {
+      "path": "patched-native-interrupted-1/trials.events.jsonl",
+      "sha256": "6b823162f7ac75dd659d4d8dcd490727c1147e50f24e951ea6015a8ed7e8a924",
+      "bytes": 12503
+    },
+    {
+      "path": "patched-native-interrupted-2/launch.log",
+      "sha256": "8e49a6c748a0490dc20a835443f4bd67f295d0ccc64f980cc55690693c698c15",
+      "bytes": 4928
+    },
+    {
+      "path": "patched-native-interrupted-2/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "patched-native-interrupted-2/result.json",
+      "sha256": "a236bf8d6e36f3d46eacd0c9151f3568e016cab1d0b9b210c0caec0d844e360b",
+      "bytes": 1186
+    },
+    {
+      "path": "patched-native-interrupted-2/trials.csv",
+      "sha256": "06fc19c9ce81dbf20b8d1554b511104d9c20af6750aefc0e34bf3bf34f3111d1",
+      "bytes": 857
+    },
+    {
+      "path": "patched-native-interrupted-2/trials.events.jsonl",
+      "sha256": "a3b627c73964f033c5d1a1df763e4b68b0aa645104170dc2c699fe466bebc889",
+      "bytes": 12401
+    },
+    {
+      "path": "patched-native-interrupted-3/launch.log",
+      "sha256": "2b437c96f8e1f7b9b83420412ff96852f1169bc8620ae7529ed082adec27ae5a",
+      "bytes": 4928
+    },
+    {
+      "path": "patched-native-interrupted-3/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "patched-native-interrupted-3/result.json",
+      "sha256": "6f19fc0604cc95049ec600caba8f15173554dd30953306aadbfb59901167aed0",
+      "bytes": 1186
+    },
+    {
+      "path": "patched-native-interrupted-3/trials.csv",
+      "sha256": "27f8d47ccd0bf42cd944689652fee215d68a6582faed631df78bf92865b3bd12",
+      "bytes": 857
+    },
+    {
+      "path": "patched-native-interrupted-3/trials.events.jsonl",
+      "sha256": "c2e574af43954700dcfd3d9282bf38b38ed41e6f0bebe44c1ccfa3a1815558cd",
+      "bytes": 12400
+    },
+    {
+      "path": "patched-native-interrupted-4/launch.log",
+      "sha256": "52324dbfa7310d37ac83f80245d1354114284817e130d2ef160d98c4223b2838",
+      "bytes": 4928
+    },
+    {
+      "path": "patched-native-interrupted-4/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "patched-native-interrupted-4/result.json",
+      "sha256": "b7fab58b1f3bee740be7ee28a52b725f430e411c62f03ce6f7029e1bfddaf518",
+      "bytes": 1186
+    },
+    {
+      "path": "patched-native-interrupted-4/trials.csv",
+      "sha256": "7e5adcf07884f45406a93f079b072dff63497c8735ecfc66398fed1064d71180",
+      "bytes": 857
+    },
+    {
+      "path": "patched-native-interrupted-4/trials.events.jsonl",
+      "sha256": "ade376028d01a52f03db0983137ada8391822d8b486fdc4e4565667c6b2f565e",
+      "bytes": 12498
+    },
+    {
+      "path": "patched-native-interrupted-5/launch.log",
+      "sha256": "b69f4a13eb4c551d857d9d162875ec09ebc12cf474845173f1ab8d372a51c89e",
+      "bytes": 4928
+    },
+    {
+      "path": "patched-native-interrupted-5/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "patched-native-interrupted-5/result.json",
+      "sha256": "ca9f3b531bcac7f58089fae884dee573673efd2196afeb9bb1537c0757327663",
+      "bytes": 1186
+    },
+    {
+      "path": "patched-native-interrupted-5/trials.csv",
+      "sha256": "4099fb77698a576e4bdd61ead553bfd1e74d970222882816e6bd11da8e5c9ca7",
+      "bytes": 857
+    },
+    {
+      "path": "patched-native-interrupted-5/trials.events.jsonl",
+      "sha256": "dbc0fa77090f24e9ce89aa64e0f6962cd397e65edb8e6f560c47c59724ac6848",
+      "bytes": 7424
+    },
+    {
+      "path": "patched-native-interrupted.log",
+      "sha256": "50fec4b1c64af89c8900d762157c898a849ac0f4b3a3e75483d5dc6e21c590d2",
+      "bytes": 365
+    },
+    {
+      "path": "patched-rviz-libraries.txt",
+      "sha256": "325b5ebbe1e464894446018b91a80b2a0e546a3e11a66e9161889716a20db349",
+      "bytes": 7956
+    },
+    {
+      "path": "preflight-environment.txt",
+      "sha256": "11974cb2332ec13a9222ac4d42d2482ac1ea184dd6f9fcd14935901e1e573e1c",
+      "bytes": 41
+    },
+    {
+      "path": "preflight-missing-lfs.log",
+      "sha256": "984c4c31cfc0e84a2057ec0719fd6cb59c966c7a05e8a28faa56cc3abde993da",
+      "bytes": 89
+    },
+    {
+      "path": "regenerated-analysis/artifacts.json",
+      "sha256": "3cca0df8fdcf370ae362ac235822cfaab06fefad9bd378275aae6a02e25d7053",
+      "bytes": 229
+    },
+    {
+      "path": "regenerated-analysis/carrier_repositions_by_trial.png",
+      "sha256": "bd93a0a2a97b625d1b8407698e040ca8ba464dddb3ade82132fcdd7fda924c5f",
+      "bytes": 61337
+    },
+    {
+      "path": "regenerated-analysis/cycle_time_by_trial.png",
+      "sha256": "795689f5c308ac68372c7bfd92abf3c4cccfc40dd96d7d7c81ad48bd4daa7c79",
+      "bytes": 50587
+    },
+    {
+      "path": "regenerated-analysis/metrics.json",
+      "sha256": "aeb9db37c991285c4fc1ce9ff460212beebc57bbc13f25af98443d4de4741ee5",
+      "bytes": 2431
+    },
+    {
+      "path": "regenerated-analysis/summary.csv",
+      "sha256": "c2f7a3a60cf4d98e75c17d7d699de2914eb61b9536e09cfb8bbd566b5873a51f",
+      "bytes": 372
+    },
+    {
+      "path": "regenerated-analysis/trial_outcomes.png",
+      "sha256": "335dbb73fbe8e5be4580f2f4794afe6a2fbc2824245d218960156cb80b0677a2",
+      "bytes": 50032
+    },
+    {
+      "path": "regenerated-analysis/trials.csv",
+      "sha256": "0a0fdd54400f92c7a43c8e80469c47c56a8826a03696b24f92bcf7c5a7691ee0",
+      "bytes": 1151
+    },
+    {
+      "path": "rosdep-check.log",
+      "sha256": "43a3ee518f5ec19ddeeb125d8bbb6f4272cd1077bfef239a91faf9e78638698f",
+      "bytes": 44
+    },
+    {
+      "path": "runner/diagnose-rviz.py",
+      "sha256": "b8ea57a8bccaa8e0e12f7060ff68b154f8abd33edcccf0cdc06ad3005b986648",
+      "bytes": 1248
+    },
+    {
+      "path": "runner/diagnose-shutdown.py",
+      "sha256": "5d5df52dde9012203cd7a5663fcf40f4760db8adcd9a80dfe02900c67413ef7c",
+      "bytes": 874
+    },
+    {
+      "path": "runner/diagnose-valgrind.py",
+      "sha256": "b12e7fbc248435f124269da3457fbb951522a782ecb31d141b44398ff5cf5311",
+      "bytes": 1263
+    },
+    {
+      "path": "runner/interrupt-active-patch.py",
+      "sha256": "ff6aabf041046267089ffa805306aec4d73da2fde704374ad0c804203743f252",
+      "bytes": 2421
+    },
+    {
+      "path": "runner/interrupt-active.py",
+      "sha256": "76b3dbdf5ffaade9c183d6df2557df870cc49f277249f9a2836c1fa65db0ee1b",
+      "bytes": 2463
+    },
+    {
+      "path": "runner/run-ay13-final.sh",
+      "sha256": "5007ff997bd47360481c6218a4bf4b681763382c37fb0fb57a875e3fdc48b0dd",
+      "bytes": 3691
+    },
+    {
+      "path": "runner/rviz-stop-update/CMakeLists.txt",
+      "sha256": "84304f1ba0a7cfabc851e3024758ed6f80c5970cd027cfae464a8dee0e1cd530",
+      "bytes": 337
+    },
+    {
+      "path": "runner/rviz-stop-update/shutdown.cpp",
+      "sha256": "a7d768c3ecb69061479ec744ff71b343b5ef65bfe28828bd6a4e8ce0806bf243",
+      "bytes": 402
+    },
+    {
+      "path": "runner/verify-sealed.py",
+      "sha256": "c6d1763e4f877322b8964fc33fa0f5b827e4d771b4af621a833ea75cde0514a8",
+      "bytes": 1111
+    },
+    {
+      "path": "runner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "rviz-common-build.log",
+      "sha256": "f2f4c9b3c0a167d25ccdd7132cb52c2b6e7c96ea5547f56df0013b949d4e31aa",
+      "bytes": 179
+    },
+    {
+      "path": "rviz-gdb/debug.launch.py",
+      "sha256": "dd2ff85df3a53095a3ad3919dd6bfc52663f6061ec9834cda5f81c382c38f9fb",
+      "bytes": 3841
+    },
+    {
+      "path": "rviz-gdb/launch.log",
+      "sha256": "4822e08664deb954bafb4514872c48108b36f87c54a701d8653884e221756183",
+      "bytes": 7818
+    },
+    {
+      "path": "rviz-gdb/probe.jsonl",
+      "sha256": "ad7ac12baac44120b7f86ecc8f41f432ab563ebe90ca65ef3674285f0ab34d49",
+      "bytes": 41298
+    },
+    {
+      "path": "rviz-gdb/trials.csv",
+      "sha256": "63a7843a49f4e8e166a1578312ef6c973c5a08a64a62063ed3fa424ff7f512ba",
+      "bytes": 821
+    },
+    {
+      "path": "rviz-gdb/trials.events.jsonl",
+      "sha256": "2d353c5455e29466ab0502446555598d2543021159ae2fd296cc5c21994eb996",
+      "bytes": 68019
+    },
+    {
+      "path": "rviz-gdb-1/debug.launch.py",
+      "sha256": "dd2ff85df3a53095a3ad3919dd6bfc52663f6061ec9834cda5f81c382c38f9fb",
+      "bytes": 3841
+    },
+    {
+      "path": "rviz-gdb-1/launch.log",
+      "sha256": "d9db2f957e159121b1b1e32944f86a02991e65285eee35cd42beda6b1d1d8bef",
+      "bytes": 7818
+    },
+    {
+      "path": "rviz-gdb-1/probe.jsonl",
+      "sha256": "15ee01ee7ffbfdfec917fe2e6e66cd519b67156853ad3bc0f5e187e409e95735",
+      "bytes": 41298
+    },
+    {
+      "path": "rviz-gdb-1/trials.csv",
+      "sha256": "f0414f1516591455a01f49b64ccd53c26aeab5663676e1ec17b6c00e490d8b89",
+      "bytes": 821
+    },
+    {
+      "path": "rviz-gdb-1/trials.events.jsonl",
+      "sha256": "f8c9b287fb47e44724f35185a0aaaea45e703a04518a0004b134c457b3946e84",
+      "bytes": 68015
+    },
+    {
+      "path": "rviz-gdb-2/debug.launch.py",
+      "sha256": "dd2ff85df3a53095a3ad3919dd6bfc52663f6061ec9834cda5f81c382c38f9fb",
+      "bytes": 3841
+    },
+    {
+      "path": "rviz-gdb-2/launch.log",
+      "sha256": "4299656d8c11c410b16960b1eedbdda73cd8ce43c1ce57279daa5fe62369c54d",
+      "bytes": 29255
+    },
+    {
+      "path": "rviz-gdb-2/probe.jsonl",
+      "sha256": "4f9f22833de8d0b0c2d383d6523c536762289a48d5ffd41c659eb4d5201db5ff",
+      "bytes": 41119
+    },
+    {
+      "path": "rviz-gdb-2/trials.csv",
+      "sha256": "62cc93595f566baaa0b2d41778ea00715d1fa3ba8373a53e258e2947d9385046",
+      "bytes": 821
+    },
+    {
+      "path": "rviz-gdb-2/trials.events.jsonl",
+      "sha256": "1a9d47d5b573441798d39e23105a5ccfca4893d5ea438e9072c8fde36ca40ee9",
+      "bytes": 68023
+    },
+    {
+      "path": "rviz-stop-update-build.log",
+      "sha256": "d8c0d1cab2368a5788d20c9bd8b730e4e37cf99ec9c4a76b9cbfdee0746c6193",
+      "bytes": 4654
+    },
+    {
+      "path": "rviz-stop-update.launch.py",
+      "sha256": "c1de56593d93ab3df0cd13e0bd67cff0b84b58e5430fbe66618d02f8c1437d9b",
+      "bytes": 3826
+    },
+    {
+      "path": "rviz-valgrind/debug.launch.py",
+      "sha256": "5552b8b494dc848b299e037673482d379921458afe2002ada3993c8f7fd3705c",
+      "bytes": 3898
+    },
+    {
+      "path": "rviz-valgrind/launch.log",
+      "sha256": "7d3dfd08a0318f840bec9c3d8a16770c9c4f9a0aa42acbe251a9bdeed9f7e99a",
+      "bytes": 5227
+    },
+    {
+      "path": "rviz-valgrind/memory.log",
+      "sha256": "0bfdbf03d08100cea245c16c3256a33c627766dc4e0a4267223b570847eb3ddd",
+      "bytes": 989283
+    },
+    {
+      "path": "sealed-preservation.json",
+      "sha256": "77d70966a0fef2632068457d26d9459f46684fd29c2f4af79c80413999223810",
+      "bytes": 89409
+    },
+    {
+      "path": "softpipe/cancelled/bag_info.txt",
+      "sha256": "faf80c16dad4bfdce0fd94cdfc9399e0f14327d4bd0135693d3477a2ec98d499",
+      "bytes": 974
+    },
+    {
+      "path": "softpipe/cancelled/bag_record.log",
+      "sha256": "813cd6e3e0f0d5e6d98d97264dfd431e5ffc5af1b058aee88f83d04c23f8d8d7",
+      "bytes": 1416
+    },
+    {
+      "path": "softpipe/cancelled/joint_state_publishers.txt",
+      "sha256": "abb45ab8e6157dbf4fff7ef27faa251996a971f0d00f1017f4f24dbffa5cbcf0",
+      "bytes": 1239
+    },
+    {
+      "path": "softpipe/cancelled/launch.log",
+      "sha256": "c267f7a650067f3ea53240089ef22c7649b74ad0ef7674c501652bdc647cf7f0",
+      "bytes": 4928
+    },
+    {
+      "path": "softpipe/cancelled/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/cancelled/probe.jsonl",
+      "sha256": "4f0a98b203cba8fa12602994bc150fcf1a6db650f046535546e424cedaec3126",
+      "bytes": 5552
+    },
+    {
+      "path": "softpipe/cancelled/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/cancelled/trials.csv",
+      "sha256": "c6b3aa75969b648aca662b07bb6ca24d8fcdb5a1eb297e0fc808b46d79247848",
+      "bytes": 864
+    },
+    {
+      "path": "softpipe/cancelled/trials.events.jsonl",
+      "sha256": "12d20fedb79ab5517e9c9e599cb73ca39c5fe524eb3e15f6acabfa2a018cf25e",
+      "bytes": 12493
+    },
+    {
+      "path": "softpipe/cancelled/visual_rosbag/metadata.yaml",
+      "sha256": "a74ce4419fa9948b982811a42e93f8b08505ab7aa5eadaea5f95934a74d1f744",
+      "bytes": 3390
+    },
+    {
+      "path": "softpipe/cancelled/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "5df9221d11a9f2129ed4208b12f264f4bc7eaf93dcdaa38c46899947a7ec1b0d",
+      "bytes": 151552
+    },
+    {
+      "path": "softpipe/interrupted/launch.log",
+      "sha256": "c353a277c419f3e40073ca12b2ca7129461a872eb9611df60c25280ede274ce8",
+      "bytes": 5145
+    },
+    {
+      "path": "softpipe/interrupted/trials.csv",
+      "sha256": "800a37395508de967ae82ad798a31d7d16f13eccfc3955ab58d551c55a9f470b",
+      "bytes": 825
+    },
+    {
+      "path": "softpipe/interrupted/trials.events.jsonl",
+      "sha256": "b93c8a1444f5b2426f6e6f937499ac2078de096007a7f88b90956e5e78a233de",
+      "bytes": 10559
+    },
+    {
+      "path": "softpipe/load_failure/bag_info.txt",
+      "sha256": "f6935632bef4341a0e9c555104ab3390322faa1406b141ba94dc5c58441f5ea2",
+      "bytes": 977
+    },
+    {
+      "path": "softpipe/load_failure/bag_record.log",
+      "sha256": "6347f3feb225d9aa13bb715cfb20ddce3e700fc49473a7f6c03ea7e79e5be16c",
+      "bytes": 1419
+    },
+    {
+      "path": "softpipe/load_failure/joint_state_publishers.txt",
+      "sha256": "779f1c63cf7b780fc6ee474abd9bb8756756e931ed2ef9307c61b0aaf80c44e7",
+      "bytes": 1239
+    },
+    {
+      "path": "softpipe/load_failure/launch.log",
+      "sha256": "540707947e57eeff9f3181f097977dc27b0832e1fb3343ff575036baea3b7457",
+      "bytes": 4928
+    },
+    {
+      "path": "softpipe/load_failure/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/load_failure/probe.jsonl",
+      "sha256": "956aeb67fe8ee2a6315a9a1aa7135d3ed2f7cc1a7083dbd49ebbe39e1944dc0d",
+      "bytes": 16015
+    },
+    {
+      "path": "softpipe/load_failure/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/load_failure/trials.csv",
+      "sha256": "d76d550678412b27c8e7b30cb8ad3a06cca5716d34a960fd561ff5c854f43c31",
+      "bytes": 859
+    },
+    {
+      "path": "softpipe/load_failure/trials.events.jsonl",
+      "sha256": "5d3a270249fab8bd0d6e84a1b6c859e518e49faa957232a0f20c04e5b006fa29",
+      "bytes": 27653
+    },
+    {
+      "path": "softpipe/load_failure/visual_rosbag/metadata.yaml",
+      "sha256": "2029291bccee8eb2507e656941e0b7f1701ed2661222bac517ecc9c6c98bb60e",
+      "bytes": 3393
+    },
+    {
+      "path": "softpipe/load_failure/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "3ab1371b226cb7fb2ab1ae94d939659bd89c08e62117160f80b9dccaa5ad9a71",
+      "bytes": 471040
+    },
+    {
+      "path": "softpipe/success-1/bag_info.txt",
+      "sha256": "d7ac0e59ca20769038fb023c31ede19fdbd81e1fd6b4d867810d336fb9aec6cf",
+      "bytes": 978
+    },
+    {
+      "path": "softpipe/success-1/bag_record.log",
+      "sha256": "9c94c984ed3197e8db5bc4439ec9d7ca72424f282b7ec9191ab952856dbce66e",
+      "bytes": 1416
+    },
+    {
+      "path": "softpipe/success-1/joint_state_publishers.txt",
+      "sha256": "80ac4efbca209508e4ccf361e1809056d35cfbbc9d71ed661396e974e4f93673",
+      "bytes": 1239
+    },
+    {
+      "path": "softpipe/success-1/launch.log",
+      "sha256": "107f895f855afa3339e0e868133e32bdfa9835436e8030dc85d013b4d98da482",
+      "bytes": 4928
+    },
+    {
+      "path": "softpipe/success-1/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/success-1/probe.jsonl",
+      "sha256": "0c59bc94ec3e4b338992cb73e22b72705a5d97f50907284caf2e8395356454dd",
+      "bytes": 41298
+    },
+    {
+      "path": "softpipe/success-1/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/success-1/trials.csv",
+      "sha256": "5b71cbd4f6de9267b8de1e82d55e4f2dbe0a5df5346a72ff8442ba5668df27ff",
+      "bytes": 821
+    },
+    {
+      "path": "softpipe/success-1/trials.events.jsonl",
+      "sha256": "c0f653e95d3978e1ec8e306cf6f44cef2375c6b9275b2f8035d8ff7db7d3a698",
+      "bytes": 68022
+    },
+    {
+      "path": "softpipe/success-1/visual_rosbag/metadata.yaml",
+      "sha256": "bf4e2c8c1aa7cbca03888e3e2f324607d214b092cc92830752fad4728e98fd5d",
+      "bytes": 3398
+    },
+    {
+      "path": "softpipe/success-1/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "158f07c2a887766dd374097aad9df23d8402135b3d2a48b5ba3aaaef6d67d84c",
+      "bytes": 1097728
+    },
+    {
+      "path": "softpipe/success-2/bag_info.txt",
+      "sha256": "8af350895dbc0f552f348bb81f65e3711cbfaae1b954de8c2dbe66d987195059",
+      "bytes": 978
+    },
+    {
+      "path": "softpipe/success-2/bag_record.log",
+      "sha256": "6fa736a1a5f35a270a6055b2ae65f53b99f246a3e0f11387f357119804cf3b82",
+      "bytes": 1416
+    },
+    {
+      "path": "softpipe/success-2/joint_state_publishers.txt",
+      "sha256": "0728950c504d5b4e4f7157935d16d412b9e60d288b2d5c760a8355e012845838",
+      "bytes": 1239
+    },
+    {
+      "path": "softpipe/success-2/launch.log",
+      "sha256": "bcbbce6b6a17155185267c85839fc757f8a1ee30cee957bcc9f4689accedb166",
+      "bytes": 4928
+    },
+    {
+      "path": "softpipe/success-2/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/success-2/probe.jsonl",
+      "sha256": "003acf96d42c232e531e20af591ff27bf2f8d83f540de96cf64f18df58648951",
+      "bytes": 41298
+    },
+    {
+      "path": "softpipe/success-2/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/success-2/trials.csv",
+      "sha256": "255fb9e7fc6440fc2ffd0d3d69b113da68f98b5e299b458940419945a51996c7",
+      "bytes": 821
+    },
+    {
+      "path": "softpipe/success-2/trials.events.jsonl",
+      "sha256": "c60bb9a7b512613115f4b4e2bfe137307b5c3075dccd460e3a39fcc8b22785c8",
+      "bytes": 68016
+    },
+    {
+      "path": "softpipe/success-2/visual_rosbag/metadata.yaml",
+      "sha256": "d64efad9b831b1f526826f8ef5fa1419c38570a84a64c37a3ecff48f80244c01",
+      "bytes": 3398
+    },
+    {
+      "path": "softpipe/success-2/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "630dd849a330695929ef1d5636d9fa87eacb4f36c68c11887fe77a93fce7081d",
+      "bytes": 1089536
+    },
+    {
+      "path": "softpipe/success-3/bag_info.txt",
+      "sha256": "5ea3016b83cb3c037e70e056b7f154bcd50f23d7af7b2ae8c6014fd5145ee652",
+      "bytes": 978
+    },
+    {
+      "path": "softpipe/success-3/bag_record.log",
+      "sha256": "8a39fe5af6c46ef950e4354cba56ea1202f74bd87b85c73c07d400c211f1804d",
+      "bytes": 1416
+    },
+    {
+      "path": "softpipe/success-3/joint_state_publishers.txt",
+      "sha256": "3258d0833bd39fb6c72ebad4b08fa03f67f3b4f1a33536e05a9c33df1945d4ed",
+      "bytes": 1239
+    },
+    {
+      "path": "softpipe/success-3/launch.log",
+      "sha256": "9fc4bf7d73a3990b294ab44eeeb242addfde1b54a4ccbc7401b76d3346c71f28",
+      "bytes": 4928
+    },
+    {
+      "path": "softpipe/success-3/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/success-3/probe.jsonl",
+      "sha256": "ea34273d6c86328db40a7ee5e5aff62a2afec556ac4e725e03bb3cae099c5911",
+      "bytes": 41298
+    },
+    {
+      "path": "softpipe/success-3/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/success-3/trials.csv",
+      "sha256": "06c54a42b65592d5b6e89bbfb6721ad7858d3b2398102b4b15a77606c5096a35",
+      "bytes": 821
+    },
+    {
+      "path": "softpipe/success-3/trials.events.jsonl",
+      "sha256": "9ed328bcb10a82cd7771b0237004d510daba4a114836959462fdfd135d84a164",
+      "bytes": 68016
+    },
+    {
+      "path": "softpipe/success-3/visual_rosbag/metadata.yaml",
+      "sha256": "c72264e1ae27b5701d3f5fc37a70a2af5e37035badbd02374482f961b9c2886d",
+      "bytes": 3398
+    },
+    {
+      "path": "softpipe/success-3/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "35d20b932c16c3b2c31f1bd30bfea1642a2c716646081925f38d8449b3bad6fa",
+      "bytes": 1081344
+    },
+    {
+      "path": "softpipe/unreachable/bag_info.txt",
+      "sha256": "131102859abe0495d09710ad866924eae81a232dbd7e4751fa2d87673ef7bf88",
+      "bytes": 975
+    },
+    {
+      "path": "softpipe/unreachable/bag_record.log",
+      "sha256": "e2535a675dd571b66a388786108251c28e1023b7460b2c2aa8d5b5cbef0213ef",
+      "bytes": 1418
+    },
+    {
+      "path": "softpipe/unreachable/joint_state_publishers.txt",
+      "sha256": "823ec75ed1ce7b535a613c2446153b8c53602a95208725de981b0f35c3b9baec",
+      "bytes": 1239
+    },
+    {
+      "path": "softpipe/unreachable/launch.log",
+      "sha256": "d3bda457f8b34e3740f8f6183d053d9c2c405e7757ad6049e94bfddf18970080",
+      "bytes": 4928
+    },
+    {
+      "path": "softpipe/unreachable/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/unreachable/probe.jsonl",
+      "sha256": "c8ee68d89948c93a59a4a1b2b12554ca44568a762104252238fafceb8c2693d0",
+      "bytes": 6084
+    },
+    {
+      "path": "softpipe/unreachable/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "softpipe/unreachable/trials.csv",
+      "sha256": "1ab74fac3d92e80942f0ff3a9d5fca91db081a50613f6c1f1a51b5192e20ee20",
+      "bytes": 809
+    },
+    {
+      "path": "softpipe/unreachable/trials.events.jsonl",
+      "sha256": "016a6463b3fe22190621ef3d2288c300ea20f6fd42fd4bb3ffba86c0cb92b77d",
+      "bytes": 13171
+    },
+    {
+      "path": "softpipe/unreachable/unreachable-config.json",
+      "sha256": "96810ad852798d8df7b2320b45340e566b401b0e9ada0342e15665ee79b06b0c",
+      "bytes": 10926
+    },
+    {
+      "path": "softpipe/unreachable/visual_rosbag/metadata.yaml",
+      "sha256": "8147724caee97b58ae3194fc75871a584d7fcc0d2692076a3566b509bcff495e",
+      "bytes": 3391
+    },
+    {
+      "path": "softpipe/unreachable/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "16e284339e0ae83eda18ec650c7c9b734b9be49e44cb87e01b2b9ae7c4b93f50",
+      "bytes": 221184
+    },
+    {
+      "path": "softpipe-cancelled.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "bytes": 128
+    },
+    {
+      "path": "softpipe-load_failure.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "bytes": 128
+    },
+    {
+      "path": "softpipe-run-1.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "bytes": 128
+    },
+    {
+      "path": "softpipe-run-2.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "bytes": 128
+    },
+    {
+      "path": "softpipe-run-3.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "bytes": 128
+    },
+    {
+      "path": "softpipe-unreachable.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "bytes": 128
+    },
+    {
+      "path": "stop-update-interrupted-1/launch.log",
+      "sha256": "6fa27106c48c3e0e1604cc270051b809a5566ef6eb915984051f997566179903",
+      "bytes": 4928
+    },
+    {
+      "path": "stop-update-interrupted-1/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "stop-update-interrupted-1/result.json",
+      "sha256": "a629558c435b2c0a8b2c3c4baf4c5153b2a481bc314aea0650285f476cae23db",
+      "bytes": 1155
+    },
+    {
+      "path": "stop-update-interrupted-1/trials.csv",
+      "sha256": "c47736bf0babe3f9a68397a4d4863e6bf577b1e852b8eedf3a4a8a78f155885f",
+      "bytes": 826
+    },
+    {
+      "path": "stop-update-interrupted-1/trials.events.jsonl",
+      "sha256": "910288e19f3fc04c8576c0eded36d25497b9b60f7de7e1d5c7ed716aec8d3469",
+      "bytes": 9747
+    },
+    {
+      "path": "stop-update-interrupted-2/launch.log",
+      "sha256": "1409ee6f0ff5258dd2d00973332567b878f2a88b3dbd561658d5aae245330fff",
+      "bytes": 4928
+    },
+    {
+      "path": "stop-update-interrupted-2/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "stop-update-interrupted-2/result.json",
+      "sha256": "c7f13f0e8d26d6ae25cac240694fb0ee103fe94dc8efa46226c4901f6362cdeb",
+      "bytes": 1154
+    },
+    {
+      "path": "stop-update-interrupted-2/trials.csv",
+      "sha256": "50aba543c56736247050d88fb4fe62ba3039a4a6befb81d541199ccbe57cc2aa",
+      "bytes": 825
+    },
+    {
+      "path": "stop-update-interrupted-2/trials.events.jsonl",
+      "sha256": "567a007e25384a1236defa5301f85dd18e649dc3d7fe679b7349b612ee225a60",
+      "bytes": 9749
+    },
+    {
+      "path": "stop-update-interrupted-3/launch.log",
+      "sha256": "44a7d150bccc4a7245ee71a14408552c95715b59873b48acb75b27dfc333ef14",
+      "bytes": 11080
+    },
+    {
+      "path": "stop-update-interrupted-3/trials.csv",
+      "sha256": "582b5955012155e7040034d190745c8d185f61d316a10627e92c9738a5f58aac",
+      "bytes": 898
+    },
+    {
+      "path": "stop-update-interrupted-3/trials.events.jsonl",
+      "sha256": "ff344cc6f7cfc6965d04a4aa5bf474d4ea148eb4697df059c78f3c6fdcb48b50",
+      "bytes": 11185
+    },
+    {
+      "path": "stop-update-interrupted-4/launch.log",
+      "sha256": "a1ef96d63c60c7ab68e1a6e15e8085f2716c208a0b950b66ebf6f5e23fbc5175",
+      "bytes": 5197
+    },
+    {
+      "path": "stop-update-interrupted-4/trials.csv",
+      "sha256": "d864e0606d6ebd9fd755cab4dc9636a21bca82ec3e2705b5cf57d2e4ad68ba12",
+      "bytes": 852
+    },
+    {
+      "path": "stop-update-interrupted-4/trials.events.jsonl",
+      "sha256": "2e4e7d529f95fa01b5bf05cbc70aff4985fa9a59beded3899706601b3a544602",
+      "bytes": 11605
+    },
+    {
+      "path": "stop-update-interrupted-retry.log",
+      "sha256": "b4bc2e3790ea540bf7cf020766682aa65092a573556f86b88bef553c9b0f8781",
+      "bytes": 332
+    },
+    {
+      "path": "stop-update-interrupted.log",
+      "sha256": "4326221cdba41e9c69abb1e2d6f42813049f5cd739e1ae276decc4a914e1d039",
+      "bytes": 468
+    },
+    {
+      "path": "success/bag_record.log",
+      "sha256": "61c2d8d158f7489ff9ee94648d89ff97db7d19c76ec31e2dd247921537751fb9",
+      "bytes": 1405
+    },
+    {
+      "path": "success/joint_state_publishers.txt",
+      "sha256": "f7dcadc23767dc903389ec4916846a90f972c768b90384fab1994543ff4afdb1",
+      "bytes": 1239
+    },
+    {
+      "path": "success/launch.log",
+      "sha256": "4c31ab166eec01167d40a2836d1ac66bc023d6a5e3eff021ef08605e3ea98dbd",
+      "bytes": 5088
+    },
+    {
+      "path": "success/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "success/probe.jsonl",
+      "sha256": "bd09c45414387c842f175c4287b1203f09a611afb7bd1d7ff459edfa9c078e2d",
+      "bytes": 41298
+    },
+    {
+      "path": "success/trials.csv",
+      "sha256": "dba0952bf007063695aaa2089d51c94d3839d853eda769602f1f7e08d5202e54",
+      "bytes": 820
+    },
+    {
+      "path": "success/trials.events.jsonl",
+      "sha256": "a1f1221c86a83bde62ac83d10f79ef82d2ced0f9fee095e8f51e95ce95f14ba5",
+      "bytes": 68022
+    },
+    {
+      "path": "success/visual_rosbag/metadata.yaml",
+      "sha256": "96eb17d0295ce7c500a5fd297e713c4a01f9483089659fdece30492a339b6ddb",
+      "bytes": 3398
+    },
+    {
+      "path": "success/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "f0d5e520389ba3bfde52ebf06e73d929ce81f5e801f9341e3d82e7af71367218",
+      "bytes": 1093632
+    },
+    {
+      "path": "success-runner.log",
+      "sha256": "286b1a288bff1b7d0cd6274e70bee3158da63592c5fb564b9215337de81554fe",
+      "bytes": 358
+    },
+    {
+      "path": "syntax.log",
+      "sha256": "a787aa65f1ddd3d727a7c668c6bdbe9f72b87a0bd264c0e6ad8b522da52dae90",
+      "bytes": 37
+    },
+    {
+      "path": "tool-tests.log",
+      "sha256": "05588414d8334fdc4f0a9482452eea81c981d64a09e62be158a40c515d9da259",
+      "bytes": 2518
+    }
+  ]
+}
