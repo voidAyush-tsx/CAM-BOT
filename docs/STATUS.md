@@ -57,7 +57,11 @@ supporting files in this checkout.
 Historical Phase 1 UR5 and Phase 2 mass experiments have their original
 [progress](progress/phase1-carrier-baseline.md) and
 [experiment](progress/phase2-mass-sensitivity.md) reports. Phase 3 carrier
-workspace characterization and Phase 6 placement analysis remain planned.
+workspace characterization and Phase 6 placement analysis are **IN PROGRESS**:
+the [preliminary model study](../experiments/workspace/README.md) supplies
+20,006 kinematic samples, five assumed placement comparisons and a live TF
+cross-check. Collision/orientation checks, workspace boundary validation and
+an evidence-backed physical placement recommendation remain open.
 Phase 4/5 have visual integration and five measured visual cycles; selected
 controllers, validated targets, grasp feedback, and actuated simulation remain
 open. The installed carrier-control waypoint YAML is read by the legacy joint

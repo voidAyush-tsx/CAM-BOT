@@ -1,0 +1,86 @@
+{
+  "source_commit": "ed7390e",
+  "scope": "preliminary assumed-model kinematics/proxy analysis",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "ea7438e9a4d46f29e6c3bf21f3ec20b28ea47b332fb3a5a5ade4936e193e01d6",
+      "bytes": 2751
+    },
+    {
+      "path": "analysis.log",
+      "sha256": "c7e58ca0f3435fc3066a8f8c01433b3f824a9d69f57e1d322e5d8d4b84034d54",
+      "bytes": 1299
+    },
+    {
+      "path": "build.log",
+      "sha256": "6b8426b376469a3d6bb2f30b1e27a94e9b198c002b577931cc1194f9cdc245fa",
+      "bytes": 178
+    },
+    {
+      "path": "fk-crosscheck/publisher.log",
+      "sha256": "9638ae7b4630acf5352d67613f00bb6673cf6e1c7e6645f1c3d98939764faed9",
+      "bytes": 2614
+    },
+    {
+      "path": "fk-crosscheck/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "fk-crosscheck/result.json",
+      "sha256": "c8cf37c8de3a816eaa479073f662f6b40b4521506015a2e774084db30e079672",
+      "bytes": 934
+    },
+    {
+      "path": "fk-crosscheck/robot-description.yaml",
+      "sha256": "a66f3962c18e998290e2e12a9a00e812508809af8b081ba095d6e94c20815c4d",
+      "bytes": 43816
+    },
+    {
+      "path": "fk-crosscheck.log",
+      "sha256": "186af5d9cc5ac61dce84b5562efc7413da952043ef16c89da747e41438e8526c",
+      "bytes": 71
+    },
+    {
+      "path": "model.urdf",
+      "sha256": "97c160ecc8087defe65caa8069bc356c13d08fb39d216e79ec7cdb05cae8039a",
+      "bytes": 37036
+    },
+    {
+      "path": "runner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "study/configured_targets.json",
+      "sha256": "e382629bf4631721973ce7a40779c4b019b67b4c167a9514564d1c0e094a25dd",
+      "bytes": 5024
+    },
+    {
+      "path": "study/point_cloud.csv",
+      "sha256": "b5b8e4464d59191ee8f3877421678adcd48f4e97f22f122ea61413b6e237f365",
+      "bytes": 4590129
+    },
+    {
+      "path": "study/report.json",
+      "sha256": "e86ac4e1364a84a1654a1450cc6a6b01f2e32e5a64adb2d82dcb88473cac738c",
+      "bytes": 4501
+    },
+    {
+      "path": "study/station_coverage.csv",
+      "sha256": "8407141b85e71f2ab6fa46551237a22cc8793b617521b4642bcdf7afa666fdb9",
+      "bytes": 2231
+    },
+    {
+      "path": "study/workspace.png",
+      "sha256": "f070edfb9595ce549708af39765e788e14767097b4788e9c927445d0aa7172c1",
+      "bytes": 416953
+    },
+    {
+      "path": "tool-tests.log",
+      "sha256": "94e3fdbaece276d3d282e2ff849823226fc14aa75922105907d54a45a79db1f5",
+      "bytes": 3473
+    }
+  ]
+}
