@@ -16,8 +16,8 @@ corrected against source. [D-08 and D-09](../DECISIONS.md) record the evidence
 policy and visual-trial scope. The [Humble contract log](../evidence/AY-13/humble_contract.log)
 shows installed packages, executables and URDF, while the
 [checker fixtures](../evidence/AY-13/doc_checker_tests.log) cover negative
-path/status/launch cases. Current runtime repair and independent-review blockers
-are recorded in the status matrix; no reviewer observation is fabricated.
+path/status/launch cases. Current dispositions and acceptance evidence
+are recorded in the status matrix; historical blockers remain in dated records.
 
 The [2026-11-05 repair validation](../evidence/AY-13/reproducibility_repair.md)
 records documentation/LFS corrections, offline checks and the remaining
@@ -32,7 +32,8 @@ The [consolidated repair progress](../evidence/AY-13/runtime_repair_20261107/REA
 collects the earlier code fixes, tests and RViz diagnostics. The subsequent
 [reproducible-image replay](../evidence/AY-13/reproducible_image_20261107/README.md)
 records the pinned dependency integration and successful final technical suite.
-Independent human reproduction is still required.
+The [independent human review](../evidence/AY-13/independent_repeat.md) now
+records the later clean-checkout replay and Ayush Ranjan’s PASS acknowledgement.
 
 ## Evidence boundary
 
@@ -176,12 +177,11 @@ controller smoke cases remain unverified.
 
 ## Independent quick-start repeat
 
-AY-13 remains **IN PROGRESS** until a second person executes the clean
-checkout/build/Xacro/visual launch/start/one publisher steps above and records:
-their name or reviewer ID, date, checkout commit, Humble/container details,
-command outputs or logs, and any deviations. Place that record under
-`docs/evidence/AY-13/`, link it from the ledger and status, then change AY-13
-to COMPLETE. No independent replay is claimed by this guide.
+The [accepted independent repeat](../evidence/AY-13/independent_repeat.md)
+records the tested commit, container, logs, deviations, reviewer identity and
+PASS acknowledgement. For subsequent repeats, retain the same clean-checkout,
+build, Xacro, manual-start and one-publisher requirements and use new evidence
+paths. An automated technical pass alone does not create a human sign-off.
 
 For any later documentation or source edit, run the document checker and the
 relevant regression commands before committing docs with that change. Keep

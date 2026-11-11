@@ -60,8 +60,9 @@ model. See [architecture](docs/ARCHITECTURE.md) and
 
 ## Current status
 
-**AY-01–AY-12 are complete for their stated visual ROS 2 Humble scope. AY-13
-remains in progress pending an independent quick-start repeat.** The
+**AY-01–AY-13 are complete for their stated visual ROS 2 Humble scope.**
+The [independent AY-13 review](docs/evidence/AY-13/independent_repeat.md)
+records the clean-checkout replay and reviewer acknowledgement. The
 [status matrix](docs/STATUS.md) is the authoritative task/phase record;
 the [AY evidence ledger](docs/ayush/ledger.json) maps each requirement to
 files, tests, evidence and limits.

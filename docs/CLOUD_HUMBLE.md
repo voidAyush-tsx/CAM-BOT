@@ -130,8 +130,10 @@ must still reject the unvalidated default configuration.
 
 A technical replay is agent-run when executed by Codex. It does not satisfy
 the [independent human reproduction requirement](CODEX_FIRST_TASK.md).
-AY-13 remains in progress until that evidence exists. Controller actuation,
-grasp feedback and physical operation are outside this visual replay.
+The [accepted independent review](evidence/AY-13/independent_repeat.md) records
+the later user-run replay and human acknowledgement separately from the
+runner’s fixed agent-pass message. Controller actuation, grasp feedback and
+physical operation are outside this visual replay.
 
 For ordinary development, mount the existing checkout instead; do not call
 that a clean-checkout acceptance run. Stop only containers started for your
