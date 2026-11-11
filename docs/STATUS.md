@@ -1,6 +1,6 @@
 # CAM-BOT status and evidence levels
 
-Updated 2026-11-07. This is the only project status matrix. Each AY record,
+Updated 2026-11-12 (Asia/Calcutta). This is the only project status matrix. Each AY record,
 including prior state, options, exact files, commands, results, limitations and
 next action, is in the [versioned evidence ledger](ayush/ledger.json).
 The [2026-11-05 documentation repair](evidence/AY-13/reproducibility_repair.md)
@@ -10,8 +10,12 @@ adds a fresh build, package tests and live visual success/failure/cancellation
 evidence. The [consolidated runtime repair](evidence/AY-13/runtime_repair_20261107/README.md)
 fixes impossible-target classification and coordinator shutdown, with focused
 regressions and five interrupted-trial passes using a locally rebuilt RViz
-patch. Reproducible RViz patch integration, the final full visual-suite repeat,
-and independent human review remain open.
+patch. The [reproducible-image replay](evidence/AY-13/reproducible_image_20261107/README.md)
+now integrates the pinned patch and passes the final clean-checkout suite,
+including idle shutdown and five active interruptions. The subsequent
+[independent human review](evidence/AY-13/independent_repeat.md) records Ayush
+Ranjan’s clean-checkout technical/manual replay of `6df990b`, PASS acknowledgement
+and explicit declaration of independent review, closing AY-13 in visual scope.
 
 | Level | Meaning | Present evidence |
 |---|---|---|
@@ -40,7 +44,7 @@ Controller targets S1–S4 are unvalidated and S5 has no taught target.
 | AY-10 | COMPLETE | Five actual visual attempts; [acceptance](evidence/AY-10/acceptance.json), [raw manifest](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json) |
 | AY-11 | COMPLETE | Event-derived visual metrics; [metrics](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/metrics.json), [tests](evidence/AY-10/analysis_tests.log) |
 | AY-12 | COMPLETE | Reproducible visual tables/plots; [artifacts](../experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/artifacts.json), [regeneration](evidence/AY-10/regeneration.log) |
-| AY-13 | IN PROGRESS | Documentation, historical [cross-validation](evidence/AY-13/cross_validation/README.md), and [runtime repair progress](evidence/AY-13/runtime_repair_20261107/README.md) retained. RViz patch integration/final visual repeat and independent second-person review remain open. [Guide](ayush/README.md) |
+| AY-13 | COMPLETE | Documentation and reproducible pinned RViz repair; [independent clean-checkout acceptance](evidence/AY-13/independent_repeat.md), uploaded technical/manual evidence, and reviewer PASS acknowledgement. Visual simulation only. [Guide](ayush/README.md) |
 
 AY-01…09 completion refers to visual ROS scope. The original AY-06–08 capture
 was not retained. Later [AY-06–08 runtime records](evidence/AY-06-08/runtime/probe.jsonl)
@@ -55,7 +59,11 @@ supporting files in this checkout.
 Historical Phase 1 UR5 and Phase 2 mass experiments have their original
 [progress](progress/phase1-carrier-baseline.md) and
 [experiment](progress/phase2-mass-sensitivity.md) reports. Phase 3 carrier
-workspace characterization and Phase 6 placement analysis remain planned.
+workspace characterization and Phase 6 placement analysis are **IN PROGRESS**:
+the [preliminary model study](../experiments/workspace/README.md) supplies
+20,006 kinematic samples, five assumed placement comparisons and a live TF
+cross-check. Collision/orientation checks, workspace boundary validation and
+an evidence-backed physical placement recommendation remain open.
 Phase 4/5 have visual integration and five measured visual cycles; selected
 controllers, validated targets, grasp feedback, and actuated simulation remain
 open. The installed carrier-control waypoint YAML is read by the legacy joint

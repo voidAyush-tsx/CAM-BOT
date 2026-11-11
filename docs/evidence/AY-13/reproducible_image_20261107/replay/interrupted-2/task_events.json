@@ -1,0 +1,63 @@
+[
+  {
+    "event": "STARTED",
+    "mode": "visual_simulation",
+    "state": null,
+    "timestamp_utc": "2026-11-07T05:29:42.968921+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030",
+    "workpiece_state": "RAW_AT_S1"
+  },
+  {
+    "event": "ENTERED",
+    "mode": "visual_simulation",
+    "phase_index": 0,
+    "state": "HOME",
+    "timestamp_utc": "2026-11-07T05:29:42.969640+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030",
+    "workpiece_state": "RAW_AT_S1"
+  },
+  {
+    "event": "STEP_STARTED",
+    "mode": "visual_simulation",
+    "state": "HOME",
+    "step": "HOME_START",
+    "timestamp_utc": "2026-11-07T05:29:42.970200+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030",
+    "workpiece_state": "RAW_AT_S1"
+  },
+  {
+    "fsm_state": "HOME",
+    "mode": "visual_simulation",
+    "state": "CARRIER_NOT_COMMANDED",
+    "station": "HOME",
+    "timestamp_utc": "2026-11-07T05:29:42.970817+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030"
+  },
+  {
+    "event": "STEP_COMPLETED",
+    "mode": "visual_simulation",
+    "state": "HOME",
+    "step": "HOME_START",
+    "timestamp_utc": "2026-11-07T05:29:45.221522+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030",
+    "workpiece_state": "RAW_AT_S1"
+  },
+  {
+    "event": "COMPLETED",
+    "mode": "visual_simulation",
+    "phase_index": 0,
+    "state": "HOME",
+    "timestamp_utc": "2026-11-07T05:29:45.222060+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030",
+    "workpiece_state": "RAW_AT_S1"
+  },
+  {
+    "event": "ENTERED",
+    "mode": "visual_simulation",
+    "phase_index": 1,
+    "state": "PICK_RAW",
+    "timestamp_utc": "2026-11-07T05:29:45.222446+00:00",
+    "trial_id": "cambot-machine-tending-592250bd-75fa-450a-b8b1-464b31860030",
+    "workpiece_state": "RAW_AT_S1"
+  }
+]

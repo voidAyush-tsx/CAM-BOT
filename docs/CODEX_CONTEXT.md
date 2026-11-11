@@ -4,6 +4,12 @@
 
 > **Provenance:** This handoff combines past engineering conversation notes with a GitHub review of repository files such as `README.md`, `docs/STATUS.md`, `docs/ayush/README.md`, `docs/ARCHITECTURE.md`, `docs/VALIDATION.md`, `experiments/machine_tending/README.md`, `src/carrier_description/launch/dual_arm_demo.launch.py`, `src/carrier_control/carrier_control/machine_tending_coordinator.py`, and `src/carrier_control/config/machine_tending.json`. These were read from the repository at handoff time. This guide originated in a handoff bundle; it is now stored in the actual repository. No local ROS test was run during its generation. The October 15 feature work was merged, reverted and restored before the November 4 handoff commit. `main` is the repository default branch; `work` is a local Codex task branch. Verify the exact checkout/review commit; the actual source is definitive.
 
+> **2026-11-12 update:** The [independent AY-13 acceptance](evidence/AY-13/independent_repeat.md)
+> closes the visual reproducibility milestone. The dated status snapshot and
+> original next-task instructions below describe the earlier handoff; consult
+> [STATUS.md](STATUS.md) for current dispositions. Controller/physical gates
+> remain unverified.
+
 ## 1. Goal, user intent, and completion boundary
 
 CAM-BOT = **Carrier-assisted Adaptive Manipulation with Bimanual Operational Technology**. Learning/prototype project also described as **Adaptive Dual-Arm Robotics for Efficient CNC Automation**. Objective: a large **UR5 carrier** positions a flange-mounted small dual-arm module at useful workcell locations; the local arms then execute a simulated tending sequence. Coordination decides whether target is locally reachable or whether carrier repositioning is required. Target demonstrator: five-station visual CNC tending, repeatability, logging, analysis, evidence.

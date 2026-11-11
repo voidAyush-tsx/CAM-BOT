@@ -1,0 +1,3613 @@
+{
+  "result": "PASS",
+  "baseline_commit": "f1279828b875865ada5811189c8df593b9690e39",
+  "count": 721,
+  "scope": "all pre-existing source, evidence, experiments, media, Task2, root config and published build report",
+  "files": [
+    {
+      "path": "Task2/README.md",
+      "sha256": "53167456425e09d0737fcffb259825c364f7c372e94eeef4c9c04d38f0355195",
+      "storage": "git"
+    },
+    {
+      "path": "Task2/Screencast from 08-28-2026 02:16:43 AM.webm",
+      "sha256": "9df544abd7b3b9f847638b303bf8c920e8e642a53046052a157cd879f60190d1",
+      "storage": "git"
+    },
+    {
+      "path": "Task2/Screencast from 08-28-2026 12:07:58 AM.webm",
+      "sha256": "9b898d9d1750031bb8ccf77fab20341721959a2939999ecb22ef3e8df519822e",
+      "storage": "git"
+    },
+    {
+      "path": "Task2/TASK2_UR5_Mass_Sensitivity_Report.docx",
+      "sha256": "bbf770b15cecc95a2950f712ebadcac8a7c9617852f246dc847e71d40b7cf9ec",
+      "storage": "git"
+    },
+    {
+      "path": "artifacts/verification/cambot_build_report.json",
+      "sha256": "e9c14913da0fcb31224a1a907b7e4baa85a7f907fd9e700690a4696d4bd7da9d",
+      "storage": "git"
+    },
+    {
+      "path": "config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-01/README.md",
+      "sha256": "6774fbda249da40af789c5760902a335d4e51c21b7d9b853260dd2967dcb86b1",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-01/manifest.json",
+      "sha256": "fbdf56fd3b7e53bd4882732a2fd0a26fcf6d478fff599ff9cbf182bd2de04356",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-01/static-checks.json",
+      "sha256": "036cf8b3802d1eec5ab96336dcb6cedaef54a2d2143fd3813763dfa73ce870b4",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-02/clean_build.log",
+      "sha256": "324d86cd055211fb8856bf9f2d6297660ee3458856abea51bafd99741a2fe46c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-02/dependency_audit.md",
+      "sha256": "7fa4fac04b1b6a64cd4a551ac3b69a02acd58c97ab0fce789c53ea872ab8d73d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-02/installed_assets.txt",
+      "sha256": "b647bd04adbf69696e44839717c5ba8dab9ca2caf5b179d30c5f84925d5662fc",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/launch_process.log",
+      "sha256": "10254c8113b54bf8d2faf08c64cac82ab0eb6a00257ad2da5e88dccc89da32fc",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/ros_graph.txt",
+      "sha256": "9f0b9c243d554c20f0ac44ed94f4fdc5cfbf35ad9e3d5458c349062fc489ae6a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/source_check.md",
+      "sha256": "29428cc7740b02b455c1c7338dd1c79c963b861266efa392a93ceac55ee8f95e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-03/stop_start.md",
+      "sha256": "cdeaada11f8ad8bc0691e8e4af69cb73a96b047ebea47ee35a08f5d6f019fa96",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/screenshot_status.md",
+      "sha256": "83cf594e8a5a627268c4b576e5271e2436c766d216ac5dfdb013fb8aaa35c408",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/static_checks.log",
+      "sha256": "396db9ec3df30c15c65527c2ae531a1249a71afa0dd091e67eb4e7df93cf4942",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/station_mapping.md",
+      "sha256": "cee61747e333772933f9354b3cd1c730793ac9eb234c430c901f4f62f71dd9fa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/tanmay_zip_audit.md",
+      "sha256": "2b72b249c00be5d7825c9b7931c3ce15e34f322e2c94fd6188053145b84edb03",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-04/tf_station_inspection.txt",
+      "sha256": "5b416be706fa112f1be31d1caf7d792467a8a4f32cccde78981e44e807ba1e3a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-05/offline_transitions.log",
+      "sha256": "93bf964176cb7543ba41681eb645e00c699b700b071ca7ce3bbfe79eb86d8dc2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-05/test_outputs.log",
+      "sha256": "9a07488d6f2a7dca79ab6f2920e1b1598c63b4c1c886e61eba5749fb8521c7d3",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-05/transition_matrix.md",
+      "sha256": "75d8eeda698136c1eebd16a6507224502750219192b45c3bf239acc99ed7b307",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/inventory.json",
+      "sha256": "05ff5cc956f9ee3cb052a1173f695ccdc8e6cd0a0b14a3599728e99cb3bb72c3",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/bag_info.txt",
+      "sha256": "ae27cdf297a2737d6eb4545cc5142bbdc6ff58438b69c164fee7c0cf6e0d864d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/bag_record.log",
+      "sha256": "c7c9e2330cdb2232999168a04ce93f8785952f3148bc67646eda4e8c38857044",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/joint_state_publishers.txt",
+      "sha256": "7d5198461e9cb56627ff598691c02c00242ed5daff5bf45f00200a34290eae39",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/launch.log",
+      "sha256": "74b4725d140ae8e1fe79cab6eac515ac1ba102a7c2478bd5e351793add3e04fa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/probe.jsonl",
+      "sha256": "6103f72f09d7e7ef6063b2657dc0af78d8ee01b2ac9a8c54a819229c4022629c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/visual_rosbag/metadata.yaml",
+      "sha256": "cdfba9236b764fd2a761d7c025aa5ae3bc96db6f8bd05a60c512bd170e0e7d98",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/runtime/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "daf36319dd72b7915df9b01a9457b767bb988798bd9018e4d9154b0b1e38bcf7",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/target_candidate_matrix.md",
+      "sha256": "8af556810de1f1cb8015ddce2c9665102899f34e90f399dd64dd8835e1a8e903",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-06-08/verification.log",
+      "sha256": "3e72811a0ec4004c0e225847a58e95951a5a81bb02187ea5e8546990fe1d630a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-09/inventory.json",
+      "sha256": "4bae28a0650712474d66eefaa77179025403aa7b5af2deb46beafda1f9d8648b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-09/schema.md",
+      "sha256": "ff59d8defd158d59e406c424edf8ac81ec4fd38a63f5532085a9343582f578a2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-09/test_outputs.log",
+      "sha256": "bfaf0c458a348387f2c2235dc2b01fade4706338bb5bdef1eef4455412643a0f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/README.md",
+      "sha256": "25abe920e545331f6fd44661ced52047d30ed099a7cb6bd148b982eef876c851",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/acceptance.json",
+      "sha256": "754fa4b08815412296c15cb1b4ae4ddbbe1dd26ac386effca08fe07018024985",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/analysis_tests.log",
+      "sha256": "2817ee415b5b5a831b6a7abb49cc0cdb4c9380487407a076826fada5f5f00ae7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/build.log",
+      "sha256": "ae62575829f8643dec1b676bbb8e5af160e55db153802f06c10c5f471e96e87e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/final_tests.log",
+      "sha256": "a3d13134bd93b184ee2eb925c5e3c5db966548c9a19138ea8847e8d450caef10",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-10/regeneration.log",
+      "sha256": "188b3ca86500f3211ca5cc9fbf4288c91cbe5dcc9358e37f918db8ae80438c3f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/README.md",
+      "sha256": "f86c98327f4ca2e0b53adbc103871678018b85d7eaa560b08a0a4b3a8b1a7976",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/README.md",
+      "sha256": "f3274a0868c6a60641af1a6734ebdd5301321464994ef03e3331179dc0d23dbd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/analysis-comparison.json",
+      "sha256": "21e8a367e0389b9e227247da9957ae72e2e90595c0149d8b5e750325f09543e4",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/analysis-regeneration.log",
+      "sha256": "a02de4f5092f82220b8a3b93ee6f9068463310a6383734a350e069e3674c4a2f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/analysis-tests.log",
+      "sha256": "802e7ecc4f668ac3a9a03ab0d6f400a8e9ec5adfb2bd487853a9b206dbba74c1",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/launch.log",
+      "sha256": "c52d1bf9cb378f8ab0c5e0f2d9bfda6773e095522529e70c4176ea3b1788cd37",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/probe.jsonl",
+      "sha256": "94e7e4a91a2c9d00cd4635ce6be379cfc290d6d607bbc671cedffb3b987cb21c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/trials.csv",
+      "sha256": "d3222c9916abdfafdbd9f146d9d719258dcbf3e799b365ce280c329cf9d1420d",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-confirmed/trials.events.jsonl",
+      "sha256": "239804929db1452383377139e671b59d009f4839310a932d3ce60a49fc3232ca",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/launch.log",
+      "sha256": "511b0dddb3c22cda713154ae0fd5ea05304118aeb2ddce1ad66099740b2a3d00",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/probe.jsonl",
+      "sha256": "2a5b81266362ae85cf548366b75a22cf385527b4a22e376e9cd894b0731d4c7d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/trials.csv",
+      "sha256": "6f672a3dc8a0281d93dc2f456a11f07bb06e57997849fb58cc740041aa546292",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled-retry/trials.events.jsonl",
+      "sha256": "951b86a9bec3f2a158966517ee247c85dfd30ee67fa63d81c1b910bdf51d606b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled/launch.log",
+      "sha256": "4add1261b7595082abc76e32640fe2a1ad9486e16903aa01941e69e0378259e9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/cancelled/probe.jsonl",
+      "sha256": "3196af7d748570b04647ceb17fa3488b5b0557c3368799d7fe849c1a3b8315c6",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/check-urdf.log",
+      "sha256": "b1acff9c5726a81cdc9275bc49570b6a481701f5288e3029e00ebd0fc43e1df9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/colcon-build.log",
+      "sha256": "5fde081abb3c27890b89377588798a0d958369f5dabe617ddfd363b7e816b315",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/colcon-test-result.log",
+      "sha256": "aaf819a366020e173444877cf5d1924e7a8390c28504677455eb97196e158f6e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/colcon-test.log",
+      "sha256": "f1c428f9eca95f300ee59d70e8e7baac637986233df2c0202c606049b07fe955",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/controller-gate.log",
+      "sha256": "b0efc5b252a1e3951ac870a8ef363faa5127aeb84d252e76cc666acb5b0aa938",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/doc-report-tests.log",
+      "sha256": "663ec3972ea3382ca1fdd9d40da63d175b5a03c8dd693d67c21293b48ad88417",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/environment.txt",
+      "sha256": "0339a73c5c85504d20f8689599440ff393d3f3332fb023b2c6541c1a99353642",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/installed-doc-check.log",
+      "sha256": "cea15b97f05dea91e5948b7fc258c72af25517dcf330ad355954cfdf96ed425d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/launch.log",
+      "sha256": "c716870b7e02b871d11f1877b650920421526182e4d0acb34d3964fbf3c36b1d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/probe.jsonl",
+      "sha256": "b8f1181b8b45ad1ab65d928ad523786f92c120b2a2c1c720d9c17bf7080afaf7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/trials.csv",
+      "sha256": "00f6403a0fb501f8a3c8d1f17aa1a7b7b80d4f237b316c55cbeac8368d6b57d3",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/load_failure/trials.events.jsonl",
+      "sha256": "3da36e4432898c17d19de45df27a67518a2e1b2e48e8a44eb89c7be533fb2b14",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/manifest.json",
+      "sha256": "d2f3b0ba7684f6526fa77d9df5ed1c34a26cb1e1eaf5a11a46fb68da8709a86a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/rosdep-check.log",
+      "sha256": "43a3ee518f5ec19ddeeb125d8bbb6f4272cd1077bfef239a91faf9e78638698f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/capture-parent-signal.sh",
+      "sha256": "8eee28ee1121e5c638863c50e7d4ab64e59efec5a12a138795b2fbefe0ede21d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/observe-unreachable.py",
+      "sha256": "2468115a17076007ca9b9365d769e54d748146aa2ddac1f2c82e3a75bf15775c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/run-humble-failures.sh",
+      "sha256": "6fe0e70a3d6383b04690cf5d0d003ac5f17a0076f35806c1a8de168b41e9e01d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/run-humble-validation.sh",
+      "sha256": "29c03558f608f8008683426593358bbb22c90959467c7b37a9815fe0e54a5b6e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/runner/run-unreachable.sh",
+      "sha256": "68556420eb4cec0fd1d4e874a125e64f47be8df948444fa85c7c95f8aed33acf",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/rviz-standalone.log",
+      "sha256": "ddda2b8b9c2e67ac5aff84de4cce1efa628d2866031e48a825ca6a9e25ead211",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/static-verification-humble.json",
+      "sha256": "d6c5443551b6b9279e5fd7fd90afa0086bb1081b64f9111ca6d953ef32c8119c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/static-verification-humble.log",
+      "sha256": "d6c5443551b6b9279e5fd7fd90afa0086bb1081b64f9111ca6d953ef32c8119c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/tool-regressions.log",
+      "sha256": "487e3a75a4c4fd55d5a67c5bdd989f05f9292d4f7e00f15ce5c639752ef65e3b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable-config.json",
+      "sha256": "96810ad852798d8df7b2320b45340e566b401b0e9ada0342e15665ee79b06b0c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/launch.log",
+      "sha256": "32b63ca948a944e9b10d8400929bb0fcd710f141bdda2993653882c22d367f07",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/probe.jsonl",
+      "sha256": "cb25302fb032831c3d0de18170b7141caab3c2cc86c1c4d83f65fe23d7b9ac9a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/trials.csv",
+      "sha256": "c6aea6334ef9dbf9b17b61e7e40dec4d1262e6b54fd278374a0ed98bc32b191d",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/unreachable/trials.events.jsonl",
+      "sha256": "f5b8887d3293b7f568f4e64468e61a717c83611596bc982b609bde9f93bce8ac",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/bag_info.txt",
+      "sha256": "ad12c94a13ea3fd46af48ce060ae43d720647602677a1d5ebdf04f7b062f4492",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/bag_record.log",
+      "sha256": "1a13bdd58a6f6c0554c637f7e5baa16f137afaad8a58aabf368c895b52f0906c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/joint_state_publishers.txt",
+      "sha256": "aebe06f4d94e0e3e25e363142ae0234a2bf30f7daa03ddb1ddaa3ab901fbd77c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/launch.log",
+      "sha256": "ea164ce008e6da8377159bf18898b4f650c33b72aacdcde4822b83ca0adcffed",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/probe.jsonl",
+      "sha256": "269aef29973a5f3963711dc4d8ac7b3fe801e56cbf73551e308272c207ad2a5f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/visual_rosbag/metadata.yaml",
+      "sha256": "595887476810b6664ce6dd24f437a9f0a0e51b4022bc43545112eeb97116c0f0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-parent-signal/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "7ff6c395fcbf9318a2cf1b73a675683c4e56b351549e2bea3e3bd790c2b9fca5",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/bag_info.txt",
+      "sha256": "ab601f9c1ed6e4c07b86c00993ed958154af67685dd15e86ca9d206abad4f165",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/bag_record.log",
+      "sha256": "88ab10ec7e0643f89cb3439eec008f76f97fee77a7e95771fdb2f7b105ead8b2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/joint_state_publishers.txt",
+      "sha256": "d629216a4bc2c77811e10ffacb7a35563b6f474647f3dff42131ca92f870fdcc",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/launch.log",
+      "sha256": "79d3579512a98d8bafc0cab8c2af071042a22a94be2d6dd8e7ceb3f308430c6d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/probe.jsonl",
+      "sha256": "ed21fed653cbf71cb69f880f5439b226c2323cd70d372788e01e0582364d8e0c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/visual_rosbag/metadata.yaml",
+      "sha256": "d4b244f1988af3b0c79a661c1d4359afd5b152bff59a7aa6aebf789c477a00e0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/agent_replay_20261106/visual-success/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "add8ac7a3baab0602685f6bf34a59a6a75d81768b5097583d927195bac1e11f0",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/README.md",
+      "sha256": "836577c91169d94c4d104ffeec76290cf427069fae4cd670e7b9c343c204ff47",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/analysis_comparison.log",
+      "sha256": "440e11c586ca0efab2c3bbb961861a7676461107ca731045c67b9cab49fe6ddb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/analysis_regeneration.log",
+      "sha256": "fc5e1efc47456a296d2253383cf4bca2039a8d1c860e0ad9e57244a0155b5990",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/bash_syntax.log",
+      "sha256": "d44bea081267613133893cb01584c9a60c4ecbd8b1b7c0b2b9dcbae5ff2927b5",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/build_report_generation.log",
+      "sha256": "26f52258ff1e1bf5a56536e4a92ea4055abc957b08e115bcdb6c9720130b6e21",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/build_report_tests.log",
+      "sha256": "82838b500663c4c458de976b28926a981469e760359cd7098cbb22ed18c8dcfa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_build.log",
+      "sha256": "d6873c36c1d4fc5c57b8026774de0a25962dbb0b0e222916ec4483da22a74267",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_build_scoped.log",
+      "sha256": "51d648298dd031767cb799f04fb0486ce1930a482dd290915cdd25444adb634f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_retest.log",
+      "sha256": "9c62ad35e67bf3698dc1352be54266e849c3300c7fceebee8d7f7f38f11327f6",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/colcon_test.log",
+      "sha256": "5d5c7ee6760823ea05da979539e6a93cd80a416f3da298130e352c34a34e5f77",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/installed_doc_contract.log",
+      "sha256": "cea15b97f05dea91e5948b7fc258c72af25517dcf330ad355954cfdf96ed425d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_probe_invocation.log",
+      "sha256": "c83f1830f8edbf1040ba90c99707b65dc1a081533f2a9613c7f7323dbb17797f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/bag_info.txt",
+      "sha256": "cb749ee617dc5c316fa09d1c193a752624e6478aeeabdaaed5dd115c2bf5f856",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/bag_record.log",
+      "sha256": "a8d5de57bb5695b9573cc503cfb48ef9b5d814ba738ab594855879819c3b0de8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/joint_state_publishers.txt",
+      "sha256": "eddaa0107fb7422f67b151af90ef5843d5b8250d225c9ee3cc8f6c4addd1024e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/launch.log",
+      "sha256": "12cefb73ed8cceefe34ba64c0699a04fc91695a143fce5573975f50a75403174",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/probe.jsonl",
+      "sha256": "195eb163ede501fe997d5daf9c4682a45a10cfe3f8209ab71ca8550035259cac",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/metadata.yaml",
+      "sha256": "fa8611cb71a7d35800e748c9554ede3490a5c0c50ffb2237a2c44b8e69d9a2ef",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "c403bb6339adffc47b529ad9acc4566236d3efbbd42ed0785c7345be52a74857",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/live_recheck_invocation.log",
+      "sha256": "c83f1830f8edbf1040ba90c99707b65dc1a081533f2a9613c7f7323dbb17797f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/model_assets.log",
+      "sha256": "26c3a27db3157f318a48ff67c8a7f27808f89678df32632c7a62a86a5ea93ee9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/regression_48.log",
+      "sha256": "45520b40b5237b5ee282a749284a2c24441c0d89049ad9b35d8efa3be1a1ee8b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/rosdep_check.log",
+      "sha256": "43a3ee518f5ec19ddeeb125d8bbb6f4272cd1077bfef239a91faf9e78638698f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/cross_validation/source_inventory.json",
+      "sha256": "e60bc80507439727366a236a23080f8b2a2518c1f73012a4a7ba8f1c5ee5ca23",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/doc_checker_tests.log",
+      "sha256": "5677a6c27922a905d54b5dbe2e2cfc1e9ceaf01a927886fbc4ba603efe028e13",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/humble_contract.log",
+      "sha256": "68485184b86fd9e4357b18fd6456f79a3f293316b903b2951aafe9c223f01f39",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/reproducibility_repair.md",
+      "sha256": "74f02784dff2b4ea68af830012496f55bfd85ae4ae65e5d19f6d48e0a9b2ae04",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/README.md",
+      "sha256": "298a5ff4b7e7f87360d3b90768c1c107fae223461a8807f90687a2eb8d3faf76",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/active-interrupt-runner.log",
+      "sha256": "b460030dbc75e4b9f0301bff6646ada2facac2ceee69b8241b17f3a92657ab59",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/analysis-comparison.log",
+      "sha256": "f2b585bf0cd8a93cf01721a971b4b8dc77431403b7b0153e94403b8f1fa35eb8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/analysis-regeneration.log",
+      "sha256": "a02de4f5092f82220b8a3b93ee6f9068463310a6383734a350e069e3674c4a2f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/analysis-tests.log",
+      "sha256": "f501747e0d5ae9753794e9271aac22240273f412b6df2af9b1eb8a83cee35590",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/apt-gdb.log",
+      "sha256": "e598d530d517da795daf2b96b3ce7d919a44f027303c7780f6e18ee5a128c5a3",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/apt-git-lfs.log",
+      "sha256": "ab03931bff42318d26d2687d5e4ceb3cb28b3ad15e017c5f1cab27301713c8a2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/apt-valgrind.log",
+      "sha256": "3dadb702c0b68c25fa5c2444107ac53d817b2b295c10c0e0c02a166a03d62ab1",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/cambot.urdf",
+      "sha256": "97c160ecc8087defe65caa8069bc356c13d08fb39d216e79ec7cdb05cae8039a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/check-urdf.log",
+      "sha256": "b1acff9c5726a81cdc9275bc49570b6a481701f5288e3029e00ebd0fc43e1df9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/colcon-build.log",
+      "sha256": "50f03efcac931acd8484e40210fb66cad433965fe06febedee54579e30893a60",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/colcon-test-result.log",
+      "sha256": "812133deb0e1fe640f104cc521d160d93b9b16e15c0fdbbe3bd65e45ad7d270f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/colcon-test.log",
+      "sha256": "319503803575e2831feb28849b3496099f721f69ffcaf0ba4b61df2d214fddaa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/bag_info.txt",
+      "sha256": "6dbfcb5b5b2172333088e4f1d578e1b3d086d20afb59097161a8deaf75a8ab63",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/bag_record.log",
+      "sha256": "d0dd2c1709cce0a1c182737eac324fd21c098ca8d2f95b07deaecbd9bcf0eff0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/joint_state_publishers.txt",
+      "sha256": "10c6bdf6e2aec9566c6f1bb071536d0fe18c2aa019a68b61105df6b66e705364",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/launch.log",
+      "sha256": "7a8a0e5abdb42c40bbbf6a1c7718b7a90bedd7878df2b383b77c84b048c3ff2f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/probe.jsonl",
+      "sha256": "4f84a8eee29daca707412198f8d74561bed5feddeec55cde8cd5e4cd84fba0e4",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/trials.csv",
+      "sha256": "28471f717941e2aa67469f0d6b6ebcea59a0fd4077710522424beea854139a8c",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/trials.events.jsonl",
+      "sha256": "9eb5b9fa73eb0ec01af30c74fc379a251dd6055bd6bc53a664b8e13ac0ab0d37",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "55bcd8696a82153f46ee591dd595b691cc1d698433afc6b53d3aeae90ba30e35",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/cancelled-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "b42e4fc4d9a6610155ffc2ec2fc694360d25a752e947c8478339c70686ffd189",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/development-build.log",
+      "sha256": "2a01df65718c6901f39bb941085c4b2d0ba8c6826b1b79e5d0ffe58cc815457c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/development-test-result.log",
+      "sha256": "812133deb0e1fe640f104cc521d160d93b9b16e15c0fdbbe3bd65e45ad7d270f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/development-tests.log",
+      "sha256": "4ea6aed95d75d9d4c565752a253c0ad2afa007959d96255a3373322e5c34ed34",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/development-tool-tests-retry.log",
+      "sha256": "ce8cc3324245ba53330baf1cb1f24c50b3337f00a047461eb625c618e6174019",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/development-tool-tests.log",
+      "sha256": "ab930d9e36b5edf8470d0665176883a62d92809a87d49c31234fd3e0ac94cb0f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/bag_info.txt",
+      "sha256": "bd37baa5627aa9c663bf6c1c0765312ccd33dc96c40ea2d488f9885522a74822",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/bag_record.log",
+      "sha256": "941ad1a507d61db6f2626f9d2af4d39895374273a757c01d33621ffdbf9fbbf5",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/joint_state_publishers.txt",
+      "sha256": "7d4c7857c87f918730c1bcadbc96f04ca92ed3c605096da4574c47a0e5f656bf",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/launch.log",
+      "sha256": "11eb0bb68a496e29972d74d99ca98c7067e58d9a1b3c4252a506e22a56f4d087",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/probe.jsonl",
+      "sha256": "57a957dd428f8f182fb9fb21cce681e15e635b2b3a0c371c17f4fe2463575e37",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/trials.csv",
+      "sha256": "aaa6ff7792a9b912219d791d5b5ae6b3126d47640af4415487ffd2f917428d37",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/trials.events.jsonl",
+      "sha256": "32a1fecadd6476fee7fb9cf4ef30cf8a540d23fe492855e4c889b9828421b16c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "602ef3c8992374bb8da3c3bb2c5cfdc89428db0b027e376382ac877ab00406e8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/load-failure-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "d2ebad1c0c55ba0fb7d87dd6c0ea85dcd3ca69b3236349c97b7e9ed99c345e80",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/bag_info.txt",
+      "sha256": "68978eb024aef8005a2ede97cc10a04caee8d0e8f3bae088df7b783a57b7d688",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/bag_record.log",
+      "sha256": "4f436a32b4d401feceb82b409178e780693a2fbec008baea425d1969ee8afa61",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/joint_state_publishers.txt",
+      "sha256": "4f353d2330f6475c4b6b16f41add4710109ca3611df991c9241a89a9e5dc344a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/launch.log",
+      "sha256": "855cccdfd621a1ef71d56abaa1b53f8f18ff3e1c6105c3bf3520c436a07c9988",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/probe.jsonl",
+      "sha256": "14587f7f78f88641b8e9a357a21bcef3d71e9f2b4956881e3144ef04bd51c1c2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/trials.csv",
+      "sha256": "7c30cecf4173810290656a886039a210a5b8a6d5b75a65e245072d4f28da645e",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/trials.events.jsonl",
+      "sha256": "25fcf164fd08b2a971f75080258b6d7035f6fdaeb8e6632fc76ffefd4b650aab",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/visual_rosbag/metadata.yaml",
+      "sha256": "cdf8acdaa6cb3ca567434864d9cd9b5ec2d3593b12355a2e1a4c67d7357ba805",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed-retry/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "55750fc0cb833cb6da8e6fec80c2c2e294654b5dd6bdef8fd3c0020ce8f03fa3",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/bag_record.log",
+      "sha256": "404ed674f26b915fb14a39ec7da321a9bff22ca752d17377987f446f0ee5dc40",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/launch.log",
+      "sha256": "5c138143f4ae6c7e2a9bb36389971f9eb69b3fcda4b824140d60e0a41145fafb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/probe.jsonl",
+      "sha256": "67452659122f86ba484aa069e115a02a49524dfa8717bb84cb351c863f4b5aad",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/trials.csv",
+      "sha256": "29571fd6fa7bbb2591d16d9bd934f82a47640b6ad667465d4fa3dcf0d214fce9",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/trials.events.jsonl",
+      "sha256": "3855bd96c3dac9ea07c0204a082a1b08ebfb890d2609c30b10321180537cb5e3",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "21e493ff2fc25db5336ecd1305d1981a83da198caba4a083339dba30500963bf",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/normal-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "bdbba12f25272d280114b33631441280797df6e0a3cdbf64cb0d203ec0aca615",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/shutdown-parent-python/launch.log",
+      "sha256": "7560a9d28dcdcccf5d6e61afaea651f3fc964204e03ecc462e1e3d8cc15a0c08",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/shutdown-parent-python/processes.txt",
+      "sha256": "1e78391e7e8fce30e296940e7cd74ecaeda0a689386c6bcb630f98d1c3167006",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/bag_info.txt",
+      "sha256": "bf101463b1d2f97997304ca6d0d10512566215d69968318a61825412d926a9ff",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/bag_record.log",
+      "sha256": "05c06565a3868eff62547907e6139f421f12f47e472c37ac6c791fee611cccf0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/joint_state_publishers.txt",
+      "sha256": "d25b71033cef97e5b821a1ff36e00daef4a391472faae65e7572749a27eeb583",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/launch.log",
+      "sha256": "d6dbcb937c1cff8426ae406604bbc9ecd6f4857cfd6c9469a8cad326c4905e41",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/probe.jsonl",
+      "sha256": "c9d96a28448641df92f14c03391c0459ff343f525756aac532800733f67e1798",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/trials.csv",
+      "sha256": "a93af3eaa709434b9154f04c7eb1bb7e0fcc0ce8a1a6d9db66335d309f6a603b",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/trials.events.jsonl",
+      "sha256": "29a3e9de6b3a5b8aa75ae7382e06ec10f202d066f33a761c8a13523955e78504",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/unreachable-config.json",
+      "sha256": "96810ad852798d8df7b2320b45340e566b401b0e9ada0342e15665ee79b06b0c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/visual_rosbag/metadata.yaml",
+      "sha256": "de496757c9da27e88c7d489fe25895e12ef47eab124ded884961b29e7d9234a8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/development/unreachable-fixed/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "9d86a06575968593bf8884dc88f362ca134e7109392bb0de1f73fb91c25a1697",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/docker-build.log",
+      "sha256": "f976dd6c1bfce36cad386b1d45af9fd2b6eefd2e300d0b62230e7cbf99efdf12",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/environment.txt",
+      "sha256": "1b2d37a33d24a61c8d18ff611df107d1fa14e8eb8dc19a7a19ce3ac7bc9f1eaa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/final-analysis-tests.log",
+      "sha256": "ecfb25a1ca158d7daba8ab6ad4e7c8da4c9629237938e8fe2bfae56f2389925b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/final-colcon-test-result.log",
+      "sha256": "fa6b0f0ccf7c3bda2aa883828ed3ed3b8bd12fe7c0a3298883fc131996ebe2c7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/final-colcon-test.log",
+      "sha256": "74746dcac8841311727ce9a698af4919e318dfe9c19a49787ca9690c3762bf0f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/final-tool-tests.log",
+      "sha256": "50249c41dbb8966214f814c1c0f91104f83901f9d2fce5b65ffeb25aa31718c6",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/historical-report.json",
+      "sha256": "4f362d6f8f8698475847edda7483a703111819fe57644f1e1400f564cb0f1f57",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/historical-report.log",
+      "sha256": "383a9a146b1e9a7dc205f4389348a592030b3bbde7f6a3fa59005433fba38f5c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/installed-doc-check.log",
+      "sha256": "cea15b97f05dea91e5948b7fc258c72af25517dcf330ad355954cfdf96ed425d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/legacy-verification.json",
+      "sha256": "642a370260ab011a158d6279ce9044955c0d5bc8cc8c451d4b400a757cc5e10a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/legacy-verification.log",
+      "sha256": "642a370260ab011a158d6279ce9044955c0d5bc8cc8c451d4b400a757cc5e10a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/manifest.json",
+      "sha256": "a53997867d5b788c1c513c055c73312820d5b4d48f8c86286e476fd5262c2a63",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-1/launch.log",
+      "sha256": "a0f17e90e602d4a85f51910055ee3e8d0677bbf4481767c90635a3956bc7a1a4",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-1/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-1/result.json",
+      "sha256": "2eb0f37172c2327eb8b0450bf3598fc2fcd4c94adcb35da01a707e6904e70050",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-1/trials.csv",
+      "sha256": "1053d3b8fe5824fc08a812f81cfc2df945e19eb3417e718529c13e5eb43d0f71",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-1/trials.events.jsonl",
+      "sha256": "6b823162f7ac75dd659d4d8dcd490727c1147e50f24e951ea6015a8ed7e8a924",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-2/launch.log",
+      "sha256": "8e49a6c748a0490dc20a835443f4bd67f295d0ccc64f980cc55690693c698c15",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-2/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-2/result.json",
+      "sha256": "a236bf8d6e36f3d46eacd0c9151f3568e016cab1d0b9b210c0caec0d844e360b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-2/trials.csv",
+      "sha256": "06fc19c9ce81dbf20b8d1554b511104d9c20af6750aefc0e34bf3bf34f3111d1",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-2/trials.events.jsonl",
+      "sha256": "a3b627c73964f033c5d1a1df763e4b68b0aa645104170dc2c699fe466bebc889",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-3/launch.log",
+      "sha256": "2b437c96f8e1f7b9b83420412ff96852f1169bc8620ae7529ed082adec27ae5a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-3/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-3/result.json",
+      "sha256": "6f19fc0604cc95049ec600caba8f15173554dd30953306aadbfb59901167aed0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-3/trials.csv",
+      "sha256": "27f8d47ccd0bf42cd944689652fee215d68a6582faed631df78bf92865b3bd12",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-3/trials.events.jsonl",
+      "sha256": "c2e574af43954700dcfd3d9282bf38b38ed41e6f0bebe44c1ccfa3a1815558cd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-4/launch.log",
+      "sha256": "52324dbfa7310d37ac83f80245d1354114284817e130d2ef160d98c4223b2838",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-4/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-4/result.json",
+      "sha256": "b7fab58b1f3bee740be7ee28a52b725f430e411c62f03ce6f7029e1bfddaf518",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-4/trials.csv",
+      "sha256": "7e5adcf07884f45406a93f079b072dff63497c8735ecfc66398fed1064d71180",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-4/trials.events.jsonl",
+      "sha256": "ade376028d01a52f03db0983137ada8391822d8b486fdc4e4565667c6b2f565e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-5/launch.log",
+      "sha256": "b69f4a13eb4c551d857d9d162875ec09ebc12cf474845173f1ab8d372a51c89e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-5/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-5/result.json",
+      "sha256": "ca9f3b531bcac7f58089fae884dee573673efd2196afeb9bb1537c0757327663",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-5/trials.csv",
+      "sha256": "4099fb77698a576e4bdd61ead553bfd1e74d970222882816e6bd11da8e5c9ca7",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted-5/trials.events.jsonl",
+      "sha256": "dbc0fa77090f24e9ce89aa64e0f6962cd397e65edb8e6f560c47c59724ac6848",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted.log",
+      "sha256": "50fec4b1c64af89c8900d762157c898a849ac0f4b3a3e75483d5dc6e21c590d2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/patched-rviz-libraries.txt",
+      "sha256": "325b5ebbe1e464894446018b91a80b2a0e546a3e11a66e9161889716a20db349",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/preflight-environment.txt",
+      "sha256": "11974cb2332ec13a9222ac4d42d2482ac1ea184dd6f9fcd14935901e1e573e1c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/preflight-missing-lfs.log",
+      "sha256": "984c4c31cfc0e84a2057ec0719fd6cb59c966c7a05e8a28faa56cc3abde993da",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/artifacts.json",
+      "sha256": "3cca0df8fdcf370ae362ac235822cfaab06fefad9bd378275aae6a02e25d7053",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/carrier_repositions_by_trial.png",
+      "sha256": "bd93a0a2a97b625d1b8407698e040ca8ba464dddb3ade82132fcdd7fda924c5f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/cycle_time_by_trial.png",
+      "sha256": "795689f5c308ac68372c7bfd92abf3c4cccfc40dd96d7d7c81ad48bd4daa7c79",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/metrics.json",
+      "sha256": "aeb9db37c991285c4fc1ce9ff460212beebc57bbc13f25af98443d4de4741ee5",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/summary.csv",
+      "sha256": "c2f7a3a60cf4d98e75c17d7d699de2914eb61b9536e09cfb8bbd566b5873a51f",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/trial_outcomes.png",
+      "sha256": "335dbb73fbe8e5be4580f2f4794afe6a2fbc2824245d218960156cb80b0677a2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/regenerated-analysis/trials.csv",
+      "sha256": "0a0fdd54400f92c7a43c8e80469c47c56a8826a03696b24f92bcf7c5a7691ee0",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rosdep-check.log",
+      "sha256": "43a3ee518f5ec19ddeeb125d8bbb6f4272cd1077bfef239a91faf9e78638698f",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/diagnose-rviz.py",
+      "sha256": "b8ea57a8bccaa8e0e12f7060ff68b154f8abd33edcccf0cdc06ad3005b986648",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/diagnose-shutdown.py",
+      "sha256": "5d5df52dde9012203cd7a5663fcf40f4760db8adcd9a80dfe02900c67413ef7c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/diagnose-valgrind.py",
+      "sha256": "b12e7fbc248435f124269da3457fbb951522a782ecb31d141b44398ff5cf5311",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/interrupt-active-patch.py",
+      "sha256": "ff6aabf041046267089ffa805306aec4d73da2fde704374ad0c804203743f252",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/interrupt-active.py",
+      "sha256": "76b3dbdf5ffaade9c183d6df2557df870cc49f277249f9a2836c1fa65db0ee1b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/run-ay13-final.sh",
+      "sha256": "5007ff997bd47360481c6218a4bf4b681763382c37fb0fb57a875e3fdc48b0dd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/rviz-stop-update/CMakeLists.txt",
+      "sha256": "84304f1ba0a7cfabc851e3024758ed6f80c5970cd027cfae464a8dee0e1cd530",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/rviz-stop-update/shutdown.cpp",
+      "sha256": "a7d768c3ecb69061479ec744ff71b343b5ef65bfe28828bd6a4e8ce0806bf243",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/runner/verify-sealed.py",
+      "sha256": "c6d1763e4f877322b8964fc33fa0f5b827e4d771b4af621a833ea75cde0514a8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-common-build.log",
+      "sha256": "f2f4c9b3c0a167d25ccdd7132cb52c2b6e7c96ea5547f56df0013b949d4e31aa",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-1/debug.launch.py",
+      "sha256": "dd2ff85df3a53095a3ad3919dd6bfc52663f6061ec9834cda5f81c382c38f9fb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-1/launch.log",
+      "sha256": "d9db2f957e159121b1b1e32944f86a02991e65285eee35cd42beda6b1d1d8bef",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-1/probe.jsonl",
+      "sha256": "15ee01ee7ffbfdfec917fe2e6e66cd519b67156853ad3bc0f5e187e409e95735",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-1/trials.csv",
+      "sha256": "f0414f1516591455a01f49b64ccd53c26aeab5663676e1ec17b6c00e490d8b89",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-1/trials.events.jsonl",
+      "sha256": "f8c9b287fb47e44724f35185a0aaaea45e703a04518a0004b134c457b3946e84",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-2/debug.launch.py",
+      "sha256": "dd2ff85df3a53095a3ad3919dd6bfc52663f6061ec9834cda5f81c382c38f9fb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-2/launch.log",
+      "sha256": "4299656d8c11c410b16960b1eedbdda73cd8ce43c1ce57279daa5fe62369c54d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-2/probe.jsonl",
+      "sha256": "4f9f22833de8d0b0c2d383d6523c536762289a48d5ffd41c659eb4d5201db5ff",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-2/trials.csv",
+      "sha256": "62cc93595f566baaa0b2d41778ea00715d1fa3ba8373a53e258e2947d9385046",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb-2/trials.events.jsonl",
+      "sha256": "1a9d47d5b573441798d39e23105a5ccfca4893d5ea438e9072c8fde36ca40ee9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb/debug.launch.py",
+      "sha256": "dd2ff85df3a53095a3ad3919dd6bfc52663f6061ec9834cda5f81c382c38f9fb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb/launch.log",
+      "sha256": "4822e08664deb954bafb4514872c48108b36f87c54a701d8653884e221756183",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb/probe.jsonl",
+      "sha256": "ad7ac12baac44120b7f86ecc8f41f432ab563ebe90ca65ef3674285f0ab34d49",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb/trials.csv",
+      "sha256": "63a7843a49f4e8e166a1578312ef6c973c5a08a64a62063ed3fa424ff7f512ba",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-gdb/trials.events.jsonl",
+      "sha256": "2d353c5455e29466ab0502446555598d2543021159ae2fd296cc5c21994eb996",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-stop-update-build.log",
+      "sha256": "d8c0d1cab2368a5788d20c9bd8b730e4e37cf99ec9c4a76b9cbfdee0746c6193",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-stop-update.launch.py",
+      "sha256": "c1de56593d93ab3df0cd13e0bd67cff0b84b58e5430fbe66618d02f8c1437d9b",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-valgrind/debug.launch.py",
+      "sha256": "5552b8b494dc848b299e037673482d379921458afe2002ada3993c8f7fd3705c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-valgrind/launch.log",
+      "sha256": "7d3dfd08a0318f840bec9c3d8a16770c9c4f9a0aa42acbe251a9bdeed9f7e99a",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/rviz-valgrind/memory.log",
+      "sha256": "0bfdbf03d08100cea245c16c3256a33c627766dc4e0a4267223b570847eb3ddd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/sealed-preservation.json",
+      "sha256": "77d70966a0fef2632068457d26d9459f46684fd29c2f4af79c80413999223810",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe-cancelled.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe-load_failure.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe-run-1.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe-run-2.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe-run-3.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe-unreachable.log",
+      "sha256": "dfc3c13ed1560b6105590cb37749c763ad732fe5e4b00409cc776fc7eb4e1e73",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/bag_info.txt",
+      "sha256": "faf80c16dad4bfdce0fd94cdfc9399e0f14327d4bd0135693d3477a2ec98d499",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/bag_record.log",
+      "sha256": "813cd6e3e0f0d5e6d98d97264dfd431e5ffc5af1b058aee88f83d04c23f8d8d7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/joint_state_publishers.txt",
+      "sha256": "abb45ab8e6157dbf4fff7ef27faa251996a971f0d00f1017f4f24dbffa5cbcf0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/launch.log",
+      "sha256": "c267f7a650067f3ea53240089ef22c7649b74ad0ef7674c501652bdc647cf7f0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/probe.jsonl",
+      "sha256": "4f0a98b203cba8fa12602994bc150fcf1a6db650f046535546e424cedaec3126",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/trials.csv",
+      "sha256": "c6b3aa75969b648aca662b07bb6ca24d8fcdb5a1eb297e0fc808b46d79247848",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/trials.events.jsonl",
+      "sha256": "12d20fedb79ab5517e9c9e599cb73ca39c5fe524eb3e15f6acabfa2a018cf25e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/visual_rosbag/metadata.yaml",
+      "sha256": "a74ce4419fa9948b982811a42e93f8b08505ab7aa5eadaea5f95934a74d1f744",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/cancelled/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "5df9221d11a9f2129ed4208b12f264f4bc7eaf93dcdaa38c46899947a7ec1b0d",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/interrupted/launch.log",
+      "sha256": "c353a277c419f3e40073ca12b2ca7129461a872eb9611df60c25280ede274ce8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/interrupted/trials.csv",
+      "sha256": "800a37395508de967ae82ad798a31d7d16f13eccfc3955ab58d551c55a9f470b",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/interrupted/trials.events.jsonl",
+      "sha256": "b93c8a1444f5b2426f6e6f937499ac2078de096007a7f88b90956e5e78a233de",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/bag_info.txt",
+      "sha256": "f6935632bef4341a0e9c555104ab3390322faa1406b141ba94dc5c58441f5ea2",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/bag_record.log",
+      "sha256": "6347f3feb225d9aa13bb715cfb20ddce3e700fc49473a7f6c03ea7e79e5be16c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/joint_state_publishers.txt",
+      "sha256": "779f1c63cf7b780fc6ee474abd9bb8756756e931ed2ef9307c61b0aaf80c44e7",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/launch.log",
+      "sha256": "540707947e57eeff9f3181f097977dc27b0832e1fb3343ff575036baea3b7457",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/probe.jsonl",
+      "sha256": "956aeb67fe8ee2a6315a9a1aa7135d3ed2f7cc1a7083dbd49ebbe39e1944dc0d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/trials.csv",
+      "sha256": "d76d550678412b27c8e7b30cb8ad3a06cca5716d34a960fd561ff5c854f43c31",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/trials.events.jsonl",
+      "sha256": "5d3a270249fab8bd0d6e84a1b6c859e518e49faa957232a0f20c04e5b006fa29",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/visual_rosbag/metadata.yaml",
+      "sha256": "2029291bccee8eb2507e656941e0b7f1701ed2661222bac517ecc9c6c98bb60e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/load_failure/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "3ab1371b226cb7fb2ab1ae94d939659bd89c08e62117160f80b9dccaa5ad9a71",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/bag_info.txt",
+      "sha256": "d7ac0e59ca20769038fb023c31ede19fdbd81e1fd6b4d867810d336fb9aec6cf",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/bag_record.log",
+      "sha256": "9c94c984ed3197e8db5bc4439ec9d7ca72424f282b7ec9191ab952856dbce66e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/joint_state_publishers.txt",
+      "sha256": "80ac4efbca209508e4ccf361e1809056d35cfbbc9d71ed661396e974e4f93673",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/launch.log",
+      "sha256": "107f895f855afa3339e0e868133e32bdfa9835436e8030dc85d013b4d98da482",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/probe.jsonl",
+      "sha256": "0c59bc94ec3e4b338992cb73e22b72705a5d97f50907284caf2e8395356454dd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/trials.csv",
+      "sha256": "5b71cbd4f6de9267b8de1e82d55e4f2dbe0a5df5346a72ff8442ba5668df27ff",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/trials.events.jsonl",
+      "sha256": "c0f653e95d3978e1ec8e306cf6f44cef2375c6b9275b2f8035d8ff7db7d3a698",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/visual_rosbag/metadata.yaml",
+      "sha256": "bf4e2c8c1aa7cbca03888e3e2f324607d214b092cc92830752fad4728e98fd5d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-1/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "158f07c2a887766dd374097aad9df23d8402135b3d2a48b5ba3aaaef6d67d84c",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/bag_info.txt",
+      "sha256": "8af350895dbc0f552f348bb81f65e3711cbfaae1b954de8c2dbe66d987195059",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/bag_record.log",
+      "sha256": "6fa736a1a5f35a270a6055b2ae65f53b99f246a3e0f11387f357119804cf3b82",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/joint_state_publishers.txt",
+      "sha256": "0728950c504d5b4e4f7157935d16d412b9e60d288b2d5c760a8355e012845838",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/launch.log",
+      "sha256": "bcbbce6b6a17155185267c85839fc757f8a1ee30cee957bcc9f4689accedb166",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/probe.jsonl",
+      "sha256": "003acf96d42c232e531e20af591ff27bf2f8d83f540de96cf64f18df58648951",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/trials.csv",
+      "sha256": "255fb9e7fc6440fc2ffd0d3d69b113da68f98b5e299b458940419945a51996c7",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/trials.events.jsonl",
+      "sha256": "c60bb9a7b512613115f4b4e2bfe137307b5c3075dccd460e3a39fcc8b22785c8",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/visual_rosbag/metadata.yaml",
+      "sha256": "d64efad9b831b1f526826f8ef5fa1419c38570a84a64c37a3ecff48f80244c01",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-2/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "630dd849a330695929ef1d5636d9fa87eacb4f36c68c11887fe77a93fce7081d",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/bag_info.txt",
+      "sha256": "5ea3016b83cb3c037e70e056b7f154bcd50f23d7af7b2ae8c6014fd5145ee652",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/bag_record.log",
+      "sha256": "8a39fe5af6c46ef950e4354cba56ea1202f74bd87b85c73c07d400c211f1804d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/joint_state_publishers.txt",
+      "sha256": "3258d0833bd39fb6c72ebad4b08fa03f67f3b4f1a33536e05a9c33df1945d4ed",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/launch.log",
+      "sha256": "9fc4bf7d73a3990b294ab44eeeb242addfde1b54a4ccbc7401b76d3346c71f28",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/probe.jsonl",
+      "sha256": "ea34273d6c86328db40a7ee5e5aff62a2afec556ac4e725e03bb3cae099c5911",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/trials.csv",
+      "sha256": "06c54a42b65592d5b6e89bbfb6721ad7858d3b2398102b4b15a77606c5096a35",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/trials.events.jsonl",
+      "sha256": "9ed328bcb10a82cd7771b0237004d510daba4a114836959462fdfd135d84a164",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/visual_rosbag/metadata.yaml",
+      "sha256": "c72264e1ae27b5701d3f5fc37a70a2af5e37035badbd02374482f961b9c2886d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/success-3/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "35d20b932c16c3b2c31f1bd30bfea1642a2c716646081925f38d8449b3bad6fa",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/bag_info.txt",
+      "sha256": "131102859abe0495d09710ad866924eae81a232dbd7e4751fa2d87673ef7bf88",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/bag_record.log",
+      "sha256": "e2535a675dd571b66a388786108251c28e1023b7460b2c2aa8d5b5cbef0213ef",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/joint_state_publishers.txt",
+      "sha256": "823ec75ed1ce7b535a613c2446153b8c53602a95208725de981b0f35c3b9baec",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/launch.log",
+      "sha256": "d3bda457f8b34e3740f8f6183d053d9c2c405e7757ad6049e94bfddf18970080",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/probe.jsonl",
+      "sha256": "c8ee68d89948c93a59a4a1b2b12554ca44568a762104252238fafceb8c2693d0",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/trials.csv",
+      "sha256": "1ab74fac3d92e80942f0ff3a9d5fca91db081a50613f6c1f1a51b5192e20ee20",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/trials.events.jsonl",
+      "sha256": "016a6463b3fe22190621ef3d2288c300ea20f6fd42fd4bb3ffba86c0cb92b77d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/unreachable-config.json",
+      "sha256": "96810ad852798d8df7b2320b45340e566b401b0e9ada0342e15665ee79b06b0c",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/visual_rosbag/metadata.yaml",
+      "sha256": "8147724caee97b58ae3194fc75871a584d7fcc0d2692076a3566b509bcff495e",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "16e284339e0ae83eda18ec650c7c9b734b9be49e44cb87e01b2b9ae7c4b93f50",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-1/launch.log",
+      "sha256": "6fa27106c48c3e0e1604cc270051b809a5566ef6eb915984051f997566179903",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-1/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-1/result.json",
+      "sha256": "a629558c435b2c0a8b2c3c4baf4c5153b2a481bc314aea0650285f476cae23db",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-1/trials.csv",
+      "sha256": "c47736bf0babe3f9a68397a4d4863e6bf577b1e852b8eedf3a4a8a78f155885f",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-1/trials.events.jsonl",
+      "sha256": "910288e19f3fc04c8576c0eded36d25497b9b60f7de7e1d5c7ed716aec8d3469",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-2/launch.log",
+      "sha256": "1409ee6f0ff5258dd2d00973332567b878f2a88b3dbd561658d5aae245330fff",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-2/residual_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-2/result.json",
+      "sha256": "c7f13f0e8d26d6ae25cac240694fb0ee103fe94dc8efa46226c4901f6362cdeb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-2/trials.csv",
+      "sha256": "50aba543c56736247050d88fb4fe62ba3039a4a6befb81d541199ccbe57cc2aa",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-2/trials.events.jsonl",
+      "sha256": "567a007e25384a1236defa5301f85dd18e649dc3d7fe679b7349b612ee225a60",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-3/launch.log",
+      "sha256": "44a7d150bccc4a7245ee71a14408552c95715b59873b48acb75b27dfc333ef14",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-3/trials.csv",
+      "sha256": "582b5955012155e7040034d190745c8d185f61d316a10627e92c9738a5f58aac",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-3/trials.events.jsonl",
+      "sha256": "ff344cc6f7cfc6965d04a4aa5bf474d4ea148eb4697df059c78f3c6fdcb48b50",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-4/launch.log",
+      "sha256": "a1ef96d63c60c7ab68e1a6e15e8085f2716c208a0b950b66ebf6f5e23fbc5175",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-4/trials.csv",
+      "sha256": "d864e0606d6ebd9fd755cab4dc9636a21bca82ec3e2705b5cf57d2e4ad68ba12",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-4/trials.events.jsonl",
+      "sha256": "2e4e7d529f95fa01b5bf05cbc70aff4985fa9a59beded3899706601b3a544602",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted-retry.log",
+      "sha256": "b4bc2e3790ea540bf7cf020766682aa65092a573556f86b88bef553c9b0f8781",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/stop-update-interrupted.log",
+      "sha256": "4326221cdba41e9c69abb1e2d6f42813049f5cd739e1ae276decc4a914e1d039",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success-runner.log",
+      "sha256": "286b1a288bff1b7d0cd6274e70bee3158da63592c5fb564b9215337de81554fe",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/bag_record.log",
+      "sha256": "61c2d8d158f7489ff9ee94648d89ff97db7d19c76ec31e2dd247921537751fb9",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/joint_state_publishers.txt",
+      "sha256": "f7dcadc23767dc903389ec4916846a90f972c768b90384fab1994543ff4afdb1",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/launch.log",
+      "sha256": "4c31ab166eec01167d40a2836d1ac66bc023d6a5e3eff021ef08605e3ea98dbd",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/probe.jsonl",
+      "sha256": "bd09c45414387c842f175c4287b1203f09a611afb7bd1d7ff459edfa9c078e2d",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/trials.csv",
+      "sha256": "dba0952bf007063695aaa2089d51c94d3839d853eda769602f1f7e08d5202e54",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/trials.events.jsonl",
+      "sha256": "a1f1221c86a83bde62ac83d10f79ef82d2ced0f9fee095e8f51e95ce95f14ba5",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/visual_rosbag/metadata.yaml",
+      "sha256": "96eb17d0295ce7c500a5fd297e713c4a01f9483089659fdece30492a339b6ddb",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/success/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "f0d5e520389ba3bfde52ebf06e73d929ce81f5e801f9341e3d82e7af71367218",
+      "storage": "lfs"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/syntax.log",
+      "sha256": "a787aa65f1ddd3d727a7c668c6bdbe9f72b87a0bd264c0e6ad8b522da52dae90",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/runtime_repair_20261107/tool-tests.log",
+      "sha256": "05588414d8334fdc4f0a9482452eea81c981d64a09e62be158a40c515d9da259",
+      "storage": "git"
+    },
+    {
+      "path": "docs/evidence/AY-13/source_contract.log",
+      "sha256": "c6ebe8ee258206200ab76eddc31604bfec3c6df160c5840ee52498343da2069a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/README.md",
+      "sha256": "f630fb686e85795fade14319aa914a0895aa77cbf7d83dcc930f2d13276887a7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/analysis-requirements.txt",
+      "sha256": "c7ec1e00cf71fcf9a6d6de9e4d54409d187c34206af240a43694cad256b461b7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/README.md",
+      "sha256": "94a927aad3108494a071e241154d96925cca1a8ebe98670a36a728cea6656b35",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/attempts.jsonl",
+      "sha256": "0496f97fde6803d280965659519dee901a0fa90c3a00a04848ba89da112ac1f2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/bag_info.txt",
+      "sha256": "952d0352edc6a501dac2c74cf4e70d9341bfda47c86a0c1ec1b8d34052e20fbc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/bag_record.log",
+      "sha256": "c43f529854105504abea804e7f448d9628045c09c2a2855e015f41e0199a73fb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/checksums.json",
+      "sha256": "9efa4e59a580f74a542be80b9a8aba16b927cc9495702286832ee677129cd29d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/config.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/joint_state_publishers.txt",
+      "sha256": "5efd8085482ce5f8252599ff246ce41b1e85c1e74539455c1bff59813e5bd12f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/launch.log",
+      "sha256": "2598e0517764224b80375f252ff7ce84b9ed8bb39163064e602e045ddda3fda0",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/manifest.json",
+      "sha256": "a8ebabc77805166ae02d8c1ceb664f1f881263b430cfadf4392d0f6dfba34495",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/probe.log",
+      "sha256": "3fb9fa408871b24a412f94aea06ef75decc83b682df144adbd5a8e16c90a949e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/rviz_runtime.json",
+      "sha256": "6847ad9d9349a4e273548d473352444379a784a25c46a709d3444d49025d6710",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/rviz_runtime.png",
+      "sha256": "d8ee83dbb781f725d284a15e31d3f935619ef462fccc3cb3ac362f9bda23fd81",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source.patch",
+      "sha256": "27e2981eb438a6c38d645633010cececc5b1581423582f4145f1d32c04aa2c8a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/experiments/machine_tending/scripts/analyze_trials.py",
+      "sha256": "eed0aa2e29c2837c6868c94212afd29ba8f554537b3c5da52a1a9ddbd54565e1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/coordination_policy.py",
+      "sha256": "24018bc1de323894c956cb2c25a6e340f8f78a0660041d16030d47348ff36c40",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "sha256": "b621a2e84ee14d1fc7aac8c4ab6f1162b1a8aeea8cee6f556c0bd8b923ccbc58",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/launch_preflight.py",
+      "sha256": "f704b6a494e5b54405b374e77fed78628bd66eb71dd8c48b567607c6326462cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "sha256": "381b4481dafa51f62a4591cedd031c6cb85e17ff76a27f13604315a552fb57f8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_shop_trajectory.py",
+      "sha256": "fc8da7e0c5e7e767065904c5b56f72e783ef4a066c72d72c7d6e1e4b5b20837f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "sha256": "15a94b8ad686ba70d7f32aec36222dc0617cc3d468198d76254eb486e86a8f54",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "sha256": "bd69fc6461b09c87d62bdba0c827e6ba88e732d32b472eeebc49c251fde31751",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/metrics.py",
+      "sha256": "8d1861a3abdea20974b08d1b176ad50957c2efb55aa460fab5376c9c226479f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/plot_machine_shop_path.py",
+      "sha256": "de3f5ab207eb63543af007719d4142402c3fd67ec8b5736f3143ca7e6c53f1bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/reachability.py",
+      "sha256": "553c687ecdce9233aaad2900831e5ee90700ba3e2cfeea3992f5b81fb302f5c1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/waypoints.py",
+      "sha256": "25e007b6abb1b32aad725a402833037c21fe1a52da8260507389b19871b9ec93",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/workcell_model.py",
+      "sha256": "d3afa07b431f6b4339f913096a1d86fa19fb21f2c0e2a353851b56bd6216dd3f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/carrier_control/workflow.py",
+      "sha256": "cc1402f920e824d1e5632f4f135c795ecc1840be54965c9989094343117257c8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/config/machine_tending.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/package.xml",
+      "sha256": "4e630a53d59946ee85592b55f55a97d2094d4e26c97c2ad0a339cbfdf6d53d5f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/setup.py",
+      "sha256": "bc91dd567a001fba06329c408f6b69e3d6e88bc065c4fbd2040c1dac26b25597",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_action_safety.py",
+      "sha256": "4458ded22938ff1dcb6100ba78a090a9ddd0cea02c9f9ad60eaa8c7f3e0f928f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_coordination.py",
+      "sha256": "234a020761debec8834dc3920b19dd56129d6c3e8d5570803b9a44dfcfc9d485",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_launch_preflight.py",
+      "sha256": "37a8822c66425cdbca0a8614e15280b64fd7519bc091ca8fab0fc00aee79065a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_machine_tending_fsm.py",
+      "sha256": "f8699dd0327d3c8a84b47806406fe035e82c60966741f990a45a74a43b4355d7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_metrics.py",
+      "sha256": "ecd9a14b26ba1d8c1b13ee900f2a054ef285f8dc1defcd01aae661fffefd59bf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_package_integration.py",
+      "sha256": "ab9fe3715fec02d6fd23202192a37918b87d5ec07d1ca89296f05e40d4c94462",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_reachability.py",
+      "sha256": "a65cabeef7e3f8c2d119ff0f32019d4b1ba3ea1dc926515c7cb7db123f0bcf3a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_workcell_contract.py",
+      "sha256": "27513f5628c0304381871b348e10cb3e217dd93b28b465fbc8f1268ee3ed72e2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_control/test/test_workflow.py",
+      "sha256": "d618ee79daf45225a62cfb91873d80acfd140bb6ff0d72fe7fac19aa4cbb1f78",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/carrier_description/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/dual_arm_demo.launch.py",
+      "sha256": "0ba531adbd4cb5c1d10756f438f0ba3945139d0e8d34c938e518aee5ecf46861",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/machine_tending_controller.launch.py",
+      "sha256": "5f9bf73549f6cd4685ea4de0b61e90a3ac0902a52e5beeab277d34755aab1b28",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/view_carrier.launch.py",
+      "sha256": "ddd40d2594c4671963a0215c4bee927e66e0806092df2eb7fb45272230457b70",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/launch/view_dual_arm.launch.py",
+      "sha256": "6fb9ccd4eec5896dda0066e6491a2bdb54a355317fbb43f3ec9f41d57c87bea3",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/package.xml",
+      "sha256": "dcf9ee4944d3c5f81751f7826e57fb1583809a858c14791e8846ba7be81b35ec",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/rviz/dual_arm.rviz",
+      "sha256": "899302e6d68696323a5e989c0426b77bd2f147b81451f0de6eff2c843676007b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/setup.py",
+      "sha256": "5cfec68555f25ec91c19d734cd620308e86d0a87150b64b621950d5f32b66da4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_cell_model.py",
+      "sha256": "d24fbebc47eeb2862498b04ef17d9dc652bcd5790d67764e37beaf9d4a7dcee0",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_launch_contract.py",
+      "sha256": "fade78188dfad0e62565f0a463f24635b08c7429a8e1cace5497b6d2ac865ebc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/test/test_phase4_contract.py",
+      "sha256": "d87e2bf0020de445312ab4eaac6ede733ec9868399affafa50c5c59f8af6f01a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/carrier_flange.xacro",
+      "sha256": "395c404cb87eb73fb87c9838dfb2a705b2823056d612451f9f549b9a97e0b3f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/dual_arm.xacro",
+      "sha256": "2a7b37c06bc216cd099d082a93c37a1392c6f152105dacd64d9f373655de9c20",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/machine_tending_cell.xacro",
+      "sha256": "4a70b4afbfb535e09c5f8b0c8163b22351f4ed55fcd06411ae23ff21ab085f2a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/test_tool.xacro",
+      "sha256": "81aa4e175b7a32706d520119afe3756c5609e44436c287261818c41c96261a56",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "sha256": "995d77b46c632b6d0b729651885bf248d3daba20bf816226489ca15eb8b0e8bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay05_offline_trace.py",
+      "sha256": "382adcf983fec02b317eea1cbd617f90e9c193b4753bff853554752d845f2148",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay05_ros_probe.py",
+      "sha256": "25064ff1cfa5bfee56ce0ffde2cfeacb5697019330a625735e303258c68b9f57",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay0608_ros_probe.py",
+      "sha256": "76e34e8935fb8f33cb15ee3d070daf540d4e2dfedeb56ca843b1784bc93b4a13",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/ay10_ros_probe.py",
+      "sha256": "632aafb51e42dcec81d3622e59264e914a03f0c54bbd461f460540b9b05ab56d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay01_humble.sh",
+      "sha256": "5ce5d6a4fbe46e75c633c052a0baf19793342039d7c5990a7019153226f1d9f1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay02_humble.sh",
+      "sha256": "32bbe17cf82653320e015957ccfbd0bdbde932b247e3c91519527b35b581feff",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay03_humble.sh",
+      "sha256": "3a5e1b45f6d48c1b5322dcc0de2ee775c4b53e4e15cbac9cd8ac63bb34809402",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay04_humble.sh",
+      "sha256": "c5db29759d498b5346f04c848429c1ef49b449e30d57a4a09ecb0c813943ad63",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay05_humble.sh",
+      "sha256": "33757fa51edb637d79f8ec40c273332cc5f3e9b0f10e1994c8260e1eb6b1111f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay0608_humble.sh",
+      "sha256": "dd1e0aab566030c01b0da16033a8906a9eaceedb4e35756fee1b97e1016c22a1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay09_humble.sh",
+      "sha256": "0bc457a52e435a9575ed6da342ff4ab518f2dbb860ea5543f72968111f60a146",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/capture_ay10_humble.sh",
+      "sha256": "aea0e3832c9f1bfde316f62b7e25308562f98feb986736ef9d166806a8e2b90f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/phase4_contract.py",
+      "sha256": "855580923c15f3f83a4f76918af9b0d64ab64a15f841049a5a0e592fc2e965cf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/record_ay10_environment.py",
+      "sha256": "d67eb2293b18c59b681dd9175492a094300a026614b3c212e1083088f79ad5cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/validate_ay09_dataset.py",
+      "sha256": "430b5f332c4631e1baeb8f2390b46383c8baaa8a11433f95179510d27308d367",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/source/tools/verify_ay.py",
+      "sha256": "7400b779bea4e506299d38e18827c2884ddb5c822514cd0f861a789a45ea531f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/topics.jsonl",
+      "sha256": "457ba1d5e43eca5ad516aaa15d9f3102e31edcebb6d537b3a8debf8aa5ee6a61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/trials.csv",
+      "sha256": "2d80c0e7e709cce1d3de4caecc59f2fd98dc3977c754a381fcd79998265eab08",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/trials.events.jsonl",
+      "sha256": "8fe9a96acf4e5a0e91065dcfc8011d7e97762e2d5522c35298e885a90a1c26d6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/visual_rosbag/metadata.yaml",
+      "sha256": "1e4d5b82c330dcba3d292a094651ceb552bfc709310576324584984d6ddf9814",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "6e4b36f6d7f7d16c150918afc854e06c7b93629045a5c674a52215b98fe6a1c8",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/artifacts.json",
+      "sha256": "ad8bdaa39aa38100b0c157146ab8c5de02683ad68d4a0df8767a21b240268f52",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/carrier_repositions_by_trial.png",
+      "sha256": "e4b3a5bf4f772d6bf5e867e1a53576fd00ea6a47ed6cc047ed89f2e7af069fda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/cycle_time_by_trial.png",
+      "sha256": "f69ba8e629c685fee3d098a8554330d981aa94d2b078f4610f619572838c73ce",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/metrics.json",
+      "sha256": "eeb08628e9689eba5155d013707ab0d108c5b7dfdef8eaa576de346e87961918",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/summary.csv",
+      "sha256": "9ec5962cc0be76fac37e6470001aa0d539c2547ed85532980ec8ba5fc67179a0",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/trial_outcomes.png",
+      "sha256": "cb338199eb3c390f819c9e8d493eb33a30442e0be4a6a1b781f7e8debd0af69d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-01/raw_analysis/trials.csv",
+      "sha256": "40b8e2efbdccab447f4ba2c3e4deb73c99955e9af179fccc3f51251e8809347c",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-02/README.md",
+      "sha256": "4a16d594f6198e8afc5640770eb2afd6575cc15848c64399f0f8838d9bda482d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-02/raw/preexisting_nodes.txt",
+      "sha256": "60bb6577d71646284369414459247079d979c1c975e3203cdd626ba01d90703d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/README.md",
+      "sha256": "fc0d90d2ad14f400f99dbeb1e41278c4c1f2aa6652a4bd01ef1570fa31801af8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/attempts.jsonl",
+      "sha256": "ce69f144e1f7c4abe93312a26cfcf414b0221c1aeafc6870828a24d0fdde1bd1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/bag_info.txt",
+      "sha256": "623a8a99b02b42fb00528d14e6624fd8e7da8ebda3690aacf91fdfec9ec61ab6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/bag_record.log",
+      "sha256": "37e0ba7c5a081b3d48ea0b96175bd5e1b27278cce545eea1e0f9db4869859458",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/checksums.json",
+      "sha256": "77ebeac651e94ae41740795974d469803f49012caf56659361b780658a99290a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/config.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/joint_state_publishers.txt",
+      "sha256": "7922eb475ddc4073921768afcf8b2467f8dd63d409addd13616ad54b434d9be4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/launch.log",
+      "sha256": "7700d1aae4a244f985777eebe4da0f0a83cb2bbcacd524b613935ecf75038906",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/manifest.json",
+      "sha256": "9b941b0c1f356d86de60f83d6256590d2fffe7ca440122c9b22de08b4dacdb49",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/preexisting_nodes.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/probe.log",
+      "sha256": "ce69f144e1f7c4abe93312a26cfcf414b0221c1aeafc6870828a24d0fdde1bd1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/rviz_runtime.json",
+      "sha256": "a5982dcef688d9c7b2256c941092b2b0ef2862c3ceb76b4a1e20c255afa29e5c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/rviz_runtime.png",
+      "sha256": "b6b152c70909d6cf6669a4d43b9a85842884387782870bcf1a1768b223610772",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source.patch",
+      "sha256": "27e2981eb438a6c38d645633010cececc5b1581423582f4145f1d32c04aa2c8a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/experiments/machine_tending/scripts/analyze_trials.py",
+      "sha256": "eed0aa2e29c2837c6868c94212afd29ba8f554537b3c5da52a1a9ddbd54565e1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/coordination_policy.py",
+      "sha256": "24018bc1de323894c956cb2c25a6e340f8f78a0660041d16030d47348ff36c40",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "sha256": "b621a2e84ee14d1fc7aac8c4ab6f1162b1a8aeea8cee6f556c0bd8b923ccbc58",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/launch_preflight.py",
+      "sha256": "f704b6a494e5b54405b374e77fed78628bd66eb71dd8c48b567607c6326462cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "sha256": "381b4481dafa51f62a4591cedd031c6cb85e17ff76a27f13604315a552fb57f8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_shop_trajectory.py",
+      "sha256": "fc8da7e0c5e7e767065904c5b56f72e783ef4a066c72d72c7d6e1e4b5b20837f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "sha256": "15a94b8ad686ba70d7f32aec36222dc0617cc3d468198d76254eb486e86a8f54",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "sha256": "bd69fc6461b09c87d62bdba0c827e6ba88e732d32b472eeebc49c251fde31751",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/metrics.py",
+      "sha256": "8d1861a3abdea20974b08d1b176ad50957c2efb55aa460fab5376c9c226479f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/plot_machine_shop_path.py",
+      "sha256": "de3f5ab207eb63543af007719d4142402c3fd67ec8b5736f3143ca7e6c53f1bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/reachability.py",
+      "sha256": "553c687ecdce9233aaad2900831e5ee90700ba3e2cfeea3992f5b81fb302f5c1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/waypoints.py",
+      "sha256": "25e007b6abb1b32aad725a402833037c21fe1a52da8260507389b19871b9ec93",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/workcell_model.py",
+      "sha256": "d3afa07b431f6b4339f913096a1d86fa19fb21f2c0e2a353851b56bd6216dd3f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/carrier_control/workflow.py",
+      "sha256": "cc1402f920e824d1e5632f4f135c795ecc1840be54965c9989094343117257c8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/config/machine_tending.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/package.xml",
+      "sha256": "4e630a53d59946ee85592b55f55a97d2094d4e26c97c2ad0a339cbfdf6d53d5f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/setup.py",
+      "sha256": "bc91dd567a001fba06329c408f6b69e3d6e88bc065c4fbd2040c1dac26b25597",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_action_safety.py",
+      "sha256": "4458ded22938ff1dcb6100ba78a090a9ddd0cea02c9f9ad60eaa8c7f3e0f928f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_coordination.py",
+      "sha256": "234a020761debec8834dc3920b19dd56129d6c3e8d5570803b9a44dfcfc9d485",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_launch_preflight.py",
+      "sha256": "37a8822c66425cdbca0a8614e15280b64fd7519bc091ca8fab0fc00aee79065a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_machine_tending_fsm.py",
+      "sha256": "f8699dd0327d3c8a84b47806406fe035e82c60966741f990a45a74a43b4355d7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_metrics.py",
+      "sha256": "ecd9a14b26ba1d8c1b13ee900f2a054ef285f8dc1defcd01aae661fffefd59bf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_package_integration.py",
+      "sha256": "ab9fe3715fec02d6fd23202192a37918b87d5ec07d1ca89296f05e40d4c94462",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_reachability.py",
+      "sha256": "a65cabeef7e3f8c2d119ff0f32019d4b1ba3ea1dc926515c7cb7db123f0bcf3a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_workcell_contract.py",
+      "sha256": "27513f5628c0304381871b348e10cb3e217dd93b28b465fbc8f1268ee3ed72e2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_control/test/test_workflow.py",
+      "sha256": "d618ee79daf45225a62cfb91873d80acfd140bb6ff0d72fe7fac19aa4cbb1f78",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/carrier_description/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/dual_arm_demo.launch.py",
+      "sha256": "0ba531adbd4cb5c1d10756f438f0ba3945139d0e8d34c938e518aee5ecf46861",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/machine_tending_controller.launch.py",
+      "sha256": "5f9bf73549f6cd4685ea4de0b61e90a3ac0902a52e5beeab277d34755aab1b28",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/view_carrier.launch.py",
+      "sha256": "ddd40d2594c4671963a0215c4bee927e66e0806092df2eb7fb45272230457b70",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/launch/view_dual_arm.launch.py",
+      "sha256": "6fb9ccd4eec5896dda0066e6491a2bdb54a355317fbb43f3ec9f41d57c87bea3",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/package.xml",
+      "sha256": "dcf9ee4944d3c5f81751f7826e57fb1583809a858c14791e8846ba7be81b35ec",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/rviz/dual_arm.rviz",
+      "sha256": "899302e6d68696323a5e989c0426b77bd2f147b81451f0de6eff2c843676007b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/setup.py",
+      "sha256": "5cfec68555f25ec91c19d734cd620308e86d0a87150b64b621950d5f32b66da4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_cell_model.py",
+      "sha256": "d24fbebc47eeb2862498b04ef17d9dc652bcd5790d67764e37beaf9d4a7dcee0",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_launch_contract.py",
+      "sha256": "fade78188dfad0e62565f0a463f24635b08c7429a8e1cace5497b6d2ac865ebc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/test/test_phase4_contract.py",
+      "sha256": "d87e2bf0020de445312ab4eaac6ede733ec9868399affafa50c5c59f8af6f01a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/carrier_flange.xacro",
+      "sha256": "395c404cb87eb73fb87c9838dfb2a705b2823056d612451f9f549b9a97e0b3f9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/dual_arm.xacro",
+      "sha256": "2a7b37c06bc216cd099d082a93c37a1392c6f152105dacd64d9f373655de9c20",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/machine_tending_cell.xacro",
+      "sha256": "4a70b4afbfb535e09c5f8b0c8163b22351f4ed55fcd06411ae23ff21ab085f2a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/test_tool.xacro",
+      "sha256": "81aa4e175b7a32706d520119afe3756c5609e44436c287261818c41c96261a56",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "sha256": "995d77b46c632b6d0b729651885bf248d3daba20bf816226489ca15eb8b0e8bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay05_offline_trace.py",
+      "sha256": "382adcf983fec02b317eea1cbd617f90e9c193b4753bff853554752d845f2148",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay05_ros_probe.py",
+      "sha256": "25064ff1cfa5bfee56ce0ffde2cfeacb5697019330a625735e303258c68b9f57",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay0608_ros_probe.py",
+      "sha256": "76e34e8935fb8f33cb15ee3d070daf540d4e2dfedeb56ca843b1784bc93b4a13",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/ay10_ros_probe.py",
+      "sha256": "8dd381703fa496fb1ef667079f1eff3cb71e9e3878d1fa4ce96db1bacdd57c02",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay01_humble.sh",
+      "sha256": "5ce5d6a4fbe46e75c633c052a0baf19793342039d7c5990a7019153226f1d9f1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay02_humble.sh",
+      "sha256": "32bbe17cf82653320e015957ccfbd0bdbde932b247e3c91519527b35b581feff",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay03_humble.sh",
+      "sha256": "3a5e1b45f6d48c1b5322dcc0de2ee775c4b53e4e15cbac9cd8ac63bb34809402",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay04_humble.sh",
+      "sha256": "c5db29759d498b5346f04c848429c1ef49b449e30d57a4a09ecb0c813943ad63",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay05_humble.sh",
+      "sha256": "33757fa51edb637d79f8ec40c273332cc5f3e9b0f10e1994c8260e1eb6b1111f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay0608_humble.sh",
+      "sha256": "dd1e0aab566030c01b0da16033a8906a9eaceedb4e35756fee1b97e1016c22a1",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay09_humble.sh",
+      "sha256": "0bc457a52e435a9575ed6da342ff4ab518f2dbb860ea5543f72968111f60a146",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/capture_ay10_humble.sh",
+      "sha256": "9aa5c698962c7c5f73e060810f780f48611b7b9d9c8b0f039356f62411cfce02",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/phase4_contract.py",
+      "sha256": "855580923c15f3f83a4f76918af9b0d64ab64a15f841049a5a0e592fc2e965cf",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/record_ay10_environment.py",
+      "sha256": "d67eb2293b18c59b681dd9175492a094300a026614b3c212e1083088f79ad5cc",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/validate_ay09_dataset.py",
+      "sha256": "430b5f332c4631e1baeb8f2390b46383c8baaa8a11433f95179510d27308d367",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/source/tools/verify_ay.py",
+      "sha256": "7400b779bea4e506299d38e18827c2884ddb5c822514cd0f861a789a45ea531f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/topics.jsonl",
+      "sha256": "f5f22042f30e697bc642c2b434f5ac0fea88a5f99eef7e981be881cf961961fa",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.csv",
+      "sha256": "971b22b29ba27d3207a5638f0c83dc3bda404571d3dbab125bbed5794fbdc4be",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/trials.events.jsonl",
+      "sha256": "d38122f95825b6d22fbe3cf6901b787076e9e7bc2bac6bb33e5da9f2669de3fb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/visual_rosbag/metadata.yaml",
+      "sha256": "42be498509ee4328d08b79d4a3afa95cfbc0fe2503aaa296b4c900bbe00ccc74",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw/visual_rosbag/visual_rosbag_0.db3",
+      "sha256": "227c136b0f2b1430a432060148cd4ced2e63979dd4b0f6be28004e7ea8b8c616",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/artifacts.json",
+      "sha256": "3cca0df8fdcf370ae362ac235822cfaab06fefad9bd378275aae6a02e25d7053",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/carrier_repositions_by_trial.png",
+      "sha256": "bd93a0a2a97b625d1b8407698e040ca8ba464dddb3ade82132fcdd7fda924c5f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/cycle_time_by_trial.png",
+      "sha256": "795689f5c308ac68372c7bfd92abf3c4cccfc40dd96d7d7c81ad48bd4daa7c79",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/metrics.json",
+      "sha256": "aeb9db37c991285c4fc1ce9ff460212beebc57bbc13f25af98443d4de4741ee5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/summary.csv",
+      "sha256": "c2f7a3a60cf4d98e75c17d7d699de2914eb61b9536e09cfb8bbd566b5873a51f",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/trial_outcomes.png",
+      "sha256": "335dbb73fbe8e5be4580f2f4794afe6a2fbc2824245d218960156cb80b0677a2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/runs/ay10-visual-20261015-03/raw_analysis/trials.csv",
+      "sha256": "0a0fdd54400f92c7a43c8e80469c47c56a8826a03696b24f92bcf7c5a7691ee0",
+      "storage": "lfs"
+    },
+    {
+      "path": "experiments/machine_tending/schema/event.schema.json",
+      "sha256": "0af7481f6c98ff24a044114be1ac5d6f770cb9a4900cb217ce4979bf8acaa33b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/schema/trial.schema.json",
+      "sha256": "ce82466745013a884e333c71adf79a710460866c3df4f12cb39f6cc988e5ba7f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/scripts/analyze_trials.py",
+      "sha256": "befd582ce60adc14c320d23b664ebbae6472ea3837aaaa1425c3a38489920422",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/templates/trials.csv",
+      "sha256": "a3517abdd551dd871f78059bf8a7b51ad26c5c22b8202cf5de6dff99c2e415b8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/tests/fixtures/expected.json",
+      "sha256": "2cc85bb691a5af9b2c6699d11dc8b7241c236d814d8b07a30d19659c4f0bb9e5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/machine_tending/tests/test_analysis.py",
+      "sha256": "e76455899a28e66cf3e234097795a7132c51460d949cb70f5a134b6de94ebb61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/README.md",
+      "sha256": "7d7337dacacd909b015952c2c38ae625d96f518704047763760f168ba6aba9fb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/data/baseline_8.393kg.csv",
+      "sha256": "f3ba7a5f5d5606504322d37713b5a37fbe52728420dca6a5b868d12f2d848c0e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/data/experiment_9.2323kg.csv",
+      "sha256": "dd3576c733ec972e8e9fc0dd267c5a617f5f5aaddd5e25b69997d9b0d15d0ab8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/params/physical_parameters_9.2323kg.yaml",
+      "sha256": "e798d18df856f876d0866493f32b203e8c46658df1747f156e253a5e7e7c49ab",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/params/physical_parameters_baseline.yaml",
+      "sha256": "e798d18df856f876d0866493f32b203e8c46658df1747f156e253a5e7e7c49ab",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/all_joint_positions_comparison.png",
+      "sha256": "63a4c58e2e7f3f8c004f7b99da3a5058605432a2ef617c7c19f1c295101f78f5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/elbow_joint_acceleration_comparison.png",
+      "sha256": "ca84930a8cac2038245768cd3cb8d46fe41df4cd4f42137d11beeff64193f67c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/elbow_joint_position_comparison.png",
+      "sha256": "ce647e1e1c6ebf4cfd6035bd1fcc120bd4f23662a2f0d904933784fa917d984f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/elbow_joint_velocity_comparison.png",
+      "sha256": "9509103a28515126e6286c3e646b488e35517283567668536e8e99c67ce5cadb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/position_range_comparison.png",
+      "sha256": "6e341d24d8f4e0ba8940c69e0adebf30032a474f4cc4ce94b2f62622fc8885af",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_lift_joint_acceleration_comparison.png",
+      "sha256": "c737e5cad81782684f7625301b1192a3c438b3db734bf6a94e92ee8047a322a6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_lift_joint_position_comparison.png",
+      "sha256": "68485e06d3cc1812dd220eadddad1bd813c003ada319266c502611af4a973a4b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_lift_joint_velocity_comparison.png",
+      "sha256": "d4fe340f54ffd7e7aa414b60ba971619d50884ffbf86630cef09b84691548b41",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_pan_joint_acceleration_comparison.png",
+      "sha256": "a65afc5673bd8785d6ff7a5d90b011f8bd31d4bb042d8ae79298f050b1f0f5bd",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_pan_joint_position_comparison.png",
+      "sha256": "933d6bc45734b5e35c51847e4f8172542a4e8bccaf16eade49a5fd4535667ed7",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/shoulder_pan_joint_velocity_comparison.png",
+      "sha256": "2f77dc13847a3a29289d9b779d14995225338cec93acdfbcbd8925860b42cc39",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_1_joint_acceleration_comparison.png",
+      "sha256": "aac31e204b396757556e8a6812d2d35bc8d6cb0a644f69192b908361d969e511",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_1_joint_position_comparison.png",
+      "sha256": "4d61dc5e5c8b157c7e1700b580515b5a32218c47f09631fcbe66b1be66e358a8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_1_joint_velocity_comparison.png",
+      "sha256": "381785f86e188be1610b97274cd5f8d4e57d423fac24f1afc6101eda1a72d693",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_2_joint_acceleration_comparison.png",
+      "sha256": "0120be462b82a731b2cee51b99c9412021c4deb9078b5fe5ddc4dc8d663a2aef",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_2_joint_position_comparison.png",
+      "sha256": "6a769edfc7892088ccfaa923b1a3dd1c02f0158fab84a79619f7666cb2a164cb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_2_joint_velocity_comparison.png",
+      "sha256": "bd58e1daca3834c563c28da2af020012c9ad950f6e796b1f06900234047e4ba4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_3_joint_acceleration_comparison.png",
+      "sha256": "31ee39aa4d78cd48e5c44dd30d2c99caa4beb2984e67237b6525d3c7293d9b88",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_3_joint_position_comparison.png",
+      "sha256": "d69bb40e2dd547508fad59afc3b8b75b9f0cea40e4097a89c58cabc6a8640694",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/plots/wrist_3_joint_velocity_comparison.png",
+      "sha256": "648ef07893d847264602bd73cdc3ad19a67b1a39f2a9ba64a38407066d4e2271",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/results/exp01_mass_comparison.txt",
+      "sha256": "2528909251cf0eb45fe9319873641294919ead28e6a5e3fb9e2ae39f0edb403e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/results/experiment_bag_metadata.yaml",
+      "sha256": "01f9bf84c125bd1d040d31623e792b1e2cd65c9cd400b92bd8107308f7e04ea8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/scripts/compare_exp01.py",
+      "sha256": "e37e715668e262c094b706d401d01834d76cf8cab10287966e7fcbef2e93b02e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/scripts/compare_exp01_plots.py",
+      "sha256": "77c508a17954c64f7eab09d899f4da71b93f22a4279ab43a822cd4676fec347e",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/scripts/extract_joint_states.py",
+      "sha256": "1cd99e5423e2089134759f2a03653aa6cb5f7c9d8aea64c99bd896afdc6fe26b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/urdf/experiment_9.2323kg.urdf",
+      "sha256": "5216c976ca752342ffd6af31a732f1178f9350555de2d32f5a6e3bef8746ddc4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/urdf/ur5_baseline_verified.urdf",
+      "sha256": "ac29aae7d6cbf13d8b00870b746292d7632ac94a936a9864e648db9d3c405994",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp01-upper-arm-10pct/urdf/ur5_exp01_verified.urdf",
+      "sha256": "5216c976ca752342ffd6af31a732f1178f9350555de2d32f5a6e3bef8746ddc4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/data/baseline_2.330kg.csv",
+      "sha256": "87424e2eaf805371387d61a1a34154ad1d6196a509bd6d8e39b140b828c5345c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/data/exp02_forearm_2.563kg.csv",
+      "sha256": "6dacdb8141b476971e73f05a82d66bc9da28b08d0fcfe8d5fdc6a442121e1375",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/params/physical_parameters_baseline.yaml",
+      "sha256": "58b2a17bc1e5be5cc0ee0f093b81d58bbab5784e2f795a7cd51cdf6c3e8d0dae",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/params/physical_parameters_exp02.yaml",
+      "sha256": "05798b6b0c461afe6098735e5ce4bf176d2bd02ab949cb4abe2018b59a531de3",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_accelerations_comparison.png",
+      "sha256": "f507515b1d28d37a97f281477ef49eaef5349c0d5aeb6c58a54cf8bcca53b6f2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_positions_comparison.png",
+      "sha256": "fdeb3317bf8eeaff71fd547ab93159f82745f6f96389eaffe3ab0e1afc2d07c9",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_range_comparison.png",
+      "sha256": "105d0841846fe8821b28c3cbe4e6d7027a89a2ad4b6701e73f3bf19c1931a66a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/plots/exp02_joint_velocities_comparison.png",
+      "sha256": "188354f56ff5b19618d16decf868e559a81a47e6d800fc6955a66aebdb60dd2b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/baseline_bag_metadata.yaml",
+      "sha256": "1e4d9daa76594bc9ee0b3a8c135828ae776cd67a999924813a9cdd4ad4dd2d1a",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/exp02_baseline_vs_forearm_10pct_comparison.txt",
+      "sha256": "c3f60a3b8d712417c6bcdd11193d0d60c80388116cd9a1f338738b86bf80a086",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/exp02_forearm_mass_10pct_analysis.txt",
+      "sha256": "54a298ac12359a5466edc307412ab7fbfdb1365f7382f6e96e7fba1f7af2b8cb",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/exp02_summary.txt",
+      "sha256": "0e9b317831ca0bb926e5e4b398ab973ca20373fa8f0ef09d56d0a237c7cf2338",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/results/experiment_bag_metadata.yaml",
+      "sha256": "0a9be1d1e2e68f4d9399e355ebcb0195866226a6e6a7cc364cd83c9b81aedc4f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/analyze_exp02.py",
+      "sha256": "adff38feda35699b9ed17577195bef654c32c558a36d2c9427997e8a72fb94c2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/compare_exp02.py",
+      "sha256": "5668c2f41d5dc16842c9de9af21538629ae50825f9852bd46cd3b8eeb3623183",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/exp02_plots.py",
+      "sha256": "37c45be9d1c268383ccdfb5004ea5b9878d89273b8aabf8ea9c58e6cef2e857d",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/extract_baseline_exp02.py",
+      "sha256": "3cb6943a6aa7ca2e614e94007299f596b6e417f99e75c8272518acf8ce3643a8",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/scripts/extract_exp02_joint_states.py",
+      "sha256": "a0aa509c843fb705ff5fa8d39bcec3fdc5f657b091ee27aeb32ac2cc0b81249b",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/urdf/baseline_reference.urdf",
+      "sha256": "ac29aae7d6cbf13d8b00870b746292d7632ac94a936a9864e648db9d3c405994",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/urdf/ur5_exp02_generated.urdf",
+      "sha256": "3e8b7f3d65295dffab7e3f3ef5e249732d67be1530c5d8855f113a2f08011e61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp02-forearm-10pct/urdf/ur5_exp02_verified.urdf",
+      "sha256": "3e8b7f3d65295dffab7e3f3ef5e249732d67be1530c5d8855f113a2f08011e61",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/data/baseline_8.393_2.330kg.csv",
+      "sha256": "162fc364c5e2caf2ad8e7446fa629945a1d86a595c2fced3b4ea45078a9929e5",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/data/exp03_shoulder_4.070kg.csv",
+      "sha256": "ce9b248be7154e17cbcc73129480733bc328ede4815de979afc4914b90d1068c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/params/physical_parameters_exp03.yaml",
+      "sha256": "f8d419686ccf93d822beb10f1121ac5b7d67ff750b592ba5c5c1106fefad60aa",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_accelerations_comparison.png",
+      "sha256": "7744df7777756382705267cd4710d8ead75170152ef15bbee4622c6fbc7100af",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_positions_comparison.png",
+      "sha256": "034f9f26e10d981c74e64f5517cf15d487c079ff88a9dced387e9306e6f9baa6",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_range_comparison.png",
+      "sha256": "5f351e1c99cfe6cb8c33889945d6b5f476ded2e19a57e7f96074dec98d2ca827",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/plots/exp03_joint_velocities_comparison.png",
+      "sha256": "0366ceb2e6e9540ba7534f52cf4dd06d0628c895f200101fe874a9989912af81",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/results/exp03_shoulder_mass_10pct_analysis.txt",
+      "sha256": "c6a22cd82e64f581f7d0c39335b0387f6b3b0d08d772dfc263f313d5533d15b4",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/results/experiment_bag_metadata.yaml",
+      "sha256": "6e222c09fc14303b62d72c206a91175c68d0613f06f3dd4231521cf14f4be7d2",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/scripts/analyze_exp03.py",
+      "sha256": "00cadaa514cdef63801492412b7f3644ea14b50b671d890c67377aa6f1ab1b3f",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/scripts/exp03_plots.py",
+      "sha256": "b6c6493e45b0b0ff24271f1b389e6104b09eb405020866602bc83c0eb229687c",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/scripts/extract_exp03.py",
+      "sha256": "2a815e2d710191fe3892b0c0666c8328016b8e305ff38bc8fac03a5d188d0901",
+      "storage": "git"
+    },
+    {
+      "path": "experiments/mass_sensitivity/exp03-shoulder-10pct/urdf/ur5_exp03_verified.urdf",
+      "sha256": "574c8152883e7d82c0bef538d6e00e158962e0b088b99022c3c47167c17c4c01",
+      "storage": "git"
+    },
+    {
+      "path": "media/2026-08-24-machine-shop-cycle.webm",
+      "sha256": "7ac28efb7693cb93a03d041012f9eee1d515163412c5dbc93ec743c9125507dd",
+      "storage": "git"
+    },
+    {
+      "path": "media/Screencast from 09-29-2026 10:03:01 PM.webm",
+      "sha256": "fe01d1c8ef4f33a8475bfdf4f755b3cba65e62f9f5d3c045cd9b598777999fa3",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/coordination_policy.py",
+      "sha256": "24018bc1de323894c956cb2c25a6e340f8f78a0660041d16030d47348ff36c40",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/dual_arm_cycle.py",
+      "sha256": "4a7c2a335a7ded6a201f8813d436626d79ddfc9a1432c1e3edfc0a3a9f834a24",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/launch_preflight.py",
+      "sha256": "f704b6a494e5b54405b374e77fed78628bd66eb71dd8c48b567607c6326462cc",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_shop_joint_cycle.py",
+      "sha256": "1cb2600a357199f6946253bfbc065a0f01671e650775a8022b10d94a6856c003",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_shop_trajectory.py",
+      "sha256": "3003338f7b7e944def61075d9a49671212d0bbaea5e5d227d53e37904d909e88",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_tending_coordinator.py",
+      "sha256": "a0f6fdabf4ceafb0778789f2e7c07942f0c9bfaac1e7a441bd6e4ded49ea053d",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/machine_tending_fsm.py",
+      "sha256": "602c658bbc92dd0200e58a9350479eacd0fa3bcc95160b3ab76e87c11d60bcdf",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/metrics.py",
+      "sha256": "8d1861a3abdea20974b08d1b176ad50957c2efb55aa460fab5376c9c226479f9",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/plot_machine_shop_path.py",
+      "sha256": "f1c19d57a7213fb83f2d9e86907c2800b7403ff8b52174710e36dd2db4ea3e31",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/reachability.py",
+      "sha256": "205ed65e13eb48f87e923ef1be0c5b97ee4b72e58c32281bab91c3e0274d31a6",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/waypoints.py",
+      "sha256": "90df4e4b4588f327f6655143234291ee53ceb987b8da7016ad9de9fb6442943d",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/workcell_model.py",
+      "sha256": "cd3df56c683c837f0eed2847dd125b10ec63cc2d63e3a0c92826ee616f928809",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/carrier_control/workflow.py",
+      "sha256": "cc1402f920e824d1e5632f4f135c795ecc1840be54965c9989094343117257c8",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/config/machine_tending.json",
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/config/waypoints.yaml",
+      "sha256": "629bc26ae4bfc93a3d8b6d2973ac6d21ffad816d4a01dfb7d8829d387650e07f",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/package.xml",
+      "sha256": "4e630a53d59946ee85592b55f55a97d2094d4e26c97c2ad0a339cbfdf6d53d5f",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/resource/carrier_control",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/setup.cfg",
+      "sha256": "0029bef66bb3b848393b3d0ce728e2b1f7b95c61d033fc5d6917c691e72a1d35",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/setup.py",
+      "sha256": "81d3aa2bd8cb80a6d3d752f85970853d3c837675d88df8758b17f23369b61880",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_action_safety.py",
+      "sha256": "4458ded22938ff1dcb6100ba78a090a9ddd0cea02c9f9ad60eaa8c7f3e0f928f",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_coordination.py",
+      "sha256": "23b658c24f460b18fd8d324b0690e79780d8257ffb306e156def4c57404c7609",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_coordinator_runtime.py",
+      "sha256": "600240373e9d331c6ad26fd74a4bdefbe5d33179f9de5b8065b34f18346fc5d7",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_launch_preflight.py",
+      "sha256": "37a8822c66425cdbca0a8614e15280b64fd7519bc091ca8fab0fc00aee79065a",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_machine_tending_fsm.py",
+      "sha256": "f8699dd0327d3c8a84b47806406fe035e82c60966741f990a45a74a43b4355d7",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_metrics.py",
+      "sha256": "ecd9a14b26ba1d8c1b13ee900f2a054ef285f8dc1defcd01aae661fffefd59bf",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_package_integration.py",
+      "sha256": "ab9fe3715fec02d6fd23202192a37918b87d5ec07d1ca89296f05e40d4c94462",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_reachability.py",
+      "sha256": "a65cabeef7e3f8c2d119ff0f32019d4b1ba3ea1dc926515c7cb7db123f0bcf3a",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_workcell_contract.py",
+      "sha256": "27513f5628c0304381871b348e10cb3e217dd93b28b465fbc8f1268ee3ed72e2",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_control/test/test_workflow.py",
+      "sha256": "d618ee79daf45225a62cfb91873d80acfd140bb6ff0d72fe7fac19aa4cbb1f78",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/carrier_description/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/launch/dual_arm_demo.launch.py",
+      "sha256": "0ba531adbd4cb5c1d10756f438f0ba3945139d0e8d34c938e518aee5ecf46861",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/launch/machine_tending_controller.launch.py",
+      "sha256": "31446f8380e95cc56fdb56e7ea502c6d18de4eeac380f50e218e32a2cdb71c65",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/launch/view_carrier.launch.py",
+      "sha256": "ddd40d2594c4671963a0215c4bee927e66e0806092df2eb7fb45272230457b70",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/launch/view_dual_arm.launch.py",
+      "sha256": "6fb9ccd4eec5896dda0066e6491a2bdb54a355317fbb43f3ec9f41d57c87bea3",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/package.xml",
+      "sha256": "dcf9ee4944d3c5f81751f7826e57fb1583809a858c14791e8846ba7be81b35ec",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/resource/carrier_description",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/rviz/dual_arm.rviz",
+      "sha256": "899302e6d68696323a5e989c0426b77bd2f147b81451f0de6eff2c843676007b",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/rviz/dual_arm.rviz.backup",
+      "sha256": "8830d59b52c89b875b890c2c8082e7eeb7078535107ff27dfd6433ec4b211370",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/setup.cfg",
+      "sha256": "90fe9f0e0c3fa43dffe9d2f4f7d3929f19328bf0cef0c0676b177f7fe350c2b9",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/setup.py",
+      "sha256": "710097f1fb7aa1f8d879f21e36a74177850da3e6075b18b09e1877b93c62c2e5",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/test/test_cell_model.py",
+      "sha256": "d24fbebc47eeb2862498b04ef17d9dc652bcd5790d67764e37beaf9d4a7dcee0",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/test/test_copyright.py",
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/test/test_flake8.py",
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/test/test_launch_contract.py",
+      "sha256": "fade78188dfad0e62565f0a463f24635b08c7429a8e1cace5497b6d2ac865ebc",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/test/test_pep257.py",
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/test/test_phase4_contract.py",
+      "sha256": "d87e2bf0020de445312ab4eaac6ede733ec9868399affafa50c5c59f8af6f01a",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/urdf/carrier_flange.xacro",
+      "sha256": "395c404cb87eb73fb87c9838dfb2a705b2823056d612451f9f549b9a97e0b3f9",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/urdf/dual_arm.xacro",
+      "sha256": "2a7b37c06bc216cd099d082a93c37a1392c6f152105dacd64d9f373655de9c20",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/urdf/machine_tending_cell.xacro",
+      "sha256": "4a70b4afbfb535e09c5f8b0c8163b22351f4ed55fcd06411ae23ff21ab085f2a",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/urdf/test_tool.xacro",
+      "sha256": "81aa4e175b7a32706d520119afe3756c5609e44436c287261818c41c96261a56",
+      "storage": "git"
+    },
+    {
+      "path": "src/carrier_description/urdf/ur5_with_test_tool.xacro",
+      "sha256": "995d77b46c632b6d0b729651885bf248d3daba20bf816226489ca15eb8b0e8bd",
+      "storage": "git"
+    }
+  ]
+}

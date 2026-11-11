@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15",
+  "updated_utc": "2026-11-12",
   "status_source": "docs/STATUS.md",
   "scope": "Visual ROS Humble evidence; historical reports kept separate",
   "records": [
@@ -377,7 +377,12 @@
         "tools/test_ros_shutdown.py",
         "tools/cloud/rviz-stop-render-on-close.patch",
         "artifacts/verification/source_inventory.json",
-        "docs/evidence/AY-13/runtime_repair_20261107/README.md"
+        "docs/evidence/AY-13/runtime_repair_20261107/README.md",
+        "tools/cloud/ros_entrypoint.sh",
+        "tools/cloud/validate_humble.sh",
+        "tools/probe_visual_shutdown.py",
+        "tools/test_probe_visual_shutdown.py",
+        "docs/evidence/AY-13/independent_repeat.md"
       ],
       "tests": [
         {
@@ -434,6 +439,16 @@
           "command": "colcon test --base-paths src --packages-select carrier_description carrier_control --executor sequential --return-code-on-test-failure; tool unittest suite; experiment analysis unittest suite; recorded visual/interruption runners",
           "environment": "2026-11-07 Codex Ubuntu 22.04 / ROS Humble; source c375343, tested checkout 9a192ec; native patched RViz built from upstream 11.2.29 plus recorded timer-stop patch",
           "result": "PASS: latest 70 package results (0 errors, 0 failures, 2 copyright skips), 26 tool tests, 14 analysis tests. Earlier full build/model/analysis pass with 7 outputs byte-identical; 404 protected files unchanged. Three visual cycles, unreachable/load/cancel probes passed on intermediate source. Five latest interrupted runs pass with locally rebuilt RViz; unpatched RViz and softpipe-only shutdown failures retained. Final dependency packaging/full visual repeat and human review remain open."
+        },
+        {
+          "command": "Fresh GitHub clone of 540998c; docker build -f tools/cloud/Dockerfile.humble --secret id=ca,src=/etc/ssl/certs/ca-certificates.crt -t cambot-humble:ay13-reproducible .; bash tools/cloud/validate_humble.sh /evidence/replay",
+          "environment": "2026-11-07 agent-run Ubuntu 22.04.5 / ROS Humble Docker, Xvfb, domain 99, default software renderer; image 276b84e9359a; pinned patched RViz 11.2.29",
+          "result": "PASS: 70 Colcon results (0 errors/failures, 2 copyright skips), 30 tool tests, 14 analysis tests, installed docs/inventory, 26 legacy checks, URDF, 61 Python/10 shell syntax checks. All seven analysis outputs byte-match. Success/unreachable/load-failure/cancellation/idle and five active interruptions pass with one joint-state publisher, clean child exits and no residual nodes. Expected controller rejection. All 721 baseline protected files unchanged. No independent human reproduction."
+        },
+        {
+          "command": "docker buildx build --load --progress=plain -f tools/cloud/Dockerfile.humble --secret id=ca,src=/etc/ssl/certs/ca-certificates.crt -t cambot-humble:ay13-reproducible .; bash tools/cloud/validate_humble.sh /evidence/replay; manual desktop launch/start/topic capture and check_ros_shutdown.py",
+          "environment": "2026-11-11 user-host clean checkout 6df990b; Ubuntu 22.04.5 / ROS Humble Docker, image e8020c7bfd5c; Xvfb technical replay and CachyOS Wayland/XWayland manual RViz; reviewer Ayush Ranjan acknowledged PASS and declared independent review on 2026-11-12 Asia/Calcutta",
+          "result": "PASS: 70 Colcon results (0 errors/failures, 2 skips), 38 tool tests, 14 analysis tests, 26 legacy offline checks, installed docs/source inventory/URDF, 64 Python/10 shell syntax checks, 7 analysis outputs byte-identical. Ten automated runtime cases plus manual cycle: one publisher, clean shutdown, no residual nodes. Manual FINISHED_AT_S5 and HOME return. Uploaded archive checksum verified; reviewer declaration retained verbatim. Visual scope only."
         }
       ],
       "evidence": [
@@ -468,12 +483,22 @@
         "docs/evidence/AY-13/runtime_repair_20261107/softpipe/unreachable/probe.jsonl",
         "docs/evidence/AY-13/runtime_repair_20261107/patched-native-interrupted.log",
         "docs/evidence/AY-13/runtime_repair_20261107/rviz-valgrind/memory.log",
-        "docs/evidence/AY-13/runtime_repair_20261107/sealed-preservation.json"
+        "docs/evidence/AY-13/runtime_repair_20261107/sealed-preservation.json",
+        "docs/evidence/AY-13/reproducible_image_20261107/README.md",
+        "docs/evidence/AY-13/reproducible_image_20261107/manifest.json",
+        "docs/evidence/AY-13/reproducible_image_20261107/runner.log",
+        "docs/evidence/AY-13/reproducible_image_20261107/preserved-artifacts.json",
+        "docs/evidence/AY-13/independent_repeat.md",
+        "docs/evidence/AY-13/independent_review_20261112/manifest.json",
+        "docs/evidence/AY-13/independent_review_20261112/reviewer_acknowledgement.json",
+        "docs/evidence/AY-13/independent_review_20261112/cambot-ay13-review.Lm71RR.tar.gz",
+        "docs/evidence/AY-13/independent_review_20261112/cambot-ay13-review.Lm71RR.tar.gz.sha256",
+        "docs/evidence/AY-13/independent_review_20261112/recording_validation.md"
       ],
-      "limitations": "Coordinator and unreachable-target repairs are covered by regression and runtime evidence. RViz timer-stop patch passes five interrupted runs locally but is not integrated into the reproducible image or validated across the final full visual suite. No independent second-person review or controller/grasp/physical verification.",
-      "next": "Review consolidated draft; integrate pinned RViz dependency patch, repeat the full visual/shutdown suite, then record a genuinely independent second-person clean-checkout review before marking AY-13 complete.",
+      "limitations": "Independent review accepted on the explicit reviewer declaration and uploaded technical/manual evidence for 6df990b. No controller/grasp/physical verification; graphics-driver behavior outside the tested environment remains unverified. Historical failed attempts and agent-only review boundaries remain in their dated records.",
+      "next": "Merge the reviewed documentation/evidence closure through a PR; retain sealed artifacts and rerun relevant acceptance checks for future runtime changes. Controller-backed work remains a separate milestone.",
       "source_commit_or_change": "current documentation change; see Git history",
-      "change_summary": "Reconciled status/architecture/decisions/quick start, marked archival claims, added evidence ledger, clean-checkout guide, document checker and negative fixtures. Cross-validation repaired Colcon discovery instructions, preexisting package lint, and visual capture process-group shutdown without altering the sealed AY-10 raw data. Consolidated post-merge runtime repairs, strict shutdown/observer checks, current source inventory, overwrite-safe historical report generation, and all later diagnostic evidence; AY-13 remains IN PROGRESS."
+      "change_summary": "Reconciled status/architecture/decisions/quick start, marked archival claims, added evidence ledger, clean-checkout guide, document checker and negative fixtures. Cross-validation repaired Colcon discovery instructions, preexisting package lint, and visual capture process-group shutdown without altering the sealed AY-10 raw data. Consolidated post-merge runtime repairs, strict shutdown/observer checks, current source inventory, overwrite-safe historical report generation, and all later diagnostic evidence; AY-13 remained IN PROGRESS at that stage. Integrated the pinned RViz dependency patch into the Docker image, added reusable idle/interruption probes and a clean-checkout validator, and recorded the successful final agent-run technical replay. On 2026-11-12, recorded the subsequent independent reviewer declaration, PASS acknowledgement and checksum-verified user-host clean-checkout technical/manual evidence for 6df990b; AY-13 is now COMPLETE in visual scope."
     }
   ]
 }

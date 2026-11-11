@@ -1,0 +1,237 @@
+[
+  {
+    "station": "HOME",
+    "configuration": "visual_carrier_joints",
+    "joints": [
+      0.0,
+      -1.5707,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "controller_validated": true,
+    "base_xyz_m": [
+      0.09472872263388593,
+      0.3014500001482059,
+      0.9063998788154779
+    ],
+    "target_proxy_clearance_m": {}
+  },
+  {
+    "station": "HOME",
+    "configuration": "carrier_joints",
+    "joints": [
+      0.0,
+      -1.5707,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "controller_validated": true,
+    "base_xyz_m": [
+      0.09472872263388593,
+      0.3014500001482059,
+      0.9063998788154779
+    ],
+    "target_proxy_clearance_m": {}
+  },
+  {
+    "station": "S1_RAW",
+    "configuration": "visual_carrier_joints",
+    "joints": [
+      4.14379989790734,
+      -2.601572782352827,
+      -0.0011403497327275738,
+      -0.9697176492935128,
+      1.3348811011396422,
+      -3.1453336367520204
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      0.620158183897914,
+      0.6843549543874788,
+      0.5168811082451303
+    ],
+    "target_proxy_clearance_m": {
+      "RAW_PICK": 0.01892189495454555
+    }
+  },
+  {
+    "station": "S1_RAW",
+    "configuration": "carrier_joints",
+    "joints": [
+      3.593065,
+      -2.205479,
+      -1.067588,
+      0.131337,
+      1.24201,
+      -4.712387
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      0.8151338592821173,
+      0.204925125633774,
+      0.47459708458718297
+    ],
+    "target_proxy_clearance_m": {
+      "RAW_PICK": -0.4227288925514663
+    }
+  },
+  {
+    "station": "S2_STAGING",
+    "configuration": "visual_carrier_joints",
+    "joints": [
+      -5.018432574192238,
+      -0.5717668807858146,
+      0.006819504420831884,
+      -0.9826347085614247,
+      1.3085720467961368,
+      -3.1411705666800254
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      0.08569484273924197,
+      0.7989443110853907,
+      0.7126131860439398
+    ],
+    "target_proxy_clearance_m": {
+      "STAGE_INSPECT": 0.01988693033423476
+    }
+  },
+  {
+    "station": "S2_STAGING",
+    "configuration": "carrier_joints",
+    "joints": [
+      -2.97318,
+      -1.069788,
+      0.405185,
+      -2.478748,
+      -1.710968,
+      -0.000344
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      -0.6794030784399768,
+      -0.1989782615673305,
+      0.7988294983401516
+    ],
+    "target_proxy_clearance_m": {
+      "STAGE_INSPECT": -1.3104763804906918
+    }
+  },
+  {
+    "station": "S3_MACHINE",
+    "configuration": "visual_carrier_joints",
+    "joints": [
+      5.6031575450977025,
+      -2.419395157605122,
+      0.0009535924786663888,
+      -0.9726635291378096,
+      1.3367156743535458,
+      -3.1411270948632617
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      -0.5390584434756566,
+      0.6336804668450425,
+      0.6751995848199168
+    ],
+    "target_proxy_clearance_m": {
+      "MACHINE_LOAD": 0.019886953481194423,
+      "MACHINE_UNLOAD": 0.019886953481194423
+    }
+  },
+  {
+    "station": "S3_MACHINE",
+    "configuration": "carrier_joints",
+    "joints": [
+      -0.491184,
+      -1.243253,
+      1.013834,
+      -2.910754,
+      -1.513936,
+      -0.000694
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      0.6834260428716706,
+      -0.22939340690295223,
+      0.6751437302914104
+    ],
+    "target_proxy_clearance_m": {
+      "MACHINE_LOAD": -1.4721375916101767,
+      "MACHINE_UNLOAD": -1.4721375916101767
+    }
+  },
+  {
+    "station": "S4_OUTPUT",
+    "configuration": "visual_carrier_joints",
+    "joints": [
+      -5.405318252398965,
+      -2.574346038001332,
+      0.2926637792053955,
+      -3.6952148217057204,
+      -1.5847038638155235,
+      0.8256780966393559
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      -0.6097263473060084,
+      -0.5676863724917751,
+      0.5824894730425297
+    ],
+    "target_proxy_clearance_m": {
+      "OUTPUT_UNLOAD": 0.019970219337281863
+    }
+  },
+  {
+    "station": "S4_OUTPUT",
+    "configuration": "carrier_joints",
+    "joints": [
+      -1.912422,
+      -1.170719,
+      1.563141,
+      -3.534719,
+      -1.728039,
+      -0.001561
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      -0.1660166937884226,
+      -0.7028237309660281,
+      0.4253737162612539
+    ],
+    "target_proxy_clearance_m": {
+      "OUTPUT_UNLOAD": -0.6142537817180364
+    }
+  },
+  {
+    "station": "S5_FINISHED",
+    "configuration": "visual_carrier_joints",
+    "joints": [
+      2.0985209678404364,
+      -2.5536859955144933,
+      0.055607345603007764,
+      -2.651437520767342,
+      -2.1017720091078473,
+      2.067684137734014
+    ],
+    "controller_validated": false,
+    "base_xyz_m": [
+      0.40446144050167177,
+      -0.7173013913281349,
+      0.6703885149961858
+    ],
+    "target_proxy_clearance_m": {
+      "FINISHED_PLACE": 0.019925563330977444
+    }
+  },
+  {
+    "station": "S5_FINISHED",
+    "configuration": "carrier_joints",
+    "joints": null,
+    "controller_validated": false
+  }
+]

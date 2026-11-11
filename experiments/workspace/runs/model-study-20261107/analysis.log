@@ -1,0 +1,62 @@
+[
+  {
+    "placement": "current",
+    "targets_with_proxy_samples": 6,
+    "greedy_endpoint_joint_travel_rad": 75.97070346261117,
+    "selected_samples": [
+      {
+        "step": "S1_APPROACH",
+        "sample_index": 20001
+      },
+      {
+        "step": "S2_STAGE",
+        "sample_index": 20002
+      },
+      {
+        "step": "S3_LOAD",
+        "sample_index": 20003
+      },
+      {
+        "step": "S4_UNLOAD",
+        "sample_index": 20004
+      },
+      {
+        "step": "S5_PLACE",
+        "sample_index": 20005
+      }
+    ]
+  },
+  {
+    "placement": "east_0.2m",
+    "targets_with_proxy_samples": 0,
+    "greedy_endpoint_joint_travel_rad": null,
+    "selected_samples": []
+  },
+  {
+    "placement": "west_0.2m",
+    "targets_with_proxy_samples": 3,
+    "greedy_endpoint_joint_travel_rad": null,
+    "selected_samples": []
+  },
+  {
+    "placement": "north_0.2m",
+    "targets_with_proxy_samples": 3,
+    "greedy_endpoint_joint_travel_rad": null,
+    "selected_samples": [
+      {
+        "step": "S1_APPROACH",
+        "sample_index": 13899
+      },
+      {
+        "step": "S2_STAGE",
+        "sample_index": 8664
+      }
+    ]
+  },
+  {
+    "placement": "south_0.2m",
+    "targets_with_proxy_samples": 2,
+    "greedy_endpoint_joint_travel_rad": null,
+    "selected_samples": []
+  }
+]

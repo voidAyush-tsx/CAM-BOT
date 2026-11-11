@@ -4,7 +4,8 @@ The [status matrix](STATUS.md) is the authoritative disposition for all
 thirteen tasks. The [versioned evidence ledger](ayush/ledger.json) maps each
 requirement to prior state, approach, exact files, commands, results, evidence,
 limits and next action. The [reproducibility guide](ayush/README.md) provides
-clean-checkout instructions and the pending independent-repeat protocol.
+clean-checkout instructions and links to the
+[accepted independent repeat](evidence/AY-13/independent_repeat.md).
 
 The [AY-10–12 experiment record](../experiments/machine_tending/README.md)
 contains the fixed five-attempt visual scenario, raw source/config identity,

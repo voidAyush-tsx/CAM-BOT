@@ -1,0 +1,10 @@
+metrics.json NUMERICAL_MATCH
+summary.csv NUMERICAL_MATCH
+trials.csv NUMERICAL_MATCH
+artifacts.json BYTE_MATCH
+carrier_repositions_by_trial.png BYTE_MATCH
+cycle_time_by_trial.png BYTE_MATCH
+metrics.json BYTE_MATCH
+summary.csv BYTE_MATCH
+trial_outcomes.png BYTE_MATCH
+trials.csv BYTE_MATCH

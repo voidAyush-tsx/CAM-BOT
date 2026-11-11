@@ -1,0 +1,69 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.humble
+#1 transferring dockerfile: 3.23kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ros:humble-ros-base-jammy@sha256:d9bcf2e6f72df127fdee07048c2e87b1b4b9a59a74af0592f4489fc2844aa855
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [runtime 1/3] FROM docker.io/library/ros:humble-ros-base-jammy@sha256:d9bcf2e6f72df127fdee07048c2e87b1b4b9a59a74af0592f4489fc2844aa855
+#4 DONE 0.0s
+
+#5 [runtime 2/3] RUN --mount=type=secret,id=ca,required=true     apt-get -o Acquire::https::CaInfo=/run/secrets/ca update &&     DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::https::CaInfo=/run/secrets/ca install -y --no-install-recommends     ros-humble-ur-description ros-humble-moveit-msgs ros-humble-control-msgs     ros-humble-robot-state-publisher ros-humble-joint-state-publisher-gui     ros-humble-rviz2 ros-humble-xacro ros-humble-tf2-tools     python3-colcon-common-extensions python3-pytest python3-matplotlib python3-yaml     ros-humble-ament-copyright ros-humble-ament-flake8 ros-humble-ament-pep257     liburdfdom-tools xvfb xauth git-lfs && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [runtime 3/3] WORKDIR /workspace/CAM-BOT
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 835B done
+#7 DONE 0.0s
+
+#8 [rviz-build 1/3] COPY tools/cloud/rviz-stop-render-on-close.patch /tmp/rviz-stop-render-on-close.patch
+#8 DONE 16.3s
+
+#9 [rviz-build 2/3] RUN --mount=type=secret,id=ca,required=true     git init /tmp/rviz &&     git -C /tmp/rviz remote add origin https://github.com/ros2/rviz.git &&     git -C /tmp/rviz -c http.sslCAInfo=/run/secrets/ca fetch --depth 1 origin "4e2b27b7561da7eb03fbc7e92a74d4b3f1e0b054" &&     git -C /tmp/rviz checkout --detach FETCH_HEAD &&     test "$(git -C /tmp/rviz rev-parse HEAD)" = "4e2b27b7561da7eb03fbc7e92a74d4b3f1e0b054" &&     git -C /tmp/rviz apply --check /tmp/rviz-stop-render-on-close.patch &&     git -C /tmp/rviz apply /tmp/rviz-stop-render-on-close.patch
+#9 5.647 hint: Using 'master' as the name for the initial branch. This default branch name
+#9 5.647 hint: is subject to change. To configure the initial branch name to use in all
+#9 5.647 hint: of your new repositories, which will suppress this warning, call:
+#9 5.647 hint: 
+#9 5.647 hint: 	git config --global init.defaultBranch <name>
+#9 5.647 hint: 
+#9 5.647 hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+#9 5.647 hint: 'development'. The just-created branch can be renamed via this command:
+#9 5.647 hint: 
+#9 5.647 hint: 	git branch -m <name>
+#9 5.648 Initialized empty Git repository in /tmp/rviz/.git/
+#9 7.545 From https://github.com/ros2/rviz
+#9 7.545  * branch            4e2b27b7561da7eb03fbc7e92a74d4b3f1e0b054 -> FETCH_HEAD
+#9 7.629 HEAD is now at 4e2b27b 11.2.29
+#9 DONE 7.6s
+
+#10 [rviz-build 3/3] RUN source /opt/ros/humble/setup.bash &&     for package in rviz_common rviz2 rviz_default_plugins; do       python3 -c 'import sys, xml.etree.ElementTree as ET; assert ET.parse(sys.argv[1]).findtext("version") == "11.2.29", "RViz ABI changed: review the pinned patch"'         "/opt/ros/humble/share/$package/package.xml";     done &&     mkdir /tmp/rviz-build && cd /tmp/rviz-build &&     MAKEFLAGS=-j2 colcon build --base-paths /tmp/rviz/rviz_common --merge-install       --install-base /opt/cambot/rviz --executor sequential       --cmake-args -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release &&     mkdir -p /opt/cambot/rviz/share/cambot-patches &&     cp /tmp/rviz/LICENSE /tmp/rviz-stop-render-on-close.patch /opt/cambot/rviz/share/cambot-patches/ &&     { printf 'upstream=https://github.com/ros2/rviz.git\nrevision=%s\nversion=11.2.29\n' "4e2b27b7561da7eb03fbc7e92a74d4b3f1e0b054";       sha256sum /tmp/rviz-stop-render-on-close.patch /opt/cambot/rviz/lib/librviz_common.so;       dpkg-query -W ros-humble-rviz-common ros-humble-rviz2 ros-humble-rviz-default-plugins;     } > /opt/cambot/rviz/share/cambot-patches/provenance.txt
+#10 5.018 Starting >>> rviz_common
+#10 155.5 Finished <<< rviz_common [2min 30s]
+#10 155.5 
+#10 155.5 Summary: 1 package finished [2min 31s]
+#10 DONE 155.5s
+
+#11 [stage-2 1/3] COPY --from=rviz-build /opt/cambot/rviz /opt/cambot/rviz
+#11 DONE 3.7s
+
+#12 [stage-2 2/3] COPY --chmod=755 tools/cloud/ros_entrypoint.sh /cambot_entrypoint.sh
+#12 DONE 3.2s
+
+#13 [stage-2 3/3] RUN /cambot_entrypoint.sh bash -ec     'test "$(ros2 pkg prefix rviz_common)" = /opt/cambot/rviz; ldd /opt/ros/humble/lib/rviz2/rviz2 | grep -F "librviz_common.so => /opt/cambot/rviz/lib/librviz_common.so"'
+#13 4.030 	librviz_common.so => /opt/cambot/rviz/lib/librviz_common.so (0x00007f23f25b9000)
+#13 DONE 4.0s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 1.6s done
+#14 writing image sha256:276b84e9359aa087e5c166f64eeed1d3d18b93d9fc159fe6c21506a56da0e0a2 done
+#14 naming to docker.io/library/cambot-humble:ay13-reproducible done
+#14 DONE 1.6s
