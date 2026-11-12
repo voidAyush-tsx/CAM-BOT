@@ -27,6 +27,10 @@ and explicit declaration of independent review, closing AY-13 in visual scope.
 Workcell dimensions and visual carrier poses are temporary assumptions. The
 reachability check is a geometric proxy, not IK or collision checking.
 Controller targets S1–S4 are unvalidated and S5 has no taught target.
+Task 6 (measured geometry and station-target validation) remains pending.
+The [survey and candidate-target intake](WORKCELL_SURVEY.md) supplies separate
+blank records for measurements, provenance and validation; it does not change
+the working demonstration or establish controller readiness.
 
 ## AY task matrix
 

@@ -1,0 +1,222 @@
+{
+  "schema_version": "cambot-survey-intake/1",
+  "record_kind": "measurement_intake_not_runtime_config",
+  "survey_id": null,
+  "status": "NOT_MEASURED",
+  "units": {
+    "position": "m",
+    "orientation": "rad"
+  },
+  "robot": {
+    "manufacturer": null,
+    "exact_model": null,
+    "serial_or_asset_id": null,
+    "calibration_reference": null,
+    "calibration_sha256": null,
+    "provenance_id": null
+  },
+  "world_frame": {
+    "name": "world",
+    "origin_definition": null,
+    "positive_axes_definition": null,
+    "handedness": "right"
+  },
+  "world_to_base_link": {
+    "parent_frame": "world",
+    "child_frame": "base_link",
+    "translation_xyz_m": null,
+    "rotation_rpy_rad": null,
+    "provenance_id": null
+  },
+  "stations": {
+    "RAW_INPUT": {
+      "frame": "station_s1_raw",
+      "pose_in_world": {
+        "parent_frame": "world",
+        "child_frame": "station_s1_raw",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      "dimensions_xyz_m": null,
+      "dimension_provenance_id": null
+    },
+    "STAGING_INSPECTION": {
+      "frame": "station_s2_staging",
+      "pose_in_world": {
+        "parent_frame": "world",
+        "child_frame": "station_s2_staging",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      "dimensions_xyz_m": null,
+      "dimension_provenance_id": null
+    },
+    "CNC_MACHINE": {
+      "frame": "station_s3_machine",
+      "pose_in_world": {
+        "parent_frame": "world",
+        "child_frame": "station_s3_machine",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      "dimensions_xyz_m": null,
+      "dimension_provenance_id": null
+    },
+    "OUTPUT_UNLOADING": {
+      "frame": "station_s4_output",
+      "pose_in_world": {
+        "parent_frame": "world",
+        "child_frame": "station_s4_output",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      "dimensions_xyz_m": null,
+      "dimension_provenance_id": null
+    },
+    "FINISHED_PART": {
+      "frame": "station_s5_finished",
+      "pose_in_world": {
+        "parent_frame": "world",
+        "child_frame": "station_s5_finished",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      "dimensions_xyz_m": null,
+      "dimension_provenance_id": null
+    }
+  },
+  "interaction_points": {
+    "RAW_PICK": {
+      "station_id": "RAW_INPUT",
+      "reference_frame": "station_s1_raw",
+      "position_xyz_m": null,
+      "required_tool_frame": null,
+      "required_tool_rpy_rad": null,
+      "approach_direction_unit_xyz": null,
+      "approach_distance_m": null,
+      "retreat_direction_unit_xyz": null,
+      "retreat_distance_m": null,
+      "provenance_id": null
+    },
+    "STAGE_INSPECT": {
+      "station_id": "STAGING_INSPECTION",
+      "reference_frame": "station_s2_staging",
+      "position_xyz_m": null,
+      "required_tool_frame": null,
+      "required_tool_rpy_rad": null,
+      "approach_direction_unit_xyz": null,
+      "approach_distance_m": null,
+      "retreat_direction_unit_xyz": null,
+      "retreat_distance_m": null,
+      "provenance_id": null
+    },
+    "MACHINE_LOAD": {
+      "station_id": "CNC_MACHINE",
+      "reference_frame": "station_s3_machine",
+      "position_xyz_m": null,
+      "required_tool_frame": null,
+      "required_tool_rpy_rad": null,
+      "approach_direction_unit_xyz": null,
+      "approach_distance_m": null,
+      "retreat_direction_unit_xyz": null,
+      "retreat_distance_m": null,
+      "provenance_id": null
+    },
+    "MACHINE_UNLOAD": {
+      "station_id": "CNC_MACHINE",
+      "reference_frame": "station_s3_machine",
+      "position_xyz_m": null,
+      "required_tool_frame": null,
+      "required_tool_rpy_rad": null,
+      "approach_direction_unit_xyz": null,
+      "approach_distance_m": null,
+      "retreat_direction_unit_xyz": null,
+      "retreat_distance_m": null,
+      "provenance_id": null
+    },
+    "OUTPUT_UNLOAD": {
+      "station_id": "OUTPUT_UNLOADING",
+      "reference_frame": "station_s4_output",
+      "position_xyz_m": null,
+      "required_tool_frame": null,
+      "required_tool_rpy_rad": null,
+      "approach_direction_unit_xyz": null,
+      "approach_distance_m": null,
+      "retreat_direction_unit_xyz": null,
+      "retreat_distance_m": null,
+      "provenance_id": null
+    },
+    "FINISHED_PLACE": {
+      "station_id": "FINISHED_PART",
+      "reference_frame": "station_s5_finished",
+      "position_xyz_m": null,
+      "required_tool_frame": null,
+      "required_tool_rpy_rad": null,
+      "approach_direction_unit_xyz": null,
+      "approach_distance_m": null,
+      "retreat_direction_unit_xyz": null,
+      "retreat_distance_m": null,
+      "provenance_id": null
+    }
+  },
+  "mounted_assembly": {
+    "assembly_id": null,
+    "revision": null,
+    "cad_reference": null,
+    "cad_sha256": null,
+    "flange_dimensions_xyz_m": null,
+    "module_dimensions_xyz_m": null,
+    "provenance_id": null,
+    "mounting_transforms": [
+      {
+        "parent_frame": "tool0",
+        "child_frame": "carrier_flange",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      {
+        "parent_frame": "carrier_flange",
+        "child_frame": "carrier_flange_interface",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      },
+      {
+        "parent_frame": "carrier_flange_interface",
+        "child_frame": "dual_arm_base_link",
+        "translation_xyz_m": null,
+        "rotation_rpy_rad": null,
+        "provenance_id": null
+      }
+    ],
+    "tool_frames": []
+  },
+  "provenance_records": [
+    {
+      "id": null,
+      "source_kind": null,
+      "date_time_with_timezone": null,
+      "person": null,
+      "instrument_or_cad_source": null,
+      "instrument_calibration_reference": null,
+      "method": null,
+      "position_uncertainty_xyz_m": null,
+      "orientation_uncertainty_rpy_rad": null,
+      "dimension_uncertainty_xyz_m": null,
+      "uncertainty_basis": null,
+      "evidence_files": []
+    }
+  ],
+  "review": {
+    "reviewer": null,
+    "date_time_with_timezone": null,
+    "conclusion": "NOT_REVIEWED",
+    "unresolved_items": []
+  }
+}

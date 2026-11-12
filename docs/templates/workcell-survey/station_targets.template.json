@@ -1,0 +1,410 @@
+{
+  "schema_version": "cambot-station-target-intake/1",
+  "record_kind": "candidate_intake_not_runtime_config",
+  "status": "NOT_TAUGHT",
+  "survey_id": null,
+  "survey_file_sha256": null,
+  "robot_calibration_reference": null,
+  "mounted_assembly_revision": null,
+  "joint_units": "rad",
+  "joint_order": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "controller": {
+    "implementation": null,
+    "version": null,
+    "bringup_reference": null,
+    "action_name": null,
+    "joint_limits_reference": null
+  },
+  "targets": {
+    "HOME": {
+      "workcell_station_id": null,
+      "interaction_point_ids": [],
+      "status": "NOT_TAUGHT",
+      "joint_positions_rad": null,
+      "operator": null,
+      "taught_at_with_timezone": null,
+      "teaching_record": null,
+      "mounted_module_frame": "dual_arm_base_link",
+      "required_module_pose_reference": null,
+      "approach_retreat_path_reference": null,
+      "validation": {
+        "joint_limits": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "target_alignment": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "approach_retreat": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "self_collision": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "environment_clearance": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "controller_execution_and_feedback": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        }
+      }
+    },
+    "S1_RAW": {
+      "workcell_station_id": "RAW_INPUT",
+      "interaction_point_ids": [
+        "RAW_PICK"
+      ],
+      "status": "NOT_TAUGHT",
+      "joint_positions_rad": null,
+      "operator": null,
+      "taught_at_with_timezone": null,
+      "teaching_record": null,
+      "mounted_module_frame": "dual_arm_base_link",
+      "required_module_pose_reference": null,
+      "approach_retreat_path_reference": null,
+      "validation": {
+        "joint_limits": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "target_alignment": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "approach_retreat": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "self_collision": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "environment_clearance": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "controller_execution_and_feedback": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        }
+      }
+    },
+    "S2_STAGING": {
+      "workcell_station_id": "STAGING_INSPECTION",
+      "interaction_point_ids": [
+        "STAGE_INSPECT"
+      ],
+      "status": "NOT_TAUGHT",
+      "joint_positions_rad": null,
+      "operator": null,
+      "taught_at_with_timezone": null,
+      "teaching_record": null,
+      "mounted_module_frame": "dual_arm_base_link",
+      "required_module_pose_reference": null,
+      "approach_retreat_path_reference": null,
+      "validation": {
+        "joint_limits": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "target_alignment": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "approach_retreat": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "self_collision": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "environment_clearance": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "controller_execution_and_feedback": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        }
+      }
+    },
+    "S3_MACHINE": {
+      "workcell_station_id": "CNC_MACHINE",
+      "interaction_point_ids": [
+        "MACHINE_LOAD",
+        "MACHINE_UNLOAD"
+      ],
+      "status": "NOT_TAUGHT",
+      "joint_positions_rad": null,
+      "operator": null,
+      "taught_at_with_timezone": null,
+      "teaching_record": null,
+      "mounted_module_frame": "dual_arm_base_link",
+      "required_module_pose_reference": null,
+      "approach_retreat_path_reference": null,
+      "validation": {
+        "joint_limits": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "target_alignment": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "approach_retreat": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "self_collision": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "environment_clearance": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "controller_execution_and_feedback": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        }
+      }
+    },
+    "S4_OUTPUT": {
+      "workcell_station_id": "OUTPUT_UNLOADING",
+      "interaction_point_ids": [
+        "OUTPUT_UNLOAD"
+      ],
+      "status": "NOT_TAUGHT",
+      "joint_positions_rad": null,
+      "operator": null,
+      "taught_at_with_timezone": null,
+      "teaching_record": null,
+      "mounted_module_frame": "dual_arm_base_link",
+      "required_module_pose_reference": null,
+      "approach_retreat_path_reference": null,
+      "validation": {
+        "joint_limits": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "target_alignment": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "approach_retreat": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "self_collision": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "environment_clearance": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "controller_execution_and_feedback": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        }
+      }
+    },
+    "S5_FINISHED": {
+      "workcell_station_id": "FINISHED_PART",
+      "interaction_point_ids": [
+        "FINISHED_PLACE"
+      ],
+      "status": "NOT_TAUGHT",
+      "joint_positions_rad": null,
+      "operator": null,
+      "taught_at_with_timezone": null,
+      "teaching_record": null,
+      "mounted_module_frame": "dual_arm_base_link",
+      "required_module_pose_reference": null,
+      "approach_retreat_path_reference": null,
+      "validation": {
+        "joint_limits": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "target_alignment": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "approach_retreat": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "self_collision": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "environment_clearance": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        },
+        "controller_execution_and_feedback": {
+          "status": "NOT_RUN",
+          "evidence_files": [],
+          "reviewer": null,
+          "date_time_with_timezone": null,
+          "acceptance_criteria": null,
+          "observed_result": null
+        }
+      }
+    }
+  }
+}
