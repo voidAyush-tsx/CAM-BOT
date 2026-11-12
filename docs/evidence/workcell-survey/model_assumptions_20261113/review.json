@@ -1,0 +1,102 @@
+{
+  "review_date": "2026-11-13",
+  "timezone": "Asia/Calcutta",
+  "result": "PASS_AS_ASSUMPTION_BASELINE_ONLY",
+  "tested_repository_commit": "138e1059189c2c5e79b82ed4daf2a9fb4f62d08d",
+  "checks_passed": [
+    "Config snapshot exactly matches recorded Git commit",
+    "Blank survey remains identical to the committed template",
+    "Candidate-target file remains identical to the committed blank template",
+    "Assumed status and metre/radian units",
+    "One explicit assumption provenance record",
+    "Provenance identifies assumptions and exact commit",
+    "Provenance timestamp has timezone",
+    "Referenced source evidence hash matches",
+    "All five expected station identifiers",
+    "RAW_INPUT frame/pose/dimensions/provenance match",
+    "RAW_INPUT finite geometry and positive dimensions",
+    "RAW_PICK station-local coordinates and provenance match",
+    "STAGING_INSPECTION frame/pose/dimensions/provenance match",
+    "STAGING_INSPECTION finite geometry and positive dimensions",
+    "STAGE_INSPECT station-local coordinates and provenance match",
+    "CNC_MACHINE frame/pose/dimensions/provenance match",
+    "CNC_MACHINE finite geometry and positive dimensions",
+    "MACHINE_LOAD station-local coordinates and provenance match",
+    "MACHINE_UNLOAD station-local coordinates and provenance match",
+    "OUTPUT_UNLOADING frame/pose/dimensions/provenance match",
+    "OUTPUT_UNLOADING finite geometry and positive dimensions",
+    "OUTPUT_UNLOAD station-local coordinates and provenance match",
+    "FINISHED_PART frame/pose/dimensions/provenance match",
+    "FINISHED_PART finite geometry and positive dimensions",
+    "FINISHED_PLACE station-local coordinates and provenance match",
+    "Exactly six interaction points",
+    "Six-joint order and HOME plus S1-S5 identifiers match",
+    "No taught targets or completed validation gates claimed",
+    "survey.json is rejected as an executable controller plan",
+    "survey.assumed.json is rejected as an executable controller plan",
+    "station_targets.json is rejected as an executable controller plan"
+  ],
+  "assumed_interaction_points": {
+    "RAW_PICK": {
+      "station": "RAW_INPUT",
+      "assumed_world_xyz_m": [
+        0.75,
+        0.85,
+        0.76
+      ]
+    },
+    "STAGE_INSPECT": {
+      "station": "STAGING_INSPECTION",
+      "assumed_world_xyz_m": [
+        0.15,
+        1.05,
+        0.76
+      ]
+    },
+    "MACHINE_LOAD": {
+      "station": "CNC_MACHINE",
+      "assumed_world_xyz_m": [
+        -0.65,
+        0.75,
+        0.95
+      ]
+    },
+    "MACHINE_UNLOAD": {
+      "station": "CNC_MACHINE",
+      "assumed_world_xyz_m": [
+        -0.65,
+        0.75,
+        0.95
+      ]
+    },
+    "OUTPUT_UNLOAD": {
+      "station": "OUTPUT_UNLOADING",
+      "assumed_world_xyz_m": [
+        -0.75,
+        -0.45,
+        0.76
+      ]
+    },
+    "FINISHED_PLACE": {
+      "station": "FINISHED_PART",
+      "assumed_world_xyz_m": [
+        0.35,
+        -0.95,
+        0.76
+      ]
+    }
+  },
+  "task_6_complete": false,
+  "measured_geometry_verified": false,
+  "controller_execution_verified": false,
+  "grasp_verified": false,
+  "physical_operation_verified": false,
+  "missing_inputs": [
+    "Physical robot identification and calibration",
+    "World-frame definition and measured world-to-base transform",
+    "Measured station geometry and uncertainty",
+    "Actual mounted assembly geometry and tool frames",
+    "Required tool orientations and approach/retreat paths",
+    "Taught carrier targets and controller-validation evidence"
+  ]
+}

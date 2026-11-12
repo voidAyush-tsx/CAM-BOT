@@ -20,6 +20,11 @@ live FK/TF cross-check. It does not establish collision-free reachability,
 surveyed geometry or physical station targets. Repeating that study alone
 would not complete Task 6.
 
+The [2026-11-13 uploaded assumption packet](evidence/workcell-survey/model_assumptions_20261113/README.md)
+now retains the model configuration, five station records and six interaction
+points with checked provenance. Its candidate controller targets are still
+blank; the review lists the measured/CAD and controller evidence still needed.
+
 ## Create a separate survey packet
 
 Use a new directory outside the working demonstration configuration:

@@ -1,0 +1,27 @@
+{
+  "origin": "Inventory generated during offline inspection of the unchanged user upload",
+  "archive": "cambot-survey-packet.oI05hp.tar.gz",
+  "archive_sha256": "fca3128b5ab1799d3d150fd8057da6d3dfebb7b47aad72349a27730456c3126e",
+  "files": {
+    "evidence/model-config.json": {
+      "bytes": 8174,
+      "sha256": "a973226b7e02b7da1cdb96954990e61abe12a07867bfad678bbd07b3f3c8a64e"
+    },
+    "repository-commit.txt": {
+      "bytes": 41,
+      "sha256": "2eb06b5ce139df8d414b2729f0d50a0213b889480d3fa7c4f9d85f501e2b7e50"
+    },
+    "station_targets.json": {
+      "bytes": 12457,
+      "sha256": "da8d3c78713f23d6116d117d99592b350b80415836bdfd2eab97f78ba01f2b24"
+    },
+    "survey.assumed.json": {
+      "bytes": 8698,
+      "sha256": "b30ce253b50846c112e3b9117024d3e4a32891e23131052424f7b7b5b98bc630"
+    },
+    "survey.json": {
+      "bytes": 6384,
+      "sha256": "cb360099612ae57693674dc3aa5b059f94793224b949e9972b0874e0806a4a65"
+    }
+  }
+}
